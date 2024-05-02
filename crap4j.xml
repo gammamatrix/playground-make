@@ -1,16 +1,2645 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2024-05-02 17:56:16</timestamp>
+  <timestamp>2024-05-02 19:34:59</timestamp>
   <stats>
     <name>Method Crap Stats</name>
-    <methodCount>5</methodCount>
-    <crapMethodCount>0</crapMethodCount>
-    <crapLoad>0</crapLoad>
-    <totalCrap>16</totalCrap>
-    <crapMethodPercent>0</crapMethodPercent>
+    <methodCount>244</methodCount>
+    <crapMethodCount>14</crapMethodCount>
+    <crapLoad>205</crapLoad>
+    <totalCrap>5244.26</totalCrap>
+    <crapMethodPercent>5.74</crapMethodPercent>
   </stats>
   <methods>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\Classes</className>
+      <methodName>addClassTo</methodName>
+      <methodSignature>addClassTo(string $property, mixed $fqdn): self</methodSignature>
+      <fullMethod>addClassTo(string $property, mixed $fqdn): self</fullMethod>
+      <crap>90</crap>
+      <complexity>9</complexity>
+      <coverage>0</coverage>
+      <crapLoad>9</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\Classes</className>
+      <methodName>addMappedClassTo</methodName>
+      <methodSignature>addMappedClassTo(string $property, mixed $key, mixed $value): self</methodSignature>
+      <fullMethod>addMappedClassTo(string $property, mixed $key, mixed $value): self</fullMethod>
+      <crap>240</crap>
+      <complexity>15</complexity>
+      <coverage>0</coverage>
+      <crapLoad>15</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\Classes</className>
+      <methodName>addClassFileTo</methodName>
+      <methodSignature>addClassFileTo(string $property, string $file): self</methodSignature>
+      <fullMethod>addClassFileTo(string $property, string $file): self</fullMethod>
+      <crap>42</crap>
+      <complexity>6</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\Classes</className>
+      <methodName>addToUse</methodName>
+      <methodSignature>addToUse(string $class, string $key): self</methodSignature>
+      <fullMethod>addToUse(string $class, string $key): self</fullMethod>
+      <crap>5.5</crap>
+      <complexity>4</complexity>
+      <coverage>54.55</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\PrimaryProperties</className>
+      <methodName>setOptions</methodName>
+      <methodSignature>setOptions(array $options): self</methodSignature>
+      <fullMethod>setOptions(array $options): self</fullMethod>
+      <crap>31</crap>
+      <complexity>31</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\PrimaryProperties</className>
+      <methodName>class</methodName>
+      <methodSignature>class(): string</methodSignature>
+      <fullMethod>class(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\PrimaryProperties</className>
+      <methodName>config</methodName>
+      <methodSignature>config(): string</methodSignature>
+      <fullMethod>config(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\PrimaryProperties</className>
+      <methodName>fqdn</methodName>
+      <methodSignature>fqdn(): string</methodSignature>
+      <fullMethod>fqdn(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\PrimaryProperties</className>
+      <methodName>model</methodName>
+      <methodSignature>model(): string</methodSignature>
+      <fullMethod>model(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\PrimaryProperties</className>
+      <methodName>module</methodName>
+      <methodSignature>module(): string</methodSignature>
+      <fullMethod>module(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\PrimaryProperties</className>
+      <methodName>module_slug</methodName>
+      <methodSignature>module_slug(): string</methodSignature>
+      <fullMethod>module_slug(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\PrimaryProperties</className>
+      <methodName>name</methodName>
+      <methodSignature>name(): string</methodSignature>
+      <fullMethod>name(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\PrimaryProperties</className>
+      <methodName>namespace</methodName>
+      <methodSignature>namespace(): string</methodSignature>
+      <fullMethod>namespace(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\PrimaryProperties</className>
+      <methodName>organization</methodName>
+      <methodSignature>organization(): string</methodSignature>
+      <fullMethod>organization(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\PrimaryProperties</className>
+      <methodName>package</methodName>
+      <methodSignature>package(): string</methodSignature>
+      <fullMethod>package(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\PrimaryProperties</className>
+      <methodName>type</methodName>
+      <methodSignature>type(): string</methodSignature>
+      <fullMethod>type(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\PrimaryProperties</className>
+      <methodName>uses</methodName>
+      <methodSignature>uses(): array</methodSignature>
+      <fullMethod>uses(): array</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\PrimaryProperties</className>
+      <methodName>extends</methodName>
+      <methodSignature>extends(): string</methodSignature>
+      <fullMethod>extends(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\PrimaryProperties</className>
+      <methodName>extends_use</methodName>
+      <methodSignature>extends_use(): string</methodSignature>
+      <fullMethod>extends_use(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\PrimaryProperties</className>
+      <methodName>properties</methodName>
+      <methodSignature>properties(): array</methodSignature>
+      <fullMethod>properties(): array</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\Properties</className>
+      <methodName>setOptions</methodName>
+      <methodSignature>setOptions(array $options): self</methodSignature>
+      <fullMethod>setOptions(array $options): self</fullMethod>
+      <crap>3</crap>
+      <complexity>3</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\Properties</className>
+      <methodName>type</methodName>
+      <methodSignature>type(): string</methodSignature>
+      <fullMethod>type(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\Properties</className>
+      <methodName>properties</methodName>
+      <methodSignature>properties(): array</methodSignature>
+      <fullMethod>properties(): array</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\WithFolder</className>
+      <methodName>folder</methodName>
+      <methodSignature>folder(): string</methodSignature>
+      <fullMethod>folder(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\WithFolder</className>
+      <methodName>setFolder</methodName>
+      <methodSignature>setFolder(string $folder): self</methodSignature>
+      <fullMethod>setFolder(string $folder): self</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\WithSkeleton</className>
+      <methodName>skeleton</methodName>
+      <methodSignature>skeleton(): bool</methodSignature>
+      <fullMethod>skeleton(): bool</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\WithSkeleton</className>
+      <methodName>withSkeleton</methodName>
+      <methodSignature>withSkeleton(): self</methodSignature>
+      <fullMethod>withSkeleton(): self</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration</package>
+      <className>Playground\Make\Configuration\Configuration</className>
+      <methodName>__construct</methodName>
+      <methodSignature>__construct(mixed $options)</methodSignature>
+      <fullMethod>__construct(mixed $options)</fullMethod>
+      <crap>2</crap>
+      <complexity>2</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration</package>
+      <className>Playground\Make\Configuration\Configuration</className>
+      <methodName>apply</methodName>
+      <methodSignature>apply(): self</methodSignature>
+      <fullMethod>apply(): self</fullMethod>
+      <crap>4.12</crap>
+      <complexity>3</complexity>
+      <coverage>50</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration</package>
+      <className>Playground\Make\Configuration\Configuration</className>
+      <methodName>jsonSerialize</methodName>
+      <methodSignature>jsonSerialize(): mixed</methodSignature>
+      <fullMethod>jsonSerialize(): mixed</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration</package>
+      <className>Playground\Make\Configuration\Configuration</className>
+      <methodName>toArray</methodName>
+      <methodSignature>toArray(): array</methodSignature>
+      <fullMethod>toArray(): array</fullMethod>
+      <crap>6</crap>
+      <complexity>2</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration</package>
+      <className>Playground\Make\Configuration\Model</className>
+      <methodName>apply</methodName>
+      <methodSignature>apply(): self</methodSignature>
+      <fullMethod>apply(): self</fullMethod>
+      <crap>11</crap>
+      <complexity>11</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration</package>
+      <className>Playground\Make\Configuration\Model</className>
+      <methodName>resetOption</methodName>
+      <methodSignature>resetOption(string $option): self</methodSignature>
+      <fullMethod>resetOption(string $option): self</fullMethod>
+      <crap>156</crap>
+      <complexity>12</complexity>
+      <coverage>0</coverage>
+      <crapLoad>12</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration</package>
+      <className>Playground\Make\Configuration\Model</className>
+      <methodName>setOptions</methodName>
+      <methodSignature>setOptions(array $options): self</methodSignature>
+      <fullMethod>setOptions(array $options): self</fullMethod>
+      <crap>21.57</crap>
+      <complexity>20</complexity>
+      <coverage>84.21</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration</package>
+      <className>Playground\Make\Configuration\Model</className>
+      <methodName>attributes</methodName>
+      <methodSignature>attributes(): array</methodSignature>
+      <fullMethod>attributes(): array</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration</package>
+      <className>Playground\Make\Configuration\Model</className>
+      <methodName>playground</methodName>
+      <methodSignature>playground(): bool</methodSignature>
+      <fullMethod>playground(): bool</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration</package>
+      <className>Playground\Make\Configuration\Model</className>
+      <methodName>perPage</methodName>
+      <methodSignature>perPage(): ?int</methodSignature>
+      <fullMethod>perPage(): ?int</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration</package>
+      <className>Playground\Make\Configuration\Model</className>
+      <methodName>casts</methodName>
+      <methodSignature>casts(): array</methodSignature>
+      <fullMethod>casts(): array</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration</package>
+      <className>Playground\Make\Configuration\Model</className>
+      <methodName>fillable</methodName>
+      <methodSignature>fillable(): array</methodSignature>
+      <fullMethod>fillable(): array</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration</package>
+      <className>Playground\Make\Configuration\Model</className>
+      <methodName>table</methodName>
+      <methodSignature>table(): string</methodSignature>
+      <fullMethod>table(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration</package>
+      <className>Playground\Make\Configuration\Model</className>
+      <methodName>model_plural</methodName>
+      <methodSignature>model_plural(): string</methodSignature>
+      <fullMethod>model_plural(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration</package>
+      <className>Playground\Make\Configuration\Model</className>
+      <methodName>model_singular</methodName>
+      <methodSignature>model_singular(): string</methodSignature>
+      <fullMethod>model_singular(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration</package>
+      <className>Playground\Make\Configuration\Model</className>
+      <methodName>model_slug</methodName>
+      <methodSignature>model_slug(): string</methodSignature>
+      <fullMethod>model_slug(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model\Concerns</package>
+      <className>Playground\Make\Configuration\Model\Concerns\Attributes</className>
+      <methodName>addModelProperties</methodName>
+      <methodSignature>addModelProperties(array $options): self</methodSignature>
+      <fullMethod>addModelProperties(array $options): self</fullMethod>
+      <crap>10</crap>
+      <complexity>10</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model\Concerns</package>
+      <className>Playground\Make\Configuration\Model\Concerns\Attributes</className>
+      <methodName>addAttribute</methodName>
+      <methodSignature>addAttribute(mixed $column, mixed $value): self</methodSignature>
+      <fullMethod>addAttribute(mixed $column, mixed $value): self</fullMethod>
+      <crap>7</crap>
+      <complexity>7</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model\Concerns</package>
+      <className>Playground\Make\Configuration\Model\Concerns\Attributes</className>
+      <methodName>addCast</methodName>
+      <methodSignature>addCast(mixed $column, mixed $cast): self</methodSignature>
+      <fullMethod>addCast(mixed $column, mixed $cast): self</fullMethod>
+      <crap>12</crap>
+      <complexity>12</complexity>
+      <coverage>95.24</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model\Concerns</package>
+      <className>Playground\Make\Configuration\Model\Concerns\Attributes</className>
+      <methodName>addFillable</methodName>
+      <methodSignature>addFillable(mixed $column): self</methodSignature>
+      <fullMethod>addFillable(mixed $column): self</fullMethod>
+      <crap>6</crap>
+      <complexity>6</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model\Concerns</package>
+      <className>Playground\Make\Configuration\Model\Concerns\Classes</className>
+      <methodName>addExtends</methodName>
+      <methodSignature>addExtends(array $options): self</methodSignature>
+      <fullMethod>addExtends(array $options): self</fullMethod>
+      <crap>3</crap>
+      <complexity>3</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model\Concerns</package>
+      <className>Playground\Make\Configuration\Model\Concerns\Classes</className>
+      <methodName>addImplements</methodName>
+      <methodSignature>addImplements(array $options): self</methodSignature>
+      <fullMethod>addImplements(array $options): self</fullMethod>
+      <crap>4</crap>
+      <complexity>4</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model\Concerns</package>
+      <className>Playground\Make\Configuration\Model\Concerns\Classes</className>
+      <methodName>addModels</methodName>
+      <methodSignature>addModels(array $options): self</methodSignature>
+      <fullMethod>addModels(array $options): self</fullMethod>
+      <crap>4</crap>
+      <complexity>4</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model\Concerns</package>
+      <className>Playground\Make\Configuration\Model\Concerns\Classes</className>
+      <methodName>extends</methodName>
+      <methodSignature>extends(): string</methodSignature>
+      <fullMethod>extends(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model\Concerns</package>
+      <className>Playground\Make\Configuration\Model\Concerns\Classes</className>
+      <methodName>implements</methodName>
+      <methodSignature>implements(): array</methodSignature>
+      <fullMethod>implements(): array</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model\Concerns</package>
+      <className>Playground\Make\Configuration\Model\Concerns\Classes</className>
+      <methodName>models</methodName>
+      <methodSignature>models(): array</methodSignature>
+      <fullMethod>models(): array</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model\Concerns</package>
+      <className>Playground\Make\Configuration\Model\Concerns\Components</className>
+      <methodName>addComponents</methodName>
+      <methodSignature>addComponents(array $options): self</methodSignature>
+      <fullMethod>addComponents(array $options): self</fullMethod>
+      <crap>8.15</crap>
+      <complexity>8</complexity>
+      <coverage>86.67</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model\Concerns</package>
+      <className>Playground\Make\Configuration\Model\Concerns\Components</className>
+      <methodName>controller</methodName>
+      <methodSignature>controller(): bool</methodSignature>
+      <fullMethod>controller(): bool</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model\Concerns</package>
+      <className>Playground\Make\Configuration\Model\Concerns\Components</className>
+      <methodName>factory</methodName>
+      <methodSignature>factory(): bool</methodSignature>
+      <fullMethod>factory(): bool</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model\Concerns</package>
+      <className>Playground\Make\Configuration\Model\Concerns\Components</className>
+      <methodName>migration</methodName>
+      <methodSignature>migration(): bool</methodSignature>
+      <fullMethod>migration(): bool</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model\Concerns</package>
+      <className>Playground\Make\Configuration\Model\Concerns\Components</className>
+      <methodName>policy</methodName>
+      <methodSignature>policy(): bool</methodSignature>
+      <fullMethod>policy(): bool</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model\Concerns</package>
+      <className>Playground\Make\Configuration\Model\Concerns\Components</className>
+      <methodName>requests</methodName>
+      <methodSignature>requests(): bool</methodSignature>
+      <fullMethod>requests(): bool</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model\Concerns</package>
+      <className>Playground\Make\Configuration\Model\Concerns\Components</className>
+      <methodName>seed</methodName>
+      <methodSignature>seed(): bool</methodSignature>
+      <fullMethod>seed(): bool</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model\Concerns</package>
+      <className>Playground\Make\Configuration\Model\Concerns\Components</className>
+      <methodName>test</methodName>
+      <methodSignature>test(): bool</methodSignature>
+      <fullMethod>test(): bool</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model\Concerns</package>
+      <className>Playground\Make\Configuration\Model\Concerns\Creating</className>
+      <methodName>addCreate</methodName>
+      <methodSignature>addCreate(array $options): Playground\Make\Configuration\Model\Create</methodSignature>
+      <fullMethod>addCreate(array $options): Playground\Make\Configuration\Model\Create</fullMethod>
+      <crap>5</crap>
+      <complexity>5</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model\Concerns</package>
+      <className>Playground\Make\Configuration\Model\Concerns\Creating</className>
+      <methodName>create</methodName>
+      <methodSignature>create(): ?Playground\Make\Configuration\Model\Create</methodSignature>
+      <fullMethod>create(): ?Playground\Make\Configuration\Model\Create</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model\Concerns</package>
+      <className>Playground\Make\Configuration\Model\Concerns\Filters</className>
+      <methodName>addFilters</methodName>
+      <methodSignature>addFilters(array $options, bool $apply): self</methodSignature>
+      <fullMethod>addFilters(array $options, bool $apply): self</fullMethod>
+      <crap>6.04</crap>
+      <complexity>6</complexity>
+      <coverage>90</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model\Concerns</package>
+      <className>Playground\Make\Configuration\Model\Concerns\Filters</className>
+      <methodName>addFilter</methodName>
+      <methodSignature>addFilter(array $options, bool $apply): self</methodSignature>
+      <fullMethod>addFilter(array $options, bool $apply): self</fullMethod>
+      <crap>30</crap>
+      <complexity>5</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model\Concerns</package>
+      <className>Playground\Make\Configuration\Model\Concerns\Filters</className>
+      <methodName>filters</methodName>
+      <methodSignature>filters(): ?Playground\Make\Configuration\Model\Filters</methodSignature>
+      <fullMethod>filters(): ?Playground\Make\Configuration\Model\Filters</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model\Concerns</package>
+      <className>Playground\Make\Configuration\Model\Concerns\Relationships</className>
+      <methodName>addRelationships</methodName>
+      <methodSignature>addRelationships(array $options): self</methodSignature>
+      <fullMethod>addRelationships(array $options): self</fullMethod>
+      <crap>17</crap>
+      <complexity>17</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model\Concerns</package>
+      <className>Playground\Make\Configuration\Model\Concerns\Relationships</className>
+      <methodName>addHasOne</methodName>
+      <methodSignature>addHasOne(string $accessor, mixed $meta): self</methodSignature>
+      <fullMethod>addHasOne(string $accessor, mixed $meta): self</fullMethod>
+      <crap>6</crap>
+      <complexity>6</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model\Concerns</package>
+      <className>Playground\Make\Configuration\Model\Concerns\Relationships</className>
+      <methodName>addHasMany</methodName>
+      <methodSignature>addHasMany(string $accessor, mixed $meta): self</methodSignature>
+      <fullMethod>addHasMany(string $accessor, mixed $meta): self</fullMethod>
+      <crap>6</crap>
+      <complexity>6</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model\Concerns</package>
+      <className>Playground\Make\Configuration\Model\Concerns\Relationships</className>
+      <methodName>HasOne</methodName>
+      <methodSignature>HasOne(): array</methodSignature>
+      <fullMethod>HasOne(): array</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model\Concerns</package>
+      <className>Playground\Make\Configuration\Model\Concerns\Relationships</className>
+      <methodName>HasMany</methodName>
+      <methodSignature>HasMany(): array</methodSignature>
+      <fullMethod>HasMany(): array</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model\Concerns</package>
+      <className>Playground\Make\Configuration\Model\Concerns\Scopes</className>
+      <methodName>addScopes</methodName>
+      <methodSignature>addScopes(array $options): self</methodSignature>
+      <fullMethod>addScopes(array $options): self</fullMethod>
+      <crap>4</crap>
+      <complexity>4</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model\Concerns</package>
+      <className>Playground\Make\Configuration\Model\Concerns\Scopes</className>
+      <methodName>addScope</methodName>
+      <methodSignature>addScope(mixed $scope, mixed $meta): self</methodSignature>
+      <fullMethod>addScope(mixed $scope, mixed $meta): self</fullMethod>
+      <crap>13</crap>
+      <complexity>13</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model\Concerns</package>
+      <className>Playground\Make\Configuration\Model\Concerns\Scopes</className>
+      <methodName>scopes</methodName>
+      <methodSignature>scopes(): array</methodSignature>
+      <fullMethod>scopes(): array</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model\Concerns</package>
+      <className>Playground\Make\Configuration\Model\Concerns\Sorting</className>
+      <methodName>addSorting</methodName>
+      <methodSignature>addSorting(array $options): self</methodSignature>
+      <fullMethod>addSorting(array $options): self</fullMethod>
+      <crap>4</crap>
+      <complexity>4</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model\Concerns</package>
+      <className>Playground\Make\Configuration\Model\Concerns\Sorting</className>
+      <methodName>addSortable</methodName>
+      <methodSignature>addSortable(mixed $meta, int $i): self</methodSignature>
+      <fullMethod>addSortable(mixed $meta, int $i): self</fullMethod>
+      <crap>7</crap>
+      <complexity>7</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model\Concerns</package>
+      <className>Playground\Make\Configuration\Model\Concerns\Sorting</className>
+      <methodName>sortable</methodName>
+      <methodSignature>sortable(): array</methodSignature>
+      <fullMethod>sortable(): array</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Create</className>
+      <methodName>setOptions</methodName>
+      <methodSignature>setOptions(array $options): self</methodSignature>
+      <fullMethod>setOptions(array $options): self</fullMethod>
+      <crap>45.88</crap>
+      <complexity>43</complexity>
+      <coverage>88.41</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Create</className>
+      <methodName>addId</methodName>
+      <methodSignature>addId(string $column, mixed $meta): self</methodSignature>
+      <fullMethod>addId(string $column, mixed $meta): self</fullMethod>
+      <crap>4</crap>
+      <complexity>4</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Create</className>
+      <methodName>addUnique</methodName>
+      <methodSignature>addUnique(int $i, mixed $meta): self</methodSignature>
+      <fullMethod>addUnique(int $i, mixed $meta): self</fullMethod>
+      <crap>3</crap>
+      <complexity>3</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Create</className>
+      <methodName>addDate</methodName>
+      <methodSignature>addDate(string $column, mixed $meta): self</methodSignature>
+      <fullMethod>addDate(string $column, mixed $meta): self</fullMethod>
+      <crap>4</crap>
+      <complexity>4</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Create</className>
+      <methodName>addFlag</methodName>
+      <methodSignature>addFlag(string $column, mixed $meta): self</methodSignature>
+      <fullMethod>addFlag(string $column, mixed $meta): self</fullMethod>
+      <crap>4</crap>
+      <complexity>4</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Create</className>
+      <methodName>addColumn</methodName>
+      <methodSignature>addColumn(string $column, mixed $meta): self</methodSignature>
+      <fullMethod>addColumn(string $column, mixed $meta): self</fullMethod>
+      <crap>4</crap>
+      <complexity>4</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Create</className>
+      <methodName>addPermission</methodName>
+      <methodSignature>addPermission(string $column, mixed $meta): self</methodSignature>
+      <fullMethod>addPermission(string $column, mixed $meta): self</fullMethod>
+      <crap>4</crap>
+      <complexity>4</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Create</className>
+      <methodName>addStatus</methodName>
+      <methodSignature>addStatus(string $column, mixed $meta): self</methodSignature>
+      <fullMethod>addStatus(string $column, mixed $meta): self</fullMethod>
+      <crap>4</crap>
+      <complexity>4</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Create</className>
+      <methodName>addMatrix</methodName>
+      <methodSignature>addMatrix(string $column, mixed $meta): self</methodSignature>
+      <fullMethod>addMatrix(string $column, mixed $meta): self</fullMethod>
+      <crap>20</crap>
+      <complexity>4</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Create</className>
+      <methodName>addUi</methodName>
+      <methodSignature>addUi(string $column, mixed $meta): self</methodSignature>
+      <fullMethod>addUi(string $column, mixed $meta): self</fullMethod>
+      <crap>4</crap>
+      <complexity>4</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Create</className>
+      <methodName>addJson</methodName>
+      <methodSignature>addJson(string $column, mixed $meta): self</methodSignature>
+      <fullMethod>addJson(string $column, mixed $meta): self</fullMethod>
+      <crap>4</crap>
+      <complexity>4</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Create</className>
+      <methodName>migration</methodName>
+      <methodSignature>migration(): string</methodSignature>
+      <fullMethod>migration(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Create</className>
+      <methodName>primary</methodName>
+      <methodSignature>primary(): string</methodSignature>
+      <fullMethod>primary(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Create</className>
+      <methodName>timestamps</methodName>
+      <methodSignature>timestamps(): bool</methodSignature>
+      <fullMethod>timestamps(): bool</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Create</className>
+      <methodName>softDeletes</methodName>
+      <methodSignature>softDeletes(): bool</methodSignature>
+      <fullMethod>softDeletes(): bool</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Create</className>
+      <methodName>trash</methodName>
+      <methodSignature>trash(): array</methodSignature>
+      <fullMethod>trash(): array</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Create</className>
+      <methodName>ids</methodName>
+      <methodSignature>ids(): array</methodSignature>
+      <fullMethod>ids(): array</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Create</className>
+      <methodName>unique</methodName>
+      <methodSignature>unique(): array</methodSignature>
+      <fullMethod>unique(): array</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Create</className>
+      <methodName>dates</methodName>
+      <methodSignature>dates(): array</methodSignature>
+      <fullMethod>dates(): array</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Create</className>
+      <methodName>flags</methodName>
+      <methodSignature>flags(): array</methodSignature>
+      <fullMethod>flags(): array</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Create</className>
+      <methodName>columns</methodName>
+      <methodSignature>columns(): array</methodSignature>
+      <fullMethod>columns(): array</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Create</className>
+      <methodName>permissions</methodName>
+      <methodSignature>permissions(): array</methodSignature>
+      <fullMethod>permissions(): array</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Create</className>
+      <methodName>status</methodName>
+      <methodSignature>status(): array</methodSignature>
+      <fullMethod>status(): array</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Create</className>
+      <methodName>matrix</methodName>
+      <methodSignature>matrix(): array</methodSignature>
+      <fullMethod>matrix(): array</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Create</className>
+      <methodName>ui</methodName>
+      <methodSignature>ui(): array</methodSignature>
+      <fullMethod>ui(): array</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Create</className>
+      <methodName>json</methodName>
+      <methodSignature>json(): array</methodSignature>
+      <fullMethod>json(): array</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Create</className>
+      <methodName>jsonSerialize</methodName>
+      <methodSignature>jsonSerialize(): mixed</methodSignature>
+      <fullMethod>jsonSerialize(): mixed</fullMethod>
+      <crap>28.13</crap>
+      <complexity>28</complexity>
+      <coverage>94.44</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\CreateColumn</className>
+      <methodName>setOptions</methodName>
+      <methodSignature>setOptions(array $options): self</methodSignature>
+      <fullMethod>setOptions(array $options): self</fullMethod>
+      <crap>38.04</crap>
+      <complexity>33</complexity>
+      <coverage>83.33</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\CreateColumn</className>
+      <methodName>apply</methodName>
+      <methodSignature>apply(): self</methodSignature>
+      <fullMethod>apply(): self</fullMethod>
+      <crap>5.12</crap>
+      <complexity>5</complexity>
+      <coverage>83.33</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\CreateColumn</className>
+      <methodName>jsonSerialize</methodName>
+      <methodSignature>jsonSerialize(): mixed</methodSignature>
+      <fullMethod>jsonSerialize(): mixed</fullMethod>
+      <crap>3.14</crap>
+      <complexity>3</complexity>
+      <coverage>75</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\CreateColumn</className>
+      <methodName>column</methodName>
+      <methodSignature>column(): string</methodSignature>
+      <fullMethod>column(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\CreateColumn</className>
+      <methodName>comment</methodName>
+      <methodSignature>comment(): string</methodSignature>
+      <fullMethod>comment(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\CreateColumn</className>
+      <methodName>description</methodName>
+      <methodSignature>description(): string</methodSignature>
+      <fullMethod>description(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\CreateColumn</className>
+      <methodName>label</methodName>
+      <methodSignature>label(): string</methodSignature>
+      <fullMethod>label(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\CreateColumn</className>
+      <methodName>default</methodName>
+      <methodSignature>default(): mixed</methodSignature>
+      <fullMethod>default(): mixed</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\CreateColumn</className>
+      <methodName>hasDefault</methodName>
+      <methodSignature>hasDefault(): bool</methodSignature>
+      <fullMethod>hasDefault(): bool</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\CreateColumn</className>
+      <methodName>icon</methodName>
+      <methodSignature>icon(): string</methodSignature>
+      <fullMethod>icon(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\CreateColumn</className>
+      <methodName>index</methodName>
+      <methodSignature>index(): bool</methodSignature>
+      <fullMethod>index(): bool</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\CreateColumn</className>
+      <methodName>nullable</methodName>
+      <methodSignature>nullable(): bool</methodSignature>
+      <fullMethod>nullable(): bool</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\CreateColumn</className>
+      <methodName>readOnly</methodName>
+      <methodSignature>readOnly(): bool</methodSignature>
+      <fullMethod>readOnly(): bool</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\CreateColumn</className>
+      <methodName>precision</methodName>
+      <methodSignature>precision(): ?int</methodSignature>
+      <fullMethod>precision(): ?int</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\CreateColumn</className>
+      <methodName>scale</methodName>
+      <methodSignature>scale(): ?int</methodSignature>
+      <fullMethod>scale(): ?int</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\CreateColumn</className>
+      <methodName>unsigned</methodName>
+      <methodSignature>unsigned(): bool</methodSignature>
+      <fullMethod>unsigned(): bool</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\CreateId</className>
+      <methodName>setOptions</methodName>
+      <methodSignature>setOptions(array $options): self</methodSignature>
+      <fullMethod>setOptions(array $options): self</fullMethod>
+      <crap>14.57</crap>
+      <complexity>14</complexity>
+      <coverage>85.71</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\CreateId</className>
+      <methodName>column</methodName>
+      <methodSignature>column(): string</methodSignature>
+      <fullMethod>column(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\CreateId</className>
+      <methodName>default</methodName>
+      <methodSignature>default(): mixed</methodSignature>
+      <fullMethod>default(): mixed</fullMethod>
+      <crap>6</crap>
+      <complexity>2</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\CreateId</className>
+      <methodName>description</methodName>
+      <methodSignature>description(): string</methodSignature>
+      <fullMethod>description(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\CreateId</className>
+      <methodName>icon</methodName>
+      <methodSignature>icon(): string</methodSignature>
+      <fullMethod>icon(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\CreateId</className>
+      <methodName>label</methodName>
+      <methodSignature>label(): string</methodSignature>
+      <fullMethod>label(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\CreateId</className>
+      <methodName>nullable</methodName>
+      <methodSignature>nullable(): bool</methodSignature>
+      <fullMethod>nullable(): bool</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\CreateId</className>
+      <methodName>index</methodName>
+      <methodSignature>index(): bool</methodSignature>
+      <fullMethod>index(): bool</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\CreateId</className>
+      <methodName>readOnly</methodName>
+      <methodSignature>readOnly(): bool</methodSignature>
+      <fullMethod>readOnly(): bool</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\CreateId</className>
+      <methodName>unsigned</methodName>
+      <methodSignature>unsigned(): bool</methodSignature>
+      <fullMethod>unsigned(): bool</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\CreateId</className>
+      <methodName>foreign</methodName>
+      <methodSignature>foreign(): ?array</methodSignature>
+      <fullMethod>foreign(): ?array</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\CreateUnique</className>
+      <methodName>setOptions</methodName>
+      <methodSignature>setOptions(array $options): self</methodSignature>
+      <fullMethod>setOptions(array $options): self</fullMethod>
+      <crap>7</crap>
+      <complexity>7</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\CreateUnique</className>
+      <methodName>keys</methodName>
+      <methodSignature>keys(): array</methodSignature>
+      <fullMethod>keys(): array</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Filter</className>
+      <methodName>setOptions</methodName>
+      <methodSignature>setOptions(array $options): self</methodSignature>
+      <fullMethod>setOptions(array $options): self</fullMethod>
+      <crap>13</crap>
+      <complexity>13</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Filter</className>
+      <methodName>column</methodName>
+      <methodSignature>column(): string</methodSignature>
+      <fullMethod>column(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Filter</className>
+      <methodName>label</methodName>
+      <methodSignature>label(): string</methodSignature>
+      <fullMethod>label(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Filter</className>
+      <methodName>icon</methodName>
+      <methodSignature>icon(): string</methodSignature>
+      <fullMethod>icon(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Filter</className>
+      <methodName>nullable</methodName>
+      <methodSignature>nullable(): bool</methodSignature>
+      <fullMethod>nullable(): bool</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Filter</className>
+      <methodName>type</methodName>
+      <methodSignature>type(): string</methodSignature>
+      <fullMethod>type(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Filter</className>
+      <methodName>unsigned</methodName>
+      <methodSignature>unsigned(): bool</methodSignature>
+      <fullMethod>unsigned(): bool</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Filter</className>
+      <methodName>getParent</methodName>
+      <methodSignature>getParent(): ?Playground\Make\Configuration\Model\Filters</methodSignature>
+      <fullMethod>getParent(): ?Playground\Make\Configuration\Model\Filters</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Filter</className>
+      <methodName>setParent</methodName>
+      <methodSignature>setParent(Playground\Make\Configuration\Model\Filters $parent): self</methodSignature>
+      <fullMethod>setParent(Playground\Make\Configuration\Model\Filters $parent): self</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Filters</className>
+      <methodName>setOptions</methodName>
+      <methodSignature>setOptions(array $options): self</methodSignature>
+      <fullMethod>setOptions(array $options): self</fullMethod>
+      <crap>30</crap>
+      <complexity>30</complexity>
+      <coverage>97.62</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Filters</className>
+      <methodName>addId</methodName>
+      <methodSignature>addId(int $i, mixed $meta): self</methodSignature>
+      <fullMethod>addId(int $i, mixed $meta): self</fullMethod>
+      <crap>3</crap>
+      <complexity>3</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Filters</className>
+      <methodName>addDate</methodName>
+      <methodSignature>addDate(int $i, mixed $meta): self</methodSignature>
+      <fullMethod>addDate(int $i, mixed $meta): self</fullMethod>
+      <crap>3</crap>
+      <complexity>3</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Filters</className>
+      <methodName>addFlag</methodName>
+      <methodSignature>addFlag(int $i, mixed $meta): self</methodSignature>
+      <fullMethod>addFlag(int $i, mixed $meta): self</fullMethod>
+      <crap>3</crap>
+      <complexity>3</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Filters</className>
+      <methodName>handleTrash</methodName>
+      <methodSignature>handleTrash(mixed $meta): self</methodSignature>
+      <fullMethod>handleTrash(mixed $meta): self</fullMethod>
+      <crap>3</crap>
+      <complexity>3</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Filters</className>
+      <methodName>addColumn</methodName>
+      <methodSignature>addColumn(int $i, mixed $meta): self</methodSignature>
+      <fullMethod>addColumn(int $i, mixed $meta): self</fullMethod>
+      <crap>3</crap>
+      <complexity>3</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Filters</className>
+      <methodName>addMatrix</methodName>
+      <methodSignature>addMatrix(): self</methodSignature>
+      <fullMethod>addMatrix(): self</fullMethod>
+      <crap>6</crap>
+      <complexity>2</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Filters</className>
+      <methodName>addPermission</methodName>
+      <methodSignature>addPermission(int $i, mixed $meta): self</methodSignature>
+      <fullMethod>addPermission(int $i, mixed $meta): self</fullMethod>
+      <crap>3</crap>
+      <complexity>3</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Filters</className>
+      <methodName>addStatus</methodName>
+      <methodSignature>addStatus(int $i, mixed $meta): self</methodSignature>
+      <fullMethod>addStatus(int $i, mixed $meta): self</fullMethod>
+      <crap>3</crap>
+      <complexity>3</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Filters</className>
+      <methodName>addUi</methodName>
+      <methodSignature>addUi(int $i, mixed $meta): self</methodSignature>
+      <fullMethod>addUi(int $i, mixed $meta): self</fullMethod>
+      <crap>3</crap>
+      <complexity>3</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Filters</className>
+      <methodName>addJson</methodName>
+      <methodSignature>addJson(int $i, mixed $meta): self</methodSignature>
+      <fullMethod>addJson(int $i, mixed $meta): self</fullMethod>
+      <crap>3</crap>
+      <complexity>3</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Filters</className>
+      <methodName>builder</methodName>
+      <methodSignature>builder(): ?string</methodSignature>
+      <fullMethod>builder(): ?string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Filters</className>
+      <methodName>ids</methodName>
+      <methodSignature>ids(): array</methodSignature>
+      <fullMethod>ids(): array</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Filters</className>
+      <methodName>dates</methodName>
+      <methodSignature>dates(): array</methodSignature>
+      <fullMethod>dates(): array</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Filters</className>
+      <methodName>flags</methodName>
+      <methodSignature>flags(): array</methodSignature>
+      <fullMethod>flags(): array</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Filters</className>
+      <methodName>columns</methodName>
+      <methodSignature>columns(): array</methodSignature>
+      <fullMethod>columns(): array</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Filters</className>
+      <methodName>matrix</methodName>
+      <methodSignature>matrix(): array</methodSignature>
+      <fullMethod>matrix(): array</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Filters</className>
+      <methodName>trash</methodName>
+      <methodSignature>trash(): array</methodSignature>
+      <fullMethod>trash(): array</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Filters</className>
+      <methodName>permissions</methodName>
+      <methodSignature>permissions(): array</methodSignature>
+      <fullMethod>permissions(): array</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Filters</className>
+      <methodName>status</methodName>
+      <methodSignature>status(): array</methodSignature>
+      <fullMethod>status(): array</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Filters</className>
+      <methodName>ui</methodName>
+      <methodSignature>ui(): array</methodSignature>
+      <fullMethod>ui(): array</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Filters</className>
+      <methodName>json</methodName>
+      <methodSignature>json(): array</methodSignature>
+      <fullMethod>json(): array</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\HasMany</className>
+      <methodName>setOptions</methodName>
+      <methodSignature>setOptions(array $options): self</methodSignature>
+      <fullMethod>setOptions(array $options): self</fullMethod>
+      <crap>18</crap>
+      <complexity>18</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\HasMany</className>
+      <methodName>comment</methodName>
+      <methodSignature>comment(): string</methodSignature>
+      <fullMethod>comment(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\HasMany</className>
+      <methodName>accessor</methodName>
+      <methodSignature>accessor(): string</methodSignature>
+      <fullMethod>accessor(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\HasMany</className>
+      <methodName>related</methodName>
+      <methodSignature>related(): string</methodSignature>
+      <fullMethod>related(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\HasMany</className>
+      <methodName>foreignKey</methodName>
+      <methodSignature>foreignKey(): string</methodSignature>
+      <fullMethod>foreignKey(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\HasMany</className>
+      <methodName>localKey</methodName>
+      <methodSignature>localKey(): string</methodSignature>
+      <fullMethod>localKey(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\HasOne</className>
+      <methodName>setOptions</methodName>
+      <methodSignature>setOptions(array $options): self</methodSignature>
+      <fullMethod>setOptions(array $options): self</fullMethod>
+      <crap>18</crap>
+      <complexity>18</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\HasOne</className>
+      <methodName>comment</methodName>
+      <methodSignature>comment(): string</methodSignature>
+      <fullMethod>comment(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\HasOne</className>
+      <methodName>accessor</methodName>
+      <methodSignature>accessor(): string</methodSignature>
+      <fullMethod>accessor(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\HasOne</className>
+      <methodName>related</methodName>
+      <methodSignature>related(): string</methodSignature>
+      <fullMethod>related(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\HasOne</className>
+      <methodName>foreignKey</methodName>
+      <methodSignature>foreignKey(): string</methodSignature>
+      <fullMethod>foreignKey(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\HasOne</className>
+      <methodName>localKey</methodName>
+      <methodSignature>localKey(): string</methodSignature>
+      <fullMethod>localKey(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\ModelConfiguration</className>
+      <methodName>getParent</methodName>
+      <methodSignature>getParent(): ?Playground\Make\Configuration\Model</methodSignature>
+      <fullMethod>getParent(): ?Playground\Make\Configuration\Model</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\ModelConfiguration</className>
+      <methodName>setParent</methodName>
+      <methodSignature>setParent(Playground\Make\Configuration\Model $parent): self</methodSignature>
+      <fullMethod>setParent(Playground\Make\Configuration\Model $parent): self</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Sortable</className>
+      <methodName>setOptions</methodName>
+      <methodSignature>setOptions(array $options): self</methodSignature>
+      <fullMethod>setOptions(array $options): self</fullMethod>
+      <crap>10</crap>
+      <complexity>10</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Sortable</className>
+      <methodName>column</methodName>
+      <methodSignature>column(): string</methodSignature>
+      <fullMethod>column(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Sortable</className>
+      <methodName>label</methodName>
+      <methodSignature>label(): string</methodSignature>
+      <fullMethod>label(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Sortable</className>
+      <methodName>icon</methodName>
+      <methodSignature>icon(): string</methodSignature>
+      <fullMethod>icon(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration</package>
+      <className>Playground\Make\Configuration\PrimaryConfiguration</className>
+      <methodName>__construct</methodName>
+      <methodSignature>__construct(mixed $options, bool $skeleton)</methodSignature>
+      <fullMethod>__construct(mixed $options, bool $skeleton)</fullMethod>
+      <crap>5</crap>
+      <complexity>5</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration</package>
+      <className>Playground\Make\Configuration\PrimaryConfiguration</className>
+      <methodName>apply</methodName>
+      <methodSignature>apply(): self</methodSignature>
+      <fullMethod>apply(): self</fullMethod>
+      <crap>3</crap>
+      <complexity>3</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration</package>
+      <className>Playground\Make\Configuration\PrimaryConfiguration</className>
+      <methodName>jsonSerialize</methodName>
+      <methodSignature>jsonSerialize(): mixed</methodSignature>
+      <fullMethod>jsonSerialize(): mixed</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration</package>
+      <className>Playground\Make\Configuration\PrimaryConfiguration</className>
+      <methodName>toArray</methodName>
+      <methodSignature>toArray(): array</methodSignature>
+      <fullMethod>toArray(): array</fullMethod>
+      <crap>6</crap>
+      <complexity>2</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands</package>
+      <className>Playground\Make\Console\Commands\Command</className>
+      <methodName>parseClassInput</methodName>
+      <methodSignature>parseClassInput(mixed $input): string</methodSignature>
+      <fullMethod>parseClassInput(mixed $input): string</fullMethod>
+      <crap>12</crap>
+      <complexity>3</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands</package>
+      <className>Playground\Make\Console\Commands\Command</className>
+      <methodName>parseClassConfig</methodName>
+      <methodSignature>parseClassConfig(mixed $input): string</methodSignature>
+      <fullMethod>parseClassConfig(mixed $input): string</fullMethod>
+      <crap>12</crap>
+      <complexity>3</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands</package>
+      <className>Playground\Make\Console\Commands\Command</className>
+      <methodName>get_configuration</methodName>
+      <methodSignature>get_configuration(bool $reset): Playground\Make\Configuration\Contracts\PrimaryConfiguration</methodSignature>
+      <fullMethod>get_configuration(bool $reset): Playground\Make\Configuration\Contracts\PrimaryConfiguration</fullMethod>
+      <crap>12</crap>
+      <complexity>3</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands</package>
+      <className>Playground\Make\Console\Commands\Command</className>
+      <methodName>get_search</methodName>
+      <methodSignature>get_search(): array</methodSignature>
+      <fullMethod>get_search(): array</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands</package>
+      <className>Playground\Make\Console\Commands\Command</className>
+      <methodName>getType</methodName>
+      <methodSignature>getType(): string</methodSignature>
+      <fullMethod>getType(): string</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands</package>
+      <className>Playground\Make\Console\Commands\Command</className>
+      <methodName>buildClass</methodName>
+      <methodSignature>buildClass($name): string</methodSignature>
+      <fullMethod>buildClass($name): string</fullMethod>
+      <crap>20</crap>
+      <complexity>4</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands</package>
+      <className>Playground\Make\Console\Commands\Command</className>
+      <methodName>resolveStubPath</methodName>
+      <methodSignature>resolveStubPath($stub): string</methodSignature>
+      <fullMethod>resolveStubPath($stub): string</fullMethod>
+      <crap>56</crap>
+      <complexity>7</complexity>
+      <coverage>0</coverage>
+      <crapLoad>7</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands</package>
+      <className>Playground\Make\Console\Commands\Command</className>
+      <methodName>getDefaultNamespace</methodName>
+      <methodSignature>getDefaultNamespace($rootNamespace)</methodSignature>
+      <fullMethod>getDefaultNamespace($rootNamespace)</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands</package>
+      <className>Playground\Make\Console\Commands\Command</className>
+      <methodName>rootNamespace</methodName>
+      <methodSignature>rootNamespace()</methodSignature>
+      <fullMethod>rootNamespace()</fullMethod>
+      <crap>30</crap>
+      <complexity>5</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands</package>
+      <className>Playground\Make\Console\Commands\Command</className>
+      <methodName>getPath</methodName>
+      <methodSignature>getPath($name): string</methodSignature>
+      <fullMethod>getPath($name): string</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands</package>
+      <className>Playground\Make\Console\Commands\Command</className>
+      <methodName>search_and_replace</methodName>
+      <methodSignature>search_and_replace(string $stub): self</methodSignature>
+      <fullMethod>search_and_replace(string $stub): self</fullMethod>
+      <crap>6</crap>
+      <complexity>2</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands</package>
+      <className>Playground\Make\Console\Commands\Command</className>
+      <methodName>getArguments</methodName>
+      <methodSignature>getArguments(): array</methodSignature>
+      <fullMethod>getArguments(): array</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands</package>
+      <className>Playground\Make\Console\Commands\Command</className>
+      <methodName>getOptions</methodName>
+      <methodSignature>getOptions(): array</methodSignature>
+      <fullMethod>getOptions(): array</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands</package>
+      <className>Playground\Make\Console\Commands\Command</className>
+      <methodName>qualifyClass</methodName>
+      <methodSignature>qualifyClass($name): string</methodSignature>
+      <fullMethod>qualifyClass($name): string</fullMethod>
+      <crap>6</crap>
+      <complexity>2</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands\Concerns</package>
+      <className>Playground\Make\Console\Commands\Concerns\Files</className>
+      <methodName>readJsonFileAsArray</methodName>
+      <methodSignature>readJsonFileAsArray(string $file, bool $required, string $name): array</methodSignature>
+      <fullMethod>readJsonFileAsArray(string $file, bool $required, string $name): array</fullMethod>
+      <crap>72</crap>
+      <complexity>8</complexity>
+      <coverage>0</coverage>
+      <crapLoad>8</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands\Concerns</package>
+      <className>Playground\Make\Console\Commands\Concerns\InteractiveCommands</className>
+      <methodName>interactive</methodName>
+      <methodSignature>interactive(): string</methodSignature>
+      <fullMethod>interactive(): string</fullMethod>
+      <crap>42</crap>
+      <complexity>6</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands\Concerns</package>
+      <className>Playground\Make\Console\Commands\Concerns\InteractiveCommands</className>
+      <methodName>interactivePromptInput</methodName>
+      <methodSignature>interactivePromptInput(string $label, string $placeholder, string $default, string $hint): string</methodSignature>
+      <fullMethod>interactivePromptInput(string $label, string $placeholder, string $default, string $hint): string</fullMethod>
+      <crap>12</crap>
+      <complexity>3</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands\Concerns</package>
+      <className>Playground\Make\Console\Commands\Concerns\InteractiveCommands</className>
+      <methodName>interactivePromptForName</methodName>
+      <methodSignature>interactivePromptForName(): string</methodSignature>
+      <fullMethod>interactivePromptForName(): string</fullMethod>
+      <crap>702</crap>
+      <complexity>26</complexity>
+      <coverage>0</coverage>
+      <crapLoad>27</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands\Concerns</package>
+      <className>Playground\Make\Console\Commands\Concerns\InteractiveCommands</className>
+      <methodName>interactivePromptForNamespace</methodName>
+      <methodSignature>interactivePromptForNamespace(): string</methodSignature>
+      <fullMethod>interactivePromptForNamespace(): string</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands\Concerns</package>
+      <className>Playground\Make\Console\Commands\Concerns\InteractiveCommands</className>
+      <methodName>interactivePromptForOrganization</methodName>
+      <methodSignature>interactivePromptForOrganization(): string</methodSignature>
+      <fullMethod>interactivePromptForOrganization(): string</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands\Concerns</package>
+      <className>Playground\Make\Console\Commands\Concerns\InteractiveCommands</className>
+      <methodName>interactivePromptForPackage</methodName>
+      <methodSignature>interactivePromptForPackage(): string</methodSignature>
+      <fullMethod>interactivePromptForPackage(): string</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands\Concerns</package>
+      <className>Playground\Make\Console\Commands\Concerns\PackageConfiguration</className>
+      <methodName>getModelConfiguration</methodName>
+      <methodSignature>getModelConfiguration(): ?Playground\Make\Configuration\Model</methodSignature>
+      <fullMethod>getModelConfiguration(): ?Playground\Make\Configuration\Model</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands\Concerns</package>
+      <className>Playground\Make\Console\Commands\Concerns\PackageConfiguration</className>
+      <methodName>loadOptionsIntoConfiguration</methodName>
+      <methodSignature>loadOptionsIntoConfiguration(mixed $configuration): void</methodSignature>
+      <fullMethod>loadOptionsIntoConfiguration(mixed $configuration): void</fullMethod>
+      <crap>6</crap>
+      <complexity>2</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands\Concerns</package>
+      <className>Playground\Make\Console\Commands\Concerns\PackageConfiguration</className>
+      <methodName>applyConfigurationToSearch</methodName>
+      <methodSignature>applyConfigurationToSearch(bool $apply): array</methodSignature>
+      <fullMethod>applyConfigurationToSearch(bool $apply): array</fullMethod>
+      <crap>56</crap>
+      <complexity>7</complexity>
+      <coverage>0</coverage>
+      <crapLoad>7</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands\Concerns</package>
+      <className>Playground\Make\Console\Commands\Concerns\PackageConfiguration</className>
+      <methodName>getConfigurationByKeyAsString</methodName>
+      <methodSignature>getConfigurationByKeyAsString(string $key, string $default): string</methodSignature>
+      <fullMethod>getConfigurationByKeyAsString(string $key, string $default): string</fullMethod>
+      <crap>12</crap>
+      <complexity>3</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands\Concerns</package>
+      <className>Playground\Make\Console\Commands\Concerns\PackageConfiguration</className>
+      <methodName>getConfigurationByKey</methodName>
+      <methodSignature>getConfigurationByKey(string $key, mixed $default): mixed</methodSignature>
+      <fullMethod>getConfigurationByKey(string $key, mixed $default): mixed</fullMethod>
+      <crap>6</crap>
+      <complexity>2</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands\Concerns</package>
+      <className>Playground\Make\Console\Commands\Concerns\PackageConfiguration</className>
+      <methodName>isConfigurationByKeyEmpty</methodName>
+      <methodSignature>isConfigurationByKeyEmpty(string $key): bool</methodSignature>
+      <fullMethod>isConfigurationByKeyEmpty(string $key): bool</fullMethod>
+      <crap>6</crap>
+      <complexity>2</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands\Concerns</package>
+      <className>Playground\Make\Console\Commands\Concerns\PackageConfiguration</className>
+      <methodName>setConfigurationByKey</methodName>
+      <methodSignature>setConfigurationByKey(string $key, mixed $value, bool $addable): void</methodSignature>
+      <fullMethod>setConfigurationByKey(string $key, mixed $value, bool $addable): void</fullMethod>
+      <crap>42</crap>
+      <complexity>6</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands\Concerns</package>
+      <className>Playground\Make\Console\Commands\Concerns\PackageConfiguration</className>
+      <methodName>getSearchByKey</methodName>
+      <methodSignature>getSearchByKey(string $key, string $default): string</methodSignature>
+      <fullMethod>getSearchByKey(string $key, string $default): string</fullMethod>
+      <crap>12</crap>
+      <complexity>3</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands\Concerns</package>
+      <className>Playground\Make\Console\Commands\Concerns\PackageConfiguration</className>
+      <methodName>setSearchByKey</methodName>
+      <methodSignature>setSearchByKey(string $key, mixed $value): void</methodSignature>
+      <fullMethod>setSearchByKey(string $key, mixed $value): void</fullMethod>
+      <crap>6</crap>
+      <complexity>2</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands\Concerns</package>
+      <className>Playground\Make\Console\Commands\Concerns\PackageConfiguration</className>
+      <methodName>reset</methodName>
+      <methodSignature>reset(): void</methodSignature>
+      <fullMethod>reset(): void</fullMethod>
+      <crap>12</crap>
+      <complexity>3</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands\Concerns</package>
+      <className>Playground\Make\Console\Commands\Concerns\PackageConfiguration</className>
+      <methodName>resetName</methodName>
+      <methodSignature>resetName(): void</methodSignature>
+      <fullMethod>resetName(): void</fullMethod>
+      <crap>12</crap>
+      <complexity>3</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands\Concerns</package>
+      <className>Playground\Make\Console\Commands\Concerns\PackageConfiguration</className>
+      <methodName>resetNamespace</methodName>
+      <methodSignature>resetNamespace(): void</methodSignature>
+      <fullMethod>resetNamespace(): void</fullMethod>
+      <crap>506</crap>
+      <complexity>22</complexity>
+      <coverage>0</coverage>
+      <crapLoad>22</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands\Concerns</package>
+      <className>Playground\Make\Console\Commands\Concerns\PackageConfiguration</className>
+      <methodName>resetFile</methodName>
+      <methodSignature>resetFile(): void</methodSignature>
+      <fullMethod>resetFile(): void</fullMethod>
+      <crap>56</crap>
+      <complexity>7</complexity>
+      <coverage>0</coverage>
+      <crapLoad>7</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands\Concerns</package>
+      <className>Playground\Make\Console\Commands\Concerns\PackageConfiguration</className>
+      <methodName>getModelFile</methodName>
+      <methodSignature>getModelFile(): ?string</methodSignature>
+      <fullMethod>getModelFile(): ?string</fullMethod>
+      <crap>30</crap>
+      <complexity>5</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands\Concerns</package>
+      <className>Playground\Make\Console\Commands\Concerns\PackageConfiguration</className>
+      <methodName>initModel</methodName>
+      <methodSignature>initModel(bool $withSkeleton, bool $reload): void</methodSignature>
+      <fullMethod>initModel(bool $withSkeleton, bool $reload): void</fullMethod>
+      <crap>72</crap>
+      <complexity>8</complexity>
+      <coverage>0</coverage>
+      <crapLoad>8</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands\Concerns</package>
+      <className>Playground\Make\Console\Commands\Concerns\PackageConfiguration</className>
+      <methodName>resetModelFile</methodName>
+      <methodSignature>resetModelFile(): void</methodSignature>
+      <fullMethod>resetModelFile(): void</fullMethod>
+      <crap>756</crap>
+      <complexity>27</complexity>
+      <coverage>0</coverage>
+      <crapLoad>28</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands\Concerns</package>
+      <className>Playground\Make\Console\Commands\Concerns\PackageConfiguration</className>
+      <methodName>resetOptions</methodName>
+      <methodSignature>resetOptions(): void</methodSignature>
+      <fullMethod>resetOptions(): void</fullMethod>
+      <crap>1056</crap>
+      <complexity>32</complexity>
+      <coverage>0</coverage>
+      <crapLoad>33</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands\Concerns</package>
+      <className>Playground\Make\Console\Commands\Concerns\PackageConfiguration</className>
+      <methodName>prepareOptions</methodName>
+      <methodSignature>prepareOptions(): void</methodSignature>
+      <fullMethod>prepareOptions(): void</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands\Concerns</package>
+      <className>Playground\Make\Console\Commands\Concerns\PackageConfiguration</className>
+      <methodName>getConfigurationType</methodName>
+      <methodSignature>getConfigurationType(): string</methodSignature>
+      <fullMethod>getConfigurationType(): string</fullMethod>
+      <crap>20</crap>
+      <complexity>4</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands\Concerns</package>
+      <className>Playground\Make\Console\Commands\Concerns\PackageConfiguration</className>
+      <methodName>getConfigurationFilename</methodName>
+      <methodSignature>getConfigurationFilename(): string</methodSignature>
+      <fullMethod>getConfigurationFilename(): string</fullMethod>
+      <crap>6</crap>
+      <complexity>2</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands\Concerns</package>
+      <className>Playground\Make\Console\Commands\Concerns\PackageConfiguration</className>
+      <methodName>getPackageFolder</methodName>
+      <methodSignature>getPackageFolder(): string</methodSignature>
+      <fullMethod>getPackageFolder(): string</fullMethod>
+      <crap>56</crap>
+      <complexity>7</complexity>
+      <coverage>0</coverage>
+      <crapLoad>7</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands\Concerns</package>
+      <className>Playground\Make\Console\Commands\Concerns\PackageConfiguration</className>
+      <methodName>getResourcePackageFolder</methodName>
+      <methodSignature>getResourcePackageFolder(): string</methodSignature>
+      <fullMethod>getResourcePackageFolder(): string</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands\Concerns</package>
+      <className>Playground\Make\Console\Commands\Concerns\PackageConfiguration</className>
+      <methodName>preloadConfiguration</methodName>
+      <methodSignature>preloadConfiguration(): ?array</methodSignature>
+      <fullMethod>preloadConfiguration(): ?array</fullMethod>
+      <crap>20</crap>
+      <complexity>4</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands\Concerns</package>
+      <className>Playground\Make\Console\Commands\Concerns\PackageConfiguration</className>
+      <methodName>saveConfiguration</methodName>
+      <methodSignature>saveConfiguration(): Playground\Make\Configuration\Contracts\PrimaryConfiguration</methodSignature>
+      <fullMethod>saveConfiguration(): Playground\Make\Configuration\Contracts\PrimaryConfiguration</fullMethod>
+      <crap>6</crap>
+      <complexity>2</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands\Concerns</package>
+      <className>Playground\Make\Console\Commands\Concerns\PackageConfiguration</className>
+      <methodName>getDestinationPath</methodName>
+      <methodSignature>getDestinationPath(): string</methodSignature>
+      <fullMethod>getDestinationPath(): string</fullMethod>
+      <crap>6</crap>
+      <complexity>2</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands\Concerns</package>
+      <className>Playground\Make\Console\Commands\Concerns\PackageConfiguration</className>
+      <methodName>folder</methodName>
+      <methodSignature>folder(): string</methodSignature>
+      <fullMethod>folder(): string</fullMethod>
+      <crap>6</crap>
+      <complexity>2</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands</package>
+      <className>Playground\Make\Console\Commands\GeneratorCommand</className>
+      <methodName>handle</methodName>
+      <methodSignature>handle()</methodSignature>
+      <fullMethod>handle()</fullMethod>
+      <crap>210</crap>
+      <complexity>14</complexity>
+      <coverage>0</coverage>
+      <crapLoad>14</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands</package>
+      <className>Playground\Make\Console\Commands\GeneratorCommand</className>
+      <methodName>finish</methodName>
+      <methodSignature>finish(): ?bool</methodSignature>
+      <fullMethod>finish(): ?bool</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands</package>
+      <className>Playground\Make\Console\Commands\GeneratorCommand</className>
+      <methodName>handleName</methodName>
+      <methodSignature>handleName(string $name): string</methodSignature>
+      <fullMethod>handleName(string $name): string</fullMethod>
+      <crap>12</crap>
+      <complexity>3</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands</package>
+      <className>Playground\Make\Console\Commands\GeneratorCommand</className>
+      <methodName>handleTestCreation</methodName>
+      <methodSignature>handleTestCreation($path)</methodSignature>
+      <fullMethod>handleTestCreation($path)</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands</package>
+      <className>Playground\Make\Console\Commands\GeneratorCommand</className>
+      <methodName>qualifyModel</methodName>
+      <methodSignature>qualifyModel(string $model)</methodSignature>
+      <fullMethod>qualifyModel(string $model)</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands</package>
+      <className>Playground\Make\Console\Commands\GeneratorCommand</className>
+      <methodName>getNameInput</methodName>
+      <methodSignature>getNameInput(): ?string</methodSignature>
+      <fullMethod>getNameInput(): ?string</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
     <method>
       <package>Playground\Make</package>
       <className>Playground\Make\ServiceProvider</className>
