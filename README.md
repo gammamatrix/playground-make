@@ -8,7 +8,7 @@ The Playground Make Tool for building out [Laravel](https://laravel.com/docs/11.
 
 ## Installation
 
-**NOTE:** This is a development took and not meant for normal installations.
+**NOTE:** This is a development tool and not meant for normal installations.
 
 ## `artisan about`
 
