@@ -1,0 +1,69 @@
+{
+    "name": "gammamatrix/playground-make",
+    "description": "Playground: This package provides the base playground:make command.",
+    "keywords": [
+        "gammamatrix",
+        "laravel",
+        "playground",
+        "playground:make"
+    ],
+    "homepage": "https://github.com/gammamatrix/playground-make",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jeremy Postlethwaite",
+            "email": "jeremy.postlethwaite@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "gammamatrix/playground": "dev-develop|dev-master|dev-feature/*|^73.0@dev|^73.0"
+    },
+    "require-dev": {
+        "gammamatrix/playground-test": "dev-develop|dev-master|dev-feature/*|^73.0@dev|^73.0"
+    },
+    "suggest": {
+        "gammamatrix/playground-make-controller": "Provides the playground:make:controller command.",
+        "gammamatrix/playground-make-model": "Provides the playground:make:model command.",
+        "gammamatrix/playground-make-package": "Provides the playground:make:package command.",
+        "gammamatrix/playground-make-template": "Provides the playground:make:template command.",
+        "gammamatrix/playground-make-test": "Provides the playground:make:test command."
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Playground\\Make\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\Feature\\Playground\\Make\\": "tests/Feature/",
+            "Tests\\Unit\\Playground\\Make\\": "tests/Unit/"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "preferred-install": {
+            "gammamatrix/*": "source",
+            "*": "dist"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-develop": "73.x-dev",
+            "dev-master": "73.x-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Playground\\Make\\ServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/testbench package:test",
+        "format": "vendor/bin/php-cs-fixer fix",
+        "analyse": "vendor/bin/phpstan analyse --verbose --debug --level max"
+    }
+}
