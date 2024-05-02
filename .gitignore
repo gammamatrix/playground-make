@@ -63,6 +63,8 @@ public/docs
 
 public/tests
 
+phpstan.neon
+
 phpunit.xml
 
 .phpunit.cache
