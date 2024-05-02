@@ -1,4 +1,4 @@
-# Playground Make
+# Playground: Make
 
 [![Playground CI Workflow](https://github.com/gammamatrix/playground-make/actions/workflows/ci.yml/badge.svg?branch=develop)](https://raw.githubusercontent.com/gammamatrix/playground-make/testing/develop/testdox.txt)
 [![Test Coverage](https://raw.githubusercontent.com/gammamatrix/playground-make/testing/develop/coverage.svg)](tests)
