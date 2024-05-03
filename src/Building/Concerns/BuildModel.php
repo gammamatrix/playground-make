@@ -79,8 +79,7 @@ trait BuildModel
         $this->searches['user'] = $dummyUser;
         $this->searches['$user'] = '$'.Str::camel($dummyUser);
 
-        // This could be title like on CMS
-        $this->searches['model_attribute'] = 'label';
+        $this->searches['model_attribute'] = 'title';
         $this->searches['model_label'] = $this->searches['modelLabel'];
         $this->searches['model_label_plural'] = Str::of($this->searches['modelLabel'])->plural()->toString();
 
