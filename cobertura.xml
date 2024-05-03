@@ -1,10 +1,314 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.53744025491237" branch-rate="0" lines-covered="1012" lines-valid="1883" branches-covered="0" branches-valid="0" complexity="945" version="0.4" timestamp="1714679021">
+<coverage line-rate="0.50348258706468" branch-rate="0" lines-covered="1012" lines-valid="2010" branches-covered="0" branches-valid="0" complexity="997" version="0.4" timestamp="1714694727">
   <sources>
     <source>/app/src</source>
   </sources>
   <packages>
+    <package name="Building/Concerns/BuildImplements.php" line-rate="0" branch-rate="0" complexity="11">
+      <classes>
+        <class name="Playground\Make\Building\Concerns\BuildImplements" filename="Building/Concerns/BuildImplements.php" line-rate="0" branch-rate="0" complexity="11">
+          <methods>
+            <method name="buildClass_implements" signature="" line-rate="0" branch-rate="0" complexity="11">
+              <lines>
+                <line number="16" hits="0"/>
+                <line number="17" hits="0"/>
+                <line number="20" hits="0"/>
+                <line number="21" hits="0"/>
+                <line number="23" hits="0"/>
+                <line number="24" hits="0"/>
+                <line number="25" hits="0"/>
+                <line number="26" hits="0"/>
+                <line number="27" hits="0"/>
+                <line number="28" hits="0"/>
+                <line number="29" hits="0"/>
+                <line number="30" hits="0"/>
+                <line number="31" hits="0"/>
+                <line number="32" hits="0"/>
+                <line number="33" hits="0"/>
+                <line number="34" hits="0"/>
+                <line number="36" hits="0"/>
+                <line number="38" hits="0"/>
+                <line number="47" hits="0"/>
+                <line number="52" hits="0"/>
+                <line number="53" hits="0"/>
+                <line number="54" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="16" hits="0"/>
+            <line number="17" hits="0"/>
+            <line number="20" hits="0"/>
+            <line number="21" hits="0"/>
+            <line number="23" hits="0"/>
+            <line number="24" hits="0"/>
+            <line number="25" hits="0"/>
+            <line number="26" hits="0"/>
+            <line number="27" hits="0"/>
+            <line number="28" hits="0"/>
+            <line number="29" hits="0"/>
+            <line number="30" hits="0"/>
+            <line number="31" hits="0"/>
+            <line number="32" hits="0"/>
+            <line number="33" hits="0"/>
+            <line number="34" hits="0"/>
+            <line number="36" hits="0"/>
+            <line number="38" hits="0"/>
+            <line number="47" hits="0"/>
+            <line number="52" hits="0"/>
+            <line number="53" hits="0"/>
+            <line number="54" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Building/Concerns/BuildModel.php" line-rate="0" branch-rate="0" complexity="28">
+      <classes>
+        <class name="Playground\Make\Building\Concerns\BuildModel" filename="Building/Concerns/BuildModel.php" line-rate="0" branch-rate="0" complexity="28">
+          <methods>
+            <method name="buildClass_model" signature="string $name" line-rate="0" branch-rate="0" complexity="23">
+              <lines>
+                <line number="19" hits="0"/>
+                <line number="20" hits="0"/>
+                <line number="21" hits="0"/>
+                <line number="22" hits="0"/>
+                <line number="23" hits="0"/>
+                <line number="24" hits="0"/>
+                <line number="25" hits="0"/>
+                <line number="26" hits="0"/>
+                <line number="38" hits="0"/>
+                <line number="39" hits="0"/>
+                <line number="40" hits="0"/>
+                <line number="43" hits="0"/>
+                <line number="44" hits="0"/>
+                <line number="47" hits="0"/>
+                <line number="48" hits="0"/>
+                <line number="51" hits="0"/>
+                <line number="53" hits="0"/>
+                <line number="54" hits="0"/>
+                <line number="56" hits="0"/>
+                <line number="59" hits="0"/>
+                <line number="61" hits="0"/>
+                <line number="62" hits="0"/>
+                <line number="64" hits="0"/>
+                <line number="66" hits="0"/>
+                <line number="67" hits="0"/>
+                <line number="69" hits="0"/>
+                <line number="70" hits="0"/>
+                <line number="71" hits="0"/>
+                <line number="72" hits="0"/>
+                <line number="73" hits="0"/>
+                <line number="74" hits="0"/>
+                <line number="76" hits="0"/>
+                <line number="78" hits="0"/>
+                <line number="79" hits="0"/>
+                <line number="80" hits="0"/>
+                <line number="83" hits="0"/>
+                <line number="84" hits="0"/>
+                <line number="85" hits="0"/>
+                <line number="87" hits="0"/>
+                <line number="88" hits="0"/>
+                <line number="91" hits="0"/>
+                <line number="92" hits="0"/>
+                <line number="95" hits="0"/>
+                <line number="96" hits="0"/>
+                <line number="99" hits="0"/>
+                <line number="100" hits="0"/>
+                <line number="101" hits="0"/>
+                <line number="102" hits="0"/>
+                <line number="104" hits="0"/>
+                <line number="105" hits="0"/>
+                <line number="111" hits="0"/>
+                <line number="112" hits="0"/>
+                <line number="113" hits="0"/>
+                <line number="115" hits="0"/>
+                <line number="116" hits="0"/>
+                <line number="118" hits="0"/>
+              </lines>
+            </method>
+            <method name="buildClass_model_meta" signature="string $column, Playground\Make\Configuration\Model $model" line-rate="0" branch-rate="0" complexity="5">
+              <lines>
+                <line number="136" hits="0"/>
+                <line number="137" hits="0"/>
+                <line number="140" hits="0"/>
+                <line number="141" hits="0"/>
+                <line number="142" hits="0"/>
+                <line number="143" hits="0"/>
+                <line number="144" hits="0"/>
+                <line number="145" hits="0"/>
+                <line number="146" hits="0"/>
+                <line number="147" hits="0"/>
+                <line number="149" hits="0"/>
+                <line number="150" hits="0"/>
+                <line number="152" hits="0"/>
+                <line number="153" hits="0"/>
+                <line number="154" hits="0"/>
+                <line number="156" hits="0"/>
+                <line number="160" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="19" hits="0"/>
+            <line number="20" hits="0"/>
+            <line number="21" hits="0"/>
+            <line number="22" hits="0"/>
+            <line number="23" hits="0"/>
+            <line number="24" hits="0"/>
+            <line number="25" hits="0"/>
+            <line number="26" hits="0"/>
+            <line number="38" hits="0"/>
+            <line number="39" hits="0"/>
+            <line number="40" hits="0"/>
+            <line number="43" hits="0"/>
+            <line number="44" hits="0"/>
+            <line number="47" hits="0"/>
+            <line number="48" hits="0"/>
+            <line number="51" hits="0"/>
+            <line number="53" hits="0"/>
+            <line number="54" hits="0"/>
+            <line number="56" hits="0"/>
+            <line number="59" hits="0"/>
+            <line number="61" hits="0"/>
+            <line number="62" hits="0"/>
+            <line number="64" hits="0"/>
+            <line number="66" hits="0"/>
+            <line number="67" hits="0"/>
+            <line number="69" hits="0"/>
+            <line number="70" hits="0"/>
+            <line number="71" hits="0"/>
+            <line number="72" hits="0"/>
+            <line number="73" hits="0"/>
+            <line number="74" hits="0"/>
+            <line number="76" hits="0"/>
+            <line number="78" hits="0"/>
+            <line number="79" hits="0"/>
+            <line number="80" hits="0"/>
+            <line number="83" hits="0"/>
+            <line number="84" hits="0"/>
+            <line number="85" hits="0"/>
+            <line number="87" hits="0"/>
+            <line number="88" hits="0"/>
+            <line number="91" hits="0"/>
+            <line number="92" hits="0"/>
+            <line number="95" hits="0"/>
+            <line number="96" hits="0"/>
+            <line number="99" hits="0"/>
+            <line number="100" hits="0"/>
+            <line number="101" hits="0"/>
+            <line number="102" hits="0"/>
+            <line number="104" hits="0"/>
+            <line number="105" hits="0"/>
+            <line number="111" hits="0"/>
+            <line number="112" hits="0"/>
+            <line number="113" hits="0"/>
+            <line number="115" hits="0"/>
+            <line number="116" hits="0"/>
+            <line number="118" hits="0"/>
+            <line number="136" hits="0"/>
+            <line number="137" hits="0"/>
+            <line number="140" hits="0"/>
+            <line number="141" hits="0"/>
+            <line number="142" hits="0"/>
+            <line number="143" hits="0"/>
+            <line number="144" hits="0"/>
+            <line number="145" hits="0"/>
+            <line number="146" hits="0"/>
+            <line number="147" hits="0"/>
+            <line number="149" hits="0"/>
+            <line number="150" hits="0"/>
+            <line number="152" hits="0"/>
+            <line number="153" hits="0"/>
+            <line number="154" hits="0"/>
+            <line number="156" hits="0"/>
+            <line number="160" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Building/Concerns/BuildUses.php" line-rate="0" branch-rate="0" complexity="13">
+      <classes>
+        <class name="Playground\Make\Building\Concerns\BuildUses" filename="Building/Concerns/BuildUses.php" line-rate="0" branch-rate="0" complexity="13">
+          <methods>
+            <method name="buildClass_uses" signature="string $name" line-rate="0" branch-rate="0" complexity="9">
+              <lines>
+                <line number="16" hits="0"/>
+                <line number="17" hits="0"/>
+                <line number="20" hits="0"/>
+                <line number="21" hits="0"/>
+                <line number="22" hits="0"/>
+                <line number="23" hits="0"/>
+                <line number="25" hits="0"/>
+                <line number="27" hits="0"/>
+                <line number="28" hits="0"/>
+                <line number="31" hits="0"/>
+                <line number="32" hits="0"/>
+                <line number="33" hits="0"/>
+                <line number="34" hits="0"/>
+                <line number="35" hits="0"/>
+                <line number="36" hits="0"/>
+                <line number="37" hits="0"/>
+                <line number="38" hits="0"/>
+                <line number="41" hits="0"/>
+                <line number="42" hits="0"/>
+                <line number="43" hits="0"/>
+                <line number="44" hits="0"/>
+                <line number="45" hits="0"/>
+                <line number="46" hits="0"/>
+                <line number="50" hits="0"/>
+                <line number="51" hits="0"/>
+                <line number="53" hits="0"/>
+                <line number="54" hits="0"/>
+              </lines>
+            </method>
+            <method name="buildClass_uses_add" signature="string $use, string $use_class" line-rate="0" branch-rate="0" complexity="4">
+              <lines>
+                <line number="60" hits="0"/>
+                <line number="61" hits="0"/>
+                <line number="62" hits="0"/>
+                <line number="65" hits="0"/>
+                <line number="66" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="16" hits="0"/>
+            <line number="17" hits="0"/>
+            <line number="20" hits="0"/>
+            <line number="21" hits="0"/>
+            <line number="22" hits="0"/>
+            <line number="23" hits="0"/>
+            <line number="25" hits="0"/>
+            <line number="27" hits="0"/>
+            <line number="28" hits="0"/>
+            <line number="31" hits="0"/>
+            <line number="32" hits="0"/>
+            <line number="33" hits="0"/>
+            <line number="34" hits="0"/>
+            <line number="35" hits="0"/>
+            <line number="36" hits="0"/>
+            <line number="37" hits="0"/>
+            <line number="38" hits="0"/>
+            <line number="41" hits="0"/>
+            <line number="42" hits="0"/>
+            <line number="43" hits="0"/>
+            <line number="44" hits="0"/>
+            <line number="45" hits="0"/>
+            <line number="46" hits="0"/>
+            <line number="50" hits="0"/>
+            <line number="51" hits="0"/>
+            <line number="53" hits="0"/>
+            <line number="54" hits="0"/>
+            <line number="60" hits="0"/>
+            <line number="61" hits="0"/>
+            <line number="62" hits="0"/>
+            <line number="65" hits="0"/>
+            <line number="66" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
     <package name="Configuration/Concerns/Classes.php" line-rate="0.069767441860465" branch-rate="0" complexity="34">
       <classes>
         <class name="Playground\Make\Configuration\Concerns\Classes" filename="Configuration/Concerns/Classes.php" line-rate="0.069767441860465" branch-rate="0" complexity="34">

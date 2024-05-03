@@ -1,16 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2024-05-02 19:43:41</timestamp>
+  <timestamp>2024-05-03 00:05:27</timestamp>
   <stats>
     <name>Method Crap Stats</name>
-    <methodCount>244</methodCount>
-    <crapMethodCount>14</crapMethodCount>
-    <crapLoad>205</crapLoad>
-    <totalCrap>5244.26</totalCrap>
-    <crapMethodPercent>5.74</crapMethodPercent>
+    <methodCount>249</methodCount>
+    <crapMethodCount>17</crapMethodCount>
+    <crapLoad>249</crapLoad>
+    <totalCrap>6068.26</totalCrap>
+    <crapMethodPercent>6.83</crapMethodPercent>
   </stats>
   <methods>
+    <method>
+      <package>Playground\Make\Building\Concerns</package>
+      <className>Playground\Make\Building\Concerns\BuildImplements</className>
+      <methodName>buildClass_implements</methodName>
+      <methodSignature>buildClass_implements(): void</methodSignature>
+      <fullMethod>buildClass_implements(): void</fullMethod>
+      <crap>132</crap>
+      <complexity>11</complexity>
+      <coverage>0</coverage>
+      <crapLoad>11</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Building\Concerns</package>
+      <className>Playground\Make\Building\Concerns\BuildModel</className>
+      <methodName>buildClass_model</methodName>
+      <methodSignature>buildClass_model(string $name): void</methodSignature>
+      <fullMethod>buildClass_model(string $name): void</fullMethod>
+      <crap>552</crap>
+      <complexity>23</complexity>
+      <coverage>0</coverage>
+      <crapLoad>23</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Building\Concerns</package>
+      <className>Playground\Make\Building\Concerns\BuildModel</className>
+      <methodName>buildClass_model_meta</methodName>
+      <methodSignature>buildClass_model_meta(string $column, Playground\Make\Configuration\Model $model): ?array</methodSignature>
+      <fullMethod>buildClass_model_meta(string $column, Playground\Make\Configuration\Model $model): ?array</fullMethod>
+      <crap>30</crap>
+      <complexity>5</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Building\Concerns</package>
+      <className>Playground\Make\Building\Concerns\BuildUses</className>
+      <methodName>buildClass_uses</methodName>
+      <methodSignature>buildClass_uses(string $name): void</methodSignature>
+      <fullMethod>buildClass_uses(string $name): void</fullMethod>
+      <crap>90</crap>
+      <complexity>9</complexity>
+      <coverage>0</coverage>
+      <crapLoad>9</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Building\Concerns</package>
+      <className>Playground\Make\Building\Concerns\BuildUses</className>
+      <methodName>buildClass_uses_add</methodName>
+      <methodSignature>buildClass_uses_add(string $use, string $use_class): void</methodSignature>
+      <fullMethod>buildClass_uses_add(string $use, string $use_class): void</fullMethod>
+      <crap>20</crap>
+      <complexity>4</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
     <method>
       <package>Playground\Make\Configuration\Concerns</package>
       <className>Playground\Make\Configuration\Concerns\Classes</className>
