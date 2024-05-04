@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2024-05-03 04:44:53</timestamp>
+  <timestamp>2024-05-04 18:37:56</timestamp>
   <stats>
     <name>Method Crap Stats</name>
-    <methodCount>249</methodCount>
+    <methodCount>250</methodCount>
     <crapMethodCount>17</crapMethodCount>
-    <crapLoad>249</crapLoad>
-    <totalCrap>6068.26</totalCrap>
-    <crapMethodPercent>6.83</crapMethodPercent>
+    <crapLoad>254</crapLoad>
+    <totalCrap>6168.26</totalCrap>
+    <crapMethodPercent>6.8</crapMethodPercent>
   </stats>
   <methods>
     <method>
@@ -2181,6 +2181,17 @@
     <method>
       <package>Playground\Make\Console\Commands</package>
       <className>Playground\Make\Console\Commands\Command</className>
+      <methodName>getPackageDirectoryFromCommand</methodName>
+      <methodSignature>getPackageDirectoryFromCommand(): string</methodSignature>
+      <fullMethod>getPackageDirectoryFromCommand(): string</fullMethod>
+      <crap>6</crap>
+      <complexity>2</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands</package>
+      <className>Playground\Make\Console\Commands\Command</className>
       <methodName>resolveStubPath</methodName>
       <methodSignature>resolveStubPath($stub): string</methodSignature>
       <fullMethod>resolveStubPath($stub): string</fullMethod>
@@ -2272,10 +2283,32 @@
       <methodName>readJsonFileAsArray</methodName>
       <methodSignature>readJsonFileAsArray(string $file, bool $required, string $name): array</methodSignature>
       <fullMethod>readJsonFileAsArray(string $file, bool $required, string $name): array</fullMethod>
-      <crap>72</crap>
-      <complexity>8</complexity>
+      <crap>90</crap>
+      <complexity>9</complexity>
       <coverage>0</coverage>
-      <crapLoad>8</crapLoad>
+      <crapLoad>9</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands\Concerns</package>
+      <className>Playground\Make\Console\Commands\Concerns\Files</className>
+      <methodName>getDestinationPath</methodName>
+      <methodSignature>getDestinationPath(): string</methodSignature>
+      <fullMethod>getDestinationPath(): string</fullMethod>
+      <crap>6</crap>
+      <complexity>2</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands\Concerns</package>
+      <className>Playground\Make\Console\Commands\Concerns\Files</className>
+      <methodName>folder</methodName>
+      <methodSignature>folder(): string</methodSignature>
+      <fullMethod>folder(): string</fullMethod>
+      <crap>6</crap>
+      <complexity>2</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
     </method>
     <method>
       <package>Playground\Make\Console\Commands\Concerns</package>
@@ -2481,10 +2514,10 @@
       <methodName>resetFile</methodName>
       <methodSignature>resetFile(): void</methodSignature>
       <fullMethod>resetFile(): void</fullMethod>
-      <crap>56</crap>
-      <complexity>7</complexity>
+      <crap>132</crap>
+      <complexity>11</complexity>
       <coverage>0</coverage>
-      <crapLoad>7</crapLoad>
+      <crapLoad>11</crapLoad>
     </method>
     <method>
       <package>Playground\Make\Console\Commands\Concerns</package>
@@ -2608,28 +2641,6 @@
       <crapLoad>0</crapLoad>
     </method>
     <method>
-      <package>Playground\Make\Console\Commands\Concerns</package>
-      <className>Playground\Make\Console\Commands\Concerns\PackageConfiguration</className>
-      <methodName>getDestinationPath</methodName>
-      <methodSignature>getDestinationPath(): string</methodSignature>
-      <fullMethod>getDestinationPath(): string</fullMethod>
-      <crap>6</crap>
-      <complexity>2</complexity>
-      <coverage>0</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Playground\Make\Console\Commands\Concerns</package>
-      <className>Playground\Make\Console\Commands\Concerns\PackageConfiguration</className>
-      <methodName>folder</methodName>
-      <methodSignature>folder(): string</methodSignature>
-      <fullMethod>folder(): string</fullMethod>
-      <crap>6</crap>
-      <complexity>2</complexity>
-      <coverage>0</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
       <package>Playground\Make\Console\Commands</package>
       <className>Playground\Make\Console\Commands\GeneratorCommand</className>
       <methodName>handle</methodName>
@@ -2701,8 +2712,8 @@
       <methodName>boot</methodName>
       <methodSignature>boot()</methodSignature>
       <fullMethod>boot()</fullMethod>
-      <crap>7</crap>
-      <complexity>7</complexity>
+      <crap>6</crap>
+      <complexity>6</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
@@ -2712,9 +2723,9 @@
       <methodName>boot_commands</methodName>
       <methodSignature>boot_commands(): array</methodSignature>
       <fullMethod>boot_commands(): array</fullMethod>
-      <crap>1</crap>
+      <crap>2</crap>
       <complexity>1</complexity>
-      <coverage>100</coverage>
+      <coverage>0</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
