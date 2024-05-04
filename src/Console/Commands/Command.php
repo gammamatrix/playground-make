@@ -13,10 +13,9 @@ use Playground\Make\Configuration\Contracts\PrimaryConfiguration as PrimaryConfi
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 
-// use Playground\Make\Configuration\Configuration;
-
-// use Symfony\Component\Finder\Finder;
-
+/**
+ * \Playground\Make\Console\Commands\Command
+ */
 abstract class Command extends BaseGeneratorCommand
 {
     use Concerns\Files;
@@ -30,18 +29,6 @@ abstract class Command extends BaseGeneratorCommand
 
     protected PrimaryConfigurationContract $c;
 
-    // /**
-    //  * @var array<string, mixed>
-    //  */
-    // public const CONFIGURATION = [
-    //     'class' => '',
-    //     'module' => '',
-    //     'module_slug' => '',
-    //     'namespace' => 'App',
-    //     'organization' => '',
-    //     'package' => 'app',
-    // ];
-
     /**
      * @var array<string, string>
      */
@@ -54,15 +41,19 @@ abstract class Command extends BaseGeneratorCommand
         'package' => 'app',
     ];
 
-    // /**
-    //  * @var string Uses base_path() to get the directory.
-    //  */
-    // public const STUBS = 'vendor/gammamatrix/playground-make/stubs';
+    protected ?string $options_type_default = null;
+
+    /**
+     * @var array<int, string>
+     */
+    protected array $options_type_suggested = [];
 
     /**
      * The qualified name from the input name.
      */
     protected string $qualifiedName = '';
+
+    protected bool $qualifiedNameStudly = true;
 
     /**
      * Parse the input for a class name.
@@ -126,6 +117,13 @@ abstract class Command extends BaseGeneratorCommand
         return $stub;
     }
 
+    protected function getPackageDirectoryFromCommand(): string
+    {
+        $filename = (new \ReflectionClass(static::class))->getFileName();
+
+        return $filename ? dirname(dirname(dirname(dirname($filename)))) : '';
+    }
+
     /**
      * Resolve the fully-qualified path to the stub.
      *
@@ -146,7 +144,6 @@ abstract class Command extends BaseGeneratorCommand
             } else {
                 $path = sprintf(
                     '%1$s/%2$s',
-                    // Str::of($stub_path)->finish('/')->toString(),
                     Str::of($stub_path)->toString(),
                     $stub
                 );
@@ -156,7 +153,7 @@ abstract class Command extends BaseGeneratorCommand
         if (empty($path)) {
             $path = sprintf(
                 '%1$s/resources/stubs/%2$s',
-                dirname(dirname(dirname(__DIR__))),
+                $this->getPackageDirectoryFromCommand(),
                 $stub
             );
         }
@@ -182,17 +179,6 @@ abstract class Command extends BaseGeneratorCommand
     {
         return $this->parseClassInput($rootNamespace);
     }
-
-    // /**
-    //  * Get the full namespace for a given class, without the class name.
-    //  *
-    //  * @param  string  $name
-    //  * @return string
-    //  */
-    // protected function getNamespace($name)
-    // {
-    //     return trim(implode('\\', array_slice(explode('\\', $name), 0, -1)), '\\');
-    // }
 
     /**
      * Get the root namespace for the class.
@@ -255,33 +241,6 @@ abstract class Command extends BaseGeneratorCommand
         ];
     }
 
-    // /**
-    //  * Adds an option.
-    //  *
-    //  * @param $shortcut The shortcuts, can be null, a string of shortcuts delimited by | or an array of shortcuts
-    //  * @param $mode     The option mode: One of the InputOption::VALUE_* constants
-    //  * @param $default  The default value (must be null for InputOption::VALUE_NONE)
-    //  * @param array|\Closure(CompletionInput,CompletionSuggestions):list<string|Suggestion> $suggestedValues The values used for input completion
-    //  *
-    //  * @return $this
-    //  *
-    //  * @throws InvalidArgumentException If option mode is invalid or incompatible
-    //  */
-    // public function addOption(string $name, string|array|null $shortcut = null, ?int $mode = null, string $description = '', mixed $default = null, array|\Closure $suggestedValues = []): static
-    // {
-    //     $this->definition->addOption(new InputOption($name, $shortcut, $mode, $description, $default, $suggestedValues));
-    //     $this->fullDefinition?->addOption(new InputOption($name, $shortcut, $mode, $description, $default, $suggestedValues));
-
-    //     return $this;
-    // }
-
-    protected ?string $options_type_default = null;
-
-    /**
-     * @var array<int, string>
-     */
-    protected array $options_type_suggested = [];
-
     /**
      * Get the console command arguments.
      *
@@ -307,29 +266,6 @@ abstract class Command extends BaseGeneratorCommand
         ];
     }
 
-    // /**
-    //  * Prompt for missing input arguments using the returned questions.
-    //  *
-    //  * @return array<int, mixed>
-    //  */
-    // protected function promptForMissingArgumentsUsing(): array
-    // {
-    //     return [];
-    //     // dd([
-    //     //     '__METHOD__' => __METHOD__,
-    //     //     '$this->option(file)' => $this->option('file'),
-    //     //     '$this->hasOption(file)' => $this->hasOption('file'),
-    //     // ]);
-
-    //     // if ($this->hasOption('file') && $this->option('file')) {
-    //     //     return [];
-    //     // }
-
-    //     // return parent::promptForMissingArgumentsUsing();
-    // }
-
-    protected bool $qualifiedNameStudly = true;
-
     /**
      * Parse the class name and format according to the root namespace.
      *
@@ -337,20 +273,7 @@ abstract class Command extends BaseGeneratorCommand
      */
     protected function qualifyClass($name): string
     {
-        // $name = ltrim($name, '\\/');
-
-        // $name = str_replace('/', '\\', $name);
-
-        // if ($this->qualifiedNameStudly && ! ctype_upper($name)) {
-        //     $name = Str::of($name)->studly()->toString();
-        // }
-
         $rootNamespace = $this->rootNamespace();
-        // dump([
-        //     '__METHOD__' => __METHOD__,
-        //     '$rootNamespace' => $rootNamespace,
-        //     '$name' => $name,
-        // ]);
 
         if (empty($this->c->class())) {
             $this->c->setOptions([
@@ -359,14 +282,6 @@ abstract class Command extends BaseGeneratorCommand
             $this->searches['class'] = $this->c->class();
         }
 
-        // if (Str::startsWith($name, $rootNamespace)) {
-        //     return $name;
-        // }
-
         return $this->getDefaultNamespace(trim($rootNamespace, '\\')).'\\'.$name;
-        // return $this->qualifyClass(
-        //     $this->getDefaultNamespace(trim($rootNamespace, '\\')).'\\'.$name
-        // );
-        // return trim($rootNamespace, '\\').'\\'.$name;
     }
 }

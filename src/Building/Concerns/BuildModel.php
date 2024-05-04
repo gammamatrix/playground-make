@@ -144,7 +144,7 @@ trait BuildModel
             'ui',
             'flags',
             'columns',
-            // 'entity',
+            'matrix',
             'json',
         ];
 

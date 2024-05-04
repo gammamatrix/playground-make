@@ -33,7 +33,6 @@ trait PrimaryProperties
 
     protected string $class = '';
 
-    // "config": "playground-matrix",
     protected string $config = '';
 
     protected string $extends = '';
@@ -44,22 +43,16 @@ trait PrimaryProperties
 
     protected string $model = '';
 
-    // "module": "Matrix",
     protected string $module = '';
 
-    // "module_slug": "matrix",
     protected string $module_slug = '';
 
-    // "name": "Matrix",
     protected string $name = '';
 
-    // "namespace": "GammaMatrix/Playground/Matrix",
     protected string $namespace = '';
 
-    // "organization": "GammaMatrix",
     protected string $organization = '';
 
-    // "package": "playground-matrix",
     protected string $package = '';
 
     protected string $type = '';

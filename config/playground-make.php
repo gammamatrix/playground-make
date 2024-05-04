@@ -28,12 +28,11 @@ return [
     | Loading
     |--------------------------------------------------------------------------
     |
-    | By default, commands and translations are loaded.
+    | By default, translations are loaded.
     |
     */
 
     'load' => [
-        'commands' => (bool) env('PLAYGROUND_MAKE_LOAD_COMMANDS', true),
         'translations' => (bool) env('PLAYGROUND_MAKE_LOAD_TRANSLATIONS', true),
     ],
 

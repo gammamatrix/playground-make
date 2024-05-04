@@ -7,7 +7,6 @@ declare(strict_types=1);
 namespace Playground\Make\Console\Commands;
 
 use Illuminate\Support\Str;
-use Symfony\Component\Finder\Finder;
 
 abstract class GeneratorCommand extends Command
 {
@@ -24,12 +23,6 @@ abstract class GeneratorCommand extends Command
     {
         $this->reset();
 
-        // $this->folder = $this->getDestinationPath();
-        // dd([
-        //     '__METHOD__' => __METHOD__,
-        //     '$this->folder' => $this->folder,
-        // ]);
-
         $name = $this->getNameInput();
 
         if (empty($name)) {
@@ -45,10 +38,6 @@ abstract class GeneratorCommand extends Command
             // Check if interactive
             if ($this->interactive && $this->hasOption('interactive') && $this->option('interactive')) {
                 $name = $this->interactive();
-                // dump([
-                //     '__METHOD__' => __METHOD__,
-                //     '$name' => $name,
-                // ]);
                 if (! $name) {
                     $this->components->error('Interactive mode was canceled');
 
@@ -70,10 +59,6 @@ abstract class GeneratorCommand extends Command
 
         $name = $this->handleName($name);
 
-        // dd([
-        //     '__METHOD__' => __METHOD__,
-        //     '$name' => $name,
-        // ]);
         // First we need to ensure that the given name is not a reserved word within the PHP
         // language and that the class name will actually be valid. If it is not valid we
         // can error now and prevent from polluting the filesystem using invalid files.
@@ -90,18 +75,7 @@ abstract class GeneratorCommand extends Command
             'fqdn' => $this->parseClassConfig($this->qualifiedName),
         ]);
 
-        // dd([
-        //     '__METHOD__' => __METHOD__,
-        //     '$name' => $name,
-        //     '$this->qualifiedName' => $this->qualifiedName,
-        //     '$this->c' => $this->c->class(),
-        // ]);
-
         $path = $this->getPath($this->qualifiedName);
-        // dd([
-        //     '__METHOD__' => __METHOD__,
-        //     '$path' => $path,
-        // ]);
 
         // Next, We will check to see if the class already exists. If it does, we don't want
         // to create the class and overwrite the user's code. So, we will bail out so the
@@ -167,15 +141,6 @@ abstract class GeneratorCommand extends Command
     protected function handleTestCreation($path)
     {
         return false;
-        // if (! $this->option('test') && ! $this->option('pest') && ! $this->option('phpunit')) {
-        //     return false;
-        // }
-
-        // return $this->callSilent('make:test', [
-        //     'name' => Str::of($path)->after($this->laravel['path'])->beforeLast('.php')->append('Test')->replace('\\', '/'),
-        //     '--pest' => $this->option('pest'),
-        //     '--phpunit' => $this->option('phpunit'),
-        // ]) == 0;
     }
 
     /**
@@ -185,75 +150,8 @@ abstract class GeneratorCommand extends Command
      */
     protected function qualifyModel(string $model)
     {
-        $rootNamespace = $this->rootNamespace();
-
-        // if (empty($this->configuration['modelspace'])
-        //     || ! is_string($this->configuration['modelspace'])
-        // ) {
-        //     $modelspace = $rootNamespace.'\\Models';
-        // } else {
-        //     $modelspace = $this->configuration['modelspace'];
-        // }
-        // dump([
-        //     '__METHOD__' => __METHOD__,
-        //     '$model' => $model,
-        // ]);
-        $model = ltrim($model, '\\/');
-        // dump([
-        //     '__METHOD__' => __METHOD__,
-        //     '$model' => $model,
-        // ]);
-
-        $model = str_replace('/', '\\', $model);
-        // dump([
-        //     '__METHOD__' => __METHOD__,
-        //     '$model' => $model,
-        // ]);
-
-        // dd([
-        //     '__METHOD__' => __METHOD__,
-        //     '$model' => $model,
-        //     '$rootNamespace' => $rootNamespace,
-        // ]);
-
-        return $model;
+        return $this->parseClassInput($model);
     }
-
-    // /**
-    //  * Get a list of possible model names.
-    //  *
-    //  * @return array<int, string>
-    //  */
-    // protected function possibleModels()
-    // {
-    //     $modelPath = is_dir(app_path('Models')) ? app_path('Models') : app_path();
-
-    //     return collect((new Finder)->files()->depth(0)->in($modelPath))
-    //         ->map(fn ($file) => $file->getBasename('.php'))
-    //         ->sort()
-    //         ->values()
-    //         ->all();
-    // }
-
-    // /**
-    //  * Get a list of possible event names.
-    //  *
-    //  * @return array<int, string>
-    //  */
-    // protected function possibleEvents()
-    // {
-    //     $eventPath = app_path('Events');
-
-    //     if (! is_dir($eventPath)) {
-    //         return [];
-    //     }
-
-    //     return collect((new Finder)->files()->depth(0)->in($eventPath))
-    //         ->map(fn ($file) => $file->getBasename('.php'))
-    //         ->sort()
-    //         ->values()
-    //         ->all();
-    // }
 
     /**
      * Get the desired class name from the input.

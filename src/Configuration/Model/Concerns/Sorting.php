@@ -28,10 +28,6 @@ trait Sorting
         ) {
             foreach ($options['sortable'] as $i => $meta) {
                 $this->addSortable($meta, $i);
-                // $this->sortable[$i] = new Sortable($meta, $this->skeleton());
-                // $this->sortable[$i]->apply();
-                // $this->sortable[$i] = new Sortable(null, $this->skeleton());
-                // $this->sortable[$i]->setParent($this)->setOptions($meta)->apply();
             }
         }
 

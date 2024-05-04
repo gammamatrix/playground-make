@@ -31,12 +31,7 @@ trait Filters
                 $this->filters->withSkeleton();
             }
             $this->filters->setParent($this)->setOptions($options['filters'])->apply();
-            // dd([
-            //     '__METHOD__' => __METHOD__,
-            //     '$this->filters' => $this->filters,
-            //     // '$options[filters]' => $options['filters'],
-            //     'json_encode($this->filters)' => json_encode($this->filters, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT),
-            // ]);
+
             if ($apply) {
                 $this->filters->apply();
             }
