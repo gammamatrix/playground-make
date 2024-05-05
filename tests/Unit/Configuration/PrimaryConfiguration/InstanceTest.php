@@ -35,14 +35,18 @@ class InstanceTest extends TestCase
         'fqdn' => '',
         'extends_use' => '',
         'model' => '',
+        'model_fqdn' => '',
         'module' => '',
         'module_slug' => '',
         'name' => '',
         'namespace' => '',
         'organization' => '',
         'package' => '',
+        'playground' => false,
         'type' => '',
-        'uses' => [],
+        // 'implements' => [],
+        // 'models' => [],
+        // 'uses' => [],
     ];
 
     public function test_instance_apply_without_options(): void

@@ -11,6 +11,81 @@ namespace Playground\Make\Configuration\Concerns;
  */
 trait Classes
 {
+    /**
+     * @param array<string, mixed> $options
+     */
+    public function addModels(array $options): self
+    {
+        $added = false;
+
+        if (! empty($options['models'])
+            && is_array($options['models'])
+        ) {
+            foreach ($options['models'] as $key => $file) {
+                $this->addMappedClassTo('models', $key, $file);
+                $added = true;
+            }
+        }
+
+        // models are not needed for all configurations.
+        if ($added && ! array_key_exists('models', $this->properties)) {
+            $this->properties['models'] = [];
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array<string, mixed> $options
+     */
+    public function addImplements(array $options): self
+    {
+        $added = false;
+
+        if (! empty($options['implements'])
+            && is_array($options['implements'])
+        ) {
+            foreach ($options['implements'] as $key => $fqdn) {
+                $this->addMappedClassTo('implements', $key, $fqdn);
+                $added = true;
+            }
+        }
+
+        // implements is not needed for all configurations.
+        if ($added && ! array_key_exists('implements', $this->properties)) {
+            $this->properties['implements'] = [];
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array<string, mixed> $options
+     */
+    public function addUses(array $options): self
+    {
+        $added = false;
+
+        if (! empty($options['uses'])
+            && is_array($options['uses'])
+        ) {
+            foreach ($options['uses'] as $key => $class) {
+                $this->addToUse(
+                    $class,
+                    is_string($key) ? $key : null
+                );
+                $added = true;
+            }
+        }
+
+        // uses is not needed for all configurations.
+        if ($added && ! array_key_exists('uses', $this->properties)) {
+            $this->properties['uses'] = [];
+        }
+
+        return $this;
+    }
+
     public function addClassTo(
         string $property,
         mixed $fqdn

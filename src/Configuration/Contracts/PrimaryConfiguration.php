@@ -17,7 +17,19 @@ interface PrimaryConfiguration
 
     public function fqdn(): string;
 
+    /**
+     * @return array<string, class-string>
+     */
+    public function implements(): array;
+
     public function model(): string;
+
+    public function model_fqdn(): string;
+
+    /**
+     * @return array<string, string>
+     */
+    public function models(): array;
 
     public function module(): string;
 
@@ -30,6 +42,8 @@ interface PrimaryConfiguration
     public function organization(): string;
 
     public function package(): string;
+
+    public function playground(): bool;
 
     public function type(): string;
 

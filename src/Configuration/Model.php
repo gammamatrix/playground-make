@@ -12,7 +12,8 @@ namespace Playground\Make\Configuration;
 class Model extends PrimaryConfiguration
 {
     use Model\Concerns\Attributes;
-    use Model\Concerns\Classes;
+
+    // use Model\Concerns\Classes;
     use Model\Concerns\Components;
     use Model\Concerns\Creating;
     use Model\Concerns\Filters;
@@ -270,7 +271,7 @@ class Model extends PrimaryConfiguration
             $this->table = $options['table'];
         }
 
-        $this->addExtends($options);
+        // $this->addExtends($options);
         $this->addComponents($options);
         $this->addImplements($options);
         $this->addRelationships($options);

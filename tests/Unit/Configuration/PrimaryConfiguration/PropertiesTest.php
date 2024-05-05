@@ -26,14 +26,18 @@ class PropertiesTest extends TestCase
         'fqdn' => '',
         'extends_use' => '',
         'model' => '',
+        'model_fqdn' => '',
         'module' => '',
         'module_slug' => '',
         'name' => '',
         'namespace' => '',
         'organization' => '',
         'package' => '',
+        'playground' => false,
         'type' => '',
-        'uses' => [],
+        // 'implements' => [],
+        // 'models' => [],
+        // 'uses' => [],
     ];
 
     public function test_properties(): void
@@ -46,7 +50,9 @@ class PropertiesTest extends TestCase
 
         $this->assertIsArray($properties);
 
-        $this->assertSame($this->expected_properties, $properties);
+        $expected_properties = $this->expected_properties;
+
+        $this->assertSame($expected_properties, $properties);
 
         $jsonSerialize = $instance->jsonSerialize();
 
@@ -86,7 +92,9 @@ class PropertiesTest extends TestCase
 
         $this->assertIsArray($jsonSerialize);
 
-        $this->assertSame($this->expected_properties, $jsonSerialize);
+        $expected_properties = $this->expected_properties;
+        $expected_properties['uses'] = [];
+        $this->assertSame($expected_properties, $jsonSerialize);
 
         $this->assertSame($options['class'], $instance->class());
         $this->assertSame($options['config'], $instance->config());
@@ -113,12 +121,14 @@ class PropertiesTest extends TestCase
             'fqdn' => 'Acme\\SomeClass',
             'extends_use' => 'Illuminate/Foundation/Http/FormRequest',
             'model' => 'Something',
+            'model_fqdn' => '',
             'module' => 'Some',
             'module_slug' => 'some',
             'name' => 'Some',
             'namespace' => 'Acme',
             'organization' => 'Acme',
             'package' => 'some-package',
+            'playground' => true,
             'type' => 'request',
             'uses' => [
                 'ImportantClass' => 'Acme\\ImportantClass',
@@ -147,6 +157,7 @@ class PropertiesTest extends TestCase
         $this->assertSame($options['namespace'], $instance->namespace());
         $this->assertSame($options['organization'], $instance->organization());
         $this->assertSame($options['package'], $instance->package());
+        $this->assertTrue($instance->playground());
         $this->assertSame($options['type'], $instance->type());
         $this->assertSame($options['uses'], $instance->uses());
         $this->assertSame($options['extends'], $instance->extends());
