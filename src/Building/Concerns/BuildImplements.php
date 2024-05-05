@@ -34,21 +34,12 @@ trait BuildImplements
                     );
                 }
                 if ($value) {
-                    // $this->configuration['uses'][] = ltrim($value, '\\');
                     $this->buildClass_uses_add($value);
-                    // $use .= sprintf(
-                    //     '%1$suse %2$s;',
-                    //     // empty($use) ? '' : PHP_EOL,
-                    //     PHP_EOL,
-                    //     ltrim($value, '\\')
-                    // );
                 }
             }
             $i++;
         }
 
-        // $this->searches['use'] .= $use;
-        // $this->searches['use'] = PHP_EOL.trim($this->searches['use']).PHP_EOL;
         $this->searches['implements'] = empty($implements) ? '' : sprintf(
             ' implements%1$s', $implements
         );

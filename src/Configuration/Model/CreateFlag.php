@@ -37,19 +37,4 @@ class CreateFlag extends CreateColumn
         'readOnly' => false,
         'type' => 'bool',
     ];
-
-    // /**
-    //  * @param array<string, mixed> $options
-    //  */
-    // public function setOptions(array $options = []): self
-    // {
-    //     parent::setOptions($options);
-
-    //     dump([
-    //         '__METHOD__' => __METHOD__,
-    //         '$options' => $options,
-    //         '$this' => $this,
-    //     ]);
-    //     return $this;
-    // }
 }

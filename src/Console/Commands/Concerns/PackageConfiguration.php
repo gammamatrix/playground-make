@@ -36,19 +36,6 @@ trait PackageConfiguration
 
     protected ?bool $return_status = null;
 
-    // /**
-    //  * @var array<string, mixed>
-    //  */
-    // protected array $configuration = [
-    //     'class' => '',
-    //     'model' => '',
-    //     // 'models' => [],
-    //     'name' => '',
-    //     'namespace' => '',
-    //     'organization' => '',
-    //     'package' => 'app',
-    // ];
-
     /**
      * @var array<string, string>
      */
@@ -81,12 +68,6 @@ trait PackageConfiguration
         } else {
             $this->c->setOptions($configuration);
         }
-
-        // dump([
-        //     '__METHOD__' => __METHOD__,
-        //     // '$this->searches' => $this->searches,
-        //     '$this->c' => $this->c,
-        // ]);
     }
 
     /**
@@ -104,7 +85,6 @@ trait PackageConfiguration
                     if (in_array($search, [
                         'namespace',
                     ])) {
-                        // $this->searches[$search] = $this->parseClassInput($properties[$search]);
                         $this->searches[$search] = $this->parseClassInput($this->getDefaultNamespace($properties[$search]));
                     } elseif (in_array($search, [
                         'class',
@@ -171,12 +151,12 @@ trait PackageConfiguration
         if (array_key_exists($key, $properties)) {
             $exists = true;
             if (gettype($properties[$key]) !== gettype($value)) {
-                dump([
-                    '__METHOD__' => __METHOD__,
-                    '$key' => $key,
-                    '$value' => $value,
-                    '$properties' => $properties,
-                ]);
+                // dump([
+                //     '__METHOD__' => __METHOD__,
+                //     '$key' => $key,
+                //     '$value' => $value,
+                //     '$properties' => $properties,
+                // ]);
                 throw new \Exception('The types do not match for setConfigurationByKey()');
             }
         }
@@ -206,11 +186,11 @@ trait PackageConfiguration
     ): void {
 
         if (gettype($value) !== 'string') {
-            dump([
-                '__METHOD__' => __METHOD__,
-                '$key' => $key,
-                '$value' => $value,
-            ]);
+            // dump([
+            //     '__METHOD__' => __METHOD__,
+            //     '$key' => $key,
+            //     '$value' => $value,
+            // ]);
             throw new \Exception('The search key value must be a string for setSearchByKey()');
         }
 
@@ -367,19 +347,21 @@ trait PackageConfiguration
     public function resetFile(): void
     {
         $file = '';
+        if ($this->hasOption('file')
+            && $this->option('file')
+            && is_string($this->option('file'))
+        ) {
+            $file = $this->option('file');
+        } else {
+            return;
+        }
+
         $pathInApp = '';
+        $pathInMakePackage = '';
         $pathInPackage = '';
         $payload = null;
+        $isAbsolute = Str::of($file)->startsWith('/');
 
-        // if ($this->hasOption('file')
-        //     && $this->option('file')
-        //     && is_string($this->option('file'))
-        //     && $this->files->exists($this->option('file'))
-        // ) {
-        //     $this->loadOptionsIntoConfiguration(
-        //         $this->files->json($this->option('file'))
-        //     );
-        // }
         // dump([
         //     '__METHOD__' => __METHOD__,
         //     // '$this->searches' => $this->searches,
@@ -387,23 +369,37 @@ trait PackageConfiguration
         //     '$this->options()' => $this->options(),
         // ]);
 
-        if ($this->hasOption('file')
-            && $this->option('file')
-            && is_string($this->option('file'))
-        ) {
-            $file = $this->option('file');
+        if (! $isAbsolute) {
             $pathInApp = base_path($file);
-            $pathInPackage = sprintf('%1$s/%2$s', dirname(dirname(dirname(__DIR__))), $file);
-        } else {
-            return;
+            $pathInPackage = sprintf('%1$s/%2$s', $this->getPackageDirectoryFromCommand(), $file);
+            $pathInMakePackage = sprintf('%1$s/%2$s', dirname(dirname(dirname(__DIR__))), $file);
         }
 
-        if ($this->files->exists($pathInApp)) {
+        // dump([
+        //     '__METHOD__' => __METHOD__,
+        //     '__FILE__' => __FILE__,
+        //     'static::class' => static::class,
+        //     '$isAbsolute' => $isAbsolute,
+        //     '$file' => $file,
+        //     '$pathInApp' => $pathInApp,
+        //     '$pathInPackage' => $pathInPackage,
+        //     '$pathInMakePackage' => $pathInMakePackage,
+        //     '$this->options()' => $this->options(),
+        //     '$this->getPackageDirectoryFromCommand()' => $this->getPackageDirectoryFromCommand(),
+        // ]);
+
+        if ($isAbsolute && $this->files->exists($file)) {
+            $this->components->info(sprintf('Loading %s File [%s]', $this->type, $file));
+            $payload = $this->files->json($file);
+        } elseif ($this->files->exists($pathInApp)) {
             $this->components->info(sprintf('Loading %s [%s] from the app [%s]', $this->type, $file, $pathInApp));
             $payload = $this->files->json($pathInApp);
         } elseif ($this->files->exists($pathInPackage)) {
             $this->components->info(sprintf('Loading %s [%s] from the package [%s]', $this->type, $file, $pathInApp));
             $payload = $this->files->json($pathInPackage);
+        } elseif ($this->files->exists($pathInMakePackage)) {
+            $this->components->info(sprintf('Loading %s [%s] from playground-make [%s]', $this->type, $file, $pathInApp));
+            $payload = $this->files->json($pathInMakePackage);
         } elseif ($this->files->exists($file)) {
             $this->components->info(sprintf('Loading %s [%s]', $this->type, $file));
             $payload = $this->files->json($file);
@@ -468,14 +464,6 @@ trait PackageConfiguration
                 $this->readJsonFileAsArray($models[$model], false, 'Model File'),
                 $withSkeleton
             );
-            // if (file_exists($models[$model])) {
-
-            //     $contents = file_get_contents($models[$model]);
-            //     if ($contents) {
-            //         $m = json_decode($contents, true);
-            //         $this->model = new Model($m, $withSkeleton);
-            //     }
-            // }
         }
 
         // dd([
@@ -513,16 +501,16 @@ trait PackageConfiguration
             && $this->preloadModelFile
             // && file_exists($model_file)
         ) {
+            dump([
+                '__METHOD__' => __METHOD__,
+                '__FILE__' => __FILE__,
+                'static::class' => static::class,
+                '$model_file' => $model_file,
+                '$this->preloadModelFile' => $this->preloadModelFile,
+            ]);
             $this->model = new Model(
                 $this->readJsonFileAsArray($model_file, false, 'Model File')
             );
-            // $contents = file_get_contents($model_file);
-            // if ($contents) {
-            //     $model = json_decode($contents, true);
-            //     if (is_array($model)) {
-            //         $this->model = new Model($model);
-            //     }
-            // }
         }
         // dump([
         //     '__METHOD__' => __METHOD__,
@@ -547,21 +535,15 @@ trait PackageConfiguration
 
         if ($model_file
             && is_string($model_file)
-            // && file_exists($model_file)
         ) {
 
             $model = $this->readJsonFileAsArray($model_file, false, 'Model File');
 
-            // $contents = file_get_contents($model_file);
-            // if ($contents) {
-            //     $model = json_decode($contents, true);
             if (is_array($model) && $this->model) {
-                // $this->model = array_replace($this->model, $model);
                 $this->model = new Model(array_replace($this->model->properties(), $model));
             } elseif (is_array($model)) {
                 $this->model = new Model($model);
             }
-            // }
         }
 
         // dump([
@@ -730,7 +712,6 @@ trait PackageConfiguration
             || Str::of($this->c->package())->contains('/')
             || Str::of($this->c->package())->contains('\\')
         ) {
-            // Str::of($this->c->package())->kebab()
             throw new \Exception(sprintf(
                 'Invalid package name for folder: %s',
                 $this->c->package())
@@ -752,7 +733,7 @@ trait PackageConfiguration
         );
     }
 
-    protected bool $preloadModelFile = true;
+    protected bool $preloadModelFile = false;
 
     /**
      * @return ?array<string, mixed>
@@ -761,6 +742,10 @@ trait PackageConfiguration
     {
         $configuration = null;
         $filename = $this->getConfigurationFilename();
+        dump([
+            '__METHOD__' => __METHOD__,
+            '$filename' => $filename,
+        ]);
 
         $path = sprintf(
             '%1$s/%2$s',
@@ -785,8 +770,6 @@ trait PackageConfiguration
     {
         $path_resources_packages = $this->getResourcePackageFolder();
 
-        // $path = $this->getPackageFolder();
-
         $filename = $this->getConfigurationFilename();
 
         $path = sprintf(
@@ -797,7 +780,7 @@ trait PackageConfiguration
 
         // dump([
         //     '__METHOD__' => __METHOD__,
-        //     // '$this->configuration' => $this->configuration,
+        //     // '$this->c' => $this->c,
         //     '$filename' => $filename,
         //     '$path' => $path,
         //     '$this->folder' => $this->folder,
@@ -825,33 +808,5 @@ trait PackageConfiguration
         }
 
         return $this->c;
-    }
-
-    protected function getDestinationPath(): string
-    {
-        $path = $this->getPackageFolder();
-
-        // dump([
-        //     '__METHOD__' => __METHOD__,
-        //     '$path' => $path,
-        // ]);
-        if ($this->path_destination_folder) {
-            $path .= '/'.ltrim($this->path_destination_folder, '/');
-        }
-        // dd([
-        //     '__METHOD__' => __METHOD__,
-        //     '$path' => $path,
-        // ]);
-
-        return $path;
-    }
-
-    protected function folder(): string
-    {
-        if (empty($this->folder)) {
-            $this->folder = $this->getDestinationPath();
-        }
-
-        return $this->folder;
     }
 }

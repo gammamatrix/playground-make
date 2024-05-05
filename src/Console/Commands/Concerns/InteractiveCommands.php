@@ -6,8 +6,6 @@
 declare(strict_types=1);
 namespace Playground\Make\Console\Commands\Concerns;
 
-// use Illuminate\Support\Facades\Storage;
-// use Illuminate\Support\Str;
 use function Laravel\Prompts\text;
 
 /**
@@ -65,10 +63,6 @@ trait InteractiveCommands
             default: $default,
             hint: $hint
         );
-        // dump([
-        //     '__METHOD__' => __METHOD__,
-        //     '$input' => $input,
-        // ]);
 
         return empty($input) || strtolower($input) === 'cancel' ? '' : $input;
     }
@@ -111,20 +105,12 @@ trait InteractiveCommands
 
     protected function interactivePromptForNamespace(): string
     {
-        // dump([
-        //     '__METHOD__' => __METHOD__,
-        //     '$this->configuration' => $this->configuration,
-        // ]);
         $namespace = $this->interactivePromptInput(
             'What namespace should be used?',
             'App',
             $this->getConfigurationByKeyAsString('namespace', 'App'),
             'The default namespace is for the Laravel application.'
         );
-        // dump([
-        //     '__METHOD__' => __METHOD__,
-        //     '$namespace' => $namespace,
-        // ]);
 
         $this->setConfigurationByKey('namespace', $namespace);
 
@@ -133,20 +119,12 @@ trait InteractiveCommands
 
     protected function interactivePromptForOrganization(): string
     {
-        // dump([
-        //     '__METHOD__' => __METHOD__,
-        //     '$this->configuration' => $this->configuration,
-        // ]);
         $organization = $this->interactivePromptInput(
             'What organization should be used?',
             'App',
             $this->getConfigurationByKeyAsString('organization'),
             'Use a short name.'
         );
-        // dump([
-        //     '__METHOD__' => __METHOD__,
-        //     '$organization' => $organization,
-        // ]);
 
         $this->setConfigurationByKey('organization', $organization);
 
@@ -155,20 +133,12 @@ trait InteractiveCommands
 
     protected function interactivePromptForPackage(): string
     {
-        // dump([
-        //     '__METHOD__' => __METHOD__,
-        //     '$this->configuration' => $this->configuration,
-        // ]);
         $package = $this->interactivePromptInput(
             'What package should be used?',
             'app',
             $this->getConfigurationByKeyAsString('package'),
             'Use a packagist safe slug.'
         );
-        // dump([
-        //     '__METHOD__' => __METHOD__,
-        //     '$package' => $package,
-        // ]);
 
         $this->setConfigurationByKey('package', $package);
 

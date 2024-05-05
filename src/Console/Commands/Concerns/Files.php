@@ -6,7 +6,6 @@
 declare(strict_types=1);
 namespace Playground\Make\Console\Commands\Concerns;
 
-use Illuminate\Filesystem\FilesystemAdapter;
 use Illuminate\Support\Str;
 
 /**
@@ -18,17 +17,15 @@ trait Files
      * Load a JSON file.
      *
      * Path priority for relative files:
-     * - base_path($file)
-     * - base_path($file)
+     * - $pathInApp = base_path($file)
+     * - $pathInPackage
+     * - $pathInMakePackage
+     * - absolute path
      *
      * @return array<string, mixed>
      */
     protected function readJsonFileAsArray(string $file, bool $required = true, string $name = 'file'): array
     {
-        // dump([
-        //     '__METHOD__' => __METHOD__,
-        //     '$file' => $file,
-        // ]);
         if (empty($file)) {
             throw new \RuntimeException(__('playground-make::generator.json.file.required'));
         }
@@ -45,29 +42,23 @@ trait Files
         $pathInPackage = '';
 
         $payload = null;
-        // $contents = null;
 
         // Check relative paths
         if (! $stringable->startsWith('/')) {
 
             $pathInApp = base_path($file);
-            $pathInPackage = sprintf('%1$s/%2$s', dirname(dirname(dirname(dirname(__DIR__)))), $file);
-            // dd([
-            //     '__METHOD__' => __METHOD__,
-            //     'dirname(dirname(dirname(__DIR__)))' => dirname(dirname(dirname(dirname(__DIR__)))),
-            //     '$file' => $file,
-            //     '$pathInApp' => $pathInApp,
-            //     '$file' => $pathInPackage,
-            // ]);
+            $pathInPackage = sprintf('%1$s/%2$s', $this->getPackageDirectoryFromCommand(), $file);
+            $pathInMakePackage = sprintf('%1$s/%2$s', dirname(dirname(dirname(dirname(__DIR__)))), $file);
 
             if ($this->files->exists($pathInApp)) {
                 $this->components->info(sprintf('Loading %s [%s] from the app [%s]', $name, $file, $pathInApp));
-                // $contents = file_get_contents($pathInApp);
                 $payload = $this->files->json($pathInApp);
             } elseif ($this->files->exists($pathInPackage)) {
-                $this->components->info(sprintf('Loading %s [%s] from the package [%s]', $name, $file, $pathInApp));
-                // $contents = file_get_contents($pathInPackage);
+                $this->components->info(sprintf('Loading %s [%s] from %s [%s]', $name, $file, $this->type, $pathInApp));
                 $payload = $this->files->json($pathInPackage);
+            } elseif ($this->files->exists($pathInMakePackage)) {
+                $this->components->info(sprintf('Loading %s [%s] from playground-make [%s]', $name, $file, $pathInApp));
+                $payload = $this->files->json($pathInMakePackage);
             } else {
                 $this->components->error(sprintf('Unable to find %s [%s] in the app [%s] or package [%s]', $name, $file, $pathInApp, $pathInPackage));
             }
@@ -82,6 +73,7 @@ trait Files
             }
         }
 
+        // TODO Figure out if there is a need for failing here if a file does not exist and it should.
         // // NOTE: An empty file is not necessarily an error when building skeletons.
         // if ($contents === false) {
         //     if ($required) {
@@ -115,49 +107,31 @@ trait Files
         return is_array($payload) ? $payload : [];
     }
 
-    // /**
-    //  * Create the stub directory in storage for the generated code.
-    //  */
-    // protected function disk(): FilesystemAdapter
-    // {
-    //     $disk = config('playground-make.disk');
-    //     $disk = empty($disk) || ! is_string($disk) ? 'local' : $disk;
+    protected function getDestinationPath(): string
+    {
+        $path = $this->getPackageFolder();
 
-    //     return Storage::disk($disk);
-    // }
+        // dump([
+        //     '__METHOD__' => __METHOD__,
+        //     '$path' => $path,
+        // ]);
+        if ($this->path_destination_folder) {
+            $path .= '/'.ltrim($this->path_destination_folder, '/');
+        }
+        // dd([
+        //     '__METHOD__' => __METHOD__,
+        //     '$path' => $path,
+        // ]);
 
-    // /**
-    //  * Create the stub directory in storage for the generated code.
-    //  */
-    // protected function createStubDirectory(): void
-    // {
-    //     if (!$this->disk()->exists('stub')) {
-    //         $this->disk()->makeDirectory('stub');
-    //     }
-    // }
+        return $path;
+    }
 
-    // /**
-    //  * Create the stub directory in storage for the generated code.
-    //  */
-    // protected function createTypeDirectory(): void
-    // {
-    //     if (!$this->disk()->exists('stub')) {
-    //         $this->disk()->makeDirectory('stub');
-    //     }
-    // }
+    protected function folder(): string
+    {
+        if (empty($this->folder)) {
+            $this->folder = $this->getDestinationPath();
+        }
 
-    // protected function getDestinationPath(): string
-    // {
-    //     $path = static::PATH_DESTINATION;
-
-    //     if (! empty($this->c->package())) {
-    //         $path .= '/'.ltrim($this->c->package(), '/');
-    //     }
-
-    //     if (static::PATH_DESTINATION_FOLDER) {
-    //         $path .= '/'.ltrim(static::PATH_DESTINATION_FOLDER, '/');
-    //     }
-
-    //     return $path;
-    // }
+        return $this->folder;
+    }
 }

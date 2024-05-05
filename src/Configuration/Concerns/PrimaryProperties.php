@@ -21,19 +21,22 @@ trait PrimaryProperties
         'fqdn' => '',
         'extends_use' => '',
         'model' => '',
+        'model_fqdn' => '',
         'module' => '',
         'module_slug' => '',
         'name' => '',
         'namespace' => '',
         'organization' => '',
         'package' => '',
+        'playground' => false,
         'type' => '',
-        'uses' => [],
+        // 'implements' => [],
+        // 'models' => [],
+        // 'uses' => [],
     ];
 
     protected string $class = '';
 
-    // "config": "playground-matrix",
     protected string $config = '';
 
     protected string $extends = '';
@@ -44,25 +47,33 @@ trait PrimaryProperties
 
     protected string $model = '';
 
-    // "module": "Matrix",
+    protected string $model_fqdn = '';
+
     protected string $module = '';
 
-    // "module_slug": "matrix",
     protected string $module_slug = '';
 
-    // "name": "Matrix",
     protected string $name = '';
 
-    // "namespace": "GammaMatrix/Playground/Matrix",
     protected string $namespace = '';
 
-    // "organization": "GammaMatrix",
     protected string $organization = '';
 
-    // "package": "playground-matrix",
     protected string $package = '';
 
+    protected bool $playground = false;
+
     protected string $type = '';
+
+    /**
+     * @var array<string, class-string>
+     */
+    protected array $implements = [];
+
+    /**
+     * @var array<string, string>
+     */
+    protected array $models = [];
 
     /**
      * @var array<int|string, string>
@@ -116,6 +127,12 @@ trait PrimaryProperties
             $this->model = $options['model'];
         }
 
+        if (! empty($options['model_fqdn'])
+            && is_string($options['model_fqdn'])
+        ) {
+            $this->model_fqdn = $options['model_fqdn'];
+        }
+
         if (! empty($options['module'])
             && is_string($options['module'])
         ) {
@@ -146,22 +163,19 @@ trait PrimaryProperties
             $this->package = $options['package'];
         }
 
+        if (array_key_exists('playground', $options)) {
+            $this->playground = ! empty($options['playground']);
+        }
+
         if (! empty($options['type'])
             && is_string($options['type'])
         ) {
             $this->type = $options['type'];
         }
 
-        if (! empty($options['uses'])
-            && is_array($options['uses'])
-        ) {
-            foreach ($options['uses'] as $key => $class) {
-                $this->addToUse(
-                    $class,
-                    is_string($key) ? $key : null
-                );
-            }
-        }
+        $this->addModels($options);
+        $this->addImplements($options);
+        $this->addUses($options);
 
         return $this;
     }
@@ -181,9 +195,30 @@ trait PrimaryProperties
         return $this->fqdn;
     }
 
+    /**
+     * @return array<string, class-string>
+     */
+    public function implements(): array
+    {
+        return $this->implements;
+    }
+
     public function model(): string
     {
         return $this->model;
+    }
+
+    public function model_fqdn(): string
+    {
+        return $this->model_fqdn;
+    }
+
+    /**
+     * @return array<string, string>
+     */
+    public function models(): array
+    {
+        return $this->models;
     }
 
     public function module(): string
@@ -214,6 +249,11 @@ trait PrimaryProperties
     public function package(): string
     {
         return $this->package;
+    }
+
+    public function playground(): bool
+    {
+        return $this->playground;
     }
 
     public function type(): string

@@ -246,11 +246,6 @@ class Create extends ModelConfiguration implements Configuration\Contracts\WithS
 
     public function addId(string $column, mixed $meta): self
     {
-        // dump([
-        //     '__METHOD__' => __METHOD__,
-        //     '$this->skeleton()' => $this->skeleton(),
-        //     '$column' => $column,
-        // ]);
         if (empty($column) || empty($meta) || ! is_array($meta)) {
             throw new \RuntimeException(__('playground-make::model.Create.id.invalid', [
                 'column' => $column,
@@ -300,11 +295,6 @@ class Create extends ModelConfiguration implements Configuration\Contracts\WithS
         $meta['column'] = $column;
         $this->flags[$column] = new CreateFlag($meta);
         $this->flags[$column]->apply();
-        // dump([
-        //     'static::class' => static::class,
-        //     // '$this' => $this,
-        //     '$this->flags' => $this->flags,
-        // ]);
 
         return $this;
     }
@@ -361,11 +351,6 @@ class Create extends ModelConfiguration implements Configuration\Contracts\WithS
         $meta['column'] = $column;
         $this->matrix[$column] = new CreateMatrix($meta);
         $this->matrix[$column]->apply();
-        // dump([
-        //     'static::class' => static::class,
-        //     // '$this' => $this,
-        //     '$this->matrix' => $this->matrix,
-        // ]);
 
         return $this;
     }
@@ -598,11 +583,6 @@ class Create extends ModelConfiguration implements Configuration\Contracts\WithS
                 }
             }
         }
-        // dump([
-        //     '__METHOD__' => __METHOD__,
-        //     // '$this->ids()' => $this->ids(),
-        //     '$properties' => $properties,
-        // ]);
 
         return $properties;
     }
