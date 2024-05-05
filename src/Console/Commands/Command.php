@@ -137,7 +137,7 @@ abstract class Command extends BaseGeneratorCommand
             && is_string($stub_path)
         ) {
             if (! is_dir($stub_path)) {
-                Log::error(__('playground-make::generator.path.invalid'), [
+                Log::error(__('playground-make::generator.stub.path.invalid'), [
                     '$stub_path' => $stub_path,
                     '$stub' => $stub,
                 ]);
