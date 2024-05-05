@@ -6,7 +6,6 @@
 declare(strict_types=1);
 namespace Playground\Make;
 
-use Illuminate\Console\GeneratorCommand;
 use Illuminate\Foundation\Console\AboutCommand;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider;
 
@@ -52,25 +51,6 @@ class ServiceProvider extends AuthServiceProvider
         if (! empty($config['about'])) {
             $this->about();
         }
-    }
-
-    /**
-     * @return array<int, class-string<GeneratorCommand>>
-     */
-    public function boot_commands(): array
-    {
-        $commands = [];
-
-        // $commands[] = Console\Commands\PolicyMakeCommand::class;
-        // // $commands[] = Console\Commands\PostmanMakeCommand::class;
-        // $commands[] = Console\Commands\RequestMakeCommand::class;
-        // $commands[] = Console\Commands\ResourceMakeCommand::class;
-        // $commands[] = Console\Commands\RouteMakeCommand::class;
-        // $commands[] = Console\Commands\SwaggerMakeCommand::class;
-
-        $this->commands($commands);
-
-        return $commands;
     }
 
     /**
