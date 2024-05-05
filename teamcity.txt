@@ -37,11 +37,11 @@
 
 ##teamcity[testStarted name='test_addModelProperties_with_empty_options' locationHint='php_qn:///app/tests/Unit/Configuration/Model/AttributesTest.php::\Tests\Unit\Playground\Make\Configuration\Model\AttributesTest::test_addModelProperties_with_empty_options' flowId='1']
 
-##teamcity[testFinished name='test_addModelProperties_with_empty_options' duration='201' flowId='1']
+##teamcity[testFinished name='test_addModelProperties_with_empty_options' duration='200' flowId='1']
 
 ##teamcity[testStarted name='test_addAttribute_with_invalid_column' locationHint='php_qn:///app/tests/Unit/Configuration/Model/AttributesTest.php::\Tests\Unit\Playground\Make\Configuration\Model\AttributesTest::test_addAttribute_with_invalid_column' flowId='1']
 
-##teamcity[testFinished name='test_addAttribute_with_invalid_column' duration='68' flowId='1']
+##teamcity[testFinished name='test_addAttribute_with_invalid_column' duration='67' flowId='1']
 
 ##teamcity[testStarted name='test_addAttribute_with_invalid_default_value_of_array' locationHint='php_qn:///app/tests/Unit/Configuration/Model/AttributesTest.php::\Tests\Unit\Playground\Make\Configuration\Model\AttributesTest::test_addAttribute_with_invalid_default_value_of_array' flowId='1']
 
@@ -73,7 +73,7 @@
 
 ##teamcity[testStarted name='test_setOptions_unsupported_primary_and_log_message' locationHint='php_qn:///app/tests/Unit/Configuration/Model/Create/InstanceTest.php::\Tests\Unit\Playground\Make\Configuration\Model\CreateColumn\InstanceTest::test_setOptions_unsupported_primary_and_log_message' flowId='1']
 
-##teamcity[testFinished name='test_setOptions_unsupported_primary_and_log_message' duration='6' flowId='1']
+##teamcity[testFinished name='test_setOptions_unsupported_primary_and_log_message' duration='7' flowId='1']
 
 ##teamcity[testSuiteFinished name='Tests\Unit\Playground\Make\Configuration\Model\CreateColumn\InstanceTest' flowId='1']
 
@@ -81,7 +81,7 @@
 
 ##teamcity[testStarted name='test_instance' locationHint='php_qn:///app/tests/Unit/Configuration/Model/CreateColumn/InstanceTest.php::\Tests\Unit\Playground\Make\Configuration\Model\Create\InstanceTest::test_instance' flowId='1']
 
-##teamcity[testFinished name='test_instance' duration='72' flowId='1']
+##teamcity[testFinished name='test_instance' duration='74' flowId='1']
 
 ##teamcity[testStarted name='test_model_with_file' locationHint='php_qn:///app/tests/Unit/Configuration/Model/CreateColumn/InstanceTest.php::\Tests\Unit\Playground\Make\Configuration\Model\Create\InstanceTest::test_model_with_file' flowId='1']
 
@@ -93,7 +93,7 @@
 
 ##teamcity[testStarted name='test_addId_with_empty_column' locationHint='php_qn:///app/tests/Unit/Configuration/Model/CreateColumn/InstanceTest.php::\Tests\Unit\Playground\Make\Configuration\Model\Create\InstanceTest::test_addId_with_empty_column' flowId='1']
 
-##teamcity[testFinished name='test_addId_with_empty_column' duration='6' flowId='1']
+##teamcity[testFinished name='test_addId_with_empty_column' duration='5' flowId='1']
 
 ##teamcity[testStarted name='test_addUnique_with_empty_column' locationHint='php_qn:///app/tests/Unit/Configuration/Model/CreateColumn/InstanceTest.php::\Tests\Unit\Playground\Make\Configuration\Model\Create\InstanceTest::test_addUnique_with_empty_column' flowId='1']
 
@@ -121,11 +121,11 @@
 
 ##teamcity[testStarted name='test_addUi_with_empty_column' locationHint='php_qn:///app/tests/Unit/Configuration/Model/CreateColumn/InstanceTest.php::\Tests\Unit\Playground\Make\Configuration\Model\Create\InstanceTest::test_addUi_with_empty_column' flowId='1']
 
-##teamcity[testFinished name='test_addUi_with_empty_column' duration='5' flowId='1']
+##teamcity[testFinished name='test_addUi_with_empty_column' duration='6' flowId='1']
 
 ##teamcity[testStarted name='test_addJson_with_empty_column' locationHint='php_qn:///app/tests/Unit/Configuration/Model/CreateColumn/InstanceTest.php::\Tests\Unit\Playground\Make\Configuration\Model\Create\InstanceTest::test_addJson_with_empty_column' flowId='1']
 
-##teamcity[testFinished name='test_addJson_with_empty_column' duration='5' flowId='1']
+##teamcity[testFinished name='test_addJson_with_empty_column' duration='6' flowId='1']
 
 ##teamcity[testSuiteFinished name='Tests\Unit\Playground\Make\Configuration\Model\Create\InstanceTest' flowId='1']
 
@@ -133,7 +133,7 @@
 
 ##teamcity[testStarted name='test_instance' locationHint='php_qn:///app/tests/Unit/Configuration/Model/Filter/InstanceTest.php::\Tests\Unit\Playground\Make\Configuration\Model\Filter\InstanceTest::test_instance' flowId='1']
 
-##teamcity[testFinished name='test_instance' duration='17' flowId='1']
+##teamcity[testFinished name='test_instance' duration='18' flowId='1']
 
 ##teamcity[testStarted name='test_instance_apply_without_options' locationHint='php_qn:///app/tests/Unit/Configuration/Model/Filter/InstanceTest.php::\Tests\Unit\Playground\Make\Configuration\Model\Filter\InstanceTest::test_instance_apply_without_options' flowId='1']
 
@@ -153,7 +153,7 @@
 
 ##teamcity[testStarted name='test_model_with_file' locationHint='php_qn:///app/tests/Unit/Configuration/Model/Filters/InstanceTest.php::\Tests\Unit\Playground\Make\Configuration\Model\Filters\InstanceTest::test_model_with_file' flowId='1']
 
-##teamcity[testFinished name='test_model_with_file' duration='8' flowId='1']
+##teamcity[testFinished name='test_model_with_file' duration='9' flowId='1']
 
 ##teamcity[testStarted name='test_setOptions_with_builder_in_options' locationHint='php_qn:///app/tests/Unit/Configuration/Model/Filters/InstanceTest.php::\Tests\Unit\Playground\Make\Configuration\Model\Filters\InstanceTest::test_setOptions_with_builder_in_options' flowId='1']
 
@@ -161,15 +161,15 @@
 
 ##teamcity[testStarted name='test_addId_with_empty_meta' locationHint='php_qn:///app/tests/Unit/Configuration/Model/Filters/InstanceTest.php::\Tests\Unit\Playground\Make\Configuration\Model\Filters\InstanceTest::test_addId_with_empty_meta' flowId='1']
 
-##teamcity[testFinished name='test_addId_with_empty_meta' duration='5' flowId='1']
+##teamcity[testFinished name='test_addId_with_empty_meta' duration='6' flowId='1']
 
 ##teamcity[testStarted name='test_addDate_with_empty_meta' locationHint='php_qn:///app/tests/Unit/Configuration/Model/Filters/InstanceTest.php::\Tests\Unit\Playground\Make\Configuration\Model\Filters\InstanceTest::test_addDate_with_empty_meta' flowId='1']
 
-##teamcity[testFinished name='test_addDate_with_empty_meta' duration='5' flowId='1']
+##teamcity[testFinished name='test_addDate_with_empty_meta' duration='6' flowId='1']
 
 ##teamcity[testStarted name='test_addFlag_with_empty_meta' locationHint='php_qn:///app/tests/Unit/Configuration/Model/Filters/InstanceTest.php::\Tests\Unit\Playground\Make\Configuration\Model\Filters\InstanceTest::test_addFlag_with_empty_meta' flowId='1']
 
-##teamcity[testFinished name='test_addFlag_with_empty_meta' duration='5' flowId='1']
+##teamcity[testFinished name='test_addFlag_with_empty_meta' duration='6' flowId='1']
 
 ##teamcity[testStarted name='test_handleTrash_with_empty_meta' locationHint='php_qn:///app/tests/Unit/Configuration/Model/Filters/InstanceTest.php::\Tests\Unit\Playground\Make\Configuration\Model\Filters\InstanceTest::test_handleTrash_with_empty_meta' flowId='1']
 
@@ -189,7 +189,7 @@
 
 ##teamcity[testStarted name='test_addUi_with_empty_meta' locationHint='php_qn:///app/tests/Unit/Configuration/Model/Filters/InstanceTest.php::\Tests\Unit\Playground\Make\Configuration\Model\Filters\InstanceTest::test_addUi_with_empty_meta' flowId='1']
 
-##teamcity[testFinished name='test_addUi_with_empty_meta' duration='5' flowId='1']
+##teamcity[testFinished name='test_addUi_with_empty_meta' duration='6' flowId='1']
 
 ##teamcity[testStarted name='test_addJson_with_empty_meta' locationHint='php_qn:///app/tests/Unit/Configuration/Model/Filters/InstanceTest.php::\Tests\Unit\Playground\Make\Configuration\Model\Filters\InstanceTest::test_addJson_with_empty_meta' flowId='1']
 
@@ -213,7 +213,7 @@
 
 ##teamcity[testStarted name='test_model_with_file_and_skeleton' locationHint='php_qn:///app/tests/Unit/Configuration/Model/InstanceTest.php::\Tests\Unit\Playground\Make\Configuration\Model\InstanceTest::test_model_with_file_and_skeleton' flowId='1']
 
-##teamcity[testFinished name='test_model_with_file_and_skeleton' duration='33' flowId='1']
+##teamcity[testFinished name='test_model_with_file_and_skeleton' duration='34' flowId='1']
 
 ##teamcity[testSuiteFinished name='Tests\Unit\Playground\Make\Configuration\Model\InstanceTest' flowId='1']
 
@@ -253,7 +253,7 @@
 
 ##teamcity[testStarted name='test_addScope_unsupported_scope_and_ignore' locationHint='php_qn:///app/tests/Unit/Configuration/Model/ScopesTest.php::\Tests\Unit\Playground\Make\Configuration\Model\ScopesTest::test_addScope_unsupported_scope_and_ignore' flowId='1']
 
-##teamcity[testFinished name='test_addScope_unsupported_scope_and_ignore' duration='6' flowId='1']
+##teamcity[testFinished name='test_addScope_unsupported_scope_and_ignore' duration='7' flowId='1']
 
 ##teamcity[testSuiteFinished name='Tests\Unit\Playground\Make\Configuration\Model\ScopesTest' flowId='1']
 
@@ -261,15 +261,15 @@
 
 ##teamcity[testStarted name='test_addSortable_without_column' locationHint='php_qn:///app/tests/Unit/Configuration/Model/SortingTest.php::\Tests\Unit\Playground\Make\Configuration\Model\SortingTest::test_addSortable_without_column' flowId='1']
 
-##teamcity[testFinished name='test_addSortable_without_column' duration='6' flowId='1']
+##teamcity[testFinished name='test_addSortable_without_column' duration='7' flowId='1']
 
 ##teamcity[testStarted name='test_addSortable_with_index' locationHint='php_qn:///app/tests/Unit/Configuration/Model/SortingTest.php::\Tests\Unit\Playground\Make\Configuration\Model\SortingTest::test_addSortable_with_index' flowId='1']
 
-##teamcity[testFinished name='test_addSortable_with_index' duration='6' flowId='1']
+##teamcity[testFinished name='test_addSortable_with_index' duration='7' flowId='1']
 
 ##teamcity[testStarted name='test_addSortable_without_index' locationHint='php_qn:///app/tests/Unit/Configuration/Model/SortingTest.php::\Tests\Unit\Playground\Make\Configuration\Model\SortingTest::test_addSortable_without_index' flowId='1']
 
-##teamcity[testFinished name='test_addSortable_without_index' duration='6' flowId='1']
+##teamcity[testFinished name='test_addSortable_without_index' duration='7' flowId='1']
 
 ##teamcity[testSuiteFinished name='Tests\Unit\Playground\Make\Configuration\Model\SortingTest' flowId='1']
 
@@ -305,7 +305,7 @@
 
 ##teamcity[testStarted name='test_properties_with_all_options_without_apply' locationHint='php_qn:///app/tests/Unit/Configuration/PrimaryConfiguration/PropertiesTest.php::\Tests\Unit\Playground\Make\Configuration\PrimaryConfiguration\PropertiesTest::test_properties_with_all_options_without_apply' flowId='1']
 
-##teamcity[testFinished name='test_properties_with_all_options_without_apply' duration='5' flowId='1']
+##teamcity[testFinished name='test_properties_with_all_options_without_apply' duration='6' flowId='1']
 
 ##teamcity[testStarted name='test_properties_with_all_options_with_apply' locationHint='php_qn:///app/tests/Unit/Configuration/PrimaryConfiguration/PropertiesTest.php::\Tests\Unit\Playground\Make\Configuration\PrimaryConfiguration\PropertiesTest::test_properties_with_all_options_with_apply' flowId='1']
 
@@ -353,7 +353,7 @@
 
 ##teamcity[testStarted name='test_command_about_displays_package_information_and_succeed_with_code_0' locationHint='php_qn:///app/tests/Feature/Console/Commands/About/CommandTest.php::\Tests\Feature\Playground\Make\Console\Commands\About\CommandTest::test_command_about_displays_package_information_and_succeed_with_code_0' flowId='1']
 
-##teamcity[testFinished name='test_command_about_displays_package_information_and_succeed_with_code_0' duration='155' flowId='1']
+##teamcity[testFinished name='test_command_about_displays_package_information_and_succeed_with_code_0' duration='146' flowId='1']
 
 ##teamcity[testSuiteFinished name='Tests\Feature\Playground\Make\Console\Commands\About\CommandTest' flowId='1']
 
