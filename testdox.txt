@@ -15,11 +15,6 @@ Instance (Tests\Unit\Playground\Make\Configuration\Configuration\Instance)
 
 Instance (Tests\Unit\Playground\Make\Configuration\Model\CreateColumn\Instance)
  [x] Instance
- [x] Model with file jsonSerialize
- [x] SetOptions unsupported primary and log message
-
-Instance (Tests\Unit\Playground\Make\Configuration\Model\Create\Instance)
- [x] Instance
  [x] Model with file
  [x] SetOptions unsupported primary and ignore
  [x] AddId with empty column
@@ -31,6 +26,11 @@ Instance (Tests\Unit\Playground\Make\Configuration\Model\Create\Instance)
  [x] AddStatus with empty column
  [x] AddUi with empty column
  [x] AddJson with empty column
+
+Instance (Tests\Unit\Playground\Make\Configuration\Model\Create\Instance)
+ [x] Instance
+ [x] Model with file jsonSerialize
+ [x] SetOptions unsupported primary and log message
 
 Instance (Tests\Unit\Playground\Make\Configuration\Model\Filter\Instance)
  [x] Instance
