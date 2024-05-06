@@ -1,0 +1,23 @@
+{
+    "organization": "Playground",
+    "package": "playground-cms",
+    "module": "Cms",
+    "module_slug": "cms",
+    "fqdn": "Playground/Cms/Models/SnippetRevision",
+    "name": "SnippetRevision",
+    "namespace": "Playground/Cms",
+    "modelspace": "Playground/Cms/Models",
+    "type": "playground-model",
+    "class": "SnippetRevision",
+    "table": "cms_snippet_revisions",
+    "extends": "Playground/Models/Model",
+    "factory": false,
+    "migration": false,
+    "playground": true,
+    "policy": false,
+    "seed": false,
+    "test": false,
+    "create": {
+        "migration": "2010_09_30_000000_create_cms_snippet_revisions_table"
+   }
+}

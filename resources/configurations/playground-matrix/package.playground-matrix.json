@@ -1,0 +1,63 @@
+{
+    "class": "ServiceProvider",
+    "config": "playground-matrix",
+    "config_space": "PLAYGROUND_MATRIX",
+    "fqdn": "Playground/Matrix/Matrix",
+    "module": "Matrix",
+    "module_slug": "matrix",
+    "name": "Matrix",
+    "namespace": "Playground/Matrix",
+    "organization": "Playground",
+    "package": "playground-matrix",
+    "withControllers": false,
+    "withFactories": true,
+    "withMigrations": true,
+    "withModels": true,
+    "withPolicies": false,
+    "playground": true,
+    "package_name": "",
+    "package_description": "",
+    "package_homepage": "",
+    "package_keywords": [],
+    "package_license": "MIT",
+    "package_require": {
+        "php": "^8.2",
+        "gammamatrix/playground": "dev-develop|dev-feature/*"
+    },
+    "package_require_dev": {
+        "gammamatrix/playground-test": "dev-develop|dev-feature/*"
+    },
+    "package_autoload_psr4": [],
+    "package_providers": [
+        "Playground/ServiceProvider",
+        "Playground/Matrix/ServiceProvider"
+    ],
+    "package_laravel_providers": [],
+    "packagist": "gammamatrix/playground-matrix",
+    "controllers": [],
+    "models": {
+        "Backlog": "resources/configurations/playground-matrix/model.backlog.json",
+        "Board": "resources/configurations/playground-matrix/model.board.json",
+        "Epic": "resources/configurations/playground-matrix/model.epic.json",
+        "Flow": "resources/configurations/playground-matrix/model.flow.json",
+        "Matrix": "resources/configurations/playground-matrix/model.matrix.json",
+        "Milestone": "resources/configurations/playground-matrix/model.milestone.json",
+        "Note": "resources/configurations/playground-matrix/model.note.json",
+        "Project": "resources/configurations/playground-matrix/model.project.json",
+        "Release": "resources/configurations/playground-matrix/model.release.json",
+        "Roadmap": "resources/configurations/playground-matrix/model.roadmap.json",
+        "Source": "resources/configurations/playground-matrix/model.source.json",
+        "Sprint": "resources/configurations/playground-matrix/model.sprint.json",
+        "Tag": "resources/configurations/playground-matrix/model.tag.json",
+        "Team": "resources/configurations/playground-matrix/model.team.json",
+        "Ticket": "resources/configurations/playground-matrix/model.ticket.json",
+        "Version": "resources/configurations/playground-matrix/model.version.json"
+    },
+    "policies": [],
+    "requests": [],
+    "routes": [],
+    "transformers": [],
+    "service_provider": "",
+    "type": "playground-model",
+    "version": ""
+}

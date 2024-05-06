@@ -372,7 +372,7 @@ trait PackageConfiguration
         if (! $isAbsolute) {
             $pathInApp = base_path($file);
             $pathInPackage = sprintf('%1$s/%2$s', $this->getPackageDirectoryFromCommand(), $file);
-            $pathInMakePackage = sprintf('%1$s/%2$s', dirname(dirname(dirname(__DIR__))), $file);
+            $pathInMakePackage = sprintf('%1$s/%2$s', dirname(dirname(dirname(dirname(__DIR__)))), $file);
         }
 
         // dump([
@@ -380,6 +380,7 @@ trait PackageConfiguration
         //     '__FILE__' => __FILE__,
         //     'static::class' => static::class,
         //     '$isAbsolute' => $isAbsolute,
+        //     'dir' => dirname(dirname(dirname(dirname(__DIR__)))),
         //     '$file' => $file,
         //     '$pathInApp' => $pathInApp,
         //     '$pathInPackage' => $pathInPackage,

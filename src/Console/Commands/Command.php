@@ -258,6 +258,7 @@ abstract class Command extends BaseGeneratorCommand
             ['organization',    null, InputOption::VALUE_OPTIONAL, 'The organization of the '.strtolower($this->type)],
             ['package',         null, InputOption::VALUE_OPTIONAL, 'The package of the '.strtolower($this->type)],
             ['preload',         null,  InputOption::VALUE_NONE,    'Preload the existing configuration file for the '.strtolower($this->type)],
+            ['playground',      null, InputOption::VALUE_NONE,     'Allow the '.strtolower($this->type).' to use Playground features'],
             ['skeleton',        null, InputOption::VALUE_NONE,     'Create the skeleton for the '.strtolower($this->type).' type'],
             ['class',           null, InputOption::VALUE_OPTIONAL, 'The class name of the '.strtolower($this->type)],
             ['extends',         null, InputOption::VALUE_OPTIONAL, 'The class that gets extended for the '.strtolower($this->type)],

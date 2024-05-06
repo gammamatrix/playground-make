@@ -4,7 +4,7 @@
  */
 
 declare(strict_types=1);
-namespace Tests\Unit\Playground\Make\Configuration\Model\Create;
+namespace Tests\Unit\Playground\Make\Configuration\Model\CreateColumn;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use Tests\Unit\Playground\Make\TestCase;
@@ -13,7 +13,7 @@ use TiMacDonald\Log\LogEntry;
 use TiMacDonald\Log\LogFake;
 
 /**
- * \Tests\Unit\Playground\Make\Configuration\Model\Create\InstanceTest
+ * \Tests\Unit\Playground\Make\Configuration\Model\CreateColumn\InstanceTest
  */
 #[CoversClass(Create::class)]
 class InstanceTest extends TestCase

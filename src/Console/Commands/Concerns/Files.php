@@ -100,8 +100,9 @@ trait Files
         //     '$required' => $required,
         //     '$pathInApp' => $pathInApp,
         //     '$pathInPackage' => $pathInPackage,
+        //     '$pathInMakePackage' => $pathInMakePackage,
         //     // '$contents' => $contents,
-        //     '$payload' => $payload,
+        //     // '$payload' => $payload,
         // ]);
 
         return is_array($payload) ? $payload : [];
@@ -111,17 +112,9 @@ trait Files
     {
         $path = $this->getPackageFolder();
 
-        // dump([
-        //     '__METHOD__' => __METHOD__,
-        //     '$path' => $path,
-        // ]);
         if ($this->path_destination_folder) {
             $path .= '/'.ltrim($this->path_destination_folder, '/');
         }
-        // dd([
-        //     '__METHOD__' => __METHOD__,
-        //     '$path' => $path,
-        // ]);
 
         return $path;
     }
