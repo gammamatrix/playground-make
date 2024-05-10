@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2024-05-09 06:18:29</timestamp>
+  <timestamp>2024-05-10 19:40:23</timestamp>
   <stats>
     <name>Method Crap Stats</name>
-    <methodCount>250</methodCount>
-    <crapMethodCount>17</crapMethodCount>
-    <crapLoad>254</crapLoad>
-    <totalCrap>6182.72</totalCrap>
-    <crapMethodPercent>6.8</crapMethodPercent>
+    <methodCount>264</methodCount>
+    <crapMethodCount>18</crapMethodCount>
+    <crapLoad>259</crapLoad>
+    <totalCrap>5988.72</totalCrap>
+    <crapMethodPercent>6.82</crapMethodPercent>
   </stats>
   <methods>
     <method>
@@ -168,6 +168,17 @@
     <method>
       <package>Playground\Make\Configuration\Concerns</package>
       <className>Playground\Make\Configuration\Concerns\PrimaryProperties</className>
+      <methodName>setClass</methodName>
+      <methodSignature>setClass(string $class): self</methodSignature>
+      <fullMethod>setClass(string $class): self</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\PrimaryProperties</className>
       <methodName>config</methodName>
       <methodSignature>config(): string</methodSignature>
       <fullMethod>config(): string</fullMethod>
@@ -179,12 +190,34 @@
     <method>
       <package>Playground\Make\Configuration\Concerns</package>
       <className>Playground\Make\Configuration\Concerns\PrimaryProperties</className>
+      <methodName>setConfig</methodName>
+      <methodSignature>setConfig(string $config): self</methodSignature>
+      <fullMethod>setConfig(string $config): self</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\PrimaryProperties</className>
       <methodName>fqdn</methodName>
       <methodSignature>fqdn(): string</methodSignature>
       <fullMethod>fqdn(): string</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\PrimaryProperties</className>
+      <methodName>setFqdn</methodName>
+      <methodSignature>setFqdn(string $fqdn): self</methodSignature>
+      <fullMethod>setFqdn(string $fqdn): self</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -212,12 +245,34 @@
     <method>
       <package>Playground\Make\Configuration\Concerns</package>
       <className>Playground\Make\Configuration\Concerns\PrimaryProperties</className>
+      <methodName>setModel</methodName>
+      <methodSignature>setModel(string $model): self</methodSignature>
+      <fullMethod>setModel(string $model): self</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\PrimaryProperties</className>
       <methodName>model_fqdn</methodName>
       <methodSignature>model_fqdn(): string</methodSignature>
       <fullMethod>model_fqdn(): string</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\PrimaryProperties</className>
+      <methodName>setModelFqdn</methodName>
+      <methodSignature>setModelFqdn(string $model_fqdn): self</methodSignature>
+      <fullMethod>setModelFqdn(string $model_fqdn): self</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -245,12 +300,34 @@
     <method>
       <package>Playground\Make\Configuration\Concerns</package>
       <className>Playground\Make\Configuration\Concerns\PrimaryProperties</className>
+      <methodName>setModule</methodName>
+      <methodSignature>setModule(string $module): self</methodSignature>
+      <fullMethod>setModule(string $module): self</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\PrimaryProperties</className>
       <methodName>module_slug</methodName>
       <methodSignature>module_slug(): string</methodSignature>
       <fullMethod>module_slug(): string</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\PrimaryProperties</className>
+      <methodName>setModuleSlug</methodName>
+      <methodSignature>setModuleSlug(string $module_slug): self</methodSignature>
+      <fullMethod>setModuleSlug(string $module_slug): self</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -267,12 +344,34 @@
     <method>
       <package>Playground\Make\Configuration\Concerns</package>
       <className>Playground\Make\Configuration\Concerns\PrimaryProperties</className>
+      <methodName>setName</methodName>
+      <methodSignature>setName(string $name): self</methodSignature>
+      <fullMethod>setName(string $name): self</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\PrimaryProperties</className>
       <methodName>namespace</methodName>
       <methodSignature>namespace(): string</methodSignature>
       <fullMethod>namespace(): string</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\PrimaryProperties</className>
+      <methodName>setNamespace</methodName>
+      <methodSignature>setNamespace(string $namespace): self</methodSignature>
+      <fullMethod>setNamespace(string $namespace): self</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -289,12 +388,34 @@
     <method>
       <package>Playground\Make\Configuration\Concerns</package>
       <className>Playground\Make\Configuration\Concerns\PrimaryProperties</className>
+      <methodName>setOrganization</methodName>
+      <methodSignature>setOrganization(string $organization): self</methodSignature>
+      <fullMethod>setOrganization(string $organization): self</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\PrimaryProperties</className>
       <methodName>package</methodName>
       <methodSignature>package(): string</methodSignature>
       <fullMethod>package(): string</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\PrimaryProperties</className>
+      <methodName>setPackage</methodName>
+      <methodSignature>setPackage(string $package): self</methodSignature>
+      <fullMethod>setPackage(string $package): self</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -317,6 +438,17 @@
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\PrimaryProperties</className>
+      <methodName>setType</methodName>
+      <methodSignature>setType(string $type): self</methodSignature>
+      <fullMethod>setType(string $type): self</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -2534,12 +2666,12 @@
       <package>Playground\Make\Console\Commands\Concerns</package>
       <className>Playground\Make\Console\Commands\Concerns\PackageConfiguration</className>
       <methodName>getModelFile</methodName>
-      <methodSignature>getModelFile(): ?string</methodSignature>
-      <fullMethod>getModelFile(): ?string</fullMethod>
-      <crap>30</crap>
-      <complexity>5</complexity>
+      <methodSignature>getModelFile(bool $checkOptions): ?string</methodSignature>
+      <fullMethod>getModelFile(bool $checkOptions): ?string</fullMethod>
+      <crap>90</crap>
+      <complexity>9</complexity>
       <coverage>0</coverage>
-      <crapLoad>0</crapLoad>
+      <crapLoad>9</crapLoad>
     </method>
     <method>
       <package>Playground\Make\Console\Commands\Concerns</package>
@@ -2547,10 +2679,10 @@
       <methodName>initModel</methodName>
       <methodSignature>initModel(bool $withSkeleton, bool $reload): void</methodSignature>
       <fullMethod>initModel(bool $withSkeleton, bool $reload): void</fullMethod>
-      <crap>72</crap>
-      <complexity>8</complexity>
+      <crap>110</crap>
+      <complexity>10</complexity>
       <coverage>0</coverage>
-      <crapLoad>8</crapLoad>
+      <crapLoad>10</crapLoad>
     </method>
     <method>
       <package>Playground\Make\Console\Commands\Concerns</package>
@@ -2558,10 +2690,10 @@
       <methodName>resetModelFile</methodName>
       <methodSignature>resetModelFile(): void</methodSignature>
       <fullMethod>resetModelFile(): void</fullMethod>
-      <crap>756</crap>
-      <complexity>27</complexity>
+      <crap>600</crap>
+      <complexity>24</complexity>
       <coverage>0</coverage>
-      <crapLoad>28</crapLoad>
+      <crapLoad>24</crapLoad>
     </method>
     <method>
       <package>Playground\Make\Console\Commands\Concerns</package>
@@ -2569,10 +2701,10 @@
       <methodName>resetOptions</methodName>
       <methodSignature>resetOptions(): void</methodSignature>
       <fullMethod>resetOptions(): void</fullMethod>
-      <crap>1056</crap>
-      <complexity>32</complexity>
+      <crap>870</crap>
+      <complexity>29</complexity>
       <coverage>0</coverage>
-      <crapLoad>33</crapLoad>
+      <crapLoad>30</crapLoad>
     </method>
     <method>
       <package>Playground\Make\Console\Commands\Concerns</package>
@@ -2591,8 +2723,8 @@
       <methodName>getConfigurationType</methodName>
       <methodSignature>getConfigurationType(): string</methodSignature>
       <fullMethod>getConfigurationType(): string</fullMethod>
-      <crap>20</crap>
-      <complexity>4</complexity>
+      <crap>2</crap>
+      <complexity>1</complexity>
       <coverage>0</coverage>
       <crapLoad>0</crapLoad>
     </method>
@@ -2648,6 +2780,28 @@
       <fullMethod>saveConfiguration(): Playground\Make\Configuration\Contracts\PrimaryConfiguration</fullMethod>
       <crap>6</crap>
       <complexity>2</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands\Concerns</package>
+      <className>Playground\Make\Console\Commands\Concerns\PreparingOptions</className>
+      <methodName>prepareOptionsTypeDefault</methodName>
+      <methodSignature>prepareOptionsTypeDefault(array $options): string</methodSignature>
+      <fullMethod>prepareOptionsTypeDefault(array $options): string</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Console\Commands\Concerns</package>
+      <className>Playground\Make\Console\Commands\Concerns\PreparingOptions</className>
+      <methodName>prepareOptionsType</methodName>
+      <methodSignature>prepareOptionsType(array $options): string</methodSignature>
+      <fullMethod>prepareOptionsType(array $options): string</fullMethod>
+      <crap>42</crap>
+      <complexity>6</complexity>
       <coverage>0</coverage>
       <crapLoad>0</crapLoad>
     </method>
