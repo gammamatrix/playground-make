@@ -185,14 +185,35 @@ trait PrimaryProperties
         return $this->class;
     }
 
+    public function setClass(string $class): self
+    {
+        $this->class = $class;
+
+        return $this;
+    }
+
     public function config(): string
     {
         return $this->config;
     }
 
+    public function setConfig(string $config): self
+    {
+        $this->config = $config;
+
+        return $this;
+    }
+
     public function fqdn(): string
     {
         return $this->fqdn;
+    }
+
+    public function setFqdn(string $fqdn): self
+    {
+        $this->fqdn = $fqdn;
+
+        return $this;
     }
 
     /**
@@ -203,14 +224,31 @@ trait PrimaryProperties
         return $this->implements;
     }
 
+    /**
+     * Model should only contain the class_basename($model).
+     */
     public function model(): string
     {
         return $this->model;
     }
 
+    public function setModel(string $model): self
+    {
+        $this->model = $model;
+
+        return $this;
+    }
+
     public function model_fqdn(): string
     {
         return $this->model_fqdn;
+    }
+
+    public function setModelFqdn(string $model_fqdn): self
+    {
+        $this->model_fqdn = $model_fqdn;
+
+        return $this;
     }
 
     /**
@@ -221,9 +259,19 @@ trait PrimaryProperties
         return $this->models;
     }
 
+    /**
+     * Module may contain spaces.
+     */
     public function module(): string
     {
         return $this->module;
+    }
+
+    public function setModule(string $module): self
+    {
+        $this->module = $module;
+
+        return $this;
     }
 
     public function module_slug(): string
@@ -231,9 +279,23 @@ trait PrimaryProperties
         return $this->module_slug;
     }
 
+    public function setModuleSlug(string $module_slug): self
+    {
+        $this->module_slug = $module_slug;
+
+        return $this;
+    }
+
     public function name(): string
     {
         return $this->name;
+    }
+
+    public function setName(string $name): self
+    {
+        $this->name = $name;
+
+        return $this;
     }
 
     public function namespace(): string
@@ -241,14 +303,35 @@ trait PrimaryProperties
         return $this->namespace;
     }
 
+    public function setNamespace(string $namespace): self
+    {
+        $this->namespace = $namespace;
+
+        return $this;
+    }
+
     public function organization(): string
     {
         return $this->organization;
     }
 
+    public function setOrganization(string $organization): self
+    {
+        $this->organization = $organization;
+
+        return $this;
+    }
+
     public function package(): string
     {
         return $this->package;
+    }
+
+    public function setPackage(string $package): self
+    {
+        $this->package = $package;
+
+        return $this;
     }
 
     public function playground(): bool
@@ -259,6 +342,13 @@ trait PrimaryProperties
     public function type(): string
     {
         return $this->type;
+    }
+
+    public function setType(string $type): self
+    {
+        $this->type = $type;
+
+        return $this;
     }
 
     /**

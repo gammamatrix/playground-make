@@ -51,7 +51,7 @@ trait BuildUses
             $this->searches['use'] = trim($use).PHP_EOL;
         }
         if (! empty($use_class)) {
-            $this->searches['use_class'] = '    '.trim($use_class).PHP_EOL;
+            $this->searches['use_class'] = static::INDENT.trim($use_class).PHP_EOL;
         }
     }
 

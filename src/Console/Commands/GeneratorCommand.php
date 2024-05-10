@@ -71,6 +71,7 @@ abstract class GeneratorCommand extends Command
         }
 
         $this->qualifiedName = $this->qualifyClass($name);
+
         $this->c->setOptions([
             'fqdn' => $this->parseClassConfig($this->qualifiedName),
         ]);

@@ -28,7 +28,7 @@ trait BuildImplements
                     $implements .= sprintf(
                         '%1$s%2$s%3$s%4$s',
                         ($count === 1) ? '' : PHP_EOL,
-                        ($count === 1) ? ' ' : '    ',
+                        ($count === 1) ? ' ' : static::INDENT,
                         $key,
                         (($count !== 1) && ($count - 2) >= $i) ? ',' : ''
                     );

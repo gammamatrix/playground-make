@@ -21,6 +21,7 @@ abstract class Command extends BaseGeneratorCommand
     use Concerns\Files;
     use Concerns\InteractiveCommands;
     use Concerns\PackageConfiguration;
+    use Concerns\PreparingOptions;
 
     /**
      * @var class-string<PrimaryConfigurationContract>
@@ -28,6 +29,8 @@ abstract class Command extends BaseGeneratorCommand
     public const CONF = PrimaryConfigurationContract::class;
 
     protected PrimaryConfigurationContract $c;
+
+    public const INDENT = '    ';
 
     /**
      * @var array<string, string>
@@ -60,7 +63,11 @@ abstract class Command extends BaseGeneratorCommand
      */
     public function parseClassInput(mixed $input): string
     {
-        return empty($input) || ! is_string($input) ? '' : str_replace('/', '\\', ltrim($input, '\\/'));
+        return empty($input) || ! is_string($input) ? '' : trim(str_replace(
+            '/',
+            '\\',
+            ltrim($input, '\\/'))
+        );
     }
 
     /**
@@ -68,7 +75,11 @@ abstract class Command extends BaseGeneratorCommand
      */
     public function parseClassConfig(mixed $input): string
     {
-        return empty($input) || ! is_string($input) ? '' : str_replace(['\\', '\\\\'], '/', ltrim($input, '\\/'));
+        return empty($input) || ! is_string($input) ? '' : trim(str_replace(
+            ['\\', '\\\\'],
+            '/',
+            ltrim($input, '\\/'))
+        );
     }
 
     protected function get_configuration(bool $reset = false): PrimaryConfigurationContract

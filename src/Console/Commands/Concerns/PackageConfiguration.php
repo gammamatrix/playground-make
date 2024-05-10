@@ -85,7 +85,8 @@ trait PackageConfiguration
                     if (in_array($search, [
                         'namespace',
                     ])) {
-                        $this->searches[$search] = $this->parseClassInput($this->getDefaultNamespace($properties[$search]));
+                        // $this->searches[$search] = $this->getDefaultNamespace($properties[$search]);
+                        $this->searches[$search] = $this->parseClassInput($properties[$search]);
                     } elseif (in_array($search, [
                         'class',
                         'model_fqdn',
@@ -234,9 +235,7 @@ trait PackageConfiguration
         if ($this->hasArgument('name')
             && $this->argument('name')
         ) {
-            $this->c->setOptions([
-                'name' => $this->parseClassInput($this->argument('name')),
-            ]);
+            $this->c->setName($this->parseClassInput($this->argument('name')));
             $this->searches['name'] = $this->c->name();
         }
     }
@@ -279,24 +278,16 @@ trait PackageConfiguration
             $package = $this->option('package');
         }
 
-        $this->c->setOptions([
-            'namespace' => $this->parseClassConfig($this->parseClassInput(
-                $this->getDefaultNamespace(
-                    $namespace
+        $this->c->setNamespace(
+            $this->parseClassConfig(
+                $this->parseClassInput(
+                    $this->getDefaultNamespace($namespace)
                 )
-            )),
-        ]);
-        $this->searches['namespace'] = $this->parseClassInput(
-            $this->c->namespace()
+            )
         );
 
-        $this->c->setOptions([
-            'namespace' => $this->parseClassConfig($namespace),
-        ]);
-        $this->searches['namespace'] = $this->parseClassInput(
-            $this->getDefaultNamespace(
-                $this->c->namespace()
-            )
+        $this->searches['namespace'] = $this->getDefaultNamespace(
+            $this->c->namespace()
         );
 
         $namespace_exploded = [];
@@ -318,9 +309,8 @@ trait PackageConfiguration
             }
         }
 
-        $this->c->setOptions([
-            'organization' => $organization,
-        ]);
+        $this->c->setOrganization($organization);
+
         $this->searches['organization'] = $this->c->organization();
 
         if ($organization && ! $package && count($namespace_exploded)) {
@@ -331,9 +321,8 @@ trait PackageConfiguration
             $package = 'app';
         }
 
-        $this->c->setOptions([
-            'package' => $package,
-        ]);
+        $this->c->setPackage($package);
+
         $this->searches['package'] = $this->c->package();
 
         // dump([
@@ -419,8 +408,16 @@ trait PackageConfiguration
         $this->loadOptionsIntoConfiguration($payload);
     }
 
-    public function getModelFile(): ?string
+    public function getModelFile(bool $checkOptions = true): ?string
     {
+        if ($checkOptions
+            && $this->hasOption('model-file')
+            && $this->option('model-file')
+            && is_string($this->option('model-file'))
+        ) {
+            return $this->option('model-file');
+        }
+
         $model = method_exists($this->c, 'model') ? $this->c->model() : '';
         $models = method_exists($this->c, 'models') ? $this->c->models() : [];
         // dd([
@@ -432,6 +429,8 @@ trait PackageConfiguration
 
         return ! empty($model) && ! empty($models[$model]) ? $models[$model] : null;
     }
+
+    protected bool $initModelAddToModels = true;
 
     /**
      * Initialize the model
@@ -465,6 +464,10 @@ trait PackageConfiguration
                 $this->readJsonFileAsArray($models[$model], false, 'Model File'),
                 $withSkeleton
             );
+
+            if ($this->initModelAddToModels && method_exists($this->c, 'addMappedClassTo')) {
+                $this->c->addMappedClassTo('models', $model, $models[$model]);
+            }
         }
 
         // dd([
@@ -557,107 +560,97 @@ trait PackageConfiguration
 
             $this->model->addMappedClassTo('models', $this->model->name(), $model_file);
 
-            if (empty($this->model->fqdn())) {
+            if (! $this->model->fqdn()) {
 
                 if ($this->model->namespace()) {
-                    $this->c->setOptions(['fqdn' => sprintf(
+                    $this->model->setFqdn(sprintf(
                         '%1$s\Models\%2$s',
                         trim($this->parseClassInput($this->model->namespace()), '\\/'),
-                        trim(Str::of($this->model->name())->studly()->toString(), '\\/')
-                    ), ]);
+                        $this->model->name()
+                    ));
                 }
             }
 
-            if (empty($this->c->model())
-                && ! $hasOptionModel
-                && ! empty($this->model->fqdn())
-                && is_string($this->model->fqdn())
-            ) {
-                $this->c->setOptions([
-                    'model' => $this->parseClassConfig($this->model->fqdn()),
-                ]);
+            if (! $hasOptionModel) {
+                $this->c->setModel($this->model->name());
                 $this->searches['model'] = $this->parseClassInput($this->model->fqdn());
             }
         }
-
     }
 
+    /**
+     * Reset all options provided by the CLI.
+     *
+     * Before this method is called, reset() calls:
+     * - self::get_configuration(true)
+     * - $this->searches = $this->get_search()
+     * - self::resetName()
+     * - self::resetNamespace()
+     * - self::preloadConfiguration()
+     * - self::resetFile()
+     * - self::resetModelFile()
+     */
     public function resetOptions(): void
     {
-        $hasOptionClass = $this->hasOption('class') && is_string($this->option('class')) && $this->option('class');
-        $hasOptionModel = $this->hasOption('model') && is_string($this->option('model')) && $this->option('model');
-        $hasOptionModule = $this->hasOption('module') && is_string($this->option('module')) && $this->option('module');
-        $hasOptionOrganization = $this->hasOption('organization') && is_string($this->option('organization')) && $this->option('organization');
-        $hasOptionPackage = $this->hasOption('package') && is_string($this->option('package')) && $this->option('package');
-        $hasOptionSkeleton = $this->hasOption('skeleton') && ! empty($this->option('skeleton'));
-        $hasOptionType = $this->hasOption('type') && is_string($this->option('type')) && $this->option('type');
+        $class = $this->hasOption('class') && is_string($this->option('class')) && $this->option('class') ? $this->option('class') : '';
+        $model = $this->hasOption('model') && is_string($this->option('model')) && $this->option('model') ? $this->option('model') : '';
+        $module = $this->hasOption('module') && is_string($this->option('module')) && $this->option('module') ? $this->option('module') : '';
+        $organization = $this->hasOption('organization') && is_string($this->option('organization')) && $this->option('organization') ? $this->option('organization') : '';
+        $package = $this->hasOption('package') && is_string($this->option('package')) && $this->option('package') ? $this->option('package') : '';
+        $skeleton = $this->hasOption('skeleton') && $this->option('skeleton');
+        $type = $this->hasOption('type') && is_string($this->option('type')) && $this->option('type') ? $this->option('type') : '';
 
-        if ($hasOptionSkeleton && method_exists($this->c, 'withSkeleton')) {
+        if ($skeleton && method_exists($this->c, 'withSkeleton')) {
             $this->c->withSkeleton();
         }
-
-        if ($hasOptionType && is_string($this->option('type'))) {
-            $this->c->setOptions([
-                'type' => $this->option('type'),
-            ]);
+        // dump([
+        //     '__METHOD__' => __METHOD__,
+        //     'static::class' => static::class,
+        //     '$type' => $type,
+        //     '$this->c->type()' => $this->c->type(),
+        // ]);
+        if ($type) {
+            $this->c->setType($type);
             $this->searches['type'] = $this->c->type();
         }
+        // dump([
+        //     '__METHOD__' => __METHOD__,
+        //     '$this->c->type()' => $this->c->type(),
+        // ]);
 
-        $hasNamespace = is_string($this->c->namespace()) && ! empty($this->c->namespace());
-
-        if ($hasOptionClass && is_string($this->option('class'))) {
-            $this->c->setOptions([
-                'class' => $this->option('class'),
-            ]);
+        if ($class) {
+            $this->c->setClass($class);
             $this->searches['class'] = $this->parseClassInput($this->c->class());
         }
 
-        if ($hasOptionPackage && is_string($this->option('package'))) {
-            $this->c->setOptions([
-                'package' => Str::slug($this->option('package'), '-'),
-            ]);
+        if ($package) {
+            $this->c->setPackage(
+                Str::slug($package, '-')
+            );
             $this->searches['package'] = $this->c->package();
         }
 
-        $hasPackage = is_string($this->c->package()) && ! empty($this->c->package());
-
-        if ($hasOptionOrganization && is_string($this->option('organization'))) {
-            $this->c->setOptions([
-                'organization' => $this->option('organization'),
-            ]);
+        if ($organization) {
+            $this->c->setOrganization($organization);
             $this->searches['organization'] = $this->c->organization();
         }
 
-        $hasOrganization = is_string($this->c->organization()) && ! empty($this->c->organization());
-
-        if ($hasOptionModel && is_string($this->option('model'))) {
-            $this->c->setOptions([
-                'model' => $this->option('model'),
-            ]);
-            $this->searches['model'] = class_basename($this->parseClassInput($this->c->model()));
+        if ($model) {
+            $this->c->setModel(class_basename($this->parseClassInput($model)));
+            $this->searches['model'] = $this->c->model();
         }
 
-        if ($hasOptionModule && is_string($this->option('module'))) {
-            $this->c->setOptions([
-                'module' => $this->option('module'),
-            ]);
-            $this->searches['module'] = class_basename($this->parseClassInput($this->c->module()));
-
-            // TODO: Setting module again?
-            $this->c->setOptions([
-                'module' => Str::of($this->c->module())->snake()->replace('-', '_')->title()->toString(),
-            ]);
+        if ($module) {
+            $this->c->setModule($module);
             $this->searches['module'] = $this->c->module();
-            $this->c->setOptions([
-                'module_slug' => Str::slug($this->c->module(), '/'),
-            ]);
+
+            $this->c->setModuleSlug(Str::slug($this->c->module()));
             $this->searches['module_slug'] = $this->c->module_slug();
         }
 
-        if (empty($this->c->config())) {
-            $this->c->setOptions([
-                'config' => $this->c->package(),
-            ]);
+        if (! $this->c->config()) {
+            $this->c->setConfig($this->c->package());
+            $this->searches['config'] = $this->c->config();
         }
 
         $this->isReset = true;
@@ -667,19 +660,21 @@ trait PackageConfiguration
     {
     }
 
+    /**
+     * @deprecated Use $this->c->type() instead.
+     */
     protected function getConfigurationType(): string
     {
-        $type = $this->c->type();
-        if (! $type) {
-            $type = $this->option('type');
-            if (is_string($type)) {
-                $this->c->setOptions([
-                    'type' => $type,
-                ]);
-            }
-        }
+        return $this->c->type();
+        // $type = $this->c->type();
+        // if (! $type) {
+        //     $type = $this->option('type');
+        //     if (is_string($type)) {
+        //         $this->c->setType($type);
+        //     }
+        // }
 
-        return is_string($type) ? $type : '';
+        // return is_string($type) ? $type : '';
     }
 
     protected function getConfigurationFilename(): string

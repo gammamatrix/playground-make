@@ -2,7 +2,7 @@
     "class": "ServiceProvider",
     "config": "playground-matrix",
     "config_space": "PLAYGROUND_MATRIX",
-    "fqdn": "Playground/Matrix/Matrix",
+    "fqdn": "Playground/Matrix/ServiceProvider",
     "module": "Matrix",
     "module_slug": "matrix",
     "name": "Matrix",

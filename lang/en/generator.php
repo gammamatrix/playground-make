@@ -19,4 +19,6 @@ return [
     'stub.path.invalid' => 'The stub path is invalid: [:path]',
 
     'input.error' => 'Please provide a name for the package or provide a configuration with [--file]',
+
+    'type.unexpected' => 'Unexpect [--type :type] provided for the :generator. Allowed types [:types]',
 ];
