@@ -330,6 +330,11 @@ class Model extends PrimaryConfiguration
         return $this->table;
     }
 
+    public function module_slug(): string
+    {
+        return $this->module_slug;
+    }
+
     public function model_plural(): string
     {
         return $this->model_plural;

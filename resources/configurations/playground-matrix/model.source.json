@@ -5,7 +5,7 @@
     "module": "Matrix",
     "module_slug": "matrix",
     "name": "Source",
-    "namespace": "Playground/Matrix",
+    "namespace": "Playground/Matrix/Models",
     "organization": "Playground",
     "package": "playground-matrix",
     "model": "Source",

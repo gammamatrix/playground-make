@@ -5,7 +5,7 @@
     "module": "Matrix",
     "module_slug": "matrix",
     "name": "Ticket",
-    "namespace": "Playground/Matrix",
+    "namespace": "Playground/Matrix/Models",
     "organization": "Playground",
     "package": "playground-matrix",
     "model": "Ticket",
@@ -237,6 +237,7 @@
         "locked": false,
         "pending": false,
         "planned": false,
+        "prioritized": false,
         "problem": false,
         "published": false,
         "released": false,
@@ -338,6 +339,7 @@
         "locked": "boolean",
         "pending": "boolean",
         "planned": "boolean",
+        "prioritized": "boolean",
         "problem": "boolean",
         "published": "boolean",
         "released": "boolean",
@@ -458,6 +460,7 @@
         "locked",
         "pending",
         "planned",
+        "prioritized",
         "problem",
         "published",
         "released",
@@ -953,6 +956,14 @@
                 "column": "problem",
                 "label": "Problem",
                 "icon": "fa-solid fa-triangle-exclamation text-danger",
+                "nullable": false,
+                "unsigned": true,
+                "type": "string"
+            },
+            {
+                "column": "prioritized",
+                "label": "Prioritized",
+                "icon": "fa-solid fa-triangle-exclamation text-success",
                 "nullable": false,
                 "unsigned": true,
                 "type": "string"
@@ -2051,6 +2062,13 @@
         },
         {
             "column": "planned",
+            "label": "",
+            "icon": "",
+            "nullable": false,
+            "type": "boolean"
+        },
+        {
+            "column": "prioritized",
             "label": "",
             "icon": "",
             "nullable": false,
