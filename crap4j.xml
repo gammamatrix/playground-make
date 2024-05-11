@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2024-05-10 19:40:23</timestamp>
+  <timestamp>2024-05-11 07:40:48</timestamp>
   <stats>
     <name>Method Crap Stats</name>
-    <methodCount>264</methodCount>
+    <methodCount>265</methodCount>
     <crapMethodCount>18</crapMethodCount>
     <crapLoad>259</crapLoad>
-    <totalCrap>5988.72</totalCrap>
-    <crapMethodPercent>6.82</crapMethodPercent>
+    <totalCrap>5989.72</totalCrap>
+    <crapMethodPercent>6.79</crapMethodPercent>
   </stats>
   <methods>
     <method>
@@ -710,6 +710,17 @@
       <methodName>table</methodName>
       <methodSignature>table(): string</methodSignature>
       <fullMethod>table(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration</package>
+      <className>Playground\Make\Configuration\Model</className>
+      <methodName>module_slug</methodName>
+      <methodSignature>module_slug(): string</methodSignature>
+      <fullMethod>module_slug(): string</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>

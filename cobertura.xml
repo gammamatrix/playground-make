@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.49487054225696" branch-rate="0" lines-covered="1013" lines-valid="2047" branches-covered="0" branches-valid="0" complexity="1026" version="0.4" timestamp="1715370023">
+<coverage line-rate="0.4951171875" branch-rate="0" lines-covered="1014" lines-valid="2048" branches-covered="0" branches-valid="0" complexity="1027" version="0.4" timestamp="1715413248">
   <sources>
     <source>/app/src</source>
   </sources>
@@ -1039,9 +1039,9 @@
     <package name="Configuration/Contracts/WithSkeleton.php" line-rate="0" branch-rate="0" complexity="0">
       <classes/>
     </package>
-    <package name="Configuration/Model.php" line-rate="0.76422764227642" branch-rate="0" complexity="52">
+    <package name="Configuration/Model.php" line-rate="0.76612903225806" branch-rate="0" complexity="53">
       <classes>
-        <class name="Playground\Make\Configuration\Model" filename="Configuration/Model.php" line-rate="0.76422764227642" branch-rate="0" complexity="52">
+        <class name="Playground\Make\Configuration\Model" filename="Configuration/Model.php" line-rate="0.76612903225806" branch-rate="0" complexity="53">
           <methods>
             <method name="apply" signature="" line-rate="1" branch-rate="0" complexity="11">
               <lines>
@@ -1199,19 +1199,24 @@
                 <line number="330" hits="2"/>
               </lines>
             </method>
-            <method name="model_plural" signature="" line-rate="1" branch-rate="0" complexity="1">
+            <method name="module_slug" signature="" line-rate="1" branch-rate="0" complexity="1">
               <lines>
                 <line number="335" hits="2"/>
               </lines>
             </method>
-            <method name="model_singular" signature="" line-rate="1" branch-rate="0" complexity="1">
+            <method name="model_plural" signature="" line-rate="1" branch-rate="0" complexity="1">
               <lines>
                 <line number="340" hits="2"/>
               </lines>
             </method>
-            <method name="model_slug" signature="" line-rate="1" branch-rate="0" complexity="1">
+            <method name="model_singular" signature="" line-rate="1" branch-rate="0" complexity="1">
               <lines>
                 <line number="345" hits="2"/>
+              </lines>
+            </method>
+            <method name="model_slug" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="350" hits="2"/>
               </lines>
             </method>
           </methods>
@@ -1339,6 +1344,7 @@
             <line number="335" hits="2"/>
             <line number="340" hits="2"/>
             <line number="345" hits="2"/>
+            <line number="350" hits="2"/>
           </lines>
         </class>
       </classes>
