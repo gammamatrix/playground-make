@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2024-05-11 07:40:48</timestamp>
+  <timestamp>2024-05-15 17:12:23</timestamp>
   <stats>
     <name>Method Crap Stats</name>
-    <methodCount>265</methodCount>
+    <methodCount>267</methodCount>
     <crapMethodCount>18</crapMethodCount>
     <crapLoad>259</crapLoad>
-    <totalCrap>5989.72</totalCrap>
-    <crapMethodPercent>6.79</crapMethodPercent>
+    <totalCrap>5996.67</totalCrap>
+    <crapMethodPercent>6.74</crapMethodPercent>
   </stats>
   <methods>
     <method>
@@ -644,9 +644,9 @@
       <methodName>setOptions</methodName>
       <methodSignature>setOptions(array $options): self</methodSignature>
       <fullMethod>setOptions(array $options): self</fullMethod>
-      <crap>21.71</crap>
-      <complexity>20</complexity>
-      <coverage>83.78</coverage>
+      <crap>26.66</crap>
+      <complexity>23</complexity>
+      <coverage>80.95</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -721,6 +721,28 @@
       <methodName>module_slug</methodName>
       <methodSignature>module_slug(): string</methodSignature>
       <fullMethod>module_slug(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration</package>
+      <className>Playground\Make\Configuration\Model</className>
+      <methodName>model_attribute</methodName>
+      <methodSignature>model_attribute(): string</methodSignature>
+      <fullMethod>model_attribute(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration</package>
+      <className>Playground\Make\Configuration\Model</className>
+      <methodName>model_attribute_required</methodName>
+      <methodSignature>model_attribute_required(): bool</methodSignature>
+      <fullMethod>model_attribute_required(): bool</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
