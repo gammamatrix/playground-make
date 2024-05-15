@@ -14,6 +14,9 @@
     "withMigrations": true,
     "withModels": true,
     "withPolicies": false,
+    "withRequests": false,
+    "withRoutes": false,
+    "withSwagger": false,
     "withTests": true,
     "playground": true,
     "package_name": "",
@@ -58,6 +61,7 @@
     "requests": [],
     "routes": [],
     "transformers": [],
+    "uses": [],
     "service_provider": "",
     "type": "playground-model",
     "version": ""

@@ -9,6 +9,8 @@
     "organization": "Playground",
     "package": "playground-matrix",
     "model": "Tag",
+    "model_attribute": "title",
+    "model_attribute_required": true,
     "model_plural": "Tags",
     "model_singular": "Tag",
     "model_slug": "tag",

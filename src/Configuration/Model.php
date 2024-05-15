@@ -38,6 +38,8 @@ class Model extends PrimaryConfiguration
         'package' => '',
         // properties
         'model' => '',
+        'model_attribute' => '',
+        'model_attribute_required' => false,
         'model_plural' => '',
         'model_singular' => '',
         'model_slug' => '',
@@ -79,6 +81,8 @@ class Model extends PrimaryConfiguration
         $this->properties['organization'] = $this->organization();
         $this->properties['package'] = $this->package();
         $this->properties['model'] = $this->model();
+        $this->properties['model_attribute'] = $this->model_attribute();
+        $this->properties['model_attribute_required'] = $this->model_attribute_required();
         $this->properties['model_plural'] = $this->model_plural();
         $this->properties['model_singular'] = $this->model_singular();
         $this->properties['model_slug'] = $this->model_slug();
@@ -153,6 +157,10 @@ class Model extends PrimaryConfiguration
     }
 
     protected string $model = '';
+
+    protected string $model_attribute = '';
+
+    protected bool $model_attribute_required = false;
 
     protected string $model_plural = '';
 
@@ -239,6 +247,16 @@ class Model extends PrimaryConfiguration
             && is_string($options['model'])
         ) {
             $this->model = $options['model'];
+        }
+
+        if (! empty($options['model_attribute'])
+            && is_string($options['model_attribute'])
+        ) {
+            $this->model_attribute = $options['model_attribute'];
+        }
+
+        if (array_key_exists('model_attribute_required', $options)) {
+            $this->model_attribute_required = ! empty($options['model_attribute_required']);
         }
 
         if (! empty($options['model_plural'])
@@ -333,6 +351,16 @@ class Model extends PrimaryConfiguration
     public function module_slug(): string
     {
         return $this->module_slug;
+    }
+
+    public function model_attribute(): string
+    {
+        return $this->model_attribute;
+    }
+
+    public function model_attribute_required(): bool
+    {
+        return $this->model_attribute_required;
     }
 
     public function model_plural(): string

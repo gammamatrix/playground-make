@@ -9,6 +9,8 @@
     "organization": "Playground",
     "package": "playground-matrix",
     "model": "Release",
+    "model_attribute": "title",
+    "model_attribute_required": true,
     "model_plural": "Releases",
     "model_singular": "Release",
     "model_slug": "release",

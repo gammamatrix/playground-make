@@ -468,6 +468,8 @@ trait PackageConfiguration
             if ($this->initModelAddToModels && method_exists($this->c, 'addMappedClassTo')) {
                 $this->c->addMappedClassTo('models', $model, $models[$model]);
             }
+
+            $this->model->apply();
         }
 
         // dd([
@@ -515,6 +517,7 @@ trait PackageConfiguration
             $this->model = new Model(
                 $this->readJsonFileAsArray($model_file, false, 'Model File')
             );
+            $this->model->apply();
         }
         // dump([
         //     '__METHOD__' => __METHOD__,
@@ -548,6 +551,7 @@ trait PackageConfiguration
             } elseif (is_array($model)) {
                 $this->model = new Model($model);
             }
+            $this->model?->apply();
         }
 
         // dump([

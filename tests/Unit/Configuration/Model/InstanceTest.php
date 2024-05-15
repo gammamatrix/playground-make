@@ -55,6 +55,8 @@ class InstanceTest extends TestCase
         'package' => '',
         // properties
         'model' => '',
+        'model_attribute' => '',
+        'model_attribute_required' => false,
         'model_plural' => '',
         'model_singular' => '',
         'model_slug' => '',

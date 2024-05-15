@@ -9,6 +9,8 @@
     "organization": "Playground",
     "package": "playground-matrix",
     "model": "Sprint",
+    "model_attribute": "title",
+    "model_attribute_required": true,
     "model_plural": "Sprints",
     "model_singular": "Sprint",
     "model_slug": "sprint",
