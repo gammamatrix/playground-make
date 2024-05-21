@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2024-05-15 17:12:23</timestamp>
+  <timestamp>2024-05-21 06:18:02</timestamp>
   <stats>
     <name>Method Crap Stats</name>
-    <methodCount>267</methodCount>
+    <methodCount>268</methodCount>
     <crapMethodCount>18</crapMethodCount>
     <crapLoad>259</crapLoad>
-    <totalCrap>5996.67</totalCrap>
-    <crapMethodPercent>6.74</crapMethodPercent>
+    <totalCrap>6028.12</totalCrap>
+    <crapMethodPercent>6.72</crapMethodPercent>
   </stats>
   <methods>
     <method>
@@ -1381,9 +1381,9 @@
       <methodName>jsonSerialize</methodName>
       <methodSignature>jsonSerialize(): mixed</methodSignature>
       <fullMethod>jsonSerialize(): mixed</fullMethod>
-      <crap>28.13</crap>
-      <complexity>28</complexity>
-      <coverage>94.44</coverage>
+      <crap>31.13</crap>
+      <complexity>31</complexity>
+      <coverage>94.83</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -1802,6 +1802,17 @@
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\Filters</className>
+      <methodName>apply</methodName>
+      <methodSignature>apply(): self</methodSignature>
+      <fullMethod>apply(): self</fullMethod>
+      <crap>28.45</crap>
+      <complexity>28</complexity>
+      <coverage>91.67</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
