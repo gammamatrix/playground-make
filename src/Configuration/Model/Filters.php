@@ -88,6 +88,96 @@ class Filters extends ModelConfiguration implements Configuration\Contracts\With
         'json' => [],
     ];
 
+    public function apply(): self
+    {
+        $this->properties['builder'] = $this->builder();
+
+        if ($this->ids()) {
+            $this->properties['ids'] = [];
+            foreach ($this->ids() as $i => $id) {
+                if (is_array($this->properties['ids'])) {
+                    $this->properties['ids'][$i] = $id->toArray();
+                }
+            }
+        }
+
+        if ($this->dates()) {
+            $this->properties['dates'] = [];
+            foreach ($this->dates() as $i => $date) {
+                if (is_array($this->properties['dates'])) {
+                    $this->properties['dates'][$i] = $date->toArray();
+                }
+            }
+        }
+
+        if ($this->flags()) {
+            $this->properties['flags'] = [];
+            foreach ($this->flags() as $i => $flag) {
+                if (is_array($this->properties['flags'])) {
+                    $this->properties['flags'][$i] = $flag->toArray();
+                }
+            }
+        }
+
+        $this->properties['trash'] = $this->trash();
+
+        if ($this->columns()) {
+            $this->properties['columns'] = [];
+            foreach ($this->columns() as $i => $column) {
+                if (is_array($this->properties['columns'])) {
+                    $this->properties['columns'][$i] = $column->toArray();
+                }
+            }
+        }
+
+        if ($this->permissions()) {
+            $this->properties['permissions'] = [];
+            foreach ($this->permissions() as $i => $permission) {
+                if (is_array($this->properties['permissions'])) {
+                    $this->properties['permissions'][$i] = $permission->toArray();
+                }
+            }
+        }
+
+        if ($this->status()) {
+            $this->properties['status'] = [];
+            foreach ($this->status() as $i => $status) {
+                if (is_array($this->properties['status'])) {
+                    $this->properties['status'][$i] = $status->toArray();
+                }
+            }
+        }
+
+        if ($this->matrix()) {
+            $this->properties['matrix'] = [];
+            foreach ($this->matrix() as $i => $matrix) {
+                if (is_array($this->properties['matrix'])) {
+                    $this->properties['matrix'][$i] = $matrix->toArray();
+                }
+            }
+        }
+
+        if ($this->ui()) {
+            $this->properties['ui'] = [];
+            foreach ($this->ui() as $i => $ui) {
+                if (is_array($this->properties['ui'])) {
+                    $this->properties['ui'][$i] = $ui->toArray();
+                }
+            }
+        }
+
+        if ($this->json()) {
+            $this->properties['json'] = [];
+            foreach ($this->json() as $i => $json) {
+                if (is_array($this->properties['json'])) {
+                    $this->properties['json'][$i] = $json->toArray();
+                }
+            }
+        }
+
+        return $this;
+    }
+
     /**
      * @param array<string, mixed> $options
      */

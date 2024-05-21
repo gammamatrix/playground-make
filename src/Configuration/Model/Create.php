@@ -500,8 +500,8 @@ class Create extends ModelConfiguration implements Configuration\Contracts\WithS
             'softDeletes' => $this->softDeletes(),
             'trash' => $this->trash(),
             'ids' => [],
-            // 'unique' => [],
-            'unique' => $this->unique(),
+            'unique' => [],
+            // 'unique' => $this->unique(),
             'dates' => [],
             'flags' => [],
             'columns' => [],
@@ -516,6 +516,14 @@ class Create extends ModelConfiguration implements Configuration\Contracts\WithS
             foreach ($this->ids() as $column => $c) {
                 if (is_array($properties['ids'])) {
                     $properties['ids'][$column] = $c->toArray();
+                }
+            }
+        }
+
+        if ($this->unique()) {
+            foreach ($this->unique() as $i => $unique) {
+                if (is_array($properties['unique'])) {
+                    $properties['unique'][$i] = $unique->toArray();
                 }
             }
         }

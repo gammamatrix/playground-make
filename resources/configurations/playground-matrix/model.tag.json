@@ -231,22 +231,6 @@
                 "type": "uuid"
             },
             {
-                "column": "modified_by_id",
-                "label": "Modified by id",
-                "icon": "",
-                "nullable": true,
-                "unsigned": true,
-                "type": "uuid"
-            },
-            {
-                "column": "owned_by_id",
-                "label": "Owned by id",
-                "icon": "",
-                "nullable": true,
-                "unsigned": true,
-                "type": "uuid"
-            },
-            {
                 "column": "matrix_id",
                 "label": "Matrix id",
                 "icon": "",

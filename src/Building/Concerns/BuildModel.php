@@ -16,15 +16,8 @@ trait BuildModel
 {
     protected function buildClass_model(string $name): void
     {
-        $model = '';
-        $modelConfiguration = $this->getModelConfiguration();
-        if ($modelConfiguration?->name()) {
-            $model = $this->parseClassInput(sprintf(
-                '%1$s/Models/%2$s',
-                rtrim($modelConfiguration->namespace(), '\\/'),
-                rtrim($modelConfiguration->name(), '\\/')
-            ));
-        }
+        $model = $this->model?->model();
+        $fqdn = $this->model?->fqdn();
         // dump([
         //     '__METHOD__' => __METHOD__,
         //     '$name' => $name,
@@ -35,12 +28,15 @@ trait BuildModel
         //     '$this->searches' => $this->searches,
         // ]);
 
-        if (empty($model) && $this->hasOption('model')) {
+        if (empty($model)
+            && $this->hasOption('model')
+            && $this->option('model')
+            && is_string($this->option('model'))
+        ) {
             $model = $this->option('model');
-            $model = is_string($model) ? $model : '';
         }
 
-        if (empty($model) && ! empty($this->c->model())) {
+        if (empty($model) && $this->c->model()) {
             $model = $this->c->model();
         }
 
@@ -48,23 +44,25 @@ trait BuildModel
             return;
         }
 
-        $model = str_replace('/', '\\', $model);
-
-        if (str_starts_with($model, '\\')) {
-            $namespacedModel = trim($model, '\\');
-        } else {
-            $namespacedModel = $this->qualifyModel($model);
+        if (!$fqdn) {
+            $fqdn = $model;
         }
 
-        $model = class_basename(trim($model, '\\'));
+        // dump([
+        //     '__METHOD__' => __METHOD__,
+        //     '$name' => $name,
+        //     '$model' => $model,
+        // ]);
+
+        // $model = class_basename(trim($model, '\\'));
 
         $userProviderModel = $this->userProviderModel();
         $dummyUser = ! is_string($userProviderModel) ? 'DummyUser' : class_basename($userProviderModel);
 
         $dummyModel = Str::camel($model) === 'user' ? 'model' : $model;
 
-        $this->searches['namespacedModel'] = $namespacedModel;
-        $this->searches['NamespacedDummyModel'] = $namespacedModel;
+        $this->searches['namespacedModel'] = $this->parseClassInput($fqdn);
+        $this->searches['NamespacedDummyModel'] = $this->parseClassInput($fqdn);
 
         $this->searches['DummyModel'] = $model;
         $this->searches['model'] = $model;
@@ -112,9 +110,9 @@ trait BuildModel
                 $this->searches['table'] = $this->configuration['table'];
             }
             if (empty($this->searches['table'])
-                && $modelConfiguration?->table()
+                && $this->model?->table()
             ) {
-                $this->searches['table'] = $modelConfiguration->table();
+                $this->searches['table'] = $this->model->table();
             }
         }
 
