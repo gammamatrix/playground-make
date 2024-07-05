@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2024-05-21 06:18:02</timestamp>
+  <timestamp>2024-07-05 22:37:04</timestamp>
   <stats>
     <name>Method Crap Stats</name>
-    <methodCount>268</methodCount>
+    <methodCount>267</methodCount>
     <crapMethodCount>18</crapMethodCount>
     <crapLoad>259</crapLoad>
-    <totalCrap>6028.12</totalCrap>
-    <crapMethodPercent>6.72</crapMethodPercent>
+    <totalCrap>6016.12</totalCrap>
+    <crapMethodPercent>6.74</crapMethodPercent>
   </stats>
   <methods>
     <method>
@@ -2404,8 +2404,8 @@
       <methodName>rootNamespace</methodName>
       <methodSignature>rootNamespace()</methodSignature>
       <fullMethod>rootNamespace()</fullMethod>
-      <crap>30</crap>
-      <complexity>5</complexity>
+      <crap>20</crap>
+      <complexity>4</complexity>
       <coverage>0</coverage>
       <crapLoad>0</crapLoad>
     </method>
@@ -2888,17 +2888,6 @@
       <methodName>handleTestCreation</methodName>
       <methodSignature>handleTestCreation($path)</methodSignature>
       <fullMethod>handleTestCreation($path)</fullMethod>
-      <crap>2</crap>
-      <complexity>1</complexity>
-      <coverage>0</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Playground\Make\Console\Commands</package>
-      <className>Playground\Make\Console\Commands\GeneratorCommand</className>
-      <methodName>qualifyModel</methodName>
-      <methodSignature>qualifyModel(string $model)</methodSignature>
-      <fullMethod>qualifyModel(string $model)</fullMethod>
       <crap>2</crap>
       <complexity>1</complexity>
       <coverage>0</coverage>
