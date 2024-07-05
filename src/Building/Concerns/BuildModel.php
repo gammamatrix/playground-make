@@ -44,7 +44,7 @@ trait BuildModel
             return;
         }
 
-        if (!$fqdn) {
+        if (! $fqdn) {
             $fqdn = $model;
         }
 

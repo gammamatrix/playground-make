@@ -144,15 +144,15 @@ abstract class GeneratorCommand extends Command
         return false;
     }
 
-    /**
-     * Qualify the given model class base name.
-     *
-     * @return string
-     */
-    protected function qualifyModel(string $model)
-    {
-        return $this->parseClassInput($model);
-    }
+    // /**
+    //  * Qualify the given model class base name.
+    //  *
+    //  * @return string
+    //  */
+    // protected function qualifyModel(string $model)
+    // {
+    //     return $this->parseClassInput($model);
+    // }
 
     /**
      * Get the desired class name from the input.

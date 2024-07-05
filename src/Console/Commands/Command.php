@@ -60,13 +60,18 @@ abstract class Command extends BaseGeneratorCommand
 
     /**
      * Parse the input for a class name.
+     *
+     * Generates a proper PHP syntax name: App\Models\User
      */
     public function parseClassInput(mixed $input): string
     {
-        return empty($input) || ! is_string($input) ? '' : trim(str_replace(
-            '/',
-            '\\',
-            ltrim($input, '\\/'))
+        if (empty($input) || ! is_string($input)) {
+            return '';
+        }
+
+        return trim(
+            str_replace('/', '\\', $input),
+            '\\/'
         );
     }
 
@@ -75,10 +80,13 @@ abstract class Command extends BaseGeneratorCommand
      */
     public function parseClassConfig(mixed $input): string
     {
-        return empty($input) || ! is_string($input) ? '' : trim(str_replace(
-            ['\\', '\\\\'],
-            '/',
-            ltrim($input, '\\/'))
+        if (empty($input) || ! is_string($input)) {
+            return '';
+        }
+
+        return trim(
+            str_replace(['\\', '\\\\'], '/', $input),
+            '\\/'
         );
     }
 
@@ -183,6 +191,8 @@ abstract class Command extends BaseGeneratorCommand
     /**
      * Get the default namespace for the class.
      *
+     * NOTE: This method is not expected to return trailing slashes
+     *
      * @param  string  $rootNamespace
      * @return string
      */
@@ -199,15 +209,16 @@ abstract class Command extends BaseGeneratorCommand
     protected function rootNamespace()
     {
         $rootNamespace = $this->laravel->getNamespace();
+        // trim($rootNamespace, '\\/')
         if ($this->hasOption('namespace') && $this->option('namespace')) {
             $rootNamespace = $this->parseClassInput($this->option('namespace'));
         } elseif ($this->c->namespace()) {
             $rootNamespace = $this->parseClassInput($this->c->namespace());
         }
 
-        if (! str_ends_with($rootNamespace, '\\')) {
-            $rootNamespace .= '\\';
-        }
+        // if (! str_ends_with($rootNamespace, '\\')) {
+        //     $rootNamespace .= '\\';
+        // }
 
         return $rootNamespace;
     }

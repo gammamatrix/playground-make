@@ -280,16 +280,18 @@ trait PackageConfiguration
 
         $this->c->setNamespace(
             $this->parseClassConfig(
-                $this->parseClassInput(
-                    $this->getDefaultNamespace($namespace)
-                )
+                rtrim($this->parseClassInput($namespace), '/')
             )
         );
 
-        $this->searches['namespace'] = $this->getDefaultNamespace(
+        $this->searches['namespace'] = $this->parseClassInput(
             $this->c->namespace()
         );
-
+        // dump([
+        //     '__METHOD__' => __METHOD__,
+        //     '$this->c->namespace()' => $this->c->namespace(),
+        //     '$this->searches[namespace]' => $this->searches['namespace'],
+        // ]);
         $namespace_exploded = [];
 
         foreach (Str::of($this->c->namespace())
@@ -354,8 +356,9 @@ trait PackageConfiguration
         // dump([
         //     '__METHOD__' => __METHOD__,
         //     // '$this->searches' => $this->searches,
-        //     '$this->c' => $this->c,
+        //     // '$this->c' => $this->c,
         //     '$this->options()' => $this->options(),
+        //     '$file' => $file,
         // ]);
 
         if (! $isAbsolute) {
