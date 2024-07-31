@@ -7,6 +7,7 @@ declare(strict_types=1);
 namespace Tests\Unit\Playground\Make\Configuration\Model;
 
 use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\CoversTrait;
 use Tests\Unit\Playground\Make\TestCase;
 use Playground\Make\Configuration\Model;
 use Playground\Make\Configuration\Model\Concerns\Scopes;
@@ -17,7 +18,7 @@ use TiMacDonald\Log\LogFake;
  * \Tests\Unit\Playground\Make\Configuration\Model\ScopesTest
  */
 #[CoversClass(Model::class)]
-#[CoversClass(Scopes::class)]
+#[CoversTrait(Scopes::class)]
 class ScopesTest extends TestCase
 {
     public function test_addScopes_with_sort(): void

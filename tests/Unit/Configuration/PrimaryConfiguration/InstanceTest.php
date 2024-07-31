@@ -7,6 +7,7 @@ declare(strict_types=1);
 namespace Tests\Unit\Playground\Make\Configuration\PrimaryConfiguration;
 
 use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\CoversTrait;
 use Tests\Unit\Playground\Make\TestCase;
 use Playground\Make\Configuration\PrimaryConfiguration;
 use Playground\Make\Configuration\Concerns\Properties;
@@ -15,7 +16,7 @@ use Playground\Make\Configuration\Concerns\Properties;
  * \Tests\Unit\Playground\Make\Configuration\PrimaryConfiguration\InstanceTest
  */
 #[CoversClass(PrimaryConfiguration::class)]
-#[CoversClass(Properties::class)]
+#[CoversTrait(Properties::class)]
 class InstanceTest extends TestCase
 {
     public function test_instance(): void

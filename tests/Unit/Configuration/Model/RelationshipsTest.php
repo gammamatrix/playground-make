@@ -7,6 +7,7 @@ declare(strict_types=1);
 namespace Tests\Unit\Playground\Make\Configuration\Model;
 
 use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\CoversTrait;
 use Tests\Unit\Playground\Make\TestCase;
 use Playground\Make\Configuration\Model;
 use Playground\Make\Configuration\Model\Concerns\Relationships;
@@ -15,7 +16,7 @@ use Playground\Make\Configuration\Model\Concerns\Relationships;
  * \Tests\Unit\Playground\Make\Configuration\Model\RelationshipsTest
  */
 #[CoversClass(Model::class)]
-#[CoversClass(Relationships::class)]
+#[CoversTrait(Relationships::class)]
 class RelationshipsTest extends TestCase
 {
     public function test_addRelationships_for_HasOne_with_invalid_accessor(): void

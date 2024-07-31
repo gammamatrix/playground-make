@@ -7,6 +7,7 @@ declare(strict_types=1);
 namespace Tests\Unit\Playground\Make\Configuration\Model;
 
 use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\CoversTrait;
 use Tests\Unit\Playground\Make\TestCase;
 use Playground\Make\Configuration\Model;
 use Playground\Make\Configuration\Model\Concerns\Attributes;
@@ -15,7 +16,7 @@ use Playground\Make\Configuration\Model\Concerns\Attributes;
  * \Tests\Unit\Playground\Make\Configuration\Model\AttributesTest
  */
 #[CoversClass(Model::class)]
-#[CoversClass(Attributes::class)]
+#[CoversTrait(Attributes::class)]
 class AttributesTest extends TestCase
 {
     public function test_addModelProperties_with_empty_options(): void

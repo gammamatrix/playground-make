@@ -7,6 +7,7 @@ declare(strict_types=1);
 namespace Tests\Unit\Playground\Make\Configuration\Model;
 
 use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\CoversTrait;
 use Tests\Unit\Playground\Make\TestCase;
 use Playground\Make\Configuration\Model;
 use Playground\Make\Configuration\Model\Concerns\Sorting;
@@ -15,7 +16,7 @@ use Playground\Make\Configuration\Model\Concerns\Sorting;
  * \Tests\Unit\Playground\Make\Configuration\Model\SortingTest
  */
 #[CoversClass(Model::class)]
-#[CoversClass(Sorting::class)]
+#[CoversTrait(Sorting::class)]
 class SortingTest extends TestCase
 {
     public function test_addSortable_without_column(): void

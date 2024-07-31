@@ -1,0 +1,57 @@
+{
+    "class": "ServiceProvider",
+    "config": "playground-directory",
+    "config_space": "PLAYGROUND_DIRECTORY",
+    "fqdn": "Playground/Directory/ServiceProvider",
+    "module": "Directory",
+    "module_slug": "directory",
+    "name": "Directory",
+    "namespace": "Playground/Directory",
+    "organization": "Playground",
+    "organization_email": "jeremy.postlethwaite@gmail.com",
+    "package": "playground-directory",
+    "withBlades": false,
+    "withControllers": false,
+    "withFactories": true,
+    "withMigrations": true,
+    "withModels": true,
+    "withPolicies": false,
+    "withRequests": false,
+    "withRoutes": false,
+    "withSwagger": false,
+    "withTests": true,
+    "playground": true,
+    "package_name": "Playground: Directory",
+    "package_description": "",
+    "package_homepage": "",
+    "package_keywords": [],
+    "package_license": "MIT",
+    "package_require": {
+        "php": "^8.2",
+        "gammamatrix/playground": "*"
+    },
+    "package_require_dev": {
+        "gammamatrix/playground-test": "*"
+    },
+    "package_autoload_psr4": [],
+    "package_autoload_dev_psr4": [],
+    "package_providers": [
+        "Playground/ServiceProvider",
+        "Playground/Directory/ServiceProvider"
+    ],
+    "package_laravel_providers": [],
+    "packagist": "gammamatrix/playground-directory",
+    "controllers": [],
+    "models": {
+        "Location": "resources/configurations/playground-directory/model.location.json",
+        "Sublocation": "resources/configurations/playground-directory/model.sublocation.json"
+    },
+    "policies": [],
+    "requests": [],
+    "routes": [],
+    "transformers": [],
+    "uses": [],
+    "service_provider": "",
+    "type": "playground-model",
+    "version": "73.0.0"
+}
