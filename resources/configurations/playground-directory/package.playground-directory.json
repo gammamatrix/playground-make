@@ -22,9 +22,22 @@
     "withTests": true,
     "playground": true,
     "package_name": "Playground: Directory",
-    "package_description": "",
-    "package_homepage": "",
-    "package_keywords": [],
+    "package_authors": [
+        {
+            "name": "Jeremy Postlethwaite",
+            "email": "jeremy.postlethwaite@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "package_description": "Playground: Provide the Directory models for the Playground Directory System.",
+    "package_homepage": "https://github.com/gammamatrix/playground-directory",
+    "package_keywords": [
+        "cms",
+        "directory",
+        "gammamatrix",
+        "laravel",
+        "playground"
+    ],
     "package_license": "MIT",
     "package_require": {
         "php": "^8.2",
@@ -32,6 +45,10 @@
     },
     "package_require_dev": {
         "gammamatrix/playground-test": "*"
+    },
+    "package_suggest": {
+        "gammamatrix/playground-directory-api": "Provides an API, without a UI, to interact with the models provided in this package.",
+        "gammamatrix/playground-directory-resource": "Provides a resource API and optional Blade UI to interact with the models provided in this package."
     },
     "package_autoload_psr4": [],
     "package_autoload_dev_psr4": [],

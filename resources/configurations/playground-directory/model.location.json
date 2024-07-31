@@ -20,7 +20,7 @@
     "controller": true,
     "factory": true,
     "migration": true,
-    "playground": false,
+    "playground": true,
     "policy": true,
     "requests": true,
     "seed": true,
@@ -28,8 +28,21 @@
     "extends": "Model",
     "implements": [],
     "HasOne": [],
-    "HasMany": [],
-    "scopes": [],
+    "HasMany": {
+        "sublocations": {
+            "comment": "The sublocations of the location.",
+            "accessor": "sublocations",
+            "related": "Sublocation",
+            "foreignKey": "location_id",
+            "localKey": "id"
+        }
+    },
+    "scopes": {
+        "sort": {
+            "include": "minus",
+            "builder": null
+        }
+    },
     "attributes": {
         "created_by_id": null,
         "modified_by_id": null,
@@ -250,6 +263,14 @@
     "filters": {
         "builder": null,
         "ids": [
+            {
+                "column": "id",
+                "label": "",
+                "icon": "",
+                "nullable": false,
+                "unsigned": true,
+                "type": "uuid"
+            },
             {
                 "column": "matrix_id",
                 "label": "Matrix id",
@@ -836,6 +857,13 @@
     "models": [],
     "sortable": [
         {
+            "column": "id",
+            "label": "",
+            "icon": "",
+            "nullable": false,
+            "type": "uuid"
+        },
+        {
             "column": "created_by_id",
             "label": "Created by id",
             "icon": "",
@@ -1412,9 +1440,9 @@
     ],
     "create": {
         "migration": "2024_07_31_000000_create_directory_locations_table",
-        "primary": "",
-        "timestamps": false,
-        "softDeletes": false,
+        "primary": "uuid",
+        "timestamps": true,
+        "softDeletes": true,
         "trash": {
             "hide": false,
             "only": false,
@@ -2292,6 +2320,7 @@
         }
     },
     "uses": [
-        "Playground/Models/Model"
+        "Playground/Models/Model",
+        "Illuminate/Database/Eloquent/Relations/HasMany"
     ]
 }
