@@ -5,7 +5,7 @@
     "module": "Matrix",
     "module_slug": "matrix",
     "name": "Tag",
-    "namespace": "Playground/Matrix/Models",
+    "namespace": "Playground/Matrix",
     "organization": "Playground",
     "package": "playground-matrix",
     "model": "Tag",

@@ -43,6 +43,8 @@ class Model extends PrimaryConfiguration
         'model_plural' => '',
         'model_singular' => '',
         'model_slug' => '',
+        'model_slug_plural' => '',
+        'recipe' => '',
         'type' => '',
         'table' => '',
         'perPage' => null,
@@ -86,6 +88,8 @@ class Model extends PrimaryConfiguration
         $this->properties['model_plural'] = $this->model_plural();
         $this->properties['model_singular'] = $this->model_singular();
         $this->properties['model_slug'] = $this->model_slug();
+        $this->properties['model_slug_plural'] = $this->model_slug_plural();
+        $this->properties['recipe'] = $this->recipe();
         $this->properties['type'] = $this->type();
         $this->properties['table'] = $this->table();
         $this->properties['perPage'] = $this->perPage();
@@ -167,6 +171,10 @@ class Model extends PrimaryConfiguration
     protected string $model_singular = '';
 
     protected string $model_slug = '';
+
+    protected string $model_slug_plural = '';
+
+    protected string $recipe = '';
 
     protected string $type = '';
 
@@ -277,6 +285,18 @@ class Model extends PrimaryConfiguration
             $this->model_slug = $options['model_slug'];
         }
 
+        if (! empty($options['model_slug_plural'])
+            && is_string($options['model_slug_plural'])
+        ) {
+            $this->model_slug_plural = $options['model_slug_plural'];
+        }
+
+        if (! empty($options['recipe'])
+            && is_string($options['recipe'])
+        ) {
+            $this->recipe = $options['recipe'];
+        }
+
         if (! empty($options['type'])
             && is_string($options['type'])
         ) {
@@ -343,6 +363,11 @@ class Model extends PrimaryConfiguration
         return $this->fillable;
     }
 
+    public function recipe(): string
+    {
+        return $this->recipe;
+    }
+
     public function table(): string
     {
         return $this->table;
@@ -376,5 +401,10 @@ class Model extends PrimaryConfiguration
     public function model_slug(): string
     {
         return $this->model_slug;
+    }
+
+    public function model_slug_plural(): string
+    {
+        return $this->model_slug_plural;
     }
 }

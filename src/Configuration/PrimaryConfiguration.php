@@ -56,6 +56,7 @@ class PrimaryConfiguration implements
             // dump([
             //     'static::class' => static::class,
             //     '$property' => $property,
+            //     'method_exists($this, $property)' => method_exists($this, $property),
             // ]);
             if (method_exists($this, $property)) {
                 $this->properties[$property] = $this->{$property}();

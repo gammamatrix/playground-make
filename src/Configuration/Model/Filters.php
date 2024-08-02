@@ -268,7 +268,7 @@ class Filters extends ModelConfiguration implements Configuration\Contracts\With
         return $this;
     }
 
-    public function addId(int $i, mixed $meta): self
+    public function addId(int $i, mixed $meta, bool $replace = false): self
     {
         if (empty($meta) || ! is_array($meta)) {
             throw new \RuntimeException(__('playground-make::filters.Id.invalid', [
@@ -278,13 +278,27 @@ class Filters extends ModelConfiguration implements Configuration\Contracts\With
 
         $meta['handler'] = 'ids';
 
-        $this->ids[$i] = new Filter(null);
-        $this->ids[$i]->setParent($this)->setOptions($meta)->apply();
+        if ($replace) {
+            $index = $i;
+        } else {
+            $index = count($this->ids) > 0 ? count($this->ids) : 0;
+        }
+        // dump([
+        //     '__METHOD__' => __METHOD__,
+        //     '$meta' => $meta,
+        //     '$replace' => $replace,
+        //     '$i' => $i,
+        //     '$index' => $index,
+        //     '$this->ids' => $this->ids,
+        // ]);
+
+        $this->ids[$index] = new Filter(null);
+        $this->ids[$index]->setParent($this)->setOptions($meta)->apply();
 
         return $this;
     }
 
-    public function addDate(int $i, mixed $meta): self
+    public function addDate(int $i, mixed $meta, bool $replace = false): self
     {
         if (empty($meta) || ! is_array($meta)) {
             throw new \RuntimeException(__('playground-make::filters.Date.invalid', [
@@ -294,13 +308,19 @@ class Filters extends ModelConfiguration implements Configuration\Contracts\With
 
         $meta['handler'] = 'dates';
 
-        $this->dates[$i] = new Filter(null);
-        $this->dates[$i]->setParent($this)->setOptions($meta)->apply();
+        if ($replace) {
+            $index = $i;
+        } else {
+            $index = count($this->dates) > 0 ? count($this->dates) + 1 : 0;
+        }
+
+        $this->dates[$index] = new Filter(null);
+        $this->dates[$index]->setParent($this)->setOptions($meta)->apply();
 
         return $this;
     }
 
-    public function addFlag(int $i, mixed $meta): self
+    public function addFlag(int $i, mixed $meta, bool $replace = false): self
     {
         if (empty($meta) || ! is_array($meta)) {
             throw new \RuntimeException(__('playground-make::filters.Flag.invalid', [
@@ -310,8 +330,14 @@ class Filters extends ModelConfiguration implements Configuration\Contracts\With
 
         $meta['handler'] = 'flags';
 
-        $this->flags[$i] = new Filter(null);
-        $this->flags[$i]->setParent($this)->setOptions($meta)->apply();
+        if ($replace) {
+            $index = $i;
+        } else {
+            $index = count($this->flags) > 0 ? count($this->flags) + 1 : 0;
+        }
+
+        $this->flags[$index] = new Filter(null);
+        $this->flags[$index]->setParent($this)->setOptions($meta)->apply();
 
         return $this;
     }
@@ -329,7 +355,7 @@ class Filters extends ModelConfiguration implements Configuration\Contracts\With
         return $this;
     }
 
-    public function addColumn(int $i, mixed $meta): self
+    public function addColumn(int $i, mixed $meta, bool $replace = false): self
     {
         if (empty($meta) || ! is_array($meta)) {
             throw new \RuntimeException(__('playground-make::filters.Column.invalid', [
@@ -339,8 +365,14 @@ class Filters extends ModelConfiguration implements Configuration\Contracts\With
 
         $meta['handler'] = 'columns';
 
-        $this->columns[$i] = new Filter(null);
-        $this->columns[$i]->setParent($this)->setOptions($meta)->apply();
+        if ($replace) {
+            $index = $i;
+        } else {
+            $index = count($this->columns) > 0 ? count($this->columns) + 1 : 0;
+        }
+
+        $this->columns[$index] = new Filter(null);
+        $this->columns[$index]->setParent($this)->setOptions($meta)->apply();
 
         return $this;
     }
@@ -452,7 +484,7 @@ class Filters extends ModelConfiguration implements Configuration\Contracts\With
         return $this;
     }
 
-    public function addPermission(int $i, mixed $meta): self
+    public function addPermission(int $i, mixed $meta, bool $replace = false): self
     {
         if (empty($meta) || ! is_array($meta)) {
             throw new \RuntimeException(__('playground-make::filters.Permission.invalid', [
@@ -462,13 +494,19 @@ class Filters extends ModelConfiguration implements Configuration\Contracts\With
 
         $meta['handler'] = 'permissions';
 
-        $this->permissions[$i] = new Filter(null);
-        $this->permissions[$i]->setParent($this)->setOptions($meta)->apply();
+        if ($replace) {
+            $index = $i;
+        } else {
+            $index = count($this->permissions) > 0 ? count($this->permissions) + 1 : 0;
+        }
+
+        $this->permissions[$index] = new Filter(null);
+        $this->permissions[$index]->setParent($this)->setOptions($meta)->apply();
 
         return $this;
     }
 
-    public function addStatus(int $i, mixed $meta): self
+    public function addStatus(int $i, mixed $meta, bool $replace = false): self
     {
         if (empty($meta) || ! is_array($meta)) {
             throw new \RuntimeException(__('playground-make::filters.Status.invalid', [
@@ -478,13 +516,19 @@ class Filters extends ModelConfiguration implements Configuration\Contracts\With
 
         $meta['handler'] = 'status';
 
-        $this->status[$i] = new Filter(null);
-        $this->status[$i]->setParent($this)->setOptions($meta)->apply();
+        if ($replace) {
+            $index = $i;
+        } else {
+            $index = count($this->status) > 0 ? count($this->status) + 1 : 0;
+        }
+
+        $this->status[$index] = new Filter(null);
+        $this->status[$index]->setParent($this)->setOptions($meta)->apply();
 
         return $this;
     }
 
-    public function addUi(int $i, mixed $meta): self
+    public function addUi(int $i, mixed $meta, bool $replace = false): self
     {
         if (empty($meta) || ! is_array($meta)) {
             throw new \RuntimeException(__('playground-make::filters.Ui.invalid', [
@@ -494,13 +538,19 @@ class Filters extends ModelConfiguration implements Configuration\Contracts\With
 
         $meta['handler'] = 'ui';
 
-        $this->ui[$i] = new Filter(null);
-        $this->ui[$i]->setParent($this)->setOptions($meta)->apply();
+        if ($replace) {
+            $index = $i;
+        } else {
+            $index = count($this->ui) > 0 ? count($this->ui) + 1 : 0;
+        }
+
+        $this->ui[$index] = new Filter(null);
+        $this->ui[$index]->setParent($this)->setOptions($meta)->apply();
 
         return $this;
     }
 
-    public function addJson(int $i, mixed $meta): self
+    public function addJson(int $i, mixed $meta, bool $replace = false): self
     {
         if (empty($meta) || ! is_array($meta)) {
             throw new \RuntimeException(__('playground-make::filters.Json.invalid', [
@@ -510,8 +560,14 @@ class Filters extends ModelConfiguration implements Configuration\Contracts\With
 
         $meta['handler'] = 'json';
 
-        $this->json[$i] = new Filter(null);
-        $this->json[$i]->setParent($this)->setOptions($meta)->apply();
+        if ($replace) {
+            $index = $i;
+        } else {
+            $index = count($this->json) > 0 ? count($this->json) + 1 : 0;
+        }
+
+        $this->json[$index] = new Filter(null);
+        $this->json[$index]->setParent($this)->setOptions($meta)->apply();
 
         return $this;
     }

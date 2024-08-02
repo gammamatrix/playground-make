@@ -60,6 +60,8 @@ class InstanceTest extends TestCase
         'model_plural' => '',
         'model_singular' => '',
         'model_slug' => '',
+        'model_slug_plural' => '',
+        'recipe' => '',
         'type' => '',
         'table' => '',
         'perPage' => null,
