@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2024-08-02 17:22:34</timestamp>
+  <timestamp>2024-08-02 21:55:01</timestamp>
   <stats>
     <name>Method Crap Stats</name>
     <methodCount>269</methodCount>
     <crapMethodCount>18</crapMethodCount>
     <crapLoad>259</crapLoad>
-    <totalCrap>6013.17</totalCrap>
+    <totalCrap>6015.67</totalCrap>
     <crapMethodPercent>6.69</crapMethodPercent>
   </stats>
   <methods>
@@ -1590,9 +1590,9 @@
       <methodName>setOptions</methodName>
       <methodSignature>setOptions(array $options): self</methodSignature>
       <fullMethod>setOptions(array $options): self</fullMethod>
-      <crap>14.57</crap>
-      <complexity>14</complexity>
-      <coverage>85.71</coverage>
+      <crap>17.07</crap>
+      <complexity>16</complexity>
+      <coverage>83.87</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
