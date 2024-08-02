@@ -22,13 +22,6 @@
     "withTests": true,
     "playground": true,
     "package_name": "Playground: Directory",
-    "package_authors": [
-        {
-            "name": "Jeremy Postlethwaite",
-            "email": "jeremy.postlethwaite@gmail.com",
-            "role": "Developer"
-        }
-    ],
     "package_description": "Playground: Provide the Directory models for the Playground Directory System.",
     "package_homepage": "https://github.com/gammamatrix/playground-directory",
     "package_keywords": [
@@ -39,6 +32,13 @@
         "playground"
     ],
     "package_license": "MIT",
+    "package_authors": [
+        {
+            "name": "Jeremy Postlethwaite",
+            "email": "jeremy.postlethwaite@gmail.com",
+            "role": "Developer"
+        }
+    ],
     "package_require": {
         "php": "^8.2",
         "gammamatrix/playground": "*"
@@ -56,7 +56,9 @@
         "Playground/ServiceProvider",
         "Playground/Directory/ServiceProvider"
     ],
-    "package_laravel_providers": [],
+    "package_laravel_providers": [
+        "Playground/Directory/ServiceProvider"
+    ],
     "packagist": "gammamatrix/playground-directory",
     "controllers": [],
     "models": {

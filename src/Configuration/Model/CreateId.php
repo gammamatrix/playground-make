@@ -86,6 +86,12 @@ class CreateId extends ModelConfiguration
             $this->column = $options['column'];
         }
 
+        if (! empty($options['label'])
+            && is_string($options['label'])
+        ) {
+            $this->label = $options['label'];
+        }
+
         if (! empty($options['foreign'])
             && is_array($options['foreign'])
             && ! empty($options['foreign']['on'])

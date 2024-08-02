@@ -83,6 +83,11 @@ class Filter extends Configuration
         ) {
             $this->type = $options['type'];
         }
+        // dump([
+        //     '__METHOD__' => __METHOD__,
+        //     '$options' => $options,
+        //     '$this->label' => $this->label,
+        // ]);
 
         return $this;
     }

@@ -289,7 +289,7 @@ class Filters extends ModelConfiguration implements Configuration\Contracts\With
         //     '$replace' => $replace,
         //     '$i' => $i,
         //     '$index' => $index,
-        //     '$this->ids' => $this->ids,
+        //     // '$this->ids' => $this->ids,
         // ]);
 
         $this->ids[$index] = new Filter(null);
@@ -311,7 +311,7 @@ class Filters extends ModelConfiguration implements Configuration\Contracts\With
         if ($replace) {
             $index = $i;
         } else {
-            $index = count($this->dates) > 0 ? count($this->dates) + 1 : 0;
+            $index = count($this->dates) > 0 ? count($this->dates) : 0;
         }
 
         $this->dates[$index] = new Filter(null);
@@ -333,7 +333,7 @@ class Filters extends ModelConfiguration implements Configuration\Contracts\With
         if ($replace) {
             $index = $i;
         } else {
-            $index = count($this->flags) > 0 ? count($this->flags) + 1 : 0;
+            $index = count($this->flags) > 0 ? count($this->flags) : 0;
         }
 
         $this->flags[$index] = new Filter(null);
@@ -368,7 +368,7 @@ class Filters extends ModelConfiguration implements Configuration\Contracts\With
         if ($replace) {
             $index = $i;
         } else {
-            $index = count($this->columns) > 0 ? count($this->columns) + 1 : 0;
+            $index = count($this->columns) > 0 ? count($this->columns) : 0;
         }
 
         $this->columns[$index] = new Filter(null);
@@ -497,7 +497,7 @@ class Filters extends ModelConfiguration implements Configuration\Contracts\With
         if ($replace) {
             $index = $i;
         } else {
-            $index = count($this->permissions) > 0 ? count($this->permissions) + 1 : 0;
+            $index = count($this->permissions) > 0 ? count($this->permissions) : 0;
         }
 
         $this->permissions[$index] = new Filter(null);
@@ -519,7 +519,7 @@ class Filters extends ModelConfiguration implements Configuration\Contracts\With
         if ($replace) {
             $index = $i;
         } else {
-            $index = count($this->status) > 0 ? count($this->status) + 1 : 0;
+            $index = count($this->status) > 0 ? count($this->status) : 0;
         }
 
         $this->status[$index] = new Filter(null);
@@ -541,7 +541,7 @@ class Filters extends ModelConfiguration implements Configuration\Contracts\With
         if ($replace) {
             $index = $i;
         } else {
-            $index = count($this->ui) > 0 ? count($this->ui) + 1 : 0;
+            $index = count($this->ui) > 0 ? count($this->ui) : 0;
         }
 
         $this->ui[$index] = new Filter(null);
@@ -563,7 +563,7 @@ class Filters extends ModelConfiguration implements Configuration\Contracts\With
         if ($replace) {
             $index = $i;
         } else {
-            $index = count($this->json) > 0 ? count($this->json) + 1 : 0;
+            $index = count($this->json) > 0 ? count($this->json) : 0;
         }
 
         $this->json[$index] = new Filter(null);
