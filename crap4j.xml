@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2024-07-31 20:01:51</timestamp>
+  <timestamp>2024-08-02 17:22:34</timestamp>
   <stats>
     <name>Method Crap Stats</name>
-    <methodCount>267</methodCount>
+    <methodCount>269</methodCount>
     <crapMethodCount>18</crapMethodCount>
     <crapLoad>259</crapLoad>
-    <totalCrap>6016.12</totalCrap>
-    <crapMethodPercent>6.74</crapMethodPercent>
+    <totalCrap>6013.17</totalCrap>
+    <crapMethodPercent>6.69</crapMethodPercent>
   </stats>
   <methods>
     <method>
@@ -644,9 +644,9 @@
       <methodName>setOptions</methodName>
       <methodSignature>setOptions(array $options): self</methodSignature>
       <fullMethod>setOptions(array $options): self</fullMethod>
-      <crap>26.66</crap>
-      <complexity>23</complexity>
-      <coverage>80.95</coverage>
+      <crap>33.59</crap>
+      <complexity>27</complexity>
+      <coverage>79.17</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -699,6 +699,17 @@
       <methodName>fillable</methodName>
       <methodSignature>fillable(): array</methodSignature>
       <fullMethod>fillable(): array</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration</package>
+      <className>Playground\Make\Configuration\Model</className>
+      <methodName>recipe</methodName>
+      <methodSignature>recipe(): string</methodSignature>
+      <fullMethod>recipe(): string</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
@@ -776,6 +787,17 @@
       <methodName>model_slug</methodName>
       <methodSignature>model_slug(): string</methodSignature>
       <fullMethod>model_slug(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration</package>
+      <className>Playground\Make\Configuration\Model</className>
+      <methodName>model_slug_plural</methodName>
+      <methodSignature>model_slug_plural(): string</methodSignature>
+      <fullMethod>model_slug_plural(): string</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
@@ -941,9 +963,9 @@
       <methodName>addFilters</methodName>
       <methodSignature>addFilters(array $options, bool $apply): self</methodSignature>
       <fullMethod>addFilters(array $options, bool $apply): self</fullMethod>
-      <crap>6.04</crap>
-      <complexity>6</complexity>
-      <coverage>90</coverage>
+      <crap>3</crap>
+      <complexity>3</complexity>
+      <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -952,9 +974,9 @@
       <methodName>addFilter</methodName>
       <methodSignature>addFilter(array $options, bool $apply): self</methodSignature>
       <fullMethod>addFilter(array $options, bool $apply): self</fullMethod>
-      <crap>30</crap>
+      <crap>5</crap>
       <complexity>5</complexity>
-      <coverage>0</coverage>
+      <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -1830,33 +1852,33 @@
       <package>Playground\Make\Configuration\Model</package>
       <className>Playground\Make\Configuration\Model\Filters</className>
       <methodName>addId</methodName>
-      <methodSignature>addId(int $i, mixed $meta): self</methodSignature>
-      <fullMethod>addId(int $i, mixed $meta): self</fullMethod>
-      <crap>3</crap>
-      <complexity>3</complexity>
-      <coverage>100</coverage>
+      <methodSignature>addId(int $i, mixed $meta, bool $replace): self</methodSignature>
+      <fullMethod>addId(int $i, mixed $meta, bool $replace): self</fullMethod>
+      <crap>5.02</crap>
+      <complexity>5</complexity>
+      <coverage>90.91</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
       <package>Playground\Make\Configuration\Model</package>
       <className>Playground\Make\Configuration\Model\Filters</className>
       <methodName>addDate</methodName>
-      <methodSignature>addDate(int $i, mixed $meta): self</methodSignature>
-      <fullMethod>addDate(int $i, mixed $meta): self</fullMethod>
-      <crap>3</crap>
-      <complexity>3</complexity>
-      <coverage>100</coverage>
+      <methodSignature>addDate(int $i, mixed $meta, bool $replace): self</methodSignature>
+      <fullMethod>addDate(int $i, mixed $meta, bool $replace): self</fullMethod>
+      <crap>5.02</crap>
+      <complexity>5</complexity>
+      <coverage>90.91</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
       <package>Playground\Make\Configuration\Model</package>
       <className>Playground\Make\Configuration\Model\Filters</className>
       <methodName>addFlag</methodName>
-      <methodSignature>addFlag(int $i, mixed $meta): self</methodSignature>
-      <fullMethod>addFlag(int $i, mixed $meta): self</fullMethod>
-      <crap>3</crap>
-      <complexity>3</complexity>
-      <coverage>100</coverage>
+      <methodSignature>addFlag(int $i, mixed $meta, bool $replace): self</methodSignature>
+      <fullMethod>addFlag(int $i, mixed $meta, bool $replace): self</fullMethod>
+      <crap>5.02</crap>
+      <complexity>5</complexity>
+      <coverage>90.91</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -1874,11 +1896,11 @@
       <package>Playground\Make\Configuration\Model</package>
       <className>Playground\Make\Configuration\Model\Filters</className>
       <methodName>addColumn</methodName>
-      <methodSignature>addColumn(int $i, mixed $meta): self</methodSignature>
-      <fullMethod>addColumn(int $i, mixed $meta): self</fullMethod>
-      <crap>3</crap>
-      <complexity>3</complexity>
-      <coverage>100</coverage>
+      <methodSignature>addColumn(int $i, mixed $meta, bool $replace): self</methodSignature>
+      <fullMethod>addColumn(int $i, mixed $meta, bool $replace): self</fullMethod>
+      <crap>5.02</crap>
+      <complexity>5</complexity>
+      <coverage>90.91</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -1896,44 +1918,44 @@
       <package>Playground\Make\Configuration\Model</package>
       <className>Playground\Make\Configuration\Model\Filters</className>
       <methodName>addPermission</methodName>
-      <methodSignature>addPermission(int $i, mixed $meta): self</methodSignature>
-      <fullMethod>addPermission(int $i, mixed $meta): self</fullMethod>
-      <crap>3</crap>
-      <complexity>3</complexity>
-      <coverage>100</coverage>
+      <methodSignature>addPermission(int $i, mixed $meta, bool $replace): self</methodSignature>
+      <fullMethod>addPermission(int $i, mixed $meta, bool $replace): self</fullMethod>
+      <crap>5.02</crap>
+      <complexity>5</complexity>
+      <coverage>90.91</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
       <package>Playground\Make\Configuration\Model</package>
       <className>Playground\Make\Configuration\Model\Filters</className>
       <methodName>addStatus</methodName>
-      <methodSignature>addStatus(int $i, mixed $meta): self</methodSignature>
-      <fullMethod>addStatus(int $i, mixed $meta): self</fullMethod>
-      <crap>3</crap>
-      <complexity>3</complexity>
-      <coverage>100</coverage>
+      <methodSignature>addStatus(int $i, mixed $meta, bool $replace): self</methodSignature>
+      <fullMethod>addStatus(int $i, mixed $meta, bool $replace): self</fullMethod>
+      <crap>5.02</crap>
+      <complexity>5</complexity>
+      <coverage>90.91</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
       <package>Playground\Make\Configuration\Model</package>
       <className>Playground\Make\Configuration\Model\Filters</className>
       <methodName>addUi</methodName>
-      <methodSignature>addUi(int $i, mixed $meta): self</methodSignature>
-      <fullMethod>addUi(int $i, mixed $meta): self</fullMethod>
-      <crap>3</crap>
-      <complexity>3</complexity>
-      <coverage>100</coverage>
+      <methodSignature>addUi(int $i, mixed $meta, bool $replace): self</methodSignature>
+      <fullMethod>addUi(int $i, mixed $meta, bool $replace): self</fullMethod>
+      <crap>5.02</crap>
+      <complexity>5</complexity>
+      <coverage>90.91</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
       <package>Playground\Make\Configuration\Model</package>
       <className>Playground\Make\Configuration\Model\Filters</className>
       <methodName>addJson</methodName>
-      <methodSignature>addJson(int $i, mixed $meta): self</methodSignature>
-      <fullMethod>addJson(int $i, mixed $meta): self</fullMethod>
-      <crap>3</crap>
-      <complexity>3</complexity>
-      <coverage>100</coverage>
+      <methodSignature>addJson(int $i, mixed $meta, bool $replace): self</methodSignature>
+      <fullMethod>addJson(int $i, mixed $meta, bool $replace): self</fullMethod>
+      <crap>5.02</crap>
+      <complexity>5</complexity>
+      <coverage>90.91</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
