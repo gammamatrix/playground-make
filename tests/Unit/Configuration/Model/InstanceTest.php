@@ -71,6 +71,7 @@ class InstanceTest extends TestCase
         'playground' => false,
         'policy' => false,
         'requests' => false,
+        'revision' => false,
         'seed' => false,
         'test' => false,
         // "organization": "GammaMatrix",

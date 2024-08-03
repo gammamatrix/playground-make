@@ -54,6 +54,7 @@ class Model extends PrimaryConfiguration
         'playground' => false,
         'policy' => false,
         'requests' => false,
+        'revision' => false,
         'seed' => false,
         'test' => false,
         'extends' => '',
@@ -99,6 +100,7 @@ class Model extends PrimaryConfiguration
         $this->properties['playground'] = $this->playground();
         $this->properties['policy'] = $this->policy();
         $this->properties['requests'] = $this->requests();
+        $this->properties['revision'] = $this->revision();
         $this->properties['seed'] = $this->seed();
         $this->properties['test'] = $this->test();
 
@@ -182,6 +184,8 @@ class Model extends PrimaryConfiguration
 
     protected bool $playground = false;
 
+    protected bool $revision = false;
+
     protected string $table = '';
 
     /**
@@ -242,6 +246,10 @@ class Model extends PrimaryConfiguration
 
         if (array_key_exists('playground', $options)) {
             $this->playground = ! empty($options['playground']);
+        }
+
+        if (array_key_exists('revision', $options)) {
+            $this->revision = ! empty($options['revision']);
         }
 
         if (array_key_exists('perPage', $options)) {
@@ -340,6 +348,11 @@ class Model extends PrimaryConfiguration
     public function playground(): bool
     {
         return $this->playground;
+    }
+
+    public function revision(): bool
+    {
+        return $this->revision;
     }
 
     public function perPage(): ?int

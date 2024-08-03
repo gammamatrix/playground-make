@@ -3,7 +3,7 @@
     "config": "playground-cms",
     "config_space": "PLAYGROUND_CMS",
     "fqdn": "Playground/Cms/ServiceProvider",
-    "module": "Cms",
+    "module": "CMS",
     "module_slug": "cms",
     "name": "Cms",
     "namespace": "Playground/Cms",
@@ -21,14 +21,7 @@
     "withSwagger": false,
     "withTests": true,
     "playground": true,
-    "package_name": "Playground: Cms",
-    "package_authors": [
-        {
-            "name": "Jeremy Postlethwaite",
-            "email": "jeremy.postlethwaite@gmail.com",
-            "role": "Developer"
-        }
-    ],
+    "package_name": "Playground: CMS",
     "package_description": "Playground: Provide the CMS models for the Playground Content Management System.",
     "package_homepage": "https://github.com/gammamatrix/playground-cms",
     "package_keywords": [
@@ -38,6 +31,13 @@
         "playground"
     ],
     "package_license": "MIT",
+    "package_authors": [
+        {
+            "name": "Jeremy Postlethwaite",
+            "email": "jeremy.postlethwaite@gmail.com",
+            "role": "Developer"
+        }
+    ],
     "package_require": {
         "php": "^8.2",
         "gammamatrix/playground": "*"
@@ -51,16 +51,17 @@
     },
     "package_autoload_psr4": [],
     "package_autoload_dev_psr4": [],
-    "package_providers": [
-        "Playground/ServiceProvider",
+    "package_providers": [],
+    "package_laravel_providers": [
         "Playground/Cms/ServiceProvider"
     ],
-    "package_laravel_providers": [],
     "packagist": "gammamatrix/playground-cms",
     "controllers": [],
     "models": {
         "Page": "resources/configurations/playground-cms/model.page.json",
-        "Snippet": "resources/configurations/playground-cms/model.snippet.json"
+        "PageRevision": "resources/configurations/playground-cms/model.page-revision.json",
+        "Snippet": "resources/configurations/playground-cms/model.snippet.json",
+        "SnippetRevision": "resources/configurations/playground-cms/model.snippet-revision.json"
     },
     "policies": [],
     "requests": [],
