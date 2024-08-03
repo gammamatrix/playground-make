@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2024-08-02 21:55:01</timestamp>
+  <timestamp>2024-08-03 20:30:44</timestamp>
   <stats>
     <name>Method Crap Stats</name>
-    <methodCount>269</methodCount>
+    <methodCount>270</methodCount>
     <crapMethodCount>18</crapMethodCount>
     <crapLoad>259</crapLoad>
-    <totalCrap>6015.67</totalCrap>
-    <crapMethodPercent>6.69</crapMethodPercent>
+    <totalCrap>6019.43</totalCrap>
+    <crapMethodPercent>6.67</crapMethodPercent>
   </stats>
   <methods>
     <method>
@@ -644,9 +644,9 @@
       <methodName>setOptions</methodName>
       <methodSignature>setOptions(array $options): self</methodSignature>
       <fullMethod>setOptions(array $options): self</fullMethod>
-      <crap>33.59</crap>
-      <complexity>27</complexity>
-      <coverage>79.17</coverage>
+      <crap>36.35</crap>
+      <complexity>28</complexity>
+      <coverage>78</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -666,6 +666,17 @@
       <methodName>playground</methodName>
       <methodSignature>playground(): bool</methodSignature>
       <fullMethod>playground(): bool</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration</package>
+      <className>Playground\Make\Configuration\Model</className>
+      <methodName>revision</methodName>
+      <methodSignature>revision(): bool</methodSignature>
+      <fullMethod>revision(): bool</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
