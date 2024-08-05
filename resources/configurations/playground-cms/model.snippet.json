@@ -245,7 +245,6 @@
         "status",
         "rank",
         "size",
-        "revision",
         "matrix",
         "x",
         "y",
@@ -308,6 +307,14 @@
                 "type": "string"
             },
             {
+                "column": "snippet_type",
+                "label": "Snippet Type",
+                "icon": "",
+                "nullable": true,
+                "unsigned": true,
+                "type": "string"
+            },
+            {
                 "column": "created_by_id",
                 "label": "Created by id",
                 "icon": "",
@@ -349,14 +356,6 @@
             }
         ],
         "dates": [
-            {
-                "column": "snippet_type",
-                "label": "Snippet Type",
-                "icon": "",
-                "nullable": true,
-                "unsigned": true,
-                "type": "string"
-            },
             {
                 "column": "created_at",
                 "label": "Created at",
@@ -2339,7 +2338,7 @@
                 "icon": "",
                 "index": false,
                 "nullable": false,
-                "readOnly": false,
+                "readOnly": true,
                 "type": "bigInteger",
                 "unsigned": true,
                 "default": false

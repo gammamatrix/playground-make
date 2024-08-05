@@ -11,7 +11,7 @@ namespace Playground\Make\Building\Concerns;
  */
 trait BuildUses
 {
-    protected function buildClass_uses(string $name): void
+    protected function buildClass_uses(string $name = ''): void
     {
         if (! method_exists($this->c, 'uses')) {
             return;

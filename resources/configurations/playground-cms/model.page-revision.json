@@ -85,7 +85,7 @@
         "revision": false,
         "redirect_delay": false,
         "status_code": false,
-        "route": "",
+        "route": null,
         "matrix": "{}",
         "x": null,
         "y": null,
@@ -261,7 +261,6 @@
         "status",
         "rank",
         "size",
-        "revision",
         "redirect_delay",
         "status_code",
         "route",
@@ -331,6 +330,14 @@
                 "type": "string"
             },
             {
+                "column": "page_type",
+                "label": "Page Type",
+                "icon": "",
+                "nullable": true,
+                "unsigned": true,
+                "type": "string"
+            },
+            {
                 "column": "created_by_id",
                 "label": "Created by id",
                 "icon": "",
@@ -380,14 +387,6 @@
             }
         ],
         "dates": [
-            {
-                "column": "page_type",
-                "label": "PageRevision Type",
-                "icon": "",
-                "nullable": true,
-                "unsigned": true,
-                "type": "string"
-            },
             {
                 "column": "created_at",
                 "label": "Created at",
@@ -1108,7 +1107,7 @@
         },
         {
             "column": "page_type",
-            "label": "PageRevision Type",
+            "label": "Page Type",
             "icon": "",
             "nullable": false,
             "type": "string"
@@ -1771,7 +1770,7 @@
         "ids": {
             "page_type": {
                 "column": "page_type",
-                "label": "PageRevision Type",
+                "label": "Page Type",
                 "description": "",
                 "foreign": null,
                 "icon": "",
@@ -2530,7 +2529,7 @@
                 "icon": "",
                 "index": false,
                 "nullable": false,
-                "readOnly": false,
+                "readOnly": true,
                 "type": "bigInteger",
                 "unsigned": true,
                 "default": false
@@ -2565,11 +2564,10 @@
                 "description": "",
                 "icon": "",
                 "index": false,
-                "nullable": false,
+                "nullable": true,
                 "readOnly": false,
                 "type": "string",
-                "size": 255,
-                "default": ""
+                "size": 255
             }
         },
         "matrix": {
