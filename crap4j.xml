@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2024-08-05 19:05:03</timestamp>
+  <timestamp>2024-08-07 08:25:28</timestamp>
   <stats>
     <name>Method Crap Stats</name>
-    <methodCount>270</methodCount>
+    <methodCount>271</methodCount>
     <crapMethodCount>18</crapMethodCount>
     <crapLoad>259</crapLoad>
-    <totalCrap>6019.43</totalCrap>
-    <crapMethodPercent>6.67</crapMethodPercent>
+    <totalCrap>6021.32</totalCrap>
+    <crapMethodPercent>6.64</crapMethodPercent>
   </stats>
   <methods>
     <method>
@@ -1425,9 +1425,9 @@
       <methodName>setOptions</methodName>
       <methodSignature>setOptions(array $options): self</methodSignature>
       <fullMethod>setOptions(array $options): self</fullMethod>
-      <crap>38.04</crap>
-      <complexity>33</complexity>
-      <coverage>83.33</coverage>
+      <crap>38.93</crap>
+      <complexity>34</complexity>
+      <coverage>83.78</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -1524,6 +1524,17 @@
       <methodName>icon</methodName>
       <methodSignature>icon(): string</methodSignature>
       <fullMethod>icon(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\CreateColumn</className>
+      <methodName>html</methodName>
+      <methodSignature>html(): bool</methodSignature>
+      <fullMethod>html(): bool</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
