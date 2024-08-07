@@ -26,6 +26,8 @@ class CreateColumn extends ModelConfiguration
 
     protected string $icon = '';
 
+    protected bool $html = false;
+
     protected bool $index = false;
 
     protected ?int $precision = null;
@@ -58,6 +60,7 @@ class CreateColumn extends ModelConfiguration
         // 'precision' => null,
         // 'scale' => null,
         // 'size' => null,
+        'html' => false,
         'index' => false,
         'nullable' => false,
         'readOnly' => false,
@@ -161,6 +164,10 @@ class CreateColumn extends ModelConfiguration
                 $this->size = intval($options['size']);
                 $this->properties['size'] = $this->size;
             }
+        }
+
+        if (array_key_exists('html', $options)) {
+            $this->html = ! empty($options['html']);
         }
 
         if (array_key_exists('index', $options)) {
@@ -272,6 +279,11 @@ class CreateColumn extends ModelConfiguration
     public function icon(): string
     {
         return $this->icon;
+    }
+
+    public function html(): bool
+    {
+        return $this->html;
     }
 
     public function index(): bool
