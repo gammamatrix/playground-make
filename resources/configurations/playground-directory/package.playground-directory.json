@@ -63,7 +63,9 @@
     "controllers": [],
     "models": {
         "Location": "resources/configurations/playground-directory/model.location.json",
-        "Sublocation": "resources/configurations/playground-directory/model.sublocation.json"
+        "LocationRevision": "resources/configurations/playground-directory/model.location-revision.json",
+        "Sublocation": "resources/configurations/playground-directory/model.sublocation.json",
+        "SublocationRevision": "resources/configurations/playground-directory/model.sublocation-revision.json"
     },
     "policies": [],
     "requests": [],

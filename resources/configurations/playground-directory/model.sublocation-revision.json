@@ -1,23 +1,23 @@
 {
-    "class": "Sublocation",
+    "class": "SublocationRevision",
     "config": "playground-directory",
-    "fqdn": "Playground/Directory/Models/Sublocation",
+    "fqdn": "Playground/Directory/Models/SublocationRevision",
     "module": "Directory",
     "module_slug": "directory",
-    "name": "Sublocation",
+    "name": "SublocationRevision",
     "namespace": "Playground/Directory",
     "organization": "Playground",
     "package": "playground-directory",
-    "model": "Sublocation",
+    "model": "SublocationRevision",
     "model_attribute": "title",
     "model_attribute_required": true,
-    "model_plural": "Sublocations",
-    "model_singular": "Sublocation",
-    "model_slug": "sublocation",
-    "model_slug_plural": "sublocations",
+    "model_plural": "SublocationRevisions",
+    "model_singular": "SublocationRevision",
+    "model_slug": "sublocation-revision",
+    "model_slug_plural": "sublocation-revisions",
     "recipe": "directory",
     "type": "playground-model",
-    "table": "directory_sublocations",
+    "table": "directory_sublocation_revisions",
     "perPage": null,
     "controller": true,
     "factory": true,
@@ -25,29 +25,28 @@
     "playground": true,
     "policy": true,
     "requests": true,
-    "revision": false,
+    "revision": true,
     "seed": true,
     "test": true,
     "extends": "Model",
     "implements": [],
     "HasOne": {
+        "sublocation": {
+            "comment": "The sublocation of the revision.",
+            "accessor": "sublocation",
+            "related": "Sublocation",
+            "foreignKey": "id",
+            "localKey": "sublocation_id"
+        },
         "location": {
-            "comment": "The location of the sublocation",
+            "comment": "The location of the sublocation revisoin",
             "accessor": "location",
             "related": "Location",
             "foreignKey": "id",
             "localKey": "location_id"
         }
     },
-    "HasMany": {
-        "revisions": {
-            "comment": "The revisions of the sublocation.",
-            "accessor": "revisions",
-            "related": "SublocationRevision",
-            "foreignKey": "location_id",
-            "localKey": "id"
-        }
-    },
+    "HasMany": [],
     "scopes": {
         "sort": {
             "include": "minus",
@@ -60,6 +59,7 @@
         "modified_by_id": null,
         "owned_by_id": null,
         "parent_id": null,
+        "sublocation_id": null,
         "location_id": null,
         "matrix_id": null,
         "created_at": null,
@@ -234,6 +234,7 @@
         "sublocation_type",
         "owned_by_id",
         "parent_id",
+        "sublocation_id",
         "location_id",
         "matrix_id",
         "canceled_at",
@@ -360,6 +361,14 @@
             {
                 "column": "parent_id",
                 "label": "Parent id",
+                "icon": "",
+                "nullable": true,
+                "unsigned": true,
+                "type": "uuid"
+            },
+            {
+                "column": "sublocation_id",
+                "label": "Sublocation id",
                 "icon": "",
                 "nullable": true,
                 "unsigned": true,
@@ -1105,6 +1114,13 @@
             "type": "uuid"
         },
         {
+            "column": "sublocation_id",
+            "label": "Sublocation id",
+            "icon": "",
+            "nullable": false,
+            "type": "uuid"
+        },
+        {
             "column": "location_id",
             "label": "Location id",
             "icon": "",
@@ -1694,7 +1710,7 @@
         }
     ],
     "create": {
-        "migration": "2024_07_31_000000_create_directory_sublocations_table",
+        "migration": "2024_07_31_000000_create_directory_sublocation_revisions_table",
         "primary": "uuid",
         "timestamps": true,
         "softDeletes": true,
@@ -1766,6 +1782,21 @@
                 "label": "Parent id",
                 "description": "",
                 "foreign": null,
+                "icon": "",
+                "index": true,
+                "nullable": true,
+                "readOnly": false,
+                "unsigned": false,
+                "type": "uuid"
+            },
+            "sublocation_id": {
+                "column": "sublocation_id",
+                "label": "Sublocation id",
+                "description": "",
+                "foreign": {
+                    "references": "id",
+                    "on": "directory_sublocations"
+                },
                 "icon": "",
                 "index": true,
                 "nullable": true,
@@ -2779,7 +2810,6 @@
     },
     "uses": [
         "Illuminate/Database/Eloquent/Relations/HasOne",
-        "Illuminate/Database/Eloquent/Relations/HasMany",
         "Playground/Models/Model"
     ]
 }
