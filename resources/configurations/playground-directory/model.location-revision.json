@@ -125,6 +125,7 @@
         "introduction": "",
         "content": null,
         "summary": null,
+        "phone": null,
         "icon": "",
         "image": "",
         "avatar": "",
@@ -210,6 +211,7 @@
         "introduction": "string",
         "content": "string",
         "summary": "string",
+        "phone": "string",
         "icon": "string",
         "image": "string",
         "avatar": "string",
@@ -295,6 +297,7 @@
         "introduction",
         "content",
         "summary",
+        "phone",
         "icon",
         "image",
         "avatar",
@@ -767,6 +770,14 @@
                 "nullable": true,
                 "unsigned": true,
                 "type": "mediumText"
+            },
+            {
+                "column": "phone",
+                "label": "Phone",
+                "icon": "",
+                "nullable": true,
+                "unsigned": true,
+                "type": "string"
             }
         ],
         "permissions": [
@@ -1608,6 +1619,13 @@
             "type": "mediumText"
         },
         {
+            "column": "phone",
+            "label": "Phone",
+            "icon": "",
+            "nullable": false,
+            "type": "string"
+        },
+        {
             "column": "icon",
             "label": "Icon",
             "icon": "",
@@ -2319,6 +2337,17 @@
                 "nullable": true,
                 "readOnly": false,
                 "type": "mediumText"
+            },
+            "phone": {
+                "column": "phone",
+                "label": "Phone",
+                "description": "",
+                "icon": "",
+                "html": false,
+                "index": false,
+                "nullable": true,
+                "readOnly": false,
+                "type": "string"
             }
         },
         "permissions": {
