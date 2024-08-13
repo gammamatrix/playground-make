@@ -24,11 +24,11 @@
     ],
     "require": {
         "php": "^8.2",
-        "gammamatrix/playground": "dev-develop"
+        "gammamatrix/playground": "*"
     },
     "require-dev": {
-        "gammamatrix/playground-make-model": "dev-develop",
-        "gammamatrix/playground-test": "dev-develop"
+        "gammamatrix/playground-make-model": "*",
+        "gammamatrix/playground-test": "*"
     },
     "suggest": {
         "gammamatrix/playground-make-controller": "Provides the playground:make:controller command.",
