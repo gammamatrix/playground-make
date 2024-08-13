@@ -6,6 +6,8 @@
 declare(strict_types=1);
 namespace Playground\Make\Configuration;
 
+use Playground\Make\Model\Recipe\Model as ModelRecipe;
+
 /**
  * \Playground\Make\Configuration\Model
  */
@@ -419,5 +421,22 @@ class Model extends PrimaryConfiguration
     public function model_slug_plural(): string
     {
         return $this->model_slug_plural;
+    }
+
+    public function getRecipe(): ?ModelRecipe
+    {
+        $recipe = null;
+        /**
+         * @var array<string, class-string<ModelRecipe>> $recipes
+         */
+        $recipes = config('playground-make-model.recipes');
+
+        $key = $this->recipe();
+
+        if ($key && is_array($recipes) && ! empty($recipes[$key]) && class_exists($recipes[$key])) {
+            $recipe = new $recipes[$key]($this->name, $this->type);
+        }
+
+        return $recipe;
     }
 }

@@ -16,12 +16,19 @@
             "role": "Developer"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:gammamatrix/playground-make-model.git"
+        }
+    ],
     "require": {
         "php": "^8.2",
-        "gammamatrix/playground": "dev-develop|dev-feature/*"
+        "gammamatrix/playground": "*"
     },
     "require-dev": {
-        "gammamatrix/playground-test": "dev-develop|dev-feature/*"
+        "gammamatrix/playground-make-model": "*",
+        "gammamatrix/playground-test": "*"
     },
     "suggest": {
         "gammamatrix/playground-make-controller": "Provides the playground:make:controller command.",
