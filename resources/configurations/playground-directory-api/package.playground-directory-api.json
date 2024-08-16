@@ -1,0 +1,71 @@
+{
+    "class": "ServiceProvider",
+    "config": "playground-directory-api",
+    "config_space": "PLAYGROUND_DIRECTORY_API",
+    "fqdn": "Playground/Directory/Api/ServiceProvider",
+    "module": "Directory",
+    "module_slug": "directory",
+    "name": "Directory API",
+    "namespace": "Playground/Directory/Api",
+    "organization": "Playground",
+    "organization_email": "jeremy.postlethwaite@gmail.com",
+    "package": "playground-directory-api",
+    "withBlades": false,
+    "withControllers": true,
+    "withFactories": false,
+    "withMigrations": false,
+    "withModels": false,
+    "withPolicies": true,
+    "withRequests": true,
+    "withRoutes": true,
+    "withSwagger": true,
+    "withTests": true,
+    "playground": true,
+    "revision": true,
+    "package_name": "Playground: Directory API",
+    "package_description": "Playground: Provides an API, without a UI for interacting with Playground Directory, a Directory System for Laravel applications.",
+    "package_homepage": "https://github.com/gammamatrix/playground-directory-api",
+    "package_keywords": [
+        "directory",
+        "gammamatrix",
+        "laravel",
+        "playground"
+    ],
+    "package_license": "MIT",
+    "package_authors": [
+        {
+            "name": "Jeremy Postlethwaite",
+            "email": "jeremy.postlethwaite@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "package_require": {
+        "php": "^8.2",
+        "gammamatrix/playground": "*",
+        "gammamatrix/playground-auth": "*",
+        "gammamatrix/playground-http": "*",
+        "gammamatrix/playground-directory": "*"
+    },
+    "package_require_dev": {
+        "gammamatrix/playground-test": "*",
+        "laravel/sanctum": "^4.0"
+    },
+    "package_suggest": [],
+    "package_autoload_psr4": [],
+    "package_autoload_dev_psr4": [],
+    "package_providers": [],
+    "package_laravel_providers": [
+        "Playground/Directory/Api/ServiceProvider"
+    ],
+    "packagist": "gammamatrix/playground-directory-api",
+    "controllers": [],
+    "models": [],
+    "policies": [],
+    "requests": [],
+    "routes": [],
+    "transformers": [],
+    "uses": [],
+    "service_provider": "",
+    "type": "playground-api",
+    "version": "73.0.0"
+}

@@ -1,0 +1,76 @@
+{
+    "class": "ServiceProvider",
+    "config": "playground-crm",
+    "config_space": "PLAYGROUND_CRM",
+    "fqdn": "Playground/Crm/ServiceProvider",
+    "module": "CRM",
+    "module_slug": "crm",
+    "name": "CRM",
+    "namespace": "Playground/Crm",
+    "organization": "Playground",
+    "organization_email": "jeremy.postlethwaite@gmail.com",
+    "package": "playground-crm",
+    "withBlades": false,
+    "withControllers": false,
+    "withFactories": true,
+    "withMigrations": true,
+    "withModels": true,
+    "withPolicies": false,
+    "withRequests": false,
+    "withRoutes": false,
+    "withSwagger": false,
+    "withTests": true,
+    "playground": true,
+    "revision": false,
+    "package_name": "Playground: CRM",
+    "package_description": "Playground: Provide the CRM models for the Playground Client Relationship Management System.",
+    "package_homepage": "https://github.com/gammamatrix/playground-crm",
+    "package_keywords": [
+        "crm",
+        "gammamatrix",
+        "laravel",
+        "playground"
+    ],
+    "package_license": "MIT",
+    "package_authors": [
+        {
+            "name": "Jeremy Postlethwaite",
+            "email": "jeremy.postlethwaite@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "package_require": {
+        "php": "^8.2",
+        "gammamatrix/playground": "*"
+    },
+    "package_require_dev": {
+        "gammamatrix/playground-test": "*"
+    },
+    "package_suggest": {
+        "gammamatrix/playground-crm-api": "Provides an API, without a UI, to interact with the models provided in this package.",
+        "gammamatrix/playground-crm-resource": "Provides a resource API and optional Blade UI to interact with the models provided in this package."
+    },
+    "package_autoload_psr4": [],
+    "package_autoload_dev_psr4": [],
+    "package_providers": [],
+    "package_laravel_providers": [
+        "Playground/Crm/ServiceProvider"
+    ],
+    "packagist": "gammamatrix/playground-crm",
+    "controllers": [],
+    "models": {
+        "Client": "resources/configurations/playground-crm/model.client.json",
+        "Contact": "resources/configurations/playground-crm/model.contact.json",
+        "Location": "resources/configurations/playground-crm/model.location.json",
+        "Organization": "resources/configurations/playground-crm/model.organization.json",
+        "People": "resources/configurations/playground-crm/model.people.json"
+    },
+    "policies": [],
+    "requests": [],
+    "routes": [],
+    "transformers": [],
+    "uses": [],
+    "service_provider": "",
+    "type": "playground-model",
+    "version": "73.0.0"
+}

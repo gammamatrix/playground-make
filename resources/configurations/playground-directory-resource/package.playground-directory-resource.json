@@ -1,0 +1,73 @@
+{
+    "class": "ServiceProvider",
+    "config": "playground-directory-resource",
+    "config_space": "PLAYGROUND_DIRECTORY_RESOURCE",
+    "fqdn": "Playground/Directory/Resource/ServiceProvider",
+    "module": "Directory",
+    "module_slug": "directory",
+    "name": "Directory Resource",
+    "namespace": "Playground/Directory/Resource",
+    "organization": "Playground",
+    "organization_email": "jeremy.postlethwaite@gmail.com",
+    "package": "playground-directory-resource",
+    "withBlades": true,
+    "withControllers": true,
+    "withFactories": false,
+    "withMigrations": false,
+    "withModels": false,
+    "withPolicies": true,
+    "withRequests": true,
+    "withRoutes": true,
+    "withSwagger": true,
+    "withTests": true,
+    "playground": true,
+    "revision": true,
+    "package_name": "Playground: Directory Resource",
+    "package_description": "Playground: Provides an API and a Blade UI for interacting with Playground Directory, a Directory System for Laravel applications.",
+    "package_homepage": "https://github.com/gammamatrix/playground-directory-resource",
+    "package_keywords": [
+        "directory",
+        "gammamatrix",
+        "laravel",
+        "playground",
+        "playground-blade"
+    ],
+    "package_license": "MIT",
+    "package_authors": [
+        {
+            "name": "Jeremy Postlethwaite",
+            "email": "jeremy.postlethwaite@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "package_require": {
+        "php": "^8.2",
+        "gammamatrix/playground": "*",
+        "gammamatrix/playground-auth": "*",
+        "gammamatrix/playground-http": "*",
+        "gammamatrix/playground-directory": "*"
+    },
+    "package_require_dev": {
+        "gammamatrix/playground-test": "*",
+        "gammamatrix/playground-login-blade": "*",
+        "gammamatrix/playground-site-blade": "*"
+    },
+    "package_suggest": [],
+    "package_autoload_psr4": [],
+    "package_autoload_dev_psr4": [],
+    "package_providers": [],
+    "package_laravel_providers": [
+        "Playground/Directory/Resource/ServiceProvider"
+    ],
+    "packagist": "gammamatrix/playground-directory-resource",
+    "controllers": [],
+    "models": [],
+    "policies": [],
+    "requests": [],
+    "routes": [],
+    "transformers": [],
+    "uses": [],
+    "service_provider": "",
+    "type": "playground-resource",
+    "version": "73.0.0"
+}
