@@ -14,15 +14,18 @@
     "model_plural": "Tags",
     "model_singular": "Tag",
     "model_slug": "tag",
-    "type": "model",
+    "model_slug_plural": "tags",
+    "recipe": "matrix",
+    "type": "playground-model",
     "table": "matrix_tags",
     "perPage": null,
     "controller": true,
     "factory": true,
     "migration": true,
     "playground": true,
-    "policy": false,
-    "requests": false,
+    "policy": true,
+    "requests": true,
+    "revision": false,
     "seed": true,
     "test": true,
     "extends": "Model",
@@ -36,7 +39,78 @@
             "localKey": "matrix_id"
         }
     },
-    "HasMany": [],
+    "HasMany": {
+        "backlogs": {
+            "comment": "The backlogs of the tag.",
+            "accessor": "backlogs",
+            "related": "Backlog",
+            "foreignKey": "tag_id",
+            "localKey": "id"
+        },
+        "boards": {
+            "comment": "The boards of the tag.",
+            "accessor": "boards",
+            "related": "Board",
+            "foreignKey": "tag_id",
+            "localKey": "id"
+        },
+        "epics": {
+            "comment": "The epics of the tag.",
+            "accessor": "epics",
+            "related": "Epic",
+            "foreignKey": "tag_id",
+            "localKey": "id"
+        },
+        "milestones": {
+            "comment": "The milestones of the tag.",
+            "accessor": "milestones",
+            "related": "Milestone",
+            "foreignKey": "tag_id",
+            "localKey": "id"
+        },
+        "projects": {
+            "comment": "The projects of the tag.",
+            "accessor": "projects",
+            "related": "Project",
+            "foreignKey": "tag_id",
+            "localKey": "id"
+        },
+        "releases": {
+            "comment": "The releases of the tag.",
+            "accessor": "releases",
+            "related": "Release",
+            "foreignKey": "tag_id",
+            "localKey": "id"
+        },
+        "roadmaps": {
+            "comment": "The roadmaps of the tag.",
+            "accessor": "roadmaps",
+            "related": "Roadmap",
+            "foreignKey": "tag_id",
+            "localKey": "id"
+        },
+        "sprints": {
+            "comment": "The sprints of the tag.",
+            "accessor": "sprints",
+            "related": "Sprint",
+            "foreignKey": "tag_id",
+            "localKey": "id"
+        },
+        "teams": {
+            "comment": "The teams of the tag.",
+            "accessor": "teams",
+            "related": "Team",
+            "foreignKey": "tag_id",
+            "localKey": "id"
+        },
+        "tickets": {
+            "comment": "The tickets of the tag.",
+            "accessor": "tickets",
+            "related": "Ticket",
+            "foreignKey": "tag_id",
+            "localKey": "id"
+        }
+    },
     "scopes": {
         "sort": {
             "include": "minus",
@@ -44,11 +118,11 @@
         }
     },
     "attributes": {
+        "tag_type": null,
         "created_by_id": null,
         "modified_by_id": null,
         "owned_by_id": null,
         "parent_id": null,
-        "tag_type": null,
         "matrix_id": null,
         "created_at": null,
         "updated_at": null,
@@ -76,11 +150,15 @@
         "latitude": null,
         "longitude": null,
         "active": true,
+        "cron": false,
+        "featured": false,
         "flagged": false,
         "internal": false,
         "locked": false,
         "retired": false,
+        "special": false,
         "unknown": false,
+        "locale": "",
         "label": "",
         "title": "",
         "byline": "",
@@ -128,11 +206,15 @@
         "latitude": "float",
         "longitude": "float",
         "active": "boolean",
+        "cron": "boolean",
+        "featured": "boolean",
         "flagged": "boolean",
         "internal": "boolean",
         "locked": "boolean",
         "retired": "boolean",
+        "special": "boolean",
         "unknown": "boolean",
+        "locale": "string",
         "label": "string",
         "title": "string",
         "byline": "string",
@@ -153,9 +235,9 @@
         "sources": "array"
     },
     "fillable": [
+        "tag_type",
         "owned_by_id",
         "parent_id",
-        "tag_type",
         "matrix_id",
         "gids",
         "po",
@@ -180,11 +262,15 @@
         "latitude",
         "longitude",
         "active",
+        "cron",
+        "featured",
         "flagged",
         "internal",
         "locked",
         "retired",
+        "special",
         "unknown",
+        "locale",
         "label",
         "title",
         "byline",
@@ -207,6 +293,22 @@
         "builder": null,
         "ids": [
             {
+                "column": "id",
+                "label": "ID",
+                "icon": "",
+                "nullable": true,
+                "unsigned": true,
+                "type": "string"
+            },
+            {
+                "column": "tag_type",
+                "label": "Tag Type",
+                "icon": "",
+                "nullable": true,
+                "unsigned": true,
+                "type": "string"
+            },
+            {
                 "column": "created_by_id",
                 "label": "Created by id",
                 "icon": "",
@@ -217,6 +319,14 @@
             {
                 "column": "modified_by_id",
                 "label": "Modified by id",
+                "icon": "",
+                "nullable": true,
+                "unsigned": true,
+                "type": "uuid"
+            },
+            {
+                "column": "owned_by_id",
+                "label": "Owned by id",
                 "icon": "",
                 "nullable": true,
                 "unsigned": true,
@@ -237,22 +347,6 @@
                 "nullable": true,
                 "unsigned": true,
                 "type": "uuid"
-            },
-            {
-                "column": "tag_type",
-                "label": "Tag type",
-                "icon": "",
-                "nullable": true,
-                "unsigned": true,
-                "type": "string"
-            },
-            {
-                "column": "owned_by_id",
-                "label": "Owned by id",
-                "icon": "",
-                "nullable": true,
-                "unsigned": true,
-                "type": "uuid"
             }
         ],
         "dates": [
@@ -265,16 +359,16 @@
                 "type": "datetime"
             },
             {
-                "column": "deleted_at",
-                "label": "Deleted at",
+                "column": "updated_at",
+                "label": "Updated at",
                 "icon": "",
                 "nullable": true,
                 "unsigned": true,
                 "type": "datetime"
             },
             {
-                "column": "updated_at",
-                "label": "Updated at",
+                "column": "deleted_at",
+                "label": "Deleted at",
                 "icon": "",
                 "nullable": true,
                 "unsigned": true,
@@ -285,7 +379,23 @@
             {
                 "column": "active",
                 "label": "Active",
-                "icon": "",
+                "icon": "fa-solid fa-person-running",
+                "nullable": true,
+                "unsigned": true,
+                "type": "boolean"
+            },
+            {
+                "column": "cron",
+                "label": "Cron",
+                "icon": "fa-regular fa-clock",
+                "nullable": true,
+                "unsigned": true,
+                "type": "boolean"
+            },
+            {
+                "column": "featured",
+                "label": "Featured",
+                "icon": "fa-solid fa-star text-warning",
                 "nullable": true,
                 "unsigned": true,
                 "type": "boolean"
@@ -293,7 +403,7 @@
             {
                 "column": "flagged",
                 "label": "Flagged",
-                "icon": "",
+                "icon": "fa-solid fa-flag",
                 "nullable": true,
                 "unsigned": true,
                 "type": "boolean"
@@ -301,7 +411,7 @@
             {
                 "column": "internal",
                 "label": "Internal",
-                "icon": "",
+                "icon": "fa-solid fa-server",
                 "nullable": true,
                 "unsigned": true,
                 "type": "boolean"
@@ -309,7 +419,7 @@
             {
                 "column": "locked",
                 "label": "Locked",
-                "icon": "",
+                "icon": "fa-solid fa-lock text-warning",
                 "nullable": true,
                 "unsigned": true,
                 "type": "boolean"
@@ -317,7 +427,15 @@
             {
                 "column": "retired",
                 "label": "Retired",
-                "icon": "",
+                "icon": "fa-solid fa-chair text-success",
+                "nullable": true,
+                "unsigned": true,
+                "type": "boolean"
+            },
+            {
+                "column": "special",
+                "label": "Special",
+                "icon": "fa-solid fa-star text-success",
                 "nullable": true,
                 "unsigned": true,
                 "type": "boolean"
@@ -325,7 +443,7 @@
             {
                 "column": "unknown",
                 "label": "Unknown",
-                "icon": "",
+                "icon": "fa-solid fa-question text-warning",
                 "nullable": true,
                 "unsigned": true,
                 "type": "boolean"
@@ -337,6 +455,14 @@
             "with": true
         },
         "columns": [
+            {
+                "column": "locale",
+                "label": "Locale",
+                "icon": "",
+                "nullable": true,
+                "unsigned": true,
+                "type": "string"
+            },
             {
                 "column": "label",
                 "label": "Label",
@@ -414,7 +540,7 @@
             {
                 "column": "gids",
                 "label": "Gids",
-                "icon": "",
+                "icon": "fa-solid fa-people-group",
                 "nullable": true,
                 "unsigned": true,
                 "type": "bigInteger"
@@ -422,7 +548,7 @@
             {
                 "column": "po",
                 "label": "Po",
-                "icon": "",
+                "icon": "fa-solid fa-house-user",
                 "nullable": true,
                 "unsigned": true,
                 "type": "tinyInteger"
@@ -430,7 +556,7 @@
             {
                 "column": "pg",
                 "label": "Pg",
-                "icon": "",
+                "icon": "fa-solid fa-people-roof",
                 "nullable": true,
                 "unsigned": true,
                 "type": "tinyInteger"
@@ -438,7 +564,7 @@
             {
                 "column": "pw",
                 "label": "Pw",
-                "icon": "",
+                "icon": "fa-solid fa-globe",
                 "nullable": true,
                 "unsigned": true,
                 "type": "tinyInteger"
@@ -446,7 +572,7 @@
             {
                 "column": "only_admin",
                 "label": "Only admin",
-                "icon": "",
+                "icon": "fa-solid fa-user-gear",
                 "nullable": true,
                 "unsigned": true,
                 "type": "boolean"
@@ -454,7 +580,7 @@
             {
                 "column": "only_user",
                 "label": "Only user",
-                "icon": "",
+                "icon": "fa-solid fa-user",
                 "nullable": true,
                 "unsigned": true,
                 "type": "boolean"
@@ -462,7 +588,7 @@
             {
                 "column": "only_guest",
                 "label": "Only guest",
-                "icon": "",
+                "icon": "fa-solid fa-person-rays",
                 "nullable": true,
                 "unsigned": true,
                 "type": "boolean"
@@ -470,7 +596,7 @@
             {
                 "column": "allow_public",
                 "label": "Allow public",
-                "icon": "",
+                "icon": "fa-solid fa-users-line",
                 "nullable": true,
                 "unsigned": true,
                 "type": "boolean"
@@ -669,10 +795,22 @@
             }
         ]
     },
-    "models": {
-        "Tag": "resources/configurations/playground-matrix/model.tag.json"
-    },
+    "models": [],
     "sortable": [
+        {
+            "column": "id",
+            "label": "ID",
+            "icon": "",
+            "nullable": false,
+            "type": "string"
+        },
+        {
+            "column": "tag_type",
+            "label": "Tag Type",
+            "icon": "",
+            "nullable": false,
+            "type": "string"
+        },
         {
             "column": "created_by_id",
             "label": "Created by id",
@@ -700,13 +838,6 @@
             "icon": "",
             "nullable": false,
             "type": "uuid"
-        },
-        {
-            "column": "tag_type",
-            "label": "Tag type",
-            "icon": "",
-            "nullable": false,
-            "type": "string"
         },
         {
             "column": "matrix_id",
@@ -739,56 +870,56 @@
         {
             "column": "gids",
             "label": "Gids",
-            "icon": "",
+            "icon": "fa-solid fa-people-group",
             "nullable": false,
             "type": "bigInteger"
         },
         {
             "column": "po",
             "label": "Po",
-            "icon": "",
+            "icon": "fa-solid fa-house-user",
             "nullable": false,
             "type": "tinyInteger"
         },
         {
             "column": "pg",
             "label": "Pg",
-            "icon": "",
+            "icon": "fa-solid fa-people-roof",
             "nullable": false,
             "type": "tinyInteger"
         },
         {
             "column": "pw",
             "label": "Pw",
-            "icon": "",
+            "icon": "fa-solid fa-globe",
             "nullable": false,
             "type": "tinyInteger"
         },
         {
             "column": "only_admin",
             "label": "Only admin",
-            "icon": "",
+            "icon": "fa-solid fa-user-gear",
             "nullable": false,
             "type": "boolean"
         },
         {
             "column": "only_user",
             "label": "Only user",
-            "icon": "",
+            "icon": "fa-solid fa-user",
             "nullable": false,
             "type": "boolean"
         },
         {
             "column": "only_guest",
             "label": "Only guest",
-            "icon": "",
+            "icon": "fa-solid fa-person-rays",
             "nullable": false,
             "type": "boolean"
         },
         {
             "column": "allow_public",
             "label": "Allow public",
-            "icon": "",
+            "icon": "fa-solid fa-users-line",
             "nullable": false,
             "type": "boolean"
         },
@@ -893,44 +1024,72 @@
         {
             "column": "active",
             "label": "Active",
-            "icon": "",
+            "icon": "fa-solid fa-person-running",
+            "nullable": false,
+            "type": "boolean"
+        },
+        {
+            "column": "cron",
+            "label": "Cron",
+            "icon": "fa-regular fa-clock",
+            "nullable": false,
+            "type": "boolean"
+        },
+        {
+            "column": "featured",
+            "label": "Featured",
+            "icon": "fa-solid fa-star text-warning",
             "nullable": false,
             "type": "boolean"
         },
         {
             "column": "flagged",
             "label": "Flagged",
-            "icon": "",
+            "icon": "fa-solid fa-flag",
             "nullable": false,
             "type": "boolean"
         },
         {
             "column": "internal",
             "label": "Internal",
-            "icon": "",
+            "icon": "fa-solid fa-server",
             "nullable": false,
             "type": "boolean"
         },
         {
             "column": "locked",
             "label": "Locked",
-            "icon": "",
+            "icon": "fa-solid fa-lock text-warning",
             "nullable": false,
             "type": "boolean"
         },
         {
             "column": "retired",
             "label": "Retired",
-            "icon": "",
+            "icon": "fa-solid fa-chair text-success",
+            "nullable": false,
+            "type": "boolean"
+        },
+        {
+            "column": "special",
+            "label": "Special",
+            "icon": "fa-solid fa-star text-success",
             "nullable": false,
             "type": "boolean"
         },
         {
             "column": "unknown",
             "label": "Unknown",
-            "icon": "",
+            "icon": "fa-solid fa-question text-warning",
             "nullable": false,
             "type": "boolean"
+        },
+        {
+            "column": "locale",
+            "label": "Locale",
+            "icon": "",
+            "nullable": false,
+            "type": "string"
         },
         {
             "column": "label",
@@ -1070,9 +1229,21 @@
             "with": false
         },
         "ids": {
+            "tag_type": {
+                "column": "tag_type",
+                "label": "Tag Type",
+                "description": "",
+                "foreign": null,
+                "icon": "",
+                "index": true,
+                "nullable": true,
+                "readOnly": false,
+                "unsigned": false,
+                "type": "string"
+            },
             "created_by_id": {
                 "column": "created_by_id",
-                "label": "",
+                "label": "Created by id",
                 "description": "",
                 "foreign": {
                     "references": "id",
@@ -1087,7 +1258,7 @@
             },
             "modified_by_id": {
                 "column": "modified_by_id",
-                "label": "",
+                "label": "Modified by id",
                 "description": "",
                 "foreign": {
                     "references": "id",
@@ -1102,7 +1273,7 @@
             },
             "owned_by_id": {
                 "column": "owned_by_id",
-                "label": "",
+                "label": "Owned by id",
                 "description": "",
                 "foreign": {
                     "references": "id",
@@ -1117,7 +1288,7 @@
             },
             "parent_id": {
                 "column": "parent_id",
-                "label": "",
+                "label": "Parent id",
                 "description": "",
                 "foreign": null,
                 "icon": "",
@@ -1127,21 +1298,9 @@
                 "unsigned": false,
                 "type": "uuid"
             },
-            "tag_type": {
-                "column": "tag_type",
-                "label": "",
-                "description": "",
-                "foreign": null,
-                "icon": "",
-                "index": true,
-                "nullable": true,
-                "readOnly": false,
-                "unsigned": false,
-                "type": "string"
-            },
             "matrix_id": {
                 "column": "matrix_id",
-                "label": "",
+                "label": "Matrix id",
                 "description": "",
                 "foreign": {
                     "references": "id",
@@ -1172,6 +1331,28 @@
                 "icon": "fa-solid fa-person-running",
                 "default": true,
                 "index": true,
+                "nullable": false,
+                "readOnly": false,
+                "type": "boolean"
+            },
+            "cron": {
+                "column": "cron",
+                "label": "Cron",
+                "description": "",
+                "icon": "fa-regular fa-clock",
+                "default": false,
+                "index": true,
+                "nullable": false,
+                "readOnly": false,
+                "type": "boolean"
+            },
+            "featured": {
+                "column": "featured",
+                "label": "Featured",
+                "description": "",
+                "icon": "fa-solid fa-star text-warning",
+                "default": false,
+                "index": false,
                 "nullable": false,
                 "readOnly": false,
                 "type": "boolean"
@@ -1220,6 +1401,17 @@
                 "readOnly": false,
                 "type": "boolean"
             },
+            "special": {
+                "column": "special",
+                "label": "Special",
+                "description": "",
+                "icon": "fa-solid fa-star text-success",
+                "default": false,
+                "index": false,
+                "nullable": false,
+                "readOnly": false,
+                "type": "boolean"
+            },
             "unknown": {
                 "column": "unknown",
                 "label": "Unknown",
@@ -1233,11 +1425,25 @@
             }
         },
         "columns": {
+            "locale": {
+                "column": "locale",
+                "label": "Locale",
+                "description": "",
+                "icon": "",
+                "html": false,
+                "index": false,
+                "nullable": false,
+                "readOnly": false,
+                "type": "string",
+                "size": 255,
+                "default": ""
+            },
             "label": {
                 "column": "label",
                 "label": "Label",
                 "description": "",
                 "icon": "",
+                "html": false,
                 "index": false,
                 "nullable": false,
                 "readOnly": false,
@@ -1250,6 +1456,7 @@
                 "label": "Title",
                 "description": "",
                 "icon": "",
+                "html": false,
                 "index": false,
                 "nullable": false,
                 "readOnly": false,
@@ -1262,6 +1469,7 @@
                 "label": "Byline",
                 "description": "",
                 "icon": "",
+                "html": false,
                 "index": false,
                 "nullable": false,
                 "readOnly": false,
@@ -1274,6 +1482,7 @@
                 "label": "Slug",
                 "description": "",
                 "icon": "",
+                "html": false,
                 "index": true,
                 "nullable": true,
                 "readOnly": false,
@@ -1286,6 +1495,7 @@
                 "label": "Url",
                 "description": "",
                 "icon": "",
+                "html": false,
                 "index": false,
                 "nullable": false,
                 "readOnly": false,
@@ -1298,6 +1508,7 @@
                 "label": "Description",
                 "description": "",
                 "icon": "",
+                "html": false,
                 "index": false,
                 "nullable": false,
                 "readOnly": false,
@@ -1310,6 +1521,7 @@
                 "label": "Introduction",
                 "description": "",
                 "icon": "",
+                "html": false,
                 "index": false,
                 "nullable": false,
                 "readOnly": false,
@@ -1322,6 +1534,7 @@
                 "label": "Content",
                 "description": "",
                 "icon": "",
+                "html": true,
                 "index": false,
                 "nullable": true,
                 "readOnly": false,
@@ -1332,6 +1545,7 @@
                 "label": "Summary",
                 "description": "",
                 "icon": "",
+                "html": true,
                 "index": false,
                 "nullable": true,
                 "readOnly": false,
@@ -1344,6 +1558,7 @@
                 "label": "Gids",
                 "description": "",
                 "icon": "fa-solid fa-people-group",
+                "html": false,
                 "index": false,
                 "nullable": false,
                 "readOnly": false,
@@ -1356,6 +1571,7 @@
                 "label": "Po",
                 "description": "",
                 "icon": "fa-solid fa-house-user",
+                "html": false,
                 "index": false,
                 "nullable": false,
                 "readOnly": false,
@@ -1368,6 +1584,7 @@
                 "label": "Pg",
                 "description": "",
                 "icon": "fa-solid fa-people-roof",
+                "html": false,
                 "index": false,
                 "nullable": false,
                 "readOnly": false,
@@ -1380,6 +1597,7 @@
                 "label": "Pw",
                 "description": "",
                 "icon": "fa-solid fa-globe",
+                "html": false,
                 "index": false,
                 "nullable": false,
                 "readOnly": false,
@@ -1392,6 +1610,7 @@
                 "label": "Only admin",
                 "description": "",
                 "icon": "fa-solid fa-user-gear",
+                "html": false,
                 "index": false,
                 "nullable": false,
                 "readOnly": false,
@@ -1403,6 +1622,7 @@
                 "label": "Only user",
                 "description": "",
                 "icon": "fa-solid fa-user",
+                "html": false,
                 "index": false,
                 "nullable": false,
                 "readOnly": false,
@@ -1414,6 +1634,7 @@
                 "label": "Only guest",
                 "description": "",
                 "icon": "fa-solid fa-person-rays",
+                "html": false,
                 "index": false,
                 "nullable": false,
                 "readOnly": false,
@@ -1425,6 +1646,7 @@
                 "label": "Allow public",
                 "description": "",
                 "icon": "fa-solid fa-users-line",
+                "html": false,
                 "index": false,
                 "nullable": false,
                 "readOnly": false,
@@ -1438,6 +1660,7 @@
                 "label": "Status",
                 "description": "",
                 "icon": "",
+                "html": false,
                 "index": false,
                 "nullable": false,
                 "readOnly": false,
@@ -1450,6 +1673,7 @@
                 "label": "Rank",
                 "description": "",
                 "icon": "",
+                "html": false,
                 "index": false,
                 "nullable": false,
                 "readOnly": false,
@@ -1462,6 +1686,7 @@
                 "label": "Size",
                 "description": "",
                 "icon": "",
+                "html": false,
                 "index": false,
                 "nullable": false,
                 "readOnly": false,
@@ -1476,6 +1701,7 @@
                 "label": "Matrix",
                 "description": "",
                 "icon": "",
+                "html": false,
                 "index": false,
                 "nullable": true,
                 "readOnly": false,
@@ -1487,6 +1713,7 @@
                 "label": "X",
                 "description": "",
                 "icon": "",
+                "html": false,
                 "index": false,
                 "nullable": true,
                 "readOnly": false,
@@ -1499,6 +1726,7 @@
                 "label": "Y",
                 "description": "",
                 "icon": "",
+                "html": false,
                 "index": false,
                 "nullable": true,
                 "readOnly": false,
@@ -1511,6 +1739,7 @@
                 "label": "Z",
                 "description": "",
                 "icon": "",
+                "html": false,
                 "index": false,
                 "nullable": true,
                 "readOnly": false,
@@ -1523,6 +1752,7 @@
                 "label": "R",
                 "description": "",
                 "icon": "",
+                "html": false,
                 "index": false,
                 "nullable": true,
                 "readOnly": false,
@@ -1536,6 +1766,7 @@
                 "label": "Theta",
                 "description": "",
                 "icon": "",
+                "html": false,
                 "index": false,
                 "nullable": true,
                 "readOnly": false,
@@ -1549,6 +1780,7 @@
                 "label": "Rho",
                 "description": "",
                 "icon": "",
+                "html": false,
                 "index": false,
                 "nullable": true,
                 "readOnly": false,
@@ -1562,6 +1794,7 @@
                 "label": "Phi",
                 "description": "",
                 "icon": "",
+                "html": false,
                 "index": false,
                 "nullable": true,
                 "readOnly": false,
@@ -1575,6 +1808,7 @@
                 "label": "Elevation",
                 "description": "",
                 "icon": "",
+                "html": false,
                 "index": false,
                 "nullable": true,
                 "readOnly": false,
@@ -1588,6 +1822,7 @@
                 "label": "Latitude",
                 "description": "",
                 "icon": "",
+                "html": false,
                 "index": false,
                 "nullable": true,
                 "readOnly": false,
@@ -1601,6 +1836,7 @@
                 "label": "Longitude",
                 "description": "",
                 "icon": "",
+                "html": false,
                 "index": false,
                 "nullable": true,
                 "readOnly": false,
@@ -1616,6 +1852,7 @@
                 "label": "Icon",
                 "description": "",
                 "icon": "",
+                "html": false,
                 "index": false,
                 "nullable": false,
                 "readOnly": false,
@@ -1628,6 +1865,7 @@
                 "label": "Image",
                 "description": "",
                 "icon": "",
+                "html": false,
                 "index": false,
                 "nullable": false,
                 "readOnly": false,
@@ -1640,6 +1878,7 @@
                 "label": "Avatar",
                 "description": "",
                 "icon": "",
+                "html": false,
                 "index": false,
                 "nullable": false,
                 "readOnly": false,
@@ -1652,6 +1891,7 @@
                 "label": "Ui",
                 "description": "",
                 "icon": "",
+                "html": false,
                 "index": false,
                 "nullable": true,
                 "readOnly": false,
@@ -1665,6 +1905,7 @@
                 "label": "Assets",
                 "description": "",
                 "icon": "",
+                "html": false,
                 "index": false,
                 "nullable": true,
                 "readOnly": false,
@@ -1676,6 +1917,7 @@
                 "label": "Meta",
                 "description": "",
                 "icon": "",
+                "html": false,
                 "index": false,
                 "nullable": true,
                 "readOnly": false,
@@ -1687,6 +1929,7 @@
                 "label": "Notes",
                 "description": "",
                 "icon": "",
+                "html": false,
                 "index": false,
                 "nullable": true,
                 "readOnly": true,
@@ -1699,6 +1942,7 @@
                 "label": "Options",
                 "description": "",
                 "icon": "",
+                "html": false,
                 "index": false,
                 "nullable": true,
                 "readOnly": false,
@@ -1710,6 +1954,7 @@
                 "label": "Sources",
                 "description": "",
                 "icon": "",
+                "html": false,
                 "index": false,
                 "nullable": true,
                 "readOnly": false,
@@ -1720,6 +1965,7 @@
     },
     "uses": [
         "Illuminate/Database/Eloquent/Relations/HasOne",
+        "Illuminate/Database/Eloquent/Relations/HasMany",
         "Playground/Models/Model"
     ]
 }

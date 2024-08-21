@@ -1,0 +1,71 @@
+{
+    "class": "ServiceProvider",
+    "config": "playground-lead-api",
+    "config_space": "PLAYGROUND_LEAD_API",
+    "fqdn": "Playground/Lead/Api/ServiceProvider",
+    "module": "Lead",
+    "module_slug": "lead",
+    "name": "Lead API",
+    "namespace": "Playground/Lead/Api",
+    "organization": "Playground",
+    "organization_email": "jeremy.postlethwaite@gmail.com",
+    "package": "playground-lead-api",
+    "withBlades": false,
+    "withControllers": true,
+    "withFactories": false,
+    "withMigrations": false,
+    "withModels": false,
+    "withPolicies": true,
+    "withRequests": true,
+    "withRoutes": true,
+    "withSwagger": true,
+    "withTests": true,
+    "playground": true,
+    "revision": false,
+    "package_name": "Playground: Lead API",
+    "package_description": "Playground: Provides an API, without a UI for interacting with Playground Lead, a Lead System for Laravel applications.",
+    "package_homepage": "https://github.com/gammamatrix/playground-lead-api",
+    "package_keywords": [
+        "gammamatrix",
+        "laravel",
+        "lead",
+        "playground"
+    ],
+    "package_license": "MIT",
+    "package_authors": [
+        {
+            "name": "Jeremy Postlethwaite",
+            "email": "jeremy.postlethwaite@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "package_require": {
+        "php": "^8.2",
+        "gammamatrix/playground": "*",
+        "gammamatrix/playground-auth": "*",
+        "gammamatrix/playground-http": "*",
+        "gammamatrix/playground-lead": "*"
+    },
+    "package_require_dev": {
+        "gammamatrix/playground-test": "*",
+        "laravel/sanctum": "^4.0"
+    },
+    "package_suggest": [],
+    "package_autoload_psr4": [],
+    "package_autoload_dev_psr4": [],
+    "package_providers": [],
+    "package_laravel_providers": [
+        "Playground/Lead/Api/ServiceProvider"
+    ],
+    "packagist": "gammamatrix/playground-lead-api",
+    "controllers": [],
+    "models": [],
+    "policies": [],
+    "requests": [],
+    "routes": [],
+    "transformers": [],
+    "uses": [],
+    "service_provider": "",
+    "type": "playground-api",
+    "version": "73.0.0"
+}

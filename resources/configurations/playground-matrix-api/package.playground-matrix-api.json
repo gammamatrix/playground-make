@@ -1,0 +1,71 @@
+{
+    "class": "ServiceProvider",
+    "config": "playground-matrix-api",
+    "config_space": "PLAYGROUND_MATRIX_API",
+    "fqdn": "Playground/Matrix/Api/ServiceProvider",
+    "module": "Matrix",
+    "module_slug": "matrix",
+    "name": "Matrix API",
+    "namespace": "Playground/Matrix/Api",
+    "organization": "Playground",
+    "organization_email": "jeremy.postlethwaite@gmail.com",
+    "package": "playground-matrix-api",
+    "withBlades": false,
+    "withControllers": true,
+    "withFactories": false,
+    "withMigrations": false,
+    "withModels": false,
+    "withPolicies": true,
+    "withRequests": true,
+    "withRoutes": true,
+    "withSwagger": true,
+    "withTests": true,
+    "playground": true,
+    "revision": false,
+    "package_name": "Playground: Matrix API",
+    "package_description": "Playground: Provides an API, without a UI for interacting with Playground Matrix, a Project Management System for Laravel applications.",
+    "package_homepage": "https://github.com/gammamatrix/playground-matrix-api",
+    "package_keywords": [
+        "gammamatrix",
+        "laravel",
+        "matrix",
+        "playground"
+    ],
+    "package_license": "MIT",
+    "package_authors": [
+        {
+            "name": "Jeremy Postlethwaite",
+            "email": "jeremy.postlethwaite@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "package_require": {
+        "php": "^8.2",
+        "gammamatrix/playground": "*",
+        "gammamatrix/playground-auth": "*",
+        "gammamatrix/playground-http": "*",
+        "gammamatrix/playground-matrix": "*"
+    },
+    "package_require_dev": {
+        "gammamatrix/playground-test": "*",
+        "laravel/sanctum": "^4.0"
+    },
+    "package_suggest": [],
+    "package_autoload_psr4": [],
+    "package_autoload_dev_psr4": [],
+    "package_providers": [],
+    "package_laravel_providers": [
+        "Playground/Matrix/Api/ServiceProvider"
+    ],
+    "packagist": "gammamatrix/playground-matrix-api",
+    "controllers": [],
+    "models": [],
+    "policies": [],
+    "requests": [],
+    "routes": [],
+    "transformers": [],
+    "uses": [],
+    "service_provider": "",
+    "type": "playground-api",
+    "version": "73.0.0"
+}

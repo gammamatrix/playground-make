@@ -1,23 +1,23 @@
 {
-    "class": "Flow",
-    "config": "playground-matrix",
-    "fqdn": "Playground/Matrix/Models/Flow",
-    "module": "Matrix",
-    "module_slug": "matrix",
-    "name": "Flow",
-    "namespace": "Playground/Matrix",
+    "class": "Source",
+    "config": "playground-lead",
+    "fqdn": "Playground/Lead/Models/Source",
+    "module": "Lead",
+    "module_slug": "lead",
+    "name": "Source",
+    "namespace": "Playground/Lead",
     "organization": "Playground",
-    "package": "playground-matrix",
-    "model": "Flow",
+    "package": "playground-lead",
+    "model": "Source",
     "model_attribute": "title",
     "model_attribute_required": true,
-    "model_plural": "Flows",
-    "model_singular": "Flow",
-    "model_slug": "flow",
-    "model_slug_plural": "flows",
-    "recipe": "matrix",
+    "model_plural": "Sources",
+    "model_singular": "Source",
+    "model_slug": "source",
+    "model_slug_plural": "sources",
+    "recipe": "lead",
     "type": "playground-model",
-    "table": "matrix_flows",
+    "table": "lead_sources",
     "perPage": null,
     "controller": true,
     "factory": true,
@@ -31,107 +31,78 @@
     "extends": "Model",
     "implements": [],
     "HasOne": {
-        "matrix": {
-            "comment": "The matrix of the flow.",
-            "accessor": "matrix",
-            "related": "Matrix",
+        "campaign": {
+            "comment": "The campaign of the model.",
+            "accessor": "campaign",
+            "related": "Campaign",
             "foreignKey": "id",
-            "localKey": "matrix_id"
+            "localKey": "campaign_id"
         },
-        "note": {
-            "comment": "The note of the flow.",
-            "accessor": "note",
-            "related": "Note",
+        "goal": {
+            "comment": "The goal of the model.",
+            "accessor": "goal",
+            "related": "Goal",
             "foreignKey": "id",
-            "localKey": "note_id"
+            "localKey": "goal_id"
         },
-        "tag": {
-            "comment": "The tag of the flow.",
-            "accessor": "tag",
-            "related": "Tag",
+        "lead": {
+            "comment": "The lead of the model.",
+            "accessor": "lead",
+            "related": "Lead",
             "foreignKey": "id",
-            "localKey": "tag_id"
+            "localKey": "lead_id"
+        },
+        "opportunity": {
+            "comment": "The opportunity of the model.",
+            "accessor": "opportunity",
+            "related": "Opportunity",
+            "foreignKey": "id",
+            "localKey": "opportunity_id"
+        },
+        "plan": {
+            "comment": "The plan of the model.",
+            "accessor": "plan",
+            "related": "Plan",
+            "foreignKey": "id",
+            "localKey": "plan_id"
+        },
+        "region": {
+            "comment": "The region of the model.",
+            "accessor": "region",
+            "related": "Region",
+            "foreignKey": "id",
+            "localKey": "region_id"
+        },
+        "report": {
+            "comment": "The report of the model.",
+            "accessor": "report",
+            "related": "Report",
+            "foreignKey": "id",
+            "localKey": "report_id"
+        },
+        "task": {
+            "comment": "The task of the model.",
+            "accessor": "task",
+            "related": "Task",
+            "foreignKey": "id",
+            "localKey": "task_id"
         },
         "team": {
-            "comment": "The team of the flow.",
+            "comment": "The team of the model.",
             "accessor": "team",
             "related": "Team",
             "foreignKey": "id",
             "localKey": "team_id"
+        },
+        "teammate": {
+            "comment": "The teammate of the model.",
+            "accessor": "teammate",
+            "related": "Teammate",
+            "foreignKey": "id",
+            "localKey": "teammate_id"
         }
     },
-    "HasMany": {
-        "backlogs": {
-            "comment": "The backlogs of the flow.",
-            "accessor": "backlogs",
-            "related": "Backlog",
-            "foreignKey": "flow_id",
-            "localKey": "id"
-        },
-        "boards": {
-            "comment": "The boards of the flow.",
-            "accessor": "boards",
-            "related": "Board",
-            "foreignKey": "flow_id",
-            "localKey": "id"
-        },
-        "epics": {
-            "comment": "The epics of the flow.",
-            "accessor": "epics",
-            "related": "Epic",
-            "foreignKey": "flow_id",
-            "localKey": "id"
-        },
-        "milestones": {
-            "comment": "The milestones of the flow.",
-            "accessor": "milestones",
-            "related": "Milestone",
-            "foreignKey": "flow_id",
-            "localKey": "id"
-        },
-        "projects": {
-            "comment": "The projects of the flow.",
-            "accessor": "projects",
-            "related": "Project",
-            "foreignKey": "flow_id",
-            "localKey": "id"
-        },
-        "releases": {
-            "comment": "The releases of the flow.",
-            "accessor": "releases",
-            "related": "Release",
-            "foreignKey": "flow_id",
-            "localKey": "id"
-        },
-        "roadmaps": {
-            "comment": "The roadmaps of the flow.",
-            "accessor": "roadmaps",
-            "related": "Roadmap",
-            "foreignKey": "flow_id",
-            "localKey": "id"
-        },
-        "sprints": {
-            "comment": "The sprints of the flow.",
-            "accessor": "sprints",
-            "related": "Sprint",
-            "foreignKey": "flow_id",
-            "localKey": "id"
-        },
-        "teams": {
-            "comment": "The teams of the flow.",
-            "accessor": "teams",
-            "related": "Team",
-            "foreignKey": "flow_id",
-            "localKey": "id"
-        },
-        "tickets": {
-            "comment": "The tickets of the flow.",
-            "accessor": "tickets",
-            "related": "Ticket",
-            "foreignKey": "flow_id",
-            "localKey": "id"
-        }
-    },
+    "HasMany": [],
     "scopes": {
         "sort": {
             "include": "minus",
@@ -139,27 +110,36 @@
         }
     },
     "attributes": {
-        "flow_type": null,
+        "source_type": null,
         "created_by_id": null,
         "modified_by_id": null,
         "owned_by_id": null,
         "parent_id": null,
-        "matrix_id": null,
-        "note_id": null,
-        "tag_id": null,
+        "campaign_id": null,
+        "goal_id": null,
+        "lead_id": null,
+        "opportunity_id": null,
+        "plan_id": null,
+        "region_id": null,
+        "report_id": null,
+        "task_id": null,
         "team_id": null,
+        "teammate_id": null,
+        "matrix_id": null,
         "created_at": null,
         "updated_at": null,
         "deleted_at": null,
         "canceled_at": null,
         "closed_at": null,
         "embargo_at": null,
+        "fixed_at": null,
         "planned_end_at": null,
         "planned_start_at": null,
         "postponed_at": null,
         "published_at": null,
-        "resolved_at": null,
+        "released_at": null,
         "resumed_at": null,
+        "resolved_at": null,
         "suspended_at": null,
         "timer_end_at": null,
         "timer_start_at": null,
@@ -190,7 +170,9 @@
         "closed": false,
         "completed": false,
         "cron": false,
+        "duplicate": false,
         "featured": false,
+        "fixed": false,
         "flagged": false,
         "internal": false,
         "locked": false,
@@ -200,7 +182,9 @@
         "problem": false,
         "published": false,
         "released": false,
+        "resolved": false,
         "retired": false,
+        "sms": false,
         "special": false,
         "suspended": false,
         "unknown": false,
@@ -214,30 +198,53 @@
         "introduction": "",
         "content": null,
         "summary": null,
+        "email": null,
+        "phone": null,
+        "team_role": null,
+        "currency": null,
+        "amount": null,
+        "bonus": null,
+        "bonus_rate": null,
+        "commission": null,
+        "commission_rate": null,
+        "estimate": null,
+        "fees": null,
+        "materials": null,
+        "services": null,
+        "shipping": null,
+        "subtotal": null,
+        "taxable": null,
+        "tax_rate": null,
+        "taxes": null,
+        "total": null,
         "icon": "",
         "image": "",
         "avatar": "",
         "ui": "{}",
+        "address": "{}",
         "assets": "{}",
+        "contact": "{}",
         "meta": "{}",
         "notes": "[]",
         "options": "{}",
         "sources": "{}"
     },
     "casts": {
-        "flow_type": "string",
+        "source_type": "string",
         "created_at": "datetime",
         "updated_at": "datetime",
         "deleted_at": "datetime",
         "canceled_at": "datetime",
         "closed_at": "datetime",
         "embargo_at": "datetime",
+        "fixed_at": "datetime",
         "planned_end_at": "datetime",
         "planned_start_at": "datetime",
         "postponed_at": "datetime",
         "published_at": "datetime",
-        "resolved_at": "datetime",
+        "released_at": "datetime",
         "resumed_at": "datetime",
+        "resolved_at": "datetime",
         "suspended_at": "datetime",
         "timer_end_at": "datetime",
         "timer_start_at": "datetime",
@@ -268,7 +275,9 @@
         "closed": "boolean",
         "completed": "boolean",
         "cron": "boolean",
+        "duplicate": "boolean",
         "featured": "boolean",
+        "fixed": "boolean",
         "flagged": "boolean",
         "internal": "boolean",
         "locked": "boolean",
@@ -278,7 +287,9 @@
         "problem": "boolean",
         "published": "boolean",
         "released": "boolean",
+        "resolved": "boolean",
         "retired": "boolean",
+        "sms": "boolean",
         "special": "boolean",
         "suspended": "boolean",
         "unknown": "boolean",
@@ -292,33 +303,63 @@
         "introduction": "string",
         "content": "string",
         "summary": "string",
+        "email": "string",
+        "phone": "string",
+        "team_role": "string",
+        "currency": "string",
+        "amount": "decimal",
+        "bonus": "decimal",
+        "bonus_rate": "decimal",
+        "commission": "decimal",
+        "commission_rate": "decimal",
+        "estimate": "decimal",
+        "fees": "decimal",
+        "materials": "decimal",
+        "services": "decimal",
+        "shipping": "decimal",
+        "subtotal": "decimal",
+        "taxable": "decimal",
+        "tax_rate": "decimal",
+        "taxes": "decimal",
+        "total": "decimal",
         "icon": "string",
         "image": "string",
         "avatar": "string",
         "ui": "array",
+        "address": "array",
         "assets": "array",
+        "contact": "array",
         "meta": "array",
         "notes": "array",
         "options": "array",
         "sources": "array"
     },
     "fillable": [
-        "flow_type",
+        "source_type",
         "owned_by_id",
         "parent_id",
-        "matrix_id",
-        "note_id",
-        "tag_id",
+        "campaign_id",
+        "goal_id",
+        "lead_id",
+        "opportunity_id",
+        "plan_id",
+        "region_id",
+        "report_id",
+        "task_id",
         "team_id",
+        "teammate_id",
+        "matrix_id",
         "canceled_at",
         "closed_at",
         "embargo_at",
+        "fixed_at",
         "planned_end_at",
         "planned_start_at",
         "postponed_at",
         "published_at",
-        "resolved_at",
+        "released_at",
         "resumed_at",
+        "resolved_at",
         "suspended_at",
         "timer_end_at",
         "timer_start_at",
@@ -349,7 +390,9 @@
         "closed",
         "completed",
         "cron",
+        "duplicate",
         "featured",
+        "fixed",
         "flagged",
         "internal",
         "locked",
@@ -359,7 +402,9 @@
         "problem",
         "published",
         "released",
+        "resolved",
         "retired",
+        "sms",
         "special",
         "suspended",
         "unknown",
@@ -373,11 +418,32 @@
         "introduction",
         "content",
         "summary",
+        "email",
+        "phone",
+        "team_role",
+        "currency",
+        "amount",
+        "bonus",
+        "bonus_rate",
+        "commission",
+        "commission_rate",
+        "estimate",
+        "fees",
+        "materials",
+        "services",
+        "shipping",
+        "subtotal",
+        "taxable",
+        "tax_rate",
+        "taxes",
+        "total",
         "icon",
         "image",
         "avatar",
         "ui",
+        "address",
         "assets",
+        "contact",
         "meta",
         "options",
         "sources"
@@ -394,8 +460,8 @@
                 "type": "string"
             },
             {
-                "column": "flow_type",
-                "label": "Flow Type",
+                "column": "source_type",
+                "label": "Source Type",
                 "icon": "",
                 "nullable": true,
                 "unsigned": true,
@@ -434,24 +500,64 @@
                 "type": "uuid"
             },
             {
-                "column": "matrix_id",
-                "label": "Matrix id",
+                "column": "campaign_id",
+                "label": "Campaign id",
                 "icon": "",
                 "nullable": true,
                 "unsigned": true,
                 "type": "uuid"
             },
             {
-                "column": "note_id",
-                "label": "Note id",
+                "column": "goal_id",
+                "label": "Goal id",
                 "icon": "",
                 "nullable": true,
                 "unsigned": true,
                 "type": "uuid"
             },
             {
-                "column": "tag_id",
-                "label": "Tag id",
+                "column": "lead_id",
+                "label": "Lead id",
+                "icon": "",
+                "nullable": true,
+                "unsigned": true,
+                "type": "uuid"
+            },
+            {
+                "column": "opportunity_id",
+                "label": "Opportunity id",
+                "icon": "",
+                "nullable": true,
+                "unsigned": true,
+                "type": "uuid"
+            },
+            {
+                "column": "plan_id",
+                "label": "Plan id",
+                "icon": "",
+                "nullable": true,
+                "unsigned": true,
+                "type": "uuid"
+            },
+            {
+                "column": "region_id",
+                "label": "Region id",
+                "icon": "",
+                "nullable": true,
+                "unsigned": true,
+                "type": "uuid"
+            },
+            {
+                "column": "report_id",
+                "label": "Report id",
+                "icon": "",
+                "nullable": true,
+                "unsigned": true,
+                "type": "uuid"
+            },
+            {
+                "column": "task_id",
+                "label": "Task id",
                 "icon": "",
                 "nullable": true,
                 "unsigned": true,
@@ -460,6 +566,22 @@
             {
                 "column": "team_id",
                 "label": "Team id",
+                "icon": "",
+                "nullable": true,
+                "unsigned": true,
+                "type": "uuid"
+            },
+            {
+                "column": "teammate_id",
+                "label": "Teammate id",
+                "icon": "",
+                "nullable": true,
+                "unsigned": true,
+                "type": "uuid"
+            },
+            {
+                "column": "matrix_id",
+                "label": "Matrix id",
                 "icon": "",
                 "nullable": true,
                 "unsigned": true,
@@ -516,6 +638,14 @@
                 "type": "datetime"
             },
             {
+                "column": "fixed_at",
+                "label": "Fixed at",
+                "icon": "",
+                "nullable": true,
+                "unsigned": true,
+                "type": "datetime"
+            },
+            {
                 "column": "planned_end_at",
                 "label": "Planned end at",
                 "icon": "",
@@ -548,8 +678,8 @@
                 "type": "datetime"
             },
             {
-                "column": "resolved_at",
-                "label": "Resolved at",
+                "column": "released_at",
+                "label": "Released at",
                 "icon": "",
                 "nullable": true,
                 "unsigned": true,
@@ -558,6 +688,14 @@
             {
                 "column": "resumed_at",
                 "label": "Resumed at",
+                "icon": "",
+                "nullable": true,
+                "unsigned": true,
+                "type": "datetime"
+            },
+            {
+                "column": "resolved_at",
+                "label": "Resolved at",
                 "icon": "",
                 "nullable": true,
                 "unsigned": true,
@@ -630,9 +768,25 @@
                 "type": "boolean"
             },
             {
+                "column": "duplicate",
+                "label": "Duplicate",
+                "icon": "fa-solid fa-clone",
+                "nullable": true,
+                "unsigned": true,
+                "type": "boolean"
+            },
+            {
                 "column": "featured",
                 "label": "Featured",
                 "icon": "fa-solid fa-star text-warning",
+                "nullable": true,
+                "unsigned": true,
+                "type": "boolean"
+            },
+            {
+                "column": "fixed",
+                "label": "Fixed",
+                "icon": "fa-solid fa-wrench",
                 "nullable": true,
                 "unsigned": true,
                 "type": "boolean"
@@ -710,9 +864,25 @@
                 "type": "boolean"
             },
             {
+                "column": "resolved",
+                "label": "Resolved",
+                "icon": "fa-solid fa-check-double text-success",
+                "nullable": true,
+                "unsigned": true,
+                "type": "boolean"
+            },
+            {
                 "column": "retired",
                 "label": "Retired",
                 "icon": "fa-solid fa-chair text-success",
+                "nullable": true,
+                "unsigned": true,
+                "type": "boolean"
+            },
+            {
+                "column": "sms",
+                "label": "Sms",
+                "icon": "fa-solid fa-comment-sms",
                 "nullable": true,
                 "unsigned": true,
                 "type": "boolean"
@@ -827,6 +997,158 @@
                 "nullable": true,
                 "unsigned": true,
                 "type": "mediumText"
+            },
+            {
+                "column": "email",
+                "label": "Email",
+                "icon": "",
+                "nullable": true,
+                "unsigned": true,
+                "type": "string"
+            },
+            {
+                "column": "phone",
+                "label": "Phone",
+                "icon": "",
+                "nullable": true,
+                "unsigned": true,
+                "type": "string"
+            },
+            {
+                "column": "team_role",
+                "label": "Team role",
+                "icon": "",
+                "nullable": true,
+                "unsigned": true,
+                "type": "string"
+            },
+            {
+                "column": "currency",
+                "label": "Currency",
+                "icon": "",
+                "nullable": true,
+                "unsigned": true,
+                "type": "string"
+            },
+            {
+                "column": "amount",
+                "label": "Amount",
+                "icon": "",
+                "nullable": true,
+                "unsigned": true,
+                "type": "decimal"
+            },
+            {
+                "column": "bonus",
+                "label": "Bonus",
+                "icon": "",
+                "nullable": true,
+                "unsigned": true,
+                "type": "decimal"
+            },
+            {
+                "column": "bonus_rate",
+                "label": "Bonus rate",
+                "icon": "",
+                "nullable": true,
+                "unsigned": true,
+                "type": "decimal"
+            },
+            {
+                "column": "commission",
+                "label": "Commission",
+                "icon": "",
+                "nullable": true,
+                "unsigned": true,
+                "type": "decimal"
+            },
+            {
+                "column": "commission_rate",
+                "label": "Commission rate",
+                "icon": "",
+                "nullable": true,
+                "unsigned": true,
+                "type": "decimal"
+            },
+            {
+                "column": "estimate",
+                "label": "Estimate",
+                "icon": "",
+                "nullable": true,
+                "unsigned": true,
+                "type": "decimal"
+            },
+            {
+                "column": "fees",
+                "label": "Fees",
+                "icon": "",
+                "nullable": true,
+                "unsigned": true,
+                "type": "decimal"
+            },
+            {
+                "column": "materials",
+                "label": "Materials",
+                "icon": "",
+                "nullable": true,
+                "unsigned": true,
+                "type": "decimal"
+            },
+            {
+                "column": "services",
+                "label": "Services",
+                "icon": "",
+                "nullable": true,
+                "unsigned": true,
+                "type": "decimal"
+            },
+            {
+                "column": "shipping",
+                "label": "Shipping",
+                "icon": "",
+                "nullable": true,
+                "unsigned": true,
+                "type": "decimal"
+            },
+            {
+                "column": "subtotal",
+                "label": "Subtotal",
+                "icon": "",
+                "nullable": true,
+                "unsigned": true,
+                "type": "decimal"
+            },
+            {
+                "column": "taxable",
+                "label": "Taxable",
+                "icon": "",
+                "nullable": true,
+                "unsigned": true,
+                "type": "decimal"
+            },
+            {
+                "column": "tax_rate",
+                "label": "Tax rate",
+                "icon": "",
+                "nullable": true,
+                "unsigned": true,
+                "type": "decimal"
+            },
+            {
+                "column": "taxes",
+                "label": "Taxes",
+                "icon": "",
+                "nullable": true,
+                "unsigned": true,
+                "type": "decimal"
+            },
+            {
+                "column": "total",
+                "label": "Total",
+                "icon": "",
+                "nullable": true,
+                "unsigned": true,
+                "type": "decimal"
             }
         ],
         "permissions": [
@@ -1047,8 +1369,24 @@
         ],
         "json": [
             {
+                "column": "address",
+                "label": "Address",
+                "icon": "",
+                "nullable": true,
+                "unsigned": true,
+                "type": "JSON_OBJECT"
+            },
+            {
                 "column": "assets",
                 "label": "Assets",
+                "icon": "",
+                "nullable": true,
+                "unsigned": true,
+                "type": "JSON_OBJECT"
+            },
+            {
+                "column": "contact",
+                "label": "Contact",
                 "icon": "",
                 "nullable": true,
                 "unsigned": true,
@@ -1098,8 +1436,8 @@
             "type": "string"
         },
         {
-            "column": "flow_type",
-            "label": "Flow Type",
+            "column": "source_type",
+            "label": "Source Type",
             "icon": "",
             "nullable": false,
             "type": "string"
@@ -1133,22 +1471,57 @@
             "type": "uuid"
         },
         {
-            "column": "matrix_id",
-            "label": "Matrix id",
+            "column": "campaign_id",
+            "label": "Campaign id",
             "icon": "",
             "nullable": false,
             "type": "uuid"
         },
         {
-            "column": "note_id",
-            "label": "Note id",
+            "column": "goal_id",
+            "label": "Goal id",
             "icon": "",
             "nullable": false,
             "type": "uuid"
         },
         {
-            "column": "tag_id",
-            "label": "Tag id",
+            "column": "lead_id",
+            "label": "Lead id",
+            "icon": "",
+            "nullable": false,
+            "type": "uuid"
+        },
+        {
+            "column": "opportunity_id",
+            "label": "Opportunity id",
+            "icon": "",
+            "nullable": false,
+            "type": "uuid"
+        },
+        {
+            "column": "plan_id",
+            "label": "Plan id",
+            "icon": "",
+            "nullable": false,
+            "type": "uuid"
+        },
+        {
+            "column": "region_id",
+            "label": "Region id",
+            "icon": "",
+            "nullable": false,
+            "type": "uuid"
+        },
+        {
+            "column": "report_id",
+            "label": "Report id",
+            "icon": "",
+            "nullable": false,
+            "type": "uuid"
+        },
+        {
+            "column": "task_id",
+            "label": "Task id",
             "icon": "",
             "nullable": false,
             "type": "uuid"
@@ -1156,6 +1529,20 @@
         {
             "column": "team_id",
             "label": "Team id",
+            "icon": "",
+            "nullable": false,
+            "type": "uuid"
+        },
+        {
+            "column": "teammate_id",
+            "label": "Teammate id",
+            "icon": "",
+            "nullable": false,
+            "type": "uuid"
+        },
+        {
+            "column": "matrix_id",
+            "label": "Matrix id",
             "icon": "",
             "nullable": false,
             "type": "uuid"
@@ -1203,6 +1590,13 @@
             "type": "string"
         },
         {
+            "column": "fixed_at",
+            "label": "Fixed at",
+            "icon": "",
+            "nullable": false,
+            "type": "string"
+        },
+        {
             "column": "planned_end_at",
             "label": "Planned end at",
             "icon": "",
@@ -1231,8 +1625,8 @@
             "type": "string"
         },
         {
-            "column": "resolved_at",
-            "label": "Resolved at",
+            "column": "released_at",
+            "label": "Released at",
             "icon": "",
             "nullable": false,
             "type": "string"
@@ -1240,6 +1634,13 @@
         {
             "column": "resumed_at",
             "label": "Resumed at",
+            "icon": "",
+            "nullable": false,
+            "type": "string"
+        },
+        {
+            "column": "resolved_at",
+            "label": "Resolved at",
             "icon": "",
             "nullable": false,
             "type": "string"
@@ -1455,9 +1856,23 @@
             "type": "boolean"
         },
         {
+            "column": "duplicate",
+            "label": "Duplicate",
+            "icon": "fa-solid fa-clone",
+            "nullable": false,
+            "type": "boolean"
+        },
+        {
             "column": "featured",
             "label": "Featured",
             "icon": "fa-solid fa-star text-warning",
+            "nullable": false,
+            "type": "boolean"
+        },
+        {
+            "column": "fixed",
+            "label": "Fixed",
+            "icon": "fa-solid fa-wrench",
             "nullable": false,
             "type": "boolean"
         },
@@ -1525,9 +1940,23 @@
             "type": "boolean"
         },
         {
+            "column": "resolved",
+            "label": "Resolved",
+            "icon": "fa-solid fa-check-double text-success",
+            "nullable": false,
+            "type": "boolean"
+        },
+        {
             "column": "retired",
             "label": "Retired",
             "icon": "fa-solid fa-chair text-success",
+            "nullable": false,
+            "type": "boolean"
+        },
+        {
+            "column": "sms",
+            "label": "Sms",
+            "icon": "fa-solid fa-comment-sms",
             "nullable": false,
             "type": "boolean"
         },
@@ -1623,6 +2052,139 @@
             "type": "mediumText"
         },
         {
+            "column": "email",
+            "label": "Email",
+            "icon": "",
+            "nullable": false,
+            "type": "string"
+        },
+        {
+            "column": "phone",
+            "label": "Phone",
+            "icon": "",
+            "nullable": false,
+            "type": "string"
+        },
+        {
+            "column": "team_role",
+            "label": "Team role",
+            "icon": "",
+            "nullable": false,
+            "type": "string"
+        },
+        {
+            "column": "currency",
+            "label": "Currency",
+            "icon": "",
+            "nullable": false,
+            "type": "string"
+        },
+        {
+            "column": "amount",
+            "label": "Amount",
+            "icon": "",
+            "nullable": false,
+            "type": "decimal"
+        },
+        {
+            "column": "bonus",
+            "label": "Bonus",
+            "icon": "",
+            "nullable": false,
+            "type": "decimal"
+        },
+        {
+            "column": "bonus_rate",
+            "label": "Bonus rate",
+            "icon": "",
+            "nullable": false,
+            "type": "decimal"
+        },
+        {
+            "column": "commission",
+            "label": "Commission",
+            "icon": "",
+            "nullable": false,
+            "type": "decimal"
+        },
+        {
+            "column": "commission_rate",
+            "label": "Commission rate",
+            "icon": "",
+            "nullable": false,
+            "type": "decimal"
+        },
+        {
+            "column": "estimate",
+            "label": "Estimate",
+            "icon": "",
+            "nullable": false,
+            "type": "decimal"
+        },
+        {
+            "column": "fees",
+            "label": "Fees",
+            "icon": "",
+            "nullable": false,
+            "type": "decimal"
+        },
+        {
+            "column": "materials",
+            "label": "Materials",
+            "icon": "",
+            "nullable": false,
+            "type": "decimal"
+        },
+        {
+            "column": "services",
+            "label": "Services",
+            "icon": "",
+            "nullable": false,
+            "type": "decimal"
+        },
+        {
+            "column": "shipping",
+            "label": "Shipping",
+            "icon": "",
+            "nullable": false,
+            "type": "decimal"
+        },
+        {
+            "column": "subtotal",
+            "label": "Subtotal",
+            "icon": "",
+            "nullable": false,
+            "type": "decimal"
+        },
+        {
+            "column": "taxable",
+            "label": "Taxable",
+            "icon": "",
+            "nullable": false,
+            "type": "decimal"
+        },
+        {
+            "column": "tax_rate",
+            "label": "Tax rate",
+            "icon": "",
+            "nullable": false,
+            "type": "decimal"
+        },
+        {
+            "column": "taxes",
+            "label": "Taxes",
+            "icon": "",
+            "nullable": false,
+            "type": "decimal"
+        },
+        {
+            "column": "total",
+            "label": "Total",
+            "icon": "",
+            "nullable": false,
+            "type": "decimal"
+        },
+        {
             "column": "icon",
             "label": "Icon",
             "icon": "",
@@ -1651,8 +2213,22 @@
             "type": "JSON_OBJECT"
         },
         {
+            "column": "address",
+            "label": "Address",
+            "icon": "",
+            "nullable": false,
+            "type": "JSON_OBJECT"
+        },
+        {
             "column": "assets",
             "label": "Assets",
+            "icon": "",
+            "nullable": false,
+            "type": "JSON_OBJECT"
+        },
+        {
+            "column": "contact",
+            "label": "Contact",
             "icon": "",
             "nullable": false,
             "type": "JSON_OBJECT"
@@ -1687,7 +2263,7 @@
         }
     ],
     "create": {
-        "migration": "2020_01_02_100001_create_matrix_flows_table",
+        "migration": "2010_09_30_000000_create_lead_sources_table",
         "primary": "uuid",
         "timestamps": true,
         "softDeletes": true,
@@ -1697,9 +2273,9 @@
             "with": false
         },
         "ids": {
-            "flow_type": {
-                "column": "flow_type",
-                "label": "Flow Type",
+            "source_type": {
+                "column": "source_type",
+                "label": "Source Type",
                 "description": "",
                 "foreign": null,
                 "icon": "",
@@ -1766,13 +2342,13 @@
                 "unsigned": false,
                 "type": "uuid"
             },
-            "matrix_id": {
-                "column": "matrix_id",
-                "label": "Matrix id",
+            "campaign_id": {
+                "column": "campaign_id",
+                "label": "Campaign id",
                 "description": "",
                 "foreign": {
                     "references": "id",
-                    "on": "matrix_matrices"
+                    "on": "lead_campaigns"
                 },
                 "icon": "",
                 "index": true,
@@ -1781,13 +2357,13 @@
                 "unsigned": false,
                 "type": "uuid"
             },
-            "note_id": {
-                "column": "note_id",
-                "label": "Note id",
+            "goal_id": {
+                "column": "goal_id",
+                "label": "Goal id",
                 "description": "",
                 "foreign": {
                     "references": "id",
-                    "on": "matrix_notes"
+                    "on": "lead_goals"
                 },
                 "icon": "",
                 "index": true,
@@ -1796,13 +2372,88 @@
                 "unsigned": false,
                 "type": "uuid"
             },
-            "tag_id": {
-                "column": "tag_id",
-                "label": "Tag id",
+            "lead_id": {
+                "column": "lead_id",
+                "label": "Lead id",
                 "description": "",
                 "foreign": {
                     "references": "id",
-                    "on": "matrix_tags"
+                    "on": "lead_leads"
+                },
+                "icon": "",
+                "index": true,
+                "nullable": true,
+                "readOnly": false,
+                "unsigned": false,
+                "type": "uuid"
+            },
+            "opportunity_id": {
+                "column": "opportunity_id",
+                "label": "Opportunity id",
+                "description": "",
+                "foreign": {
+                    "references": "id",
+                    "on": "lead_opportunities"
+                },
+                "icon": "",
+                "index": true,
+                "nullable": true,
+                "readOnly": false,
+                "unsigned": false,
+                "type": "uuid"
+            },
+            "plan_id": {
+                "column": "plan_id",
+                "label": "Plan id",
+                "description": "",
+                "foreign": {
+                    "references": "id",
+                    "on": "lead_plans"
+                },
+                "icon": "",
+                "index": true,
+                "nullable": true,
+                "readOnly": false,
+                "unsigned": false,
+                "type": "uuid"
+            },
+            "region_id": {
+                "column": "region_id",
+                "label": "Region id",
+                "description": "",
+                "foreign": {
+                    "references": "id",
+                    "on": "lead_regions"
+                },
+                "icon": "",
+                "index": true,
+                "nullable": true,
+                "readOnly": false,
+                "unsigned": false,
+                "type": "uuid"
+            },
+            "report_id": {
+                "column": "report_id",
+                "label": "Report id",
+                "description": "",
+                "foreign": {
+                    "references": "id",
+                    "on": "lead_reports"
+                },
+                "icon": "",
+                "index": true,
+                "nullable": true,
+                "readOnly": false,
+                "unsigned": false,
+                "type": "uuid"
+            },
+            "task_id": {
+                "column": "task_id",
+                "label": "Task id",
+                "description": "",
+                "foreign": {
+                    "references": "id",
+                    "on": "lead_tasks"
                 },
                 "icon": "",
                 "index": true,
@@ -1817,7 +2468,37 @@
                 "description": "",
                 "foreign": {
                     "references": "id",
-                    "on": "matrix_teams"
+                    "on": "lead_teams"
+                },
+                "icon": "",
+                "index": true,
+                "nullable": true,
+                "readOnly": false,
+                "unsigned": false,
+                "type": "uuid"
+            },
+            "teammate_id": {
+                "column": "teammate_id",
+                "label": "Teammate id",
+                "description": "",
+                "foreign": {
+                    "references": "id",
+                    "on": "lead_teammates"
+                },
+                "icon": "",
+                "index": true,
+                "nullable": true,
+                "readOnly": false,
+                "unsigned": false,
+                "type": "uuid"
+            },
+            "matrix_id": {
+                "column": "matrix_id",
+                "label": "Matrix id",
+                "description": "",
+                "foreign": {
+                    "references": "id",
+                    "on": "matrix_matrices"
                 },
                 "icon": "",
                 "index": true,
@@ -1861,6 +2542,17 @@
             "embargo_at": {
                 "column": "embargo_at",
                 "label": "Embargo at",
+                "description": "",
+                "icon": "",
+                "html": false,
+                "index": false,
+                "nullable": true,
+                "readOnly": false,
+                "type": "dateTime"
+            },
+            "fixed_at": {
+                "column": "fixed_at",
+                "label": "Fixed at",
                 "description": "",
                 "icon": "",
                 "html": false,
@@ -1913,13 +2605,13 @@
                 "readOnly": false,
                 "type": "dateTime"
             },
-            "resolved_at": {
-                "column": "resolved_at",
-                "label": "Resolved at",
+            "released_at": {
+                "column": "released_at",
+                "label": "Released at",
                 "description": "",
                 "icon": "",
                 "html": false,
-                "index": true,
+                "index": false,
                 "nullable": true,
                 "readOnly": false,
                 "type": "dateTime"
@@ -1931,6 +2623,17 @@
                 "icon": "",
                 "html": false,
                 "index": false,
+                "nullable": true,
+                "readOnly": false,
+                "type": "dateTime"
+            },
+            "resolved_at": {
+                "column": "resolved_at",
+                "label": "Resolved at",
+                "description": "",
+                "icon": "",
+                "html": false,
+                "index": true,
                 "nullable": true,
                 "readOnly": false,
                 "type": "dateTime"
@@ -2025,11 +2728,33 @@
                 "readOnly": false,
                 "type": "boolean"
             },
+            "duplicate": {
+                "column": "duplicate",
+                "label": "Duplicate",
+                "description": "",
+                "icon": "fa-solid fa-clone",
+                "default": false,
+                "index": false,
+                "nullable": false,
+                "readOnly": false,
+                "type": "boolean"
+            },
             "featured": {
                 "column": "featured",
                 "label": "Featured",
                 "description": "",
                 "icon": "fa-solid fa-star text-warning",
+                "default": false,
+                "index": false,
+                "nullable": false,
+                "readOnly": false,
+                "type": "boolean"
+            },
+            "fixed": {
+                "column": "fixed",
+                "label": "Fixed",
+                "description": "",
+                "icon": "fa-solid fa-wrench",
                 "default": false,
                 "index": false,
                 "nullable": false,
@@ -2135,11 +2860,33 @@
                 "readOnly": false,
                 "type": "boolean"
             },
+            "resolved": {
+                "column": "resolved",
+                "label": "Resolved",
+                "description": "",
+                "icon": "fa-solid fa-check-double text-success",
+                "default": false,
+                "index": false,
+                "nullable": false,
+                "readOnly": false,
+                "type": "boolean"
+            },
             "retired": {
                 "column": "retired",
                 "label": "Retired",
                 "description": "",
                 "icon": "fa-solid fa-chair text-success",
+                "default": false,
+                "index": false,
+                "nullable": false,
+                "readOnly": false,
+                "type": "boolean"
+            },
+            "sms": {
+                "column": "sms",
+                "label": "Sms",
+                "description": "",
+                "icon": "fa-solid fa-comment-sms",
                 "default": false,
                 "index": false,
                 "nullable": false,
@@ -2306,6 +3053,245 @@
                 "nullable": true,
                 "readOnly": false,
                 "type": "mediumText"
+            },
+            "email": {
+                "column": "email",
+                "label": "Email",
+                "description": "",
+                "icon": "",
+                "html": false,
+                "index": false,
+                "nullable": true,
+                "readOnly": false,
+                "type": "string"
+            },
+            "phone": {
+                "column": "phone",
+                "label": "Phone",
+                "description": "",
+                "icon": "",
+                "html": false,
+                "index": false,
+                "nullable": true,
+                "readOnly": false,
+                "type": "string"
+            },
+            "team_role": {
+                "column": "team_role",
+                "label": "Team role",
+                "description": "",
+                "icon": "",
+                "html": false,
+                "index": false,
+                "nullable": true,
+                "readOnly": false,
+                "type": "string"
+            },
+            "currency": {
+                "column": "currency",
+                "label": "Currency",
+                "description": "",
+                "icon": "",
+                "html": false,
+                "index": false,
+                "nullable": true,
+                "readOnly": false,
+                "type": "string"
+            },
+            "amount": {
+                "column": "amount",
+                "label": "Amount",
+                "description": "",
+                "icon": "",
+                "html": false,
+                "index": false,
+                "nullable": true,
+                "readOnly": false,
+                "type": "decimal",
+                "precision": 19,
+                "scale": 4
+            },
+            "bonus": {
+                "column": "bonus",
+                "label": "Bonus",
+                "description": "",
+                "icon": "",
+                "html": false,
+                "index": false,
+                "nullable": true,
+                "readOnly": false,
+                "type": "decimal",
+                "precision": 19,
+                "scale": 4
+            },
+            "bonus_rate": {
+                "column": "bonus_rate",
+                "label": "Bonus rate",
+                "description": "",
+                "icon": "",
+                "html": false,
+                "index": false,
+                "nullable": true,
+                "readOnly": false,
+                "type": "decimal",
+                "precision": 8,
+                "scale": 4
+            },
+            "commission": {
+                "column": "commission",
+                "label": "Commission",
+                "description": "",
+                "icon": "",
+                "html": false,
+                "index": false,
+                "nullable": true,
+                "readOnly": false,
+                "type": "decimal",
+                "precision": 19,
+                "scale": 4
+            },
+            "commission_rate": {
+                "column": "commission_rate",
+                "label": "Commission rate",
+                "description": "",
+                "icon": "",
+                "html": false,
+                "index": false,
+                "nullable": true,
+                "readOnly": false,
+                "type": "decimal",
+                "precision": 8,
+                "scale": 4
+            },
+            "estimate": {
+                "column": "estimate",
+                "label": "Estimate",
+                "description": "",
+                "icon": "",
+                "html": false,
+                "index": false,
+                "nullable": true,
+                "readOnly": false,
+                "type": "decimal",
+                "precision": 19,
+                "scale": 4
+            },
+            "fees": {
+                "column": "fees",
+                "label": "Fees",
+                "description": "",
+                "icon": "",
+                "html": false,
+                "index": false,
+                "nullable": true,
+                "readOnly": false,
+                "type": "decimal",
+                "precision": 19,
+                "scale": 4
+            },
+            "materials": {
+                "column": "materials",
+                "label": "Materials",
+                "description": "",
+                "icon": "",
+                "html": false,
+                "index": false,
+                "nullable": true,
+                "readOnly": false,
+                "type": "decimal",
+                "precision": 19,
+                "scale": 4
+            },
+            "services": {
+                "column": "services",
+                "label": "Services",
+                "description": "",
+                "icon": "",
+                "html": false,
+                "index": false,
+                "nullable": true,
+                "readOnly": false,
+                "type": "decimal",
+                "precision": 19,
+                "scale": 4
+            },
+            "shipping": {
+                "column": "shipping",
+                "label": "Shipping",
+                "description": "",
+                "icon": "",
+                "html": false,
+                "index": false,
+                "nullable": true,
+                "readOnly": false,
+                "type": "decimal",
+                "precision": 19,
+                "scale": 4
+            },
+            "subtotal": {
+                "column": "subtotal",
+                "label": "Subtotal",
+                "description": "",
+                "icon": "",
+                "html": false,
+                "index": false,
+                "nullable": true,
+                "readOnly": false,
+                "type": "decimal",
+                "precision": 19,
+                "scale": 4
+            },
+            "taxable": {
+                "column": "taxable",
+                "label": "Taxable",
+                "description": "",
+                "icon": "",
+                "html": false,
+                "index": false,
+                "nullable": true,
+                "readOnly": false,
+                "type": "decimal",
+                "precision": 19,
+                "scale": 4
+            },
+            "tax_rate": {
+                "column": "tax_rate",
+                "label": "Tax rate",
+                "description": "",
+                "icon": "",
+                "html": false,
+                "index": false,
+                "nullable": true,
+                "readOnly": false,
+                "type": "decimal",
+                "precision": 8,
+                "scale": 4
+            },
+            "taxes": {
+                "column": "taxes",
+                "label": "Taxes",
+                "description": "",
+                "icon": "",
+                "html": false,
+                "index": false,
+                "nullable": true,
+                "readOnly": false,
+                "type": "decimal",
+                "precision": 19,
+                "scale": 4
+            },
+            "total": {
+                "column": "total",
+                "label": "Total",
+                "description": "",
+                "icon": "",
+                "html": false,
+                "index": false,
+                "nullable": true,
+                "readOnly": false,
+                "type": "decimal",
+                "precision": 19,
+                "scale": 4
             }
         },
         "permissions": {
@@ -2656,9 +3642,33 @@
             }
         },
         "json": {
+            "address": {
+                "column": "address",
+                "label": "Address",
+                "description": "",
+                "icon": "",
+                "html": false,
+                "index": false,
+                "nullable": true,
+                "readOnly": false,
+                "type": "JSON_OBJECT",
+                "default": "{}"
+            },
             "assets": {
                 "column": "assets",
                 "label": "Assets",
+                "description": "",
+                "icon": "",
+                "html": false,
+                "index": false,
+                "nullable": true,
+                "readOnly": false,
+                "type": "JSON_OBJECT",
+                "default": "{}"
+            },
+            "contact": {
+                "column": "contact",
+                "label": "Contact",
                 "description": "",
                 "icon": "",
                 "html": false,
@@ -2721,7 +3731,6 @@
     },
     "uses": [
         "Illuminate/Database/Eloquent/Relations/HasOne",
-        "Illuminate/Database/Eloquent/Relations/HasMany",
         "Playground/Models/Model"
     ]
 }

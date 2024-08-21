@@ -22,6 +22,17 @@
     "withTests": true,
     "playground": true,
     "package_name": "Playground: Matrix",
+    "package_description": "Playground: This package provides the models to use Playground Matrix, a Project Management System.",
+    "package_homepage": "https://github.com/gammamatrix/playground-matrix",
+    "package_keywords": [
+        "gammamatrix",
+        "laravel",
+        "matrix",
+        "playground",
+        "projects",
+        "tickets"
+    ],
+    "package_license": "MIT",
     "package_authors": [
         {
             "name": "Jeremy Postlethwaite",
@@ -29,17 +40,6 @@
             "role": "Developer"
         }
     ],
-    "package_description": "Playground: This package provides the models to use Playground Matrix, a project management tool.",
-    "package_homepage": "https://github.com/gammamatrix/playground-matrix",
-    "package_keywords": [
-        "matrix",
-        "projects",
-        "tickets",
-        "gammamatrix",
-        "laravel",
-        "playground"
-    ],
-    "package_license": "MIT",
     "package_require": {
         "php": "^8.2",
         "gammamatrix/playground": "*"
@@ -52,12 +52,12 @@
         "gammamatrix/playground-matrix-resource": "Provides a resource API and optional Blade UI to interact with the models provided in this package."
     },
     "package_autoload_psr4": [],
+    "package_autoload_dev_psr4": [],
     "package_providers": [
         "Playground/ServiceProvider",
         "Playground/Matrix/ServiceProvider"
     ],
     "package_laravel_providers": [],
-    "package_autoload_dev_psr4": [],
     "packagist": "gammamatrix/playground-matrix",
     "controllers": [],
     "models": {

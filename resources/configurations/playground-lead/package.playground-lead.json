@@ -1,0 +1,82 @@
+{
+    "class": "ServiceProvider",
+    "config": "playground-lead",
+    "config_space": "PLAYGROUND_LEAD",
+    "fqdn": "Playground/Lead/ServiceProvider",
+    "module": "Lead",
+    "module_slug": "lead",
+    "name": "Lead",
+    "namespace": "Playground/Lead",
+    "organization": "Playground",
+    "organization_email": "jeremy.postlethwaite@gmail.com",
+    "package": "playground-lead",
+    "withBlades": false,
+    "withControllers": false,
+    "withFactories": true,
+    "withMigrations": true,
+    "withModels": true,
+    "withPolicies": false,
+    "withRequests": false,
+    "withRoutes": false,
+    "withSwagger": false,
+    "withTests": true,
+    "playground": true,
+    "revision": false,
+    "package_name": "Playground: Lead",
+    "package_description": "Playground: Provide the Lead models for the Playground Lead System.",
+    "package_homepage": "https://github.com/gammamatrix/playground-lead",
+    "package_keywords": [
+        "gammamatrix",
+        "laravel",
+        "lead",
+        "playground"
+    ],
+    "package_license": "MIT",
+    "package_authors": [
+        {
+            "name": "Jeremy Postlethwaite",
+            "email": "jeremy.postlethwaite@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "package_require": {
+        "php": "^8.2",
+        "gammamatrix/playground": "*"
+    },
+    "package_require_dev": {
+        "gammamatrix/playground-test": "*"
+    },
+    "package_suggest": {
+        "gammamatrix/playground-lead-api": "Provides an API, without a UI, to interact with the models provided in this package.",
+        "gammamatrix/playground-lead-resource": "Provides a resource API and optional Blade UI to interact with the models provided in this package."
+    },
+    "package_autoload_psr4": [],
+    "package_autoload_dev_psr4": [],
+    "package_providers": [],
+    "package_laravel_providers": [
+        "Playground/Lead/ServiceProvider"
+    ],
+    "packagist": "gammamatrix/playground-lead",
+    "controllers": [],
+    "models": {
+        "Campaign": "resources/configurations/playground-lead/model.campaign.json",
+        "Goal": "resources/configurations/playground-lead/model.goal.json",
+        "Lead": "resources/configurations/playground-lead/model.lead.json",
+        "Opportunity": "resources/configurations/playground-lead/model.opportunity.json",
+        "Plan": "resources/configurations/playground-lead/model.plan.json",
+        "Region": "resources/configurations/playground-lead/model.region.json",
+        "Report": "resources/configurations/playground-lead/model.report.json",
+        "Source": "resources/configurations/playground-lead/model.source.json",
+        "Task": "resources/configurations/playground-lead/model.task.json",
+        "Team": "resources/configurations/playground-lead/model.team.json",
+        "Teammate": "resources/configurations/playground-lead/model.teammate.json"
+    },
+    "policies": [],
+    "requests": [],
+    "routes": [],
+    "transformers": [],
+    "uses": [],
+    "service_provider": "",
+    "type": "playground-model",
+    "version": "73.0.0"
+}
