@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2024-08-21 19:35:37</timestamp>
+  <timestamp>2024-08-23 03:10:28</timestamp>
   <stats>
     <name>Method Crap Stats</name>
     <methodCount>272</methodCount>
     <crapMethodCount>18</crapMethodCount>
     <crapLoad>259</crapLoad>
-    <totalCrap>6051.32</totalCrap>
+    <totalCrap>6057.19</totalCrap>
     <crapMethodPercent>6.62</crapMethodPercent>
   </stats>
   <methods>
@@ -1425,9 +1425,9 @@
       <methodName>jsonSerialize</methodName>
       <methodSignature>jsonSerialize(): mixed</methodSignature>
       <fullMethod>jsonSerialize(): mixed</fullMethod>
-      <crap>31.13</crap>
-      <complexity>31</complexity>
-      <coverage>94.83</coverage>
+      <crap>37</crap>
+      <complexity>37</complexity>
+      <coverage>95.31</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
