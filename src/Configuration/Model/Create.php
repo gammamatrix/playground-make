@@ -534,6 +534,9 @@ class Create extends ModelConfiguration implements Configuration\Contracts\WithS
                     $properties['dates'][$column] = $c->toArray();
                 }
             }
+            if (! empty($properties['dates']) && is_array($properties['dates'])) {
+                ksort($properties['dates']);
+            }
         }
 
         if ($this->flags()) {
@@ -541,6 +544,9 @@ class Create extends ModelConfiguration implements Configuration\Contracts\WithS
                 if (is_array($properties['flags'])) {
                     $properties['flags'][$column] = $c->toArray();
                 }
+            }
+            if (! empty($properties['flags']) && is_array($properties['flags'])) {
+                ksort($properties['flags']);
             }
         }
 
@@ -589,6 +595,9 @@ class Create extends ModelConfiguration implements Configuration\Contracts\WithS
                 if (is_array($properties['json'])) {
                     $properties['json'][$column] = $c->toArray();
                 }
+            }
+            if (! empty($properties['json']) && is_array($properties['json'])) {
+                ksort($properties['json']);
             }
         }
 
