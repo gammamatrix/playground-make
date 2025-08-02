@@ -1,0 +1,24 @@
+{
+    "module": "CMS",
+    "module_slug": "cms",
+    "name": "Playground: CMS Resource",
+    "description": "Playground: Provides an API and a Blade UI for interacting with Playground CMS, a Content Management System for Laravel applications.",
+    "namespace": "Playground/Cms/Resource",
+    "organization": "Playground",
+    "package": "playground-cms-resource",
+    "models": {
+        "Page": "resources/configurations/playground-cms/model.page.json",
+        "PageRevision": "resources/configurations/playground-cms/model.page-revision.json",
+        "Snippet": "resources/configurations/playground-cms/model.snippet.json",
+        "SnippetRevision": "resources/configurations/playground-cms/model.snippet-revision.json"
+    },
+    "type": "playground-resource",
+    "model_package": "resources/configurations/playground-cms/package.playground-cms.json",
+    "controller_package": "resources/configurations/playground-cms-resource/package.playground-cms-resource.json",
+    "withAuthSanctum": true,
+    "withAuthSession": true,
+    "_postman_id": "1e4a5656-d4e0-45b2-8f4e-daad7a6ee2b1",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "1185343",
+    "_collection_link": "https://www.postman.com/gammamatrix/workspace/playground/collection/1185343-1e4a5656-d4e0-45b2-8f4e-daad7a6ee2b1?action=share&source=collection_link&creator=1185343"
+}
