@@ -1,16 +1,18 @@
 <?php
+
 /**
  * Playground
  */
 
 declare(strict_types=1);
+
 namespace Tests\Unit\Playground\Make\Configuration\PrimaryConfiguration;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\CoversTrait;
-use Tests\Unit\Playground\Make\TestCase;
-use Playground\Make\Configuration\PrimaryConfiguration;
 use Playground\Make\Configuration\Concerns\Properties;
+use Playground\Make\Configuration\PrimaryConfiguration;
+use Tests\Unit\Playground\Make\TestCase;
 
 /**
  * \Tests\Unit\Playground\Make\Configuration\PrimaryConfiguration\InstanceTest
@@ -23,6 +25,7 @@ class InstanceTest extends TestCase
     {
         $instance = new PrimaryConfiguration;
 
+        /** @phpstan-ignore method.alreadyNarrowedType */
         $this->assertInstanceOf(PrimaryConfiguration::class, $instance);
     }
 
@@ -71,27 +74,21 @@ class InstanceTest extends TestCase
     {
         $instance = new PrimaryConfiguration;
 
-        $this->assertInstanceOf(PrimaryConfiguration::class, $instance);
-
         $this->assertIsString($instance->folder());
         $this->assertEmpty($instance->folder());
     }
 
-    public function test_folder_with_empty_setFolder(): void
+    public function test_folder_with_empty_set_folder(): void
     {
-        $instance = new PrimaryConfiguration();
-
-        $this->assertInstanceOf(PrimaryConfiguration::class, $instance);
+        $instance = new PrimaryConfiguration;
 
         $this->assertIsString($instance->setFolder()->folder());
         $this->assertEmpty($instance->folder());
     }
 
-    public function test_folder_with_path_for_setFolder(): void
+    public function test_folder_with_path_for_set_folder(): void
     {
-        $instance = new PrimaryConfiguration();
-
-        $this->assertInstanceOf(PrimaryConfiguration::class, $instance);
+        $instance = new PrimaryConfiguration;
 
         $this->assertIsString($instance->setFolder('/tmp')->folder());
         $this->assertNotEmpty($instance->folder());

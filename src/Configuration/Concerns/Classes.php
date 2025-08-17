@@ -1,9 +1,11 @@
 <?php
+
 /**
  * Playground
  */
 
 declare(strict_types=1);
+
 namespace Playground\Make\Configuration\Concerns;
 
 /**
@@ -12,7 +14,7 @@ namespace Playground\Make\Configuration\Concerns;
 trait Classes
 {
     /**
-     * @param array<string, mixed> $options
+     * @param  array<string, mixed>  $options
      */
     public function addModels(array $options): self
     {
@@ -36,7 +38,7 @@ trait Classes
     }
 
     /**
-     * @param array<string, mixed> $options
+     * @param  array<string, mixed>  $options
      */
     public function addImplements(array $options): self
     {
@@ -60,7 +62,7 @@ trait Classes
     }
 
     /**
-     * @param array<string, mixed> $options
+     * @param  array<string, mixed>  $options
      */
     public function addUses(array $options): self
     {
@@ -125,7 +127,7 @@ trait Classes
     }
 
     /**
-     * @param mixed $value Provide a string value, such as an FQDN or a path to a file.
+     * @param  mixed  $value  Provide a string value, such as an FQDN or a path to a file.
      */
     public function addMappedClassTo(
         string $property,
@@ -221,7 +223,7 @@ trait Classes
 
     public function addToUse(
         string $class,
-        string $key = null
+        ?string $key = null
     ): self {
 
         if (empty($class)) {

@@ -1,14 +1,16 @@
 <?php
+
 /**
  * Playground
  */
 
 declare(strict_types=1);
+
 namespace Tests\Unit\Playground\Make\Configuration\Model\Filter;
 
 use PHPUnit\Framework\Attributes\CoversClass;
-use Tests\Unit\Playground\Make\TestCase;
 use Playground\Make\Configuration\Model;
+use Tests\Unit\Playground\Make\TestCase;
 
 /**
  * \Tests\Unit\Playground\Make\Configuration\Model\InstanceTest
@@ -20,6 +22,7 @@ class InstanceTest extends TestCase
     {
         $instance = new Model\Filter;
 
+        /** @phpstan-ignore method.alreadyNarrowedType */
         $this->assertInstanceOf(Model\Filter::class, $instance);
     }
 

@@ -1,9 +1,11 @@
 <?php
+
 /**
  * Playground
  */
 
 declare(strict_types=1);
+
 namespace Playground\Make\Configuration\Model\Concerns;
 
 use Illuminate\Support\Facades\Log;
@@ -19,7 +21,7 @@ trait Scopes
     protected array $scopes = [];
 
     /**
-     * @param array<string, mixed> $options
+     * @param  array<string, mixed>  $options
      */
     public function addScopes(array $options): self
     {

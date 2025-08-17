@@ -1,9 +1,11 @@
 <?php
+
 /**
  * Playground
  */
 
 declare(strict_types=1);
+
 namespace Playground\Make\Configuration\Model\Concerns;
 
 /**
@@ -12,7 +14,7 @@ namespace Playground\Make\Configuration\Model\Concerns;
 trait Attributes
 {
     /**
-     * @param array<string, mixed> $options
+     * @param  array<string, mixed>  $options
      */
     public function addModelProperties(array $options): self
     {

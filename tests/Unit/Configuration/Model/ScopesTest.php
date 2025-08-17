@@ -1,16 +1,18 @@
 <?php
+
 /**
  * Playground
  */
 
 declare(strict_types=1);
+
 namespace Tests\Unit\Playground\Make\Configuration\Model;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\CoversTrait;
-use Tests\Unit\Playground\Make\TestCase;
 use Playground\Make\Configuration\Model;
 use Playground\Make\Configuration\Model\Concerns\Scopes;
+use Tests\Unit\Playground\Make\TestCase;
 use TiMacDonald\Log\LogEntry;
 use TiMacDonald\Log\LogFake;
 
@@ -21,12 +23,13 @@ use TiMacDonald\Log\LogFake;
 #[CoversTrait(Scopes::class)]
 class ScopesTest extends TestCase
 {
-    public function test_addScopes_with_sort(): void
+    public function test_add_scopes_with_sort(): void
     {
         $instance = new Model([
             'name' => 'SomeModel',
         ]);
 
+        /** @phpstan-ignore method.alreadyNarrowedType */
         $this->assertInstanceOf(Model::class, $instance);
 
         $options = [
@@ -38,20 +41,17 @@ class ScopesTest extends TestCase
             ],
         ];
 
-
         $this->assertEmpty($instance->scopes());
         $instance->addScopes($options);
         $this->assertNotEmpty($instance->scopes());
     }
 
-    public function test_addScope_with_invalid_scope(): void
+    public function test_add_scope_with_invalid_scope(): void
     {
         $withSkeleton = true;
         $instance = new Model([
             'name' => 'SomeModel',
         ], $withSkeleton);
-
-        $this->assertInstanceOf(Model::class, $instance);
 
         $this->assertEmpty($instance->scopes());
 
@@ -63,14 +63,12 @@ class ScopesTest extends TestCase
         $instance->addScope(null, null);
     }
 
-    public function test_addScope_for_sort_without_meta(): void
+    public function test_add_scope_for_sort_without_meta(): void
     {
         $withSkeleton = true;
         $instance = new Model([
             'name' => 'SomeModel',
         ], $withSkeleton);
-
-        $this->assertInstanceOf(Model::class, $instance);
 
         $this->assertEmpty($instance->scopes());
         $instance->addScope('sort', null);
@@ -78,7 +76,7 @@ class ScopesTest extends TestCase
         $this->assertNotEmpty($instance->scopes());
     }
 
-    public function test_addScope_unsupported_scope_and_ignore(): void
+    public function test_add_scope_unsupported_scope_and_ignore(): void
     {
         $log = LogFake::bind();
 
@@ -86,8 +84,6 @@ class ScopesTest extends TestCase
         $instance = new Model([
             'name' => 'SomeModel',
         ], $withSkeleton);
-
-        $this->assertInstanceOf(Model::class, $instance);
 
         // dump($instance);
         $this->assertEmpty($instance->scopes());

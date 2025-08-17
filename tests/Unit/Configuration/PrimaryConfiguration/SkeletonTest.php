@@ -1,14 +1,16 @@
 <?php
+
 /**
  * Playground
  */
 
 declare(strict_types=1);
+
 namespace Tests\Unit\Playground\Make\Configuration\PrimaryConfiguration;
 
 use PHPUnit\Framework\Attributes\CoversClass;
-use Tests\Unit\Playground\Make\TestCase;
 use Playground\Make\Configuration\PrimaryConfiguration;
+use Tests\Unit\Playground\Make\TestCase;
 
 /**
  * \Tests\Unit\Playground\Make\Configuration\PrimaryConfiguration\SkeletonTest
@@ -20,12 +22,13 @@ class SkeletonTest extends TestCase
     {
         $instance = new PrimaryConfiguration;
 
+        /** @phpstan-ignore method.alreadyNarrowedType */
         $this->assertInstanceOf(PrimaryConfiguration::class, $instance);
 
         $this->assertFalse($instance->skeleton());
     }
 
-    public function test_skeleton_withSkeleton(): void
+    public function test_skeleton_with_skeleton(): void
     {
         $instance = new PrimaryConfiguration;
 

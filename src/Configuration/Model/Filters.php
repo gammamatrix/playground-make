@@ -1,9 +1,11 @@
 <?php
+
 /**
  * Playground
  */
 
 declare(strict_types=1);
+
 namespace Playground\Make\Configuration\Model;
 
 use Playground\Make\Configuration;
@@ -179,7 +181,7 @@ class Filters extends ModelConfiguration implements Configuration\Contracts\With
     }
 
     /**
-     * @param array<string, mixed> $options
+     * @param  array<string, mixed>  $options
      */
     public function setOptions(array $options = []): self
     {

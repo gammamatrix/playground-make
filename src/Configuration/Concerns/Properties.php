@@ -1,9 +1,11 @@
 <?php
+
 /**
  * Playground
  */
 
 declare(strict_types=1);
+
 namespace Playground\Make\Configuration\Concerns;
 
 /**
@@ -24,7 +26,7 @@ trait Properties
     protected array $uses = [];
 
     /**
-     * @param array<string, mixed> $options
+     * @param  array<string, mixed>  $options
      */
     public function setOptions(array $options = []): self
     {

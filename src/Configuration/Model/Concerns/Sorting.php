@@ -1,9 +1,11 @@
 <?php
+
 /**
  * Playground
  */
 
 declare(strict_types=1);
+
 namespace Playground\Make\Configuration\Model\Concerns;
 
 use Playground\Make\Configuration\Model\Sortable;
@@ -19,7 +21,7 @@ trait Sorting
     protected array $sortable = [];
 
     /**
-     * @param array<string, mixed> $options
+     * @param  array<string, mixed>  $options
      */
     public function addSorting(array $options): self
     {
@@ -36,7 +38,7 @@ trait Sorting
 
     public function addSortable(
         mixed $meta,
-        int $i = null
+        ?int $i = null
     ): self {
 
         if (empty($meta)

@@ -1,16 +1,18 @@
 <?php
+
 /**
  * Playground
  */
 
 declare(strict_types=1);
+
 namespace Tests\Unit\Playground\Make\Configuration\Model;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\CoversTrait;
-use Tests\Unit\Playground\Make\TestCase;
 use Playground\Make\Configuration\Model;
 use Playground\Make\Configuration\Model\Concerns\Attributes;
+use Tests\Unit\Playground\Make\TestCase;
 
 /**
  * \Tests\Unit\Playground\Make\Configuration\Model\AttributesTest
@@ -19,10 +21,11 @@ use Playground\Make\Configuration\Model\Concerns\Attributes;
 #[CoversTrait(Attributes::class)]
 class AttributesTest extends TestCase
 {
-    public function test_addModelProperties_with_empty_options(): void
+    public function test_add_model_properties_with_empty_options(): void
     {
         $instance = new Model;
 
+        /** @phpstan-ignore method.alreadyNarrowedType */
         $this->assertInstanceOf(Model::class, $instance);
 
         $options = [];
@@ -34,13 +37,11 @@ class AttributesTest extends TestCase
         $this->assertEmpty($instance->fillable());
     }
 
-    public function test_addAttribute_with_invalid_column(): void
+    public function test_add_attribute_with_invalid_column(): void
     {
         $instance = new Model([
             // 'name' => 'model',
         ]);
-
-        $this->assertInstanceOf(Model::class, $instance);
 
         $column = null;
         $value = false;
@@ -54,13 +55,11 @@ class AttributesTest extends TestCase
         $instance->addAttribute($column, $value);
     }
 
-    public function test_addAttribute_with_invalid_default_value_of_array(): void
+    public function test_add_attribute_with_invalid_default_value_of_array(): void
     {
         $instance = new Model([
             // 'name' => 'model',
         ]);
-
-        $this->assertInstanceOf(Model::class, $instance);
 
         $column = 'some_column';
         $value = ['arrays-are-not-allowed'];
@@ -72,13 +71,11 @@ class AttributesTest extends TestCase
         $this->assertEmpty($attributes[$column]);
     }
 
-    public function test_addCast_with_invalid_column_and_set_empty_string(): void
+    public function test_add_cast_with_invalid_column_and_set_empty_string(): void
     {
         $instance = new Model([
             'name' => 'Widget',
         ]);
-
-        $this->assertInstanceOf(Model::class, $instance);
 
         $column = true;
         $value = false;
@@ -92,13 +89,11 @@ class AttributesTest extends TestCase
         $instance->addCast($column, $value);
     }
 
-    public function test_addCast_with_invalid_cast_value_and_treat_as_string(): void
+    public function test_add_cast_with_invalid_cast_value_and_treat_as_string(): void
     {
         $instance = new Model([
             'name' => 'Widget',
         ]);
-
-        $this->assertInstanceOf(Model::class, $instance);
 
         $column = 'some_column';
         $value = false;
@@ -109,13 +104,11 @@ class AttributesTest extends TestCase
         $this->assertSame('string', $casts[$column]);
     }
 
-    public function test_addFillable_with_invalid_column(): void
+    public function test_add_fillable_with_invalid_column(): void
     {
         $instance = new Model([
             'name' => 'Thing',
         ]);
-
-        $this->assertInstanceOf(Model::class, $instance);
 
         $column = ['invalid-stuff'];
 

@@ -1,14 +1,16 @@
 <?php
+
 /**
  * Playground
  */
 
 declare(strict_types=1);
+
 namespace Tests\Unit\Playground\Make\Configuration\Model;
 
 use PHPUnit\Framework\Attributes\CoversClass;
-use Tests\Unit\Playground\Make\TestCase;
 use Playground\Make\Configuration\Model;
+use Tests\Unit\Playground\Make\TestCase;
 
 /**
  * \Tests\Unit\Playground\Make\Configuration\Model\InstanceTest
@@ -18,9 +20,9 @@ use Playground\Make\Configuration\Model;
 #[CoversClass(Model\CreateColumn::class)]
 #[CoversClass(Model\CreateDate::class)]
 #[CoversClass(Model\CreateFlag::class)]
-#[CoversClass(Model\CreateDate::class)]
 #[CoversClass(Model\CreateId::class)]
 #[CoversClass(Model\CreateJson::class)]
+#[CoversClass(Model\CreateMatrix::class)]
 #[CoversClass(Model\CreatePermission::class)]
 #[CoversClass(Model\CreateStatus::class)]
 #[CoversClass(Model\CreateUi::class)]
@@ -37,6 +39,7 @@ class InstanceTest extends TestCase
     {
         $instance = new Model;
 
+        /** @phpstan-ignore method.alreadyNarrowedType */
         $this->assertInstanceOf(Model::class, $instance);
     }
 
@@ -122,8 +125,6 @@ class InstanceTest extends TestCase
     public function test_folder_is_empty_by_default(): void
     {
         $instance = new Model;
-
-        $this->assertInstanceOf(Model::class, $instance);
 
         $this->assertIsString($instance->folder());
         $this->assertEmpty($instance->folder());

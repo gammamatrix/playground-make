@@ -1,9 +1,11 @@
 <?php
+
 /**
  * Playground
  */
 
 declare(strict_types=1);
+
 namespace Playground\Make\Configuration\Model;
 
 use Illuminate\Support\Facades\Log;
@@ -105,7 +107,7 @@ class Create extends ModelConfiguration implements Configuration\Contracts\WithS
     ];
 
     /**
-     * @param array<string, mixed> $options
+     * @param  array<string, mixed>  $options
      */
     public function setOptions(array $options = []): self
     {

@@ -1,16 +1,18 @@
 <?php
+
 /**
  * Playground
  */
 
 declare(strict_types=1);
+
 namespace Tests\Unit\Playground\Make\Configuration\Configuration;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\CoversTrait;
-use Tests\Unit\Playground\Make\TestCase;
-use Playground\Make\Configuration\Configuration;
 use Playground\Make\Configuration\Concerns\Properties;
+use Playground\Make\Configuration\Configuration;
+use Tests\Unit\Playground\Make\TestCase;
 
 /**
  * \Tests\Unit\Playground\Make\Configuration\Configuration\PropertiesTest
@@ -28,6 +30,7 @@ class PropertiesTest extends TestCase
     {
         $instance = new Configuration;
 
+        /** @phpstan-ignore method.alreadyNarrowedType */
         $this->assertInstanceOf(Configuration::class, $instance);
 
         $properties = $instance->apply()->properties();

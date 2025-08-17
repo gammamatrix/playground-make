@@ -1,9 +1,11 @@
 <?php
+
 /**
  * Playground
  */
 
 declare(strict_types=1);
+
 namespace Playground\Make\Configuration\Model;
 
 /**
@@ -24,7 +26,7 @@ class CreateUnique extends ModelConfiguration
     ];
 
     /**
-     * @param array<string, mixed> $options
+     * @param  array<string, mixed>  $options
      */
     public function setOptions(array $options = []): self
     {

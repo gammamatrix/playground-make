@@ -1,14 +1,16 @@
 <?php
+
 /**
  * Playground
  */
 
 declare(strict_types=1);
+
 namespace Tests\Unit\Playground\Make\Configuration\Model\Filters;
 
 use PHPUnit\Framework\Attributes\CoversClass;
-use Tests\Unit\Playground\Make\TestCase;
 use Playground\Make\Configuration\Model;
+use Tests\Unit\Playground\Make\TestCase;
 
 /**
  * \Tests\Unit\Playground\Make\Configuration\Model\InstanceTest
@@ -21,6 +23,7 @@ class InstanceTest extends TestCase
     {
         $instance = new Model\Filters;
 
+        /** @phpstan-ignore method.alreadyNarrowedType */
         $this->assertInstanceOf(Model\Filters::class, $instance);
     }
 
@@ -89,7 +92,7 @@ class InstanceTest extends TestCase
         $this->assertNotEmpty($instance->columns());
     }
 
-    public function test_setOptions_with_builder_in_options(): void
+    public function test_set_options_with_builder_in_options(): void
     {
         $instance = new Model\Filters([
             'builder' => 'SomeBuilder',
@@ -98,11 +101,9 @@ class InstanceTest extends TestCase
         $this->assertSame('SomeBuilder', $instance->builder());
     }
 
-    public function test_addId_with_empty_meta(): void
+    public function test_add_id_with_empty_meta(): void
     {
         $instance = new Model\Filters;
-
-        $this->assertInstanceOf(Model\Filters::class, $instance);
 
         $this->expectException(\RuntimeException::class);
         $this->expectExceptionMessage(__('playground-make::filters.Id.invalid', [
@@ -114,11 +115,9 @@ class InstanceTest extends TestCase
         $instance->addId($i, $meta);
     }
 
-    public function test_addDate_with_empty_meta(): void
+    public function test_add_date_with_empty_meta(): void
     {
         $instance = new Model\Filters;
-
-        $this->assertInstanceOf(Model\Filters::class, $instance);
 
         $this->expectException(\RuntimeException::class);
         $this->expectExceptionMessage(__('playground-make::filters.Date.invalid', [
@@ -130,11 +129,9 @@ class InstanceTest extends TestCase
         $instance->addDate($i, $meta);
     }
 
-    public function test_addFlag_with_empty_meta(): void
+    public function test_add_flag_with_empty_meta(): void
     {
         $instance = new Model\Filters;
-
-        $this->assertInstanceOf(Model\Filters::class, $instance);
 
         $this->expectException(\RuntimeException::class);
         $this->expectExceptionMessage(__('playground-make::filters.Flag.invalid', [
@@ -146,11 +143,9 @@ class InstanceTest extends TestCase
         $instance->addFlag($i, $meta);
     }
 
-    public function test_handleTrash_with_empty_meta(): void
+    public function test_handle_trash_with_empty_meta(): void
     {
         $instance = new Model\Filters;
-
-        $this->assertInstanceOf(Model\Filters::class, $instance);
 
         $this->expectException(\RuntimeException::class);
         $this->expectExceptionMessage(__('playground-make::filters.Trash.invalid'));
@@ -159,11 +154,9 @@ class InstanceTest extends TestCase
         $instance->handleTrash($meta);
     }
 
-    public function test_addColumn_with_empty_meta(): void
+    public function test_add_column_with_empty_meta(): void
     {
         $instance = new Model\Filters;
-
-        $this->assertInstanceOf(Model\Filters::class, $instance);
 
         $this->expectException(\RuntimeException::class);
         $this->expectExceptionMessage(__('playground-make::filters.Column.invalid', [
@@ -175,11 +168,9 @@ class InstanceTest extends TestCase
         $instance->addColumn($i, $meta);
     }
 
-    public function test_addPermission_with_empty_meta(): void
+    public function test_add_permission_with_empty_meta(): void
     {
         $instance = new Model\Filters;
-
-        $this->assertInstanceOf(Model\Filters::class, $instance);
 
         $this->expectException(\RuntimeException::class);
         $this->expectExceptionMessage(__('playground-make::filters.Permission.invalid', [
@@ -191,11 +182,9 @@ class InstanceTest extends TestCase
         $instance->addPermission($i, $meta);
     }
 
-    public function test_addStatus_with_empty_meta(): void
+    public function test_add_status_with_empty_meta(): void
     {
         $instance = new Model\Filters;
-
-        $this->assertInstanceOf(Model\Filters::class, $instance);
 
         $this->expectException(\RuntimeException::class);
         $this->expectExceptionMessage(__('playground-make::filters.Status.invalid', [
@@ -207,11 +196,9 @@ class InstanceTest extends TestCase
         $instance->addStatus($i, $meta);
     }
 
-    public function test_addUi_with_empty_meta(): void
+    public function test_add_ui_with_empty_meta(): void
     {
         $instance = new Model\Filters;
-
-        $this->assertInstanceOf(Model\Filters::class, $instance);
 
         $this->expectException(\RuntimeException::class);
         $this->expectExceptionMessage(__('playground-make::filters.Ui.invalid', [
@@ -223,11 +210,9 @@ class InstanceTest extends TestCase
         $instance->addUi($i, $meta);
     }
 
-    public function test_addJson_with_empty_meta(): void
+    public function test_add_json_with_empty_meta(): void
     {
         $instance = new Model\Filters;
-
-        $this->assertInstanceOf(Model\Filters::class, $instance);
 
         $this->expectException(\RuntimeException::class);
         $this->expectExceptionMessage(__('playground-make::filters.Json.invalid', [

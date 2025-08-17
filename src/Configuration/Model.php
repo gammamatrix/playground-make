@@ -1,9 +1,11 @@
 <?php
+
 /**
  * Playground
  */
 
 declare(strict_types=1);
+
 namespace Playground\Make\Configuration;
 
 use Playground\Make\Model\Recipe\Model as ModelRecipe;
@@ -236,7 +238,7 @@ class Model extends PrimaryConfiguration
     }
 
     /**
-     * @param array<string, mixed> $options
+     * @param  array<string, mixed>  $options
      */
     public function setOptions(array $options = []): self
     {

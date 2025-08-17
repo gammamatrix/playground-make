@@ -1,16 +1,18 @@
 <?php
+
 /**
  * Playground
  */
 
 declare(strict_types=1);
+
 namespace Tests\Unit\Playground\Make\Configuration\Model;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\CoversTrait;
-use Tests\Unit\Playground\Make\TestCase;
 use Playground\Make\Configuration\Model;
 use Playground\Make\Configuration\Model\Concerns\Sorting;
+use Tests\Unit\Playground\Make\TestCase;
 
 /**
  * \Tests\Unit\Playground\Make\Configuration\Model\SortingTest
@@ -19,14 +21,12 @@ use Playground\Make\Configuration\Model\Concerns\Sorting;
 #[CoversTrait(Sorting::class)]
 class SortingTest extends TestCase
 {
-    public function test_addSortable_without_column(): void
+    public function test_add_sortable_without_column(): void
     {
         $withSkeleton = true;
         $instance = new Model([
             'name' => 'SomeModel',
         ], $withSkeleton);
-
-        $this->assertInstanceOf(Model::class, $instance);
 
         $this->assertEmpty($instance->scopes());
 
@@ -38,14 +38,12 @@ class SortingTest extends TestCase
         $instance->addSortable(null, null);
     }
 
-    public function test_addSortable_with_index(): void
+    public function test_add_sortable_with_index(): void
     {
         $withSkeleton = true;
         $instance = new Model([
             'name' => 'SomeModel',
         ], $withSkeleton);
-
-        $this->assertInstanceOf(Model::class, $instance);
 
         $this->assertEmpty($instance->sortable());
         $instance->addSortable([
@@ -55,14 +53,12 @@ class SortingTest extends TestCase
         $this->assertNotEmpty($instance->sortable());
     }
 
-    public function test_addSortable_without_index(): void
+    public function test_add_sortable_without_index(): void
     {
         $withSkeleton = true;
         $instance = new Model([
             'name' => 'SomeModel',
         ], $withSkeleton);
-
-        $this->assertInstanceOf(Model::class, $instance);
 
         $this->assertEmpty($instance->sortable());
         $instance->addSortable([

@@ -1,9 +1,11 @@
 <?php
+
 /**
  * Playground
  */
 
 declare(strict_types=1);
+
 namespace Playground\Make\Configuration;
 
 use JsonSerializable;
@@ -11,9 +13,7 @@ use JsonSerializable;
 /**
  * \Playground\Make\Configuration\Configuration
  */
-class Configuration implements
-    Contracts\Configuration,
-    JsonSerializable
+class Configuration implements Contracts\Configuration, JsonSerializable
 {
     use Concerns\Properties;
 

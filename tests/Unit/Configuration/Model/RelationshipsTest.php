@@ -1,16 +1,18 @@
 <?php
+
 /**
  * Playground
  */
 
 declare(strict_types=1);
+
 namespace Tests\Unit\Playground\Make\Configuration\Model;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\CoversTrait;
-use Tests\Unit\Playground\Make\TestCase;
 use Playground\Make\Configuration\Model;
 use Playground\Make\Configuration\Model\Concerns\Relationships;
+use Tests\Unit\Playground\Make\TestCase;
 
 /**
  * \Tests\Unit\Playground\Make\Configuration\Model\RelationshipsTest
@@ -19,13 +21,11 @@ use Playground\Make\Configuration\Model\Concerns\Relationships;
 #[CoversTrait(Relationships::class)]
 class RelationshipsTest extends TestCase
 {
-    public function test_addRelationships_for_HasOne_with_invalid_accessor(): void
+    public function test_add_relationships_for_has_one_with_invalid_accessor(): void
     {
         $instance = new Model([
             'name' => 'SomeModel',
         ]);
-
-        $this->assertInstanceOf(Model::class, $instance);
 
         $options = [
             'HasOne' => [
@@ -45,13 +45,11 @@ class RelationshipsTest extends TestCase
         $instance->addRelationships($options);
     }
 
-    public function test_addRelationships_for_HasMany_with_invalid_accessor(): void
+    public function test_add_relationships_for_has_many_with_invalid_accessor(): void
     {
         $instance = new Model([
             'name' => 'SomeModel',
         ]);
-
-        $this->assertInstanceOf(Model::class, $instance);
 
         $options = [
             'HasMany' => [
@@ -74,14 +72,12 @@ class RelationshipsTest extends TestCase
         $instance->addRelationships($options);
     }
 
-    public function test_addHasOne_without_meta(): void
+    public function test_add_has_one_without_meta(): void
     {
         $withSkeleton = true;
         $instance = new Model([
             'name' => 'SomeModel',
         ], $withSkeleton);
-
-        $this->assertInstanceOf(Model::class, $instance);
 
         $this->assertEmpty($instance->HasOne());
         $instance->addHasOne('someAccessor', null);
@@ -89,14 +85,12 @@ class RelationshipsTest extends TestCase
         // dump($instance);
     }
 
-    public function test_addHasMany_without_meta(): void
+    public function test_add_has_many_without_meta(): void
     {
         $withSkeleton = true;
         $instance = new Model([
             'name' => 'SomeModel',
         ], $withSkeleton);
-
-        $this->assertInstanceOf(Model::class, $instance);
 
         // dump($instance);
         $this->assertEmpty($instance->HasMany());

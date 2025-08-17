@@ -1,9 +1,11 @@
 <?php
+
 /**
  * Playground
  */
 
 declare(strict_types=1);
+
 namespace Playground\Make\Configuration;
 
 use JsonSerializable;
@@ -11,11 +13,7 @@ use JsonSerializable;
 /**
  * \Playground\Make\Configuration\Configuration
  */
-class PrimaryConfiguration implements
-    Contracts\PrimaryConfiguration,
-    Contracts\WithFolder,
-    Contracts\WithSkeleton,
-    JsonSerializable
+class PrimaryConfiguration implements Contracts\PrimaryConfiguration, Contracts\WithFolder, Contracts\WithSkeleton, JsonSerializable
 {
     use Concerns\Classes;
     use Concerns\PrimaryProperties;
@@ -34,7 +32,7 @@ class PrimaryConfiguration implements
 
     public function __construct(
         mixed $options = null,
-        bool $skeleton = null
+        ?bool $skeleton = null
     ) {
         if (is_bool($skeleton)) {
             $this->skeleton = $skeleton;

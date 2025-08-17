@@ -1,14 +1,16 @@
 <?php
+
 /**
  * Playground
  */
 
 declare(strict_types=1);
+
 namespace Tests\Unit\Playground\Make\Configuration\Model\Create;
 
 use PHPUnit\Framework\Attributes\CoversClass;
-use Tests\Unit\Playground\Make\TestCase;
 use Playground\Make\Configuration\Model\CreateColumn;
+use Tests\Unit\Playground\Make\TestCase;
 use TiMacDonald\Log\LogEntry;
 use TiMacDonald\Log\LogFake;
 
@@ -22,6 +24,7 @@ class InstanceTest extends TestCase
     {
         $instance = new CreateColumn;
 
+        /** @phpstan-ignore method.alreadyNarrowedType */
         $this->assertInstanceOf(CreateColumn::class, $instance);
     }
 
@@ -40,7 +43,7 @@ class InstanceTest extends TestCase
         'type' => 'string',
     ];
 
-    public function test_model_with_file_jsonSerialize(): void
+    public function test_model_with_file_json_serialize(): void
     {
         $options = [
             'column' => 'some_column',
@@ -71,7 +74,7 @@ class InstanceTest extends TestCase
         $this->assertSame('some_column', $data['column']);
     }
 
-    public function test_setOptions_unsupported_primary_and_log_message(): void
+    public function test_set_options_unsupported_primary_and_log_message(): void
     {
         $log = LogFake::bind();
 
@@ -79,8 +82,6 @@ class InstanceTest extends TestCase
             'column' => 'some_column',
             'migration' => 'some_migration_name',
         ]);
-
-        $this->assertInstanceOf(CreateColumn::class, $instance);
 
         // dump($instance);
         $instance->setOptions([

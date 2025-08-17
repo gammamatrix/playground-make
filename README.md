@@ -29,9 +29,35 @@ See the contents of the published config file: [config/playground-make.php](conf
 
 This application utilizes Laravel make commands.
 
+
+<section>
+
+## Commands: rebuild existing packages
+
+<details>
+
+<summary>Toggle CMS Packages</summary>
+
+Model:
+```sh
+art playground:make:package --force --file resources/configurations/playground-cms/package.playground-cms.json
+```
+API:
+```sh
+art playground:make:package --force --file resources/configurations/playground-cms-api/package.playground-cms-api.json
+```
+Resource:
+```sh
+art playground:make:package --force --file resources/configurations/playground-cms-resource/package.playground-cms-resource.json
+```
+
+</details>
+
+</section>
+
 ## PHPStan
 
-Tests at level 9 on:
+Tests at level 10 on:
 - `config/`
 - `lang/`
 - `src/`
@@ -49,8 +75,13 @@ composer format
 
 ## Testing
 
+Unit tests
 ```sh
 composer test
+```
+Unit and feature tests
+```sh
+composer test-dev
 ```
 
 ## Changelog

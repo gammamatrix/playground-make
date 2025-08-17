@@ -1,9 +1,11 @@
 <?php
+
 /**
  * Playground
  */
 
 declare(strict_types=1);
+
 namespace Playground\Make\Console\Commands\Concerns;
 
 /**
@@ -12,7 +14,7 @@ namespace Playground\Make\Console\Commands\Concerns;
 trait PreparingOptions
 {
     /**
-     * @param array<string, mixed> $options
+     * @param  array<string, mixed>  $options
      */
     protected function prepareOptionsTypeDefault(array $options = []): string
     {
@@ -22,7 +24,7 @@ trait PreparingOptions
     }
 
     /**
-     * @param array<string, mixed> $options
+     * @param  array<string, mixed>  $options
      */
     protected function prepareOptionsType(array $options = []): string
     {

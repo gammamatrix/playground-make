@@ -1,9 +1,11 @@
 <?php
+
 /**
  * Playground
  */
 
 declare(strict_types=1);
+
 namespace Playground\Make\Configuration\Model\Concerns;
 
 /**
@@ -26,7 +28,7 @@ trait Components
     protected bool $test = false;
 
     /**
-     * @param array<string, mixed> $options
+     * @param  array<string, mixed>  $options
      */
     public function addComponents(array $options): self
     {

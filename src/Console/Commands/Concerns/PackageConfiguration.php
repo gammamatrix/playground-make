@@ -1,9 +1,11 @@
 <?php
+
 /**
  * Playground
  */
 
 declare(strict_types=1);
+
 namespace Playground\Make\Console\Commands\Concerns;
 
 use Illuminate\Support\Str;
@@ -251,7 +253,7 @@ trait PackageConfiguration
         $organization = '';
         $package = '';
 
-        if ( $this->hasOption('namespace')
+        if ($this->hasOption('namespace')
             && $this->option('namespace')
             && is_string($this->option('namespace'))
         ) {
@@ -264,14 +266,14 @@ trait PackageConfiguration
 
         $organization = '';
 
-        if ( $this->hasOption('organization')
+        if ($this->hasOption('organization')
             && $this->option('organization')
             && is_string($this->option('organization'))
         ) {
             $organization = $this->option('organization');
         }
 
-        if ( $this->hasOption('package')
+        if ($this->hasOption('package')
             && $this->option('package')
             && is_string($this->option('package'))
         ) {
@@ -663,9 +665,7 @@ trait PackageConfiguration
         $this->isReset = true;
     }
 
-    public function prepareOptions(): void
-    {
-    }
+    public function prepareOptions(): void {}
 
     /**
      * @deprecated Use $this->c->type() instead.

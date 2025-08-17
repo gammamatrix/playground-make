@@ -1,9 +1,11 @@
 <?php
+
 /**
  * Playground
  */
 
 declare(strict_types=1);
+
 namespace Playground\Make\Console\Commands;
 
 use Illuminate\Support\Str;
@@ -35,7 +37,8 @@ abstract class GeneratorCommand extends Command
 
             $error = __('playground-make::generator.input.error');
 
-            // Check if interactive
+            // Check if interactive - TODO implement interactive in applicable generators
+            /** @phpstan-ignore larastan.console.undefinedOption */
             if ($this->interactive && $this->hasOption('interactive') && $this->option('interactive')) {
                 $name = $this->interactive();
                 if (! $name) {

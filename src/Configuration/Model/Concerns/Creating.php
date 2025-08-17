@@ -1,9 +1,11 @@
 <?php
+
 /**
  * Playground
  */
 
 declare(strict_types=1);
+
 namespace Playground\Make\Configuration\Model\Concerns;
 
 use Playground\Make\Configuration\Model;
@@ -21,7 +23,7 @@ trait Creating
     protected array $implements = [];
 
     /**
-     * @param array<string, mixed> $options
+     * @param  array<string, mixed>  $options
      */
     public function addCreate(array $options = []): Model\Create
     {

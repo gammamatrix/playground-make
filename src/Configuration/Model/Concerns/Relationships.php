@@ -1,9 +1,11 @@
 <?php
+
 /**
  * Playground
  */
 
 declare(strict_types=1);
+
 namespace Playground\Make\Configuration\Model\Concerns;
 
 use Playground\Make\Configuration\Model\HasMany;
@@ -25,7 +27,7 @@ trait Relationships
     protected array $HasMany = [];
 
     /**
-     * @param array<string, mixed> $options
+     * @param  array<string, mixed>  $options
      */
     public function addRelationships(array $options): self
     {

@@ -1,9 +1,11 @@
 <?php
+
 /**
  * Playground
  */
 
 declare(strict_types=1);
+
 namespace Playground\Make\Configuration\Model;
 
 use Playground\Make\Configuration;
@@ -20,7 +22,7 @@ class ModelConfiguration extends Configuration\Configuration
         return $this->_parent;
     }
 
-    public function setParent(Configuration\Model $parent = null): self
+    public function setParent(?Configuration\Model $parent = null): self
     {
         $this->_parent = $parent;
 

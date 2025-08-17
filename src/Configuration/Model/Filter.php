@@ -1,9 +1,11 @@
 <?php
+
 /**
  * Playground
  */
 
 declare(strict_types=1);
+
 namespace Playground\Make\Configuration\Model;
 
 use Playground\Make\Configuration\Configuration;
@@ -42,7 +44,7 @@ class Filter extends Configuration
     ];
 
     /**
-     * @param array<string, mixed> $options
+     * @param  array<string, mixed>  $options
      */
     public function setOptions(array $options = []): self
     {
@@ -127,7 +129,7 @@ class Filter extends Configuration
         return $this->_parent;
     }
 
-    public function setParent(Filters $parent = null): self
+    public function setParent(?Filters $parent = null): self
     {
         $this->_parent = $parent;
 

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Playground
  */
@@ -7,6 +8,11 @@ declare(strict_types=1);
 
 /**
  * Playground Make Configuration and Environment Variables
+ *
+ * @return array{
+ *      about: bool,
+ *      load: array{translations: bool}
+ *  }
  */
 return [
 
@@ -36,22 +42,22 @@ return [
         'translations' => (bool) env('PLAYGROUND_MAKE_LOAD_TRANSLATIONS', true),
     ],
 
-    /*
-    |--------------------------------------------------------------------------
-    | Paths
-    |--------------------------------------------------------------------------
-    |
-    | By default, makes will be loaded from the resources directory of this
-    | package. A different path may be provided with:
-    |
-    | PLAYGROUND_MAKE_PATHS_MAKES
-    |
-    */
-
-    'paths' => [
-        'makes' => env('PLAYGROUND_MAKE_PATHS_MAKES', ''),
-        // 'makes' => env('PLAYGROUND_MAKE_PATHS_MAKES', '/tmp/does-not-exist'),
-        // 'makes' => env('PLAYGROUND_MAKE_PATHS_MAKES', '/tmp'),
-
-    ],
+    //    /*
+    //    |--------------------------------------------------------------------------
+    //    | Paths
+    //    |--------------------------------------------------------------------------
+    //    |
+    //    | By default, makes will be loaded from the resources directory of this
+    //    | package. A different path may be provided with:
+    //    |
+    //    | PLAYGROUND_MAKE_PATHS_MAKES
+    //    | @deprecated not sure makes PLAYGROUND_MAKE_PATHS_MAKES is needed
+    //    */
+    //
+    //    'paths' => [
+    //        'makes' => env('PLAYGROUND_MAKE_PATHS_MAKES', ''),
+    //        // 'makes' => env('PLAYGROUND_MAKE_PATHS_MAKES', '/tmp/does-not-exist'),
+    //        // 'makes' => env('PLAYGROUND_MAKE_PATHS_MAKES', '/tmp'),
+    //
+    //    ],
 ];
