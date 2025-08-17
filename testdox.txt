@@ -1,10 +1,10 @@
 Attributes (Tests\Unit\Playground\Make\Configuration\Model\Attributes)
- [x] AddModelProperties with empty options
- [x] AddAttribute with invalid column
- [x] AddAttribute with invalid default value of array
- [x] AddCast with invalid column and set empty string
- [x] AddCast with invalid cast value and treat as string
- [x] AddFillable with invalid column
+ [x] Add model properties with empty options
+ [x] Add attribute with invalid column
+ [x] Add attribute with invalid default value of array
+ [x] Add cast with invalid column and set empty string
+ [x] Add cast with invalid cast value and treat as string
+ [x] Add fillable with invalid column
 
 Command (Tests\Feature\Playground\Make\Console\Commands\About\Command)
  [x] Command about displays package information and succeed with code 0
@@ -16,21 +16,21 @@ Instance (Tests\Unit\Playground\Make\Configuration\Configuration\Instance)
 Instance (Tests\Unit\Playground\Make\Configuration\Model\CreateColumn\Instance)
  [x] Instance
  [x] Model with file
- [x] SetOptions unsupported primary and ignore
- [x] AddId with empty column
- [x] AddUnique with empty column
- [x] AddDate with empty column
- [x] AddFlag with empty column
- [x] AddColumn with empty column
- [x] AddPermission with empty column
- [x] AddStatus with empty column
- [x] AddUi with empty column
- [x] AddJson with empty column
+ [x] Set options unsupported primary and ignore
+ [x] Add id with empty column
+ [x] Add unique with empty column
+ [x] Add date with empty column
+ [x] Add flag with empty column
+ [x] Add column with empty column
+ [x] Add permission with empty column
+ [x] Add status with empty column
+ [x] Add ui with empty column
+ [x] Add json with empty column
 
 Instance (Tests\Unit\Playground\Make\Configuration\Model\Create\Instance)
  [x] Instance
- [x] Model with file jsonSerialize
- [x] SetOptions unsupported primary and log message
+ [x] Model with file json serialize
+ [x] Set options unsupported primary and log message
 
 Instance (Tests\Unit\Playground\Make\Configuration\Model\Filter\Instance)
  [x] Instance
@@ -40,16 +40,16 @@ Instance (Tests\Unit\Playground\Make\Configuration\Model\Filters\Instance)
  [x] Instance
  [x] Instance apply without options
  [x] Model with file
- [x] SetOptions with builder in options
- [x] AddId with empty meta
- [x] AddDate with empty meta
- [x] AddFlag with empty meta
- [x] HandleTrash with empty meta
- [x] AddColumn with empty meta
- [x] AddPermission with empty meta
- [x] AddStatus with empty meta
- [x] AddUi with empty meta
- [x] AddJson with empty meta
+ [x] Set options with builder in options
+ [x] Add id with empty meta
+ [x] Add date with empty meta
+ [x] Add flag with empty meta
+ [x] Handle trash with empty meta
+ [x] Add column with empty meta
+ [x] Add permission with empty meta
+ [x] Add status with empty meta
+ [x] Add ui with empty meta
+ [x] Add json with empty meta
 
 Instance (Tests\Unit\Playground\Make\Configuration\Model\Instance)
  [x] Instance
@@ -61,8 +61,8 @@ Instance (Tests\Unit\Playground\Make\Configuration\PrimaryConfiguration\Instance
  [x] Instance
  [x] Instance apply without options
  [x] Folder is empty by default
- [x] Folder with empty setFolder
- [x] Folder with path for setFolder
+ [x] Folder with empty set folder
+ [x] Folder with path for set folder
 
 Properties (Tests\Unit\Playground\Make\Configuration\Configuration\Properties)
  [x] Properties
@@ -75,20 +75,20 @@ Properties (Tests\Unit\Playground\Make\Configuration\PrimaryConfiguration\Proper
  [x] Properties with all options with apply
 
 Relationships (Tests\Unit\Playground\Make\Configuration\Model\Relationships)
- [x] AddRelationships for HasOne with invalid accessor
- [x] AddRelationships for HasMany with invalid accessor
- [x] AddHasOne without meta
- [x] AddHasMany without meta
+ [x] Add relationships for has one with invalid accessor
+ [x] Add relationships for has many with invalid accessor
+ [x] Add has one without meta
+ [x] Add has many without meta
 
 Scopes (Tests\Unit\Playground\Make\Configuration\Model\Scopes)
- [x] AddScopes with sort
- [x] AddScope with invalid scope
- [x] AddScope for sort without meta
- [x] AddScope unsupported scope and ignore
+ [x] Add scopes with sort
+ [x] Add scope with invalid scope
+ [x] Add scope for sort without meta
+ [x] Add scope unsupported scope and ignore
 
 Skeleton (Tests\Unit\Playground\Make\Configuration\PrimaryConfiguration\Skeleton)
  [x] Skeleton
- [x] Skeleton withSkeleton
+ [x] Skeleton with skeleton
  [x] Skeleton option as false
  [x] Skeleton option as true
  [x] Skeleton parameter as true
@@ -96,7 +96,7 @@ Skeleton (Tests\Unit\Playground\Make\Configuration\PrimaryConfiguration\Skeleton
  [x] Skeleton parameter as true overrules option
 
 Sorting (Tests\Unit\Playground\Make\Configuration\Model\Sorting)
- [x] AddSortable without column
- [x] AddSortable with index
- [x] AddSortable without index
+ [x] Add sortable without column
+ [x] Add sortable with index
+ [x] Add sortable without index
 

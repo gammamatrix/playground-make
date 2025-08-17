@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2025-08-02 23:50:02</timestamp>
+  <timestamp>2025-08-17 17:17:26</timestamp>
   <stats>
     <name>Method Crap Stats</name>
     <methodCount>272</methodCount>
@@ -136,8 +136,8 @@
       <package>Playground\Make\Configuration\Concerns</package>
       <className>Playground\Make\Configuration\Concerns\Classes</className>
       <methodName>addToUse</methodName>
-      <methodSignature>addToUse(string $class, string $key): self</methodSignature>
-      <fullMethod>addToUse(string $class, string $key): self</fullMethod>
+      <methodSignature>addToUse(string $class, ?string $key): self</methodSignature>
+      <fullMethod>addToUse(string $class, ?string $key): self</fullMethod>
       <crap>5.5</crap>
       <complexity>4</complexity>
       <coverage>54.55</coverage>
@@ -1115,8 +1115,8 @@
       <package>Playground\Make\Configuration\Model\Concerns</package>
       <className>Playground\Make\Configuration\Model\Concerns\Sorting</className>
       <methodName>addSortable</methodName>
-      <methodSignature>addSortable(mixed $meta, int $i): self</methodSignature>
-      <fullMethod>addSortable(mixed $meta, int $i): self</fullMethod>
+      <methodSignature>addSortable(mixed $meta, ?int $i): self</methodSignature>
+      <fullMethod>addSortable(mixed $meta, ?int $i): self</fullMethod>
       <crap>7</crap>
       <complexity>7</complexity>
       <coverage>100</coverage>
@@ -1852,8 +1852,8 @@
       <package>Playground\Make\Configuration\Model</package>
       <className>Playground\Make\Configuration\Model\Filter</className>
       <methodName>setParent</methodName>
-      <methodSignature>setParent(Playground\Make\Configuration\Model\Filters $parent): self</methodSignature>
-      <fullMethod>setParent(Playground\Make\Configuration\Model\Filters $parent): self</fullMethod>
+      <methodSignature>setParent(?Playground\Make\Configuration\Model\Filters $parent): self</methodSignature>
+      <fullMethod>setParent(?Playground\Make\Configuration\Model\Filters $parent): self</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
@@ -2259,8 +2259,8 @@
       <package>Playground\Make\Configuration\Model</package>
       <className>Playground\Make\Configuration\Model\ModelConfiguration</className>
       <methodName>setParent</methodName>
-      <methodSignature>setParent(Playground\Make\Configuration\Model $parent): self</methodSignature>
-      <fullMethod>setParent(Playground\Make\Configuration\Model $parent): self</fullMethod>
+      <methodSignature>setParent(?Playground\Make\Configuration\Model $parent): self</methodSignature>
+      <fullMethod>setParent(?Playground\Make\Configuration\Model $parent): self</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
@@ -2314,8 +2314,8 @@
       <package>Playground\Make\Configuration</package>
       <className>Playground\Make\Configuration\PrimaryConfiguration</className>
       <methodName>__construct</methodName>
-      <methodSignature>__construct(mixed $options, bool $skeleton)</methodSignature>
-      <fullMethod>__construct(mixed $options, bool $skeleton)</fullMethod>
+      <methodSignature>__construct(mixed $options, ?bool $skeleton)</methodSignature>
+      <fullMethod>__construct(mixed $options, ?bool $skeleton)</fullMethod>
       <crap>5</crap>
       <complexity>5</complexity>
       <coverage>100</coverage>
