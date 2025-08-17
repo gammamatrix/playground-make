@@ -32,7 +32,7 @@ abstract class Command extends BaseGeneratorCommand
 
     protected PrimaryConfigurationContract $c;
 
-    public const INDENT = '    ';
+    public const string INDENT = '    ';
 
     /**
      * @var array<string, string>
