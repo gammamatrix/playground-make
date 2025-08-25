@@ -123,8 +123,8 @@ trait InteractiveCommands
     {
         $organization = $this->interactivePromptInput(
             'What organization should be used?',
-            'App',
-            $this->getConfigurationByKeyAsString('organization'),
+            'Playground',
+            $this->getConfigurationByKeyAsString('organization', 'Playground'),
             'Use a short name.'
         );
 

@@ -22,7 +22,7 @@
     "withTests": true,
     "playground": true,
     "package_name": "Playground: CMS",
-    "package_description": "Playground: Provide the CMS models for the Playground Content Management System.",
+    "package_description": "Playground: Provides the CMS models for the Playground Content Management System.",
     "package_homepage": "https://github.com/gammamatrix/playground-cms",
     "package_keywords": [
         "cms",

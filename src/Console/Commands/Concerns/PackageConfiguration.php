@@ -731,7 +731,7 @@ trait PackageConfiguration
     protected function getResourcePackageFolder(): string
     {
         return sprintf(
-            '%1$s/resources/packages',
+            '%1$s/resources/package',
             $this->getPackageFolder()
         );
     }
