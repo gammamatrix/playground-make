@@ -18,7 +18,7 @@
     "withPolicies": false,
     "withRequests": false,
     "withRoutes": false,
-    "withSwagger": false,
+    "withOpenAPI": false,
     "withTests": true,
     "playground": true,
     "package_name": "Playground: Directory",
