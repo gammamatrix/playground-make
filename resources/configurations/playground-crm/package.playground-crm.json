@@ -21,7 +21,6 @@
     "withOpenAPI": false,
     "withTests": true,
     "playground": true,
-    "revision": false,
     "package_name": "Playground: CRM",
     "package_description": "Playground: Provide the CRM models for the Playground Client Relationship Management System.",
     "package_homepage": "https://github.com/gammamatrix/playground-crm",
@@ -41,10 +40,13 @@
     ],
     "package_require": {
         "php": "^8.4",
-        "gammamatrix/playground": "*"
+        "gammamatrix/playground": "*",
+        "illuminate/database": "^12.0",
+        "illuminate/support": "^12.0"
     },
     "package_require_dev": {
-        "gammamatrix/playground-test": "*"
+        "gammamatrix/playground-test": "*",
+        "illuminate/testing": "^12.0"
     },
     "package_suggest": {
         "gammamatrix/playground-crm-api": "Provides an API, without a UI, to interact with the models provided in this package.",

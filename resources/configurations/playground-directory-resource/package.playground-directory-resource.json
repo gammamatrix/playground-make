@@ -22,6 +22,10 @@
     "withTests": true,
     "playground": true,
     "revision": true,
+    "docs_name": "Playground: Directory Resource at Read the Docs: Playground Documentation",
+    "docs_url": "https://gammamatrix-playground.readthedocs.io/en/develop/built-components/directory.html",
+    "model_package": "playground-directory",
+    "model_package_name": "Playground: Directory",
     "package_name": "Playground: Directory Resource",
     "package_description": "Playground: Provides an API and a Blade UI for interacting with Playground Directory, a Directory System for Laravel applications.",
     "package_homepage": "https://github.com/gammamatrix/playground-directory-resource",
@@ -45,12 +49,14 @@
         "gammamatrix/playground": "*",
         "gammamatrix/playground-auth": "*",
         "gammamatrix/playground-http": "*",
-        "gammamatrix/playground-directory": "*"
+        "gammamatrix/playground-directory": "*",
+        "illuminate/support": "^12.0"
     },
     "package_require_dev": {
         "gammamatrix/playground-test": "*",
         "gammamatrix/playground-login-blade": "*",
-        "gammamatrix/playground-site-blade": "*"
+        "gammamatrix/playground-site-blade": "*",
+        "illuminate/testing": "^12.0"
     },
     "package_suggest": [],
     "package_autoload_psr4": [],
@@ -60,6 +66,8 @@
         "Playground/Directory/Resource/ServiceProvider"
     ],
     "packagist": "gammamatrix/playground-directory-resource",
+    "postman_collection": "",
+    "postman_url": "",
     "controllers": [],
     "models": [],
     "policies": [],

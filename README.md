@@ -51,6 +51,10 @@ Resource:
 art playground:make:package --force --file resources/configurations/playground-cms-resource/package.playground-cms-resource.json
 ```
 
+```sh
+artisan playground:make:package --force --file resources/configurations/playground-cms-resource/package.playground-cms-resource.json --model-package resources/configurations/playground-cms/package.playground-cms.json -n --build --skeleton
+````
+
 </details>
 
 </section>

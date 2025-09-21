@@ -23,7 +23,7 @@
     "playground": true,
     "revision": false,
     "docs_name": "Playground: Matrix Resource at Read the Docs: Playground Documentation",
-    "docs_url": "https://gammamatrix-playground.readthedocs.io/en/develop/components/matrix.html",
+    "docs_url": "https://gammamatrix-playground.readthedocs.io/en/develop/built-components/matrix.html",
     "package_name": "Playground: Matrix Resource",
     "package_description": "Playground: Provides an API and a Blade UI for interacting with Playground Matrix, a Project Management System for Laravel applications.",
     "package_homepage": "https://github.com/gammamatrix/playground-matrix-resource",
