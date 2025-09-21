@@ -21,7 +21,12 @@
     "withOpenAPI": false,
     "withTests": true,
     "playground": true,
+    "revision": false,
+    "docs_name": "Playground: CRM Resource at Read the Docs: Playground Documentation",
+    "docs_url": "https://gammamatrix-playground.readthedocs.io/en/develop/built-components/crm.html",
     "package_name": "Playground: CRM",
+    "model_package": "",
+    "model_package_name": "",
     "package_description": "Playground: Provide the CRM models for the Playground Client Relationship Management System.",
     "package_homepage": "https://github.com/gammamatrix/playground-crm",
     "package_keywords": [
@@ -59,6 +64,8 @@
         "Playground/Crm/ServiceProvider"
     ],
     "packagist": "gammamatrix/playground-crm",
+    "postman_collection": "",
+    "postman_url": "",
     "controllers": [],
     "models": {
         "Client": "resources/configurations/playground-crm/model.client.json",

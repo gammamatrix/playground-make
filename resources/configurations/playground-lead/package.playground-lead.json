@@ -22,13 +22,21 @@
     "withTests": true,
     "playground": true,
     "revision": false,
+    "docs_name": "",
+    "docs_url": "",
     "package_name": "Playground: Lead",
-    "package_description": "Playground: Provide the Lead models for the Playground Lead System.",
+    "model_package": "",
+    "model_package_name": "",
+    "package_description": "Playground: Provides the models for the Playground Campaign and Lead Sales Management tool.",
     "package_homepage": "https://github.com/gammamatrix/playground-lead",
     "package_keywords": [
         "gammamatrix",
         "laravel",
         "lead",
+        "campaign",
+        "opportunity",
+        "opportunities",
+        "sales",
         "playground"
     ],
     "package_license": "MIT",
@@ -41,10 +49,13 @@
     ],
     "package_require": {
         "php": "^8.4",
-        "gammamatrix/playground": "*"
+        "gammamatrix/playground": "*",
+        "illuminate/support": "^12.0",
+        "illuminate/database": "^12.0"
     },
     "package_require_dev": {
-        "gammamatrix/playground-test": "*"
+        "gammamatrix/playground-test": "*",
+        "illuminate/testing": "^12.0"
     },
     "package_suggest": {
         "gammamatrix/playground-lead-api": "Provides an API, without a UI, to interact with the models provided in this package.",
@@ -57,6 +68,8 @@
         "Playground/Lead/ServiceProvider"
     ],
     "packagist": "gammamatrix/playground-lead",
+    "postman_collection": "",
+    "postman_url": "",
     "controllers": [],
     "models": {
         "Campaign": "resources/configurations/playground-lead/model.campaign.json",
