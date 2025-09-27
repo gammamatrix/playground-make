@@ -22,13 +22,21 @@
     "withTests": true,
     "playground": true,
     "revision": false,
+    "docs_name": "Playground: Lead API at Read the Docs: Playground Documentation",
+    "docs_url": "https://gammamatrix-playground.readthedocs.io/en/develop/built-components/lead.html",
     "package_name": "Playground: Lead API",
-    "package_description": "Playground: Provides an API, without a UI for interacting with Playground Lead, a Lead System for Laravel applications.",
+    "model_package": "playground-lead",
+    "model_package_name": "Playground: Lead",
+    "package_description": "Playground: Provides an API, without a UI for interacting with Playground Lead, a Playground Campaign and Lead Sales Management tool for Laravel applications.",
     "package_homepage": "https://github.com/gammamatrix/playground-lead-api",
     "package_keywords": [
         "gammamatrix",
         "laravel",
         "lead",
+        "campaign",
+        "opportunity",
+        "opportunities",
+        "sales",
         "playground"
     ],
     "package_license": "MIT",
@@ -44,11 +52,13 @@
         "gammamatrix/playground": "*",
         "gammamatrix/playground-auth": "*",
         "gammamatrix/playground-http": "*",
-        "gammamatrix/playground-lead": "*"
+        "gammamatrix/playground-lead": "*",
+        "illuminate/support": "^12.0"
     },
     "package_require_dev": {
         "gammamatrix/playground-test": "*",
-        "laravel/sanctum": "^4.0"
+        "laravel/sanctum": "^4.0",
+        "illuminate/testing": "^12.0"
     },
     "package_suggest": [],
     "package_autoload_psr4": [],
@@ -58,6 +68,8 @@
         "Playground/Lead/Api/ServiceProvider"
     ],
     "packagist": "gammamatrix/playground-lead-api",
+    "postman_collection": "",
+    "postman_url": "",
     "controllers": [],
     "models": [],
     "policies": [],

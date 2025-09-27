@@ -28,11 +28,14 @@
     "package_description": "Playground: Provides an API and a Blade UI for interacting with Playground Matrix, a Project Management System for Laravel applications.",
     "package_homepage": "https://github.com/gammamatrix/playground-matrix-resource",
     "package_keywords": [
-        "matrix",
+        "agile",
         "gammamatrix",
         "laravel",
+        "matrix",
         "playground",
-        "playground-blade"
+        "playground-blade",
+        "projects",
+        "sprints"
     ],
     "package_license": "MIT",
     "package_authors": [

@@ -22,14 +22,19 @@
     "withTests": true,
     "playground": true,
     "revision": false,
+    "docs_name": "Playground: Matrix API at Read the Docs: Playground Documentation",
+    "docs_url": "https://gammamatrix-playground.readthedocs.io/en/develop/built-components/matrix.html",
     "package_name": "Playground: Matrix API",
     "package_description": "Playground: Provides an API, without a UI for interacting with Playground Matrix, a Project Management System for Laravel applications.",
     "package_homepage": "https://github.com/gammamatrix/playground-matrix-api",
     "package_keywords": [
+        "agile",
         "gammamatrix",
         "laravel",
         "matrix",
-        "playground"
+        "playground",
+        "projects",
+        "sprints"
     ],
     "package_license": "MIT",
     "package_authors": [
@@ -58,6 +63,8 @@
         "Playground/Matrix/Api/ServiceProvider"
     ],
     "packagist": "gammamatrix/playground-matrix-api",
+    "postman_collection": "Postman: GammaMatrix Playground Workspace",
+    "postman_url": "https://www.postman.com/gammamatrix/workspace/playground/documentation/1185343-1e4a5656-d4e0-45b2-8f4e-daad7a6ee2b1",
     "controllers": [],
     "models": [],
     "policies": [],

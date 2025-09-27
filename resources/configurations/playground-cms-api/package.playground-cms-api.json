@@ -22,7 +22,11 @@
     "withTests": true,
     "playground": true,
     "revision": true,
+    "docs_name": "Playground: CMS API at Read the Docs: Playground Documentation",
+    "docs_url": "https://gammamatrix-playground.readthedocs.io/en/develop/built-components/cms.html",
     "package_name": "Playground: CMS API",
+    "model_package": "playground-cms",
+    "model_package_name": "Playground: CMS",
     "package_description": "Playground: Provides an API, without a UI for interacting with Playground CMS, a Content Management System for Laravel applications.",
     "package_homepage": "https://github.com/gammamatrix/playground-cms-api",
     "package_keywords": [
@@ -44,10 +48,12 @@
         "gammamatrix/playground": "*",
         "gammamatrix/playground-auth": "*",
         "gammamatrix/playground-http": "*",
-        "gammamatrix/playground-cms": "*"
+        "gammamatrix/playground-cms": "*",
+        "illuminate/support": "^12.0"
     },
     "package_require_dev": {
         "gammamatrix/playground-test": "*",
+        "illuminate/testing": "^12.0",
         "laravel/sanctum": "^4.0"
     },
     "package_suggest": [],
@@ -58,6 +64,8 @@
         "Playground/Cms/Api/ServiceProvider"
     ],
     "packagist": "gammamatrix/playground-cms-api",
+    "postman_collection": "Postman: GammaMatrix Playground Workspace",
+    "postman_url": "https://www.postman.com/gammamatrix/workspace/playground/documentation/1185343-1e4a5656-d4e0-45b2-8f4e-daad7a6ee2b1",
     "controllers": [],
     "models": [],
     "policies": [],
