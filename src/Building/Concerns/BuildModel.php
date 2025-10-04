@@ -98,7 +98,11 @@ trait BuildModel
         $this->searches['model_slug'] = $this->searches['modelVariable'];
         $this->searches['model_slug_plural'] = $this->searches['modelSlugPlural'];
         $this->searches['module_label'] = $this->searches['module'];
-        $this->searches['module_label_plural'] = Str::of($this->searches['module'])->plural()->toString();
+        if (ctype_upper($this->searches['module'])) {
+            $this->searches['module_label_plural'] = Str::of($this->searches['module'])->finish('s')->toString();
+        } else {
+            $this->searches['module_label_plural'] = Str::of($this->searches['module'])->plural()->toString();
+        }
 
         if (empty($this->searches['module_route']) && ! empty($this->searches['route'])) {
             $this->searches['module_route'] = Str::of($this->searches['route'])->beforeLast('.')->toString();
