@@ -15,11 +15,12 @@
     "withFactories": false,
     "withMigrations": false,
     "withModels": false,
+    "withOpenAPI": true,
     "withPolicies": true,
     "withRequests": true,
     "withRoutes": true,
-    "withOpenAPI": true,
     "withTests": true,
+    "withTranslations": true,
     "playground": true,
     "revision": true,
     "docs_name": "Playground: Directory API at Read the Docs: Playground Documentation",
@@ -29,13 +30,13 @@
     "model_package_name": "Playground: Directory",
     "package_description": "Playground: Provides an API, without a UI for interacting with Playground Directory, a Directory System for Laravel applications.",
     "package_homepage": "https://github.com/gammamatrix/playground-directory-api",
-    "package_keywords": [
-        "directory",
-        "gammamatrix",
-        "laravel",
-        "playground"
-    ],
     "package_license": "MIT",
+    "packagist": "gammamatrix/playground-directory-api",
+    "postman_collection": "",
+    "postman_url": "",
+    "service_provider": "",
+    "type": "playground-api",
+    "version": "74.0.0",
     "package_authors": [
         {
             "name": "Jeremy Postlethwaite",
@@ -43,6 +44,18 @@
             "role": "Developer"
         }
     ],
+    "package_autoload_psr4": [],
+    "package_autoload_dev_psr4": [],
+    "package_keywords": [
+        "directory",
+        "gammamatrix",
+        "laravel",
+        "playground"
+    ],
+    "package_laravel_providers": [
+        "Playground/Directory/Api/ServiceProvider"
+    ],
+    "package_providers": [],
     "package_require": {
         "php": "^8.4",
         "gammamatrix/playground": "*",
@@ -57,23 +70,12 @@
         "illuminate/testing": "^12.0"
     },
     "package_suggest": [],
-    "package_autoload_psr4": [],
-    "package_autoload_dev_psr4": [],
-    "package_providers": [],
-    "package_laravel_providers": [
-        "Playground/Directory/Api/ServiceProvider"
-    ],
-    "packagist": "gammamatrix/playground-directory-api",
-    "postman_collection": "",
-    "postman_url": "",
     "controllers": [],
     "models": [],
     "policies": [],
     "requests": [],
     "routes": [],
     "transformers": [],
-    "uses": [],
-    "service_provider": "",
-    "type": "playground-api",
-    "version": "74.0.0"
+    "translations": [],
+    "uses": []
 }
