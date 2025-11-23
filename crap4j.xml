@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2025-10-05 17:47:36</timestamp>
+  <timestamp>2025-11-23 18:15:05</timestamp>
   <stats>
     <name>Method Crap Stats</name>
     <methodCount>272</methodCount>
     <crapMethodCount>18</crapMethodCount>
-    <crapLoad>260</crapLoad>
-    <totalCrap>6105.19</totalCrap>
+    <crapLoad>262</crapLoad>
+    <totalCrap>6147.19</totalCrap>
     <crapMethodPercent>6.62</crapMethodPercent>
   </stats>
   <methods>
@@ -2525,10 +2525,10 @@
       <methodName>readJsonFileAsArray</methodName>
       <methodSignature>readJsonFileAsArray(string $file, bool $required, string $name): array</methodSignature>
       <fullMethod>readJsonFileAsArray(string $file, bool $required, string $name): array</fullMethod>
-      <crap>90</crap>
-      <complexity>9</complexity>
+      <crap>132</crap>
+      <complexity>11</complexity>
       <coverage>0</coverage>
-      <crapLoad>9</crapLoad>
+      <crapLoad>11</crapLoad>
     </method>
     <method>
       <package>Playground\Make\Console\Commands\Concerns</package>

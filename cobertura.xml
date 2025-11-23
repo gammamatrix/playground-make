@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.51602415234556" branch-rate="0" lines-covered="1111" lines-valid="2153" branches-covered="0" branches-valid="0" complexity="1098" version="0.4" timestamp="1759686456">
+<coverage line-rate="0.51530612244898" branch-rate="0" lines-covered="1111" lines-valid="2156" branches-covered="0" branches-valid="0" complexity="1100" version="0.4" timestamp="1763921705">
   <sources>
     <source>/app/src</source>
   </sources>
@@ -4515,11 +4515,11 @@
         </class>
       </classes>
     </package>
-    <package name="Console/Commands/Concerns/Files.php" line-rate="0" branch-rate="0" complexity="13">
+    <package name="Console/Commands/Concerns/Files.php" line-rate="0" branch-rate="0" complexity="15">
       <classes>
-        <class name="Playground\Make\Console\Commands\Concerns\Files" filename="Console/Commands/Concerns/Files.php" line-rate="0" branch-rate="0" complexity="13">
+        <class name="Playground\Make\Console\Commands\Concerns\Files" filename="Console/Commands/Concerns/Files.php" line-rate="0" branch-rate="0" complexity="15">
           <methods>
-            <method name="readJsonFileAsArray" signature="string $file, bool $required, string $name" line-rate="0" branch-rate="0" complexity="9">
+            <method name="readJsonFileAsArray" signature="string $file, bool $required, string $name" line-rate="0" branch-rate="0" complexity="11">
               <lines>
                 <line number="31" hits="0"/>
                 <line number="32" hits="0"/>
@@ -4535,36 +4535,43 @@
                 <line number="51" hits="0"/>
                 <line number="52" hits="0"/>
                 <line number="53" hits="0"/>
-                <line number="55" hits="0"/>
-                <line number="56" hits="0"/>
-                <line number="57" hits="0"/>
-                <line number="58" hits="0"/>
-                <line number="59" hits="0"/>
-                <line number="60" hits="0"/>
-                <line number="61" hits="0"/>
-                <line number="62" hits="0"/>
-                <line number="63" hits="0"/>
-                <line number="65" hits="0"/>
+                <line number="54" hits="0"/>
+                <line number="66" hits="0"/>
+                <line number="67" hits="0"/>
+                <line number="68" hits="0"/>
                 <line number="69" hits="0"/>
                 <line number="70" hits="0"/>
+                <line number="71" hits="0"/>
                 <line number="72" hits="0"/>
+                <line number="73" hits="0"/>
                 <line number="74" hits="0"/>
-                <line number="110" hits="0"/>
+                <line number="75" hits="0"/>
+                <line number="76" hits="0"/>
+                <line number="77" hits="0"/>
+                <line number="78" hits="0"/>
+                <line number="79" hits="0"/>
+                <line number="80" hits="0"/>
+                <line number="82" hits="0"/>
+                <line number="86" hits="0"/>
+                <line number="87" hits="0"/>
+                <line number="89" hits="0"/>
+                <line number="91" hits="0"/>
+                <line number="127" hits="0"/>
               </lines>
             </method>
             <method name="getDestinationPath" signature="" line-rate="0" branch-rate="0" complexity="2">
               <lines>
-                <line number="115" hits="0"/>
-                <line number="117" hits="0"/>
-                <line number="118" hits="0"/>
-                <line number="121" hits="0"/>
+                <line number="132" hits="0"/>
+                <line number="134" hits="0"/>
+                <line number="135" hits="0"/>
+                <line number="138" hits="0"/>
               </lines>
             </method>
             <method name="folder" signature="" line-rate="0" branch-rate="0" complexity="2">
               <lines>
-                <line number="126" hits="0"/>
-                <line number="127" hits="0"/>
-                <line number="130" hits="0"/>
+                <line number="143" hits="0"/>
+                <line number="144" hits="0"/>
+                <line number="147" hits="0"/>
               </lines>
             </method>
           </methods>
@@ -4583,28 +4590,35 @@
             <line number="51" hits="0"/>
             <line number="52" hits="0"/>
             <line number="53" hits="0"/>
-            <line number="55" hits="0"/>
-            <line number="56" hits="0"/>
-            <line number="57" hits="0"/>
-            <line number="58" hits="0"/>
-            <line number="59" hits="0"/>
-            <line number="60" hits="0"/>
-            <line number="61" hits="0"/>
-            <line number="62" hits="0"/>
-            <line number="63" hits="0"/>
-            <line number="65" hits="0"/>
+            <line number="54" hits="0"/>
+            <line number="66" hits="0"/>
+            <line number="67" hits="0"/>
+            <line number="68" hits="0"/>
             <line number="69" hits="0"/>
             <line number="70" hits="0"/>
+            <line number="71" hits="0"/>
             <line number="72" hits="0"/>
+            <line number="73" hits="0"/>
             <line number="74" hits="0"/>
-            <line number="110" hits="0"/>
-            <line number="115" hits="0"/>
-            <line number="117" hits="0"/>
-            <line number="118" hits="0"/>
-            <line number="121" hits="0"/>
-            <line number="126" hits="0"/>
+            <line number="75" hits="0"/>
+            <line number="76" hits="0"/>
+            <line number="77" hits="0"/>
+            <line number="78" hits="0"/>
+            <line number="79" hits="0"/>
+            <line number="80" hits="0"/>
+            <line number="82" hits="0"/>
+            <line number="86" hits="0"/>
+            <line number="87" hits="0"/>
+            <line number="89" hits="0"/>
+            <line number="91" hits="0"/>
             <line number="127" hits="0"/>
-            <line number="130" hits="0"/>
+            <line number="132" hits="0"/>
+            <line number="134" hits="0"/>
+            <line number="135" hits="0"/>
+            <line number="138" hits="0"/>
+            <line number="143" hits="0"/>
+            <line number="144" hits="0"/>
+            <line number="147" hits="0"/>
           </lines>
         </class>
       </classes>
@@ -5170,10 +5184,6 @@
               <lines>
                 <line number="746" hits="0"/>
                 <line number="747" hits="0"/>
-                <line number="748" hits="0"/>
-                <line number="749" hits="0"/>
-                <line number="750" hits="0"/>
-                <line number="751" hits="0"/>
                 <line number="753" hits="0"/>
                 <line number="754" hits="0"/>
                 <line number="755" hits="0"/>
@@ -5498,10 +5508,6 @@
             <line number="736" hits="0"/>
             <line number="746" hits="0"/>
             <line number="747" hits="0"/>
-            <line number="748" hits="0"/>
-            <line number="749" hits="0"/>
-            <line number="750" hits="0"/>
-            <line number="751" hits="0"/>
             <line number="753" hits="0"/>
             <line number="754" hits="0"/>
             <line number="755" hits="0"/>
