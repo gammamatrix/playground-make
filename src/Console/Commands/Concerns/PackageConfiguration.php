@@ -745,10 +745,10 @@ trait PackageConfiguration
     {
         $configuration = null;
         $filename = $this->getConfigurationFilename();
-        dump([
-            '__METHOD__' => __METHOD__,
-            '$filename' => $filename,
-        ]);
+        // dump([
+        //    '__METHOD__' => __METHOD__,
+        //    '$filename' => $filename,
+        // ]);
 
         $path = sprintf(
             '%1$s/%2$s',
@@ -777,7 +777,7 @@ trait PackageConfiguration
 
         $path = sprintf(
             '%1$s/%2$s',
-            $this->getResourcePackageFolder(),
+            $path_resources_packages,
             $filename
         );
 
@@ -800,7 +800,7 @@ trait PackageConfiguration
         if ($payload) {
             $this->files->put(
                 $fullpath,
-                $payload
+                $payload.PHP_EOL
             );
 
             $this->components->info(sprintf(

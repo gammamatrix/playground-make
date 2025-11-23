@@ -51,8 +51,25 @@ trait Files
             $pathInApp = base_path($file);
             $pathInPackage = sprintf('%1$s/%2$s', $this->getPackageDirectoryFromCommand(), $file);
             $pathInMakePackage = sprintf('%1$s/%2$s', dirname(dirname(dirname(dirname(__DIR__)))), $file);
+            $pathInStub = sprintf('%1$s%2$s/%3$s', $this->laravel->storagePath(), $this->getPackageFolder(), $file);
+            // dump([
+            //    '__METHOD__' => __METHOD__,
+            //    '$file' => $file,
+            //    '$pathInApp' => $pathInApp,
+            //    '$pathInPackage' => $pathInPackage,
+            //    '$pathInMakePackage' => $pathInMakePackage,
+            //    '$pathInStub' => $pathInStub,
+            //    '$this->getPackageFolder()' => $this->getPackageFolder(),
+            //    '$this->getResourcePackageFolder()' => $this->getResourcePackageFolder(),
+            // ]);
 
-            if ($this->files->exists($pathInApp)) {
+            if ($this->files->exists($pathInStub)) {
+                $this->components->info(sprintf('Loading %s [%s] from the stub [%s]', $name, $file, $pathInStub));
+                $payload = $this->files->json($pathInStub);
+            } elseif ($this->files->exists($pathInApp)) {
+                $this->components->info(sprintf('Loading %s [%s] from the app [%s]', $name, $file, $pathInApp));
+                $payload = $this->files->json($pathInApp);
+            } elseif ($this->files->exists($pathInApp)) {
                 $this->components->info(sprintf('Loading %s [%s] from the app [%s]', $name, $file, $pathInApp));
                 $payload = $this->files->json($pathInApp);
             } elseif ($this->files->exists($pathInPackage)) {

@@ -81,13 +81,12 @@ class PropertiesTest extends TestCase
             'package' => 'some-package',
             'type' => 'request',
             'uses' => [
-                'ImportantClass' => 'Acme\\ImportantClass',
                 'Acme/AnotherImportantClass',
+                'ImportantClass' => 'Acme\\ImportantClass',
             ],
         ];
 
         $instance = new PrimaryConfiguration($options, true);
-        // dump($instance);
 
         $this->assertTrue($instance->skeleton());
 
@@ -134,8 +133,8 @@ class PropertiesTest extends TestCase
             'playground' => true,
             'type' => 'request',
             'uses' => [
+                0 => 'Acme/AnotherImportantClass',
                 'ImportantClass' => 'Acme\\ImportantClass',
-                'Acme/AnotherImportantClass',
             ],
         ];
 
