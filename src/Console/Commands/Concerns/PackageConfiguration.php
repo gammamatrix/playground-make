@@ -352,6 +352,7 @@ trait PackageConfiguration
         $pathInApp = '';
         $pathInMakePackage = '';
         $pathInPackage = '';
+        // $pathInStubPackage = '';
         $payload = null;
         $isAbsolute = Str::of($file)->startsWith('/');
 
@@ -367,6 +368,7 @@ trait PackageConfiguration
             $pathInApp = base_path($file);
             $pathInPackage = sprintf('%1$s/%2$s', $this->getPackageDirectoryFromCommand(), $file);
             $pathInMakePackage = sprintf('%1$s/%2$s', dirname(dirname(dirname(dirname(__DIR__)))), $file);
+            // $pathInStubPackage = storage_path(sprintf('app/stub/%1$s/%2$s', 'playground-cms', $file));
         }
 
         // dump([
@@ -407,7 +409,9 @@ trait PackageConfiguration
         //     '$this->c' => $this->c,
         //     '$file' => $file,
         //     '$pathInApp' => $pathInApp,
+        //     '$pathInMakePackage' => $pathInMakePackage,
         //     '$pathInPackage' => $pathInPackage,
+        //     '$pathInStubPackage' => $pathInStubPackage,
         //     '$payload' => $payload,
         // ]);
         $this->loadOptionsIntoConfiguration($payload);
