@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Playground\Make\Console\Commands;
 
 use Illuminate\Console\GeneratorCommand as BaseGeneratorCommand;
+use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 use Playground\Make\Configuration\Contracts\PrimaryConfiguration as PrimaryConfigurationContract;
@@ -118,7 +119,7 @@ abstract class Command extends BaseGeneratorCommand
     /**
      * Build the class with the given name.
      *
-     * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
+     * @throws FileNotFoundException
      */
     protected function buildClass($name): string
     {

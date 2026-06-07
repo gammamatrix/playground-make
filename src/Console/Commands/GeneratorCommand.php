@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace Playground\Make\Console\Commands;
 
+use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use Illuminate\Support\Str;
 
 abstract class GeneratorCommand extends Command
@@ -19,7 +20,7 @@ abstract class GeneratorCommand extends Command
      *
      * @link https://tldp.org/LDP/abs/html/exitcodes.html TRUE (1) is an error. FALSE and NULL (0) is a success
      *
-     * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
+     * @throws FileNotFoundException
      */
     public function handle()
     {
