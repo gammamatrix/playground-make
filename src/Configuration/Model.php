@@ -163,6 +163,8 @@ class Model extends PrimaryConfiguration
 
         $this->properties['uses'] = $this->uses();
 
+        sort($this->properties['uses']);
+
         return $this;
     }
 

@@ -42,12 +42,12 @@
     "package_require": {
         "php": "^8.4",
         "gammamatrix/playground": "*",
-        "illuminate/database": "^12.0",
-        "illuminate/support": "^12.0"
+        "illuminate/database": "^13.0",
+        "illuminate/support": "^13.0"
     },
     "package_require_dev": {
         "gammamatrix/playground-test": "*",
-        "illuminate/testing": "^12.0"
+        "illuminate/testing": "^13.0"
     },
     "package_suggest": {
         "gammamatrix/playground-cms-api": "Provides an API, without a UI, to interact with the models provided in this package.",
@@ -74,5 +74,5 @@
     "uses": [],
     "service_provider": "",
     "type": "playground-model",
-    "version": "74.0.0"
+    "version": "75.0.0"
 }

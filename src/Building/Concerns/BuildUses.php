@@ -10,6 +10,8 @@ namespace Playground\Make\Building\Concerns;
 
 /**
  * \Playground\Make\Building\Concerns\BuildUses
+ *
+ * @mixin \Playground\Make\Console\Commands\GeneratorCommand
  */
 trait BuildUses
 {

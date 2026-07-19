@@ -36,7 +36,7 @@
     "postman_url": "",
     "service_provider": "",
     "type": "playground-api",
-    "version": "74.0.0",
+    "version": "75.0.0",
     "package_authors": [
         {
             "name": "Jeremy Postlethwaite",
@@ -62,12 +62,12 @@
         "gammamatrix/playground-auth": "*",
         "gammamatrix/playground-http": "*",
         "gammamatrix/playground-directory": "*",
-        "illuminate/support": "^12.0"
+        "illuminate/support": "^13.0"
     },
     "package_require_dev": {
         "gammamatrix/playground-test": "*",
         "laravel/sanctum": "^4.0",
-        "illuminate/testing": "^12.0"
+        "illuminate/testing": "^13.0"
     },
     "package_suggest": [],
     "controllers": [],
