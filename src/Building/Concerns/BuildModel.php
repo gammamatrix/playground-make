@@ -73,7 +73,7 @@ trait BuildModel
         $this->searches['modelSlugPlural'] = Str::of($dummyModel)->camel()->plural()->toString();
         $this->searches['modelVariablePlural'] = Str::of($dummyModel)->camel()->plural()->toString();
 
-        $this->searches['modelLabel'] = Str::of($dummyModel)->title()->toString();
+        $this->searches['modelLabel'] = Str::of($dummyModel)->headline()->toString();
 
         $this->searches['DummyUser'] = $dummyUser;
         $this->searches['user'] = $dummyUser;

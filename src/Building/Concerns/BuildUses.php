@@ -8,10 +8,12 @@ declare(strict_types=1);
 
 namespace Playground\Make\Building\Concerns;
 
+use Playground\Make\Console\Commands\GeneratorCommand;
+
 /**
  * \Playground\Make\Building\Concerns\BuildUses
  *
- * @mixin \Playground\Make\Console\Commands\GeneratorCommand
+ * @mixin GeneratorCommand
  */
 trait BuildUses
 {
