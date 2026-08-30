@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2026-08-22 17:34:46</timestamp>
+  <timestamp>2026-08-30 16:46:09</timestamp>
   <stats>
     <name>Method Crap Stats</name>
-    <methodCount>272</methodCount>
-    <crapMethodCount>18</crapMethodCount>
-    <crapLoad>262</crapLoad>
-    <totalCrap>6147.19</totalCrap>
-    <crapMethodPercent>6.62</crapMethodPercent>
+    <methodCount>283</methodCount>
+    <crapMethodCount>19</crapMethodCount>
+    <crapLoad>288</crapLoad>
+    <totalCrap>6875.93</totalCrap>
+    <crapMethodPercent>6.71</crapMethodPercent>
   </stats>
   <methods>
     <method>
@@ -1018,9 +1018,9 @@
       <methodName>addRelationships</methodName>
       <methodSignature>addRelationships(array $options): self</methodSignature>
       <fullMethod>addRelationships(array $options): self</fullMethod>
-      <crap>17</crap>
-      <complexity>17</complexity>
-      <coverage>100</coverage>
+      <crap>35.74</crap>
+      <complexity>25</complexity>
+      <coverage>74.19</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -1048,6 +1048,17 @@
     <method>
       <package>Playground\Make\Configuration\Model\Concerns</package>
       <className>Playground\Make\Configuration\Model\Concerns\Relationships</className>
+      <methodName>addHasManyThrough</methodName>
+      <methodSignature>addHasManyThrough(string $accessor, mixed $meta): self</methodSignature>
+      <fullMethod>addHasManyThrough(string $accessor, mixed $meta): self</fullMethod>
+      <crap>42</crap>
+      <complexity>6</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model\Concerns</package>
+      <className>Playground\Make\Configuration\Model\Concerns\Relationships</className>
       <methodName>HasOne</methodName>
       <methodSignature>HasOne(): array</methodSignature>
       <fullMethod>HasOne(): array</fullMethod>
@@ -1065,6 +1076,17 @@
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model\Concerns</package>
+      <className>Playground\Make\Configuration\Model\Concerns\Relationships</className>
+      <methodName>HasManyThrough</methodName>
+      <methodSignature>HasManyThrough(): array</methodSignature>
+      <fullMethod>HasManyThrough(): array</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -2176,6 +2198,105 @@
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\HasManyThrough</className>
+      <methodName>setOptions</methodName>
+      <methodSignature>setOptions(array $options): self</methodSignature>
+      <fullMethod>setOptions(array $options): self</fullMethod>
+      <crap>650</crap>
+      <complexity>25</complexity>
+      <coverage>0</coverage>
+      <crapLoad>26</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\HasManyThrough</className>
+      <methodName>comment</methodName>
+      <methodSignature>comment(): string</methodSignature>
+      <fullMethod>comment(): string</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\HasManyThrough</className>
+      <methodName>accessor</methodName>
+      <methodSignature>accessor(): string</methodSignature>
+      <fullMethod>accessor(): string</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\HasManyThrough</className>
+      <methodName>related</methodName>
+      <methodSignature>related(): string</methodSignature>
+      <fullMethod>related(): string</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\HasManyThrough</className>
+      <methodName>firstKey</methodName>
+      <methodSignature>firstKey(): string</methodSignature>
+      <fullMethod>firstKey(): string</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\HasManyThrough</className>
+      <methodName>secondKey</methodName>
+      <methodSignature>secondKey(): string</methodSignature>
+      <fullMethod>secondKey(): string</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\HasManyThrough</className>
+      <methodName>localKey</methodName>
+      <methodSignature>localKey(): string</methodSignature>
+      <fullMethod>localKey(): string</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\HasManyThrough</className>
+      <methodName>secondLocalKey</methodName>
+      <methodSignature>secondLocalKey(): string</methodSignature>
+      <fullMethod>secondLocalKey(): string</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Model</package>
+      <className>Playground\Make\Configuration\Model\HasManyThrough</className>
+      <methodName>through</methodName>
+      <methodSignature>through(): string</methodSignature>
+      <fullMethod>through(): string</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
