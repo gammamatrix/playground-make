@@ -481,7 +481,7 @@ trait PackageConfiguration
             $this->model->apply();
         }
 
-        //dump([
+        // dump([
         //    '__METHOD__' => __METHOD__,
         //    'test' => ! empty($model) && ! empty($models[$model]),
         //    '$models[$model]' => $models[$model] ?? '',
@@ -494,7 +494,7 @@ trait PackageConfiguration
         //    // '$this->c->table()' => $this->c->table(),
         //    '$this->c->model()' => $this->c->model(),
         //    '$this->c->models()' => $this->c->models(),
-        //]);
+        // ]);
 
     }
 

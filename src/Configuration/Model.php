@@ -65,6 +65,7 @@ class Model extends PrimaryConfiguration
         'implements' => [],
         'HasOne' => [],
         'HasMany' => [],
+        'HasManyThrough' => [],
         'scopes' => [],
         'attributes' => [],
         'casts' => [],
@@ -125,6 +126,15 @@ class Model extends PrimaryConfiguration
             foreach ($this->HasMany() as $method => $HasMany) {
                 if (is_array($this->properties['HasMany'])) {
                     $this->properties['HasMany'][$method] = $HasMany->toArray();
+                }
+            }
+        }
+
+        if ($this->HasManyThrough()) {
+            $this->properties['HasManyThrough'] = [];
+            foreach ($this->HasManyThrough() as $method => $HasManyThrough) {
+                if (is_array($this->properties['HasManyThrough'])) {
+                    $this->properties['HasManyThrough'][$method] = $HasManyThrough->toArray();
                 }
             }
         }
@@ -222,6 +232,8 @@ class Model extends PrimaryConfiguration
             $this->HasOne = [];
         } elseif ($option === 'HasMany') {
             $this->HasMany = [];
+        } elseif ($option === 'HasManyThrough') {
+            $this->HasManyThrough = [];
         } elseif ($option === 'casts') {
             $this->casts = [];
         } elseif ($option === 'filters') {
@@ -244,10 +256,6 @@ class Model extends PrimaryConfiguration
      */
     public function setOptions(array $options = []): self
     {
-        // dump([
-        //     '__METHOD__' => __METHOD__,
-        //     '$options' => $options,
-        // ]);
         parent::setOptions($options);
 
         if (array_key_exists('playground', $options)) {
@@ -326,7 +334,13 @@ class Model extends PrimaryConfiguration
         // $this->addExtends($options);
         $this->addComponents($options);
         $this->addImplements($options);
-        $this->addRelationships($options);
+
+        if (array_key_exists('HasOne', $options)
+       || array_key_exists('HasMany', $options)
+            || array_key_exists('HasManyThrough', $options)
+        ) {
+            $this->addRelationships($options);
+        }
         $this->addModelProperties($options);
         $this->addSorting($options);
         $this->addScopes($options);
