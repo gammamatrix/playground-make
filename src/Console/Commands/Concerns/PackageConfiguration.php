@@ -481,16 +481,20 @@ trait PackageConfiguration
             $this->model->apply();
         }
 
-        // dd([
-        //     '__METHOD__' => __METHOD__,
-        //     'test' => !empty($model) && !empty($models[$model]),
-        //     '$models[$model]' => $models[$model] ?? '',
-        //     '$model' => $model,
-        //     '$models' => $models,
-        //     '$this->options()' => $this->options(),
-        //     '$this->c->class()' => $this->c->class(),
-        //     '$this->c->table()' => $this->c->table(),
-        // ]);
+        //dump([
+        //    '__METHOD__' => __METHOD__,
+        //    'test' => ! empty($model) && ! empty($models[$model]),
+        //    '$models[$model]' => $models[$model] ?? '',
+        //    '$model' => $model,
+        //    '$models' => $models,
+        //    '$this->options()' => $this->options(),
+        //    '$this->c' => $this->c,
+        //    '$this->model' => $this->model,
+        //    '$this->c->class()' => $this->c->class(),
+        //    // '$this->c->table()' => $this->c->table(),
+        //    '$this->c->model()' => $this->c->model(),
+        //    '$this->c->models()' => $this->c->models(),
+        //]);
 
     }
 

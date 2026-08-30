@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Playground\Make\Configuration\Model\Concerns;
 
 use Playground\Make\Configuration\Model\HasMany;
+use Playground\Make\Configuration\Model\HasManyThrough;
 use Playground\Make\Configuration\Model\HasOne;
 
 /**
@@ -25,6 +26,11 @@ trait Relationships
      * @var array<string, HasMany>
      */
     protected array $HasMany = [];
+
+    /**
+     * @var array<string, HasManyThrough>
+     */
+    protected array $HasManyThrough = [];
 
     /**
      * @param  array<string, mixed>  $options
@@ -59,6 +65,22 @@ trait Relationships
                 }
                 if (is_string($accessor)) {
                     $this->addHasMany($accessor, $meta);
+                }
+            }
+        }
+
+        if (! empty($options['HasManyThrough'])
+            && is_array($options['HasManyThrough'])
+        ) {
+            foreach ($options['HasManyThrough'] as $accessor => $meta) {
+                if (empty($accessor) || ! is_string($accessor)) {
+                    throw new \RuntimeException(__('playground-make::model.HasMany.invalid', [
+                        'name' => $this->name() ?: 'model',
+                        'accessor' => is_string($accessor) ? $accessor : gettype($accessor),
+                    ]));
+                }
+                if (is_string($accessor)) {
+                    $this->addHasManyThrough($accessor, $meta);
                 }
             }
         }
@@ -118,6 +140,32 @@ trait Relationships
         return $this;
     }
 
+    public function addHasManyThrough(
+        string $accessor,
+        mixed $meta
+    ): self {
+
+        if (empty($meta) || ! is_array($meta)) {
+            $meta = [];
+        }
+
+        if ($accessor) {
+            if (empty($meta['accessor'])) {
+                $meta['accessor'] = $accessor;
+            }
+
+            $this->HasManyThrough[$accessor] = new HasManyThrough;
+
+            if ($this->skeleton()) {
+                $this->HasManyThrough[$accessor]->withSkeleton();
+            }
+
+            $this->HasManyThrough[$accessor]->setParent($this)->setOptions($meta)->apply();
+        }
+
+        return $this;
+    }
+
     /**
      * @return array<string, HasOne>
      */
@@ -132,5 +180,13 @@ trait Relationships
     public function HasMany(): array
     {
         return $this->HasMany;
+    }
+
+    /**
+     * @return array<string, HasManyThrough>
+     */
+    public function HasManyThrough(): array
+    {
+        return $this->HasManyThrough;
     }
 }
