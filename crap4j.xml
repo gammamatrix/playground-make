@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2026-08-30 16:46:09</timestamp>
+  <timestamp>2026-09-16 21:02:02</timestamp>
   <stats>
     <name>Method Crap Stats</name>
-    <methodCount>283</methodCount>
-    <crapMethodCount>19</crapMethodCount>
-    <crapLoad>288</crapLoad>
-    <totalCrap>6875.93</totalCrap>
-    <crapMethodPercent>6.71</crapMethodPercent>
+    <methodCount>303</methodCount>
+    <crapMethodCount>20</crapMethodCount>
+    <crapLoad>296</crapLoad>
+    <totalCrap>6863.27</totalCrap>
+    <crapMethodPercent>6.6</crapMethodPercent>
   </stats>
   <methods>
     <method>
@@ -28,10 +28,10 @@
       <methodName>buildClass_model</methodName>
       <methodSignature>buildClass_model(string $name): void</methodSignature>
       <fullMethod>buildClass_model(string $name): void</fullMethod>
-      <crap>600</crap>
-      <complexity>24</complexity>
+      <crap>506</crap>
+      <complexity>22</complexity>
       <coverage>0</coverage>
-      <crapLoad>24</crapLoad>
+      <crapLoad>22</crapLoad>
     </method>
     <method>
       <package>Playground\Make\Building\Concerns</package>
@@ -149,9 +149,9 @@
       <methodName>setOptions</methodName>
       <methodSignature>setOptions(array $options): self</methodSignature>
       <fullMethod>setOptions(array $options): self</fullMethod>
-      <crap>30</crap>
-      <complexity>30</complexity>
-      <coverage>97.92</coverage>
+      <crap>40</crap>
+      <complexity>40</complexity>
+      <coverage>98.28</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -333,6 +333,28 @@
     <method>
       <package>Playground\Make\Configuration\Concerns</package>
       <className>Playground\Make\Configuration\Concerns\PrimaryProperties</className>
+      <methodName>module_slugs</methodName>
+      <methodSignature>module_slugs(): string</methodSignature>
+      <fullMethod>module_slugs(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\PrimaryProperties</className>
+      <methodName>setModuleSlugs</methodName>
+      <methodSignature>setModuleSlugs(string $module_slugs): self</methodSignature>
+      <fullMethod>setModuleSlugs(string $module_slugs): self</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\PrimaryProperties</className>
       <methodName>name</methodName>
       <methodSignature>name(): string</methodSignature>
       <fullMethod>name(): string</fullMethod>
@@ -347,6 +369,28 @@
       <methodName>setName</methodName>
       <methodSignature>setName(string $name): self</methodSignature>
       <fullMethod>setName(string $name): self</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\PrimaryProperties</className>
+      <methodName>names</methodName>
+      <methodSignature>names(): string</methodSignature>
+      <fullMethod>names(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\PrimaryProperties</className>
+      <methodName>setNames</methodName>
+      <methodSignature>setNames(string $names): self</methodSignature>
+      <fullMethod>setNames(string $names): self</fullMethod>
       <crap>2</crap>
       <complexity>1</complexity>
       <coverage>0</coverage>
@@ -622,9 +666,9 @@
       <methodName>apply</methodName>
       <methodSignature>apply(): self</methodSignature>
       <fullMethod>apply(): self</fullMethod>
-      <crap>11</crap>
-      <complexity>11</complexity>
-      <coverage>100</coverage>
+      <crap>14</crap>
+      <complexity>14</complexity>
+      <coverage>95.12</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -633,10 +677,10 @@
       <methodName>resetOption</methodName>
       <methodSignature>resetOption(string $option): self</methodSignature>
       <fullMethod>resetOption(string $option): self</fullMethod>
-      <crap>156</crap>
-      <complexity>12</complexity>
+      <crap>182</crap>
+      <complexity>13</complexity>
       <coverage>0</coverage>
-      <crapLoad>12</crapLoad>
+      <crapLoad>13</crapLoad>
     </method>
     <method>
       <package>Playground\Make\Configuration</package>
@@ -644,10 +688,10 @@
       <methodName>setOptions</methodName>
       <methodSignature>setOptions(array $options): self</methodSignature>
       <fullMethod>setOptions(array $options): self</fullMethod>
-      <crap>36.35</crap>
-      <complexity>28</complexity>
-      <coverage>78</coverage>
-      <crapLoad>0</crapLoad>
+      <crap>57.69</crap>
+      <complexity>39</complexity>
+      <coverage>76.92</coverage>
+      <crapLoad>10</crapLoad>
     </method>
     <method>
       <package>Playground\Make\Configuration</package>
@@ -740,17 +784,6 @@
     <method>
       <package>Playground\Make\Configuration</package>
       <className>Playground\Make\Configuration\Model</className>
-      <methodName>module_slug</methodName>
-      <methodSignature>module_slug(): string</methodSignature>
-      <fullMethod>module_slug(): string</fullMethod>
-      <crap>1</crap>
-      <complexity>1</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Playground\Make\Configuration</package>
-      <className>Playground\Make\Configuration\Model</className>
       <methodName>model_attribute</methodName>
       <methodSignature>model_attribute(): string</methodSignature>
       <fullMethod>model_attribute(): string</fullMethod>
@@ -765,6 +798,94 @@
       <methodName>model_attribute_required</methodName>
       <methodSignature>model_attribute_required(): bool</methodSignature>
       <fullMethod>model_attribute_required(): bool</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration</package>
+      <className>Playground\Make\Configuration\Model</className>
+      <methodName>model_camel</methodName>
+      <methodSignature>model_camel(): string</methodSignature>
+      <fullMethod>model_camel(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration</package>
+      <className>Playground\Make\Configuration\Model</className>
+      <methodName>model_camels</methodName>
+      <methodSignature>model_camels(): string</methodSignature>
+      <fullMethod>model_camels(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration</package>
+      <className>Playground\Make\Configuration\Model</className>
+      <methodName>model_label</methodName>
+      <methodSignature>model_label(): string</methodSignature>
+      <fullMethod>model_label(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration</package>
+      <className>Playground\Make\Configuration\Model</className>
+      <methodName>model_labels</methodName>
+      <methodSignature>model_labels(): string</methodSignature>
+      <fullMethod>model_labels(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration</package>
+      <className>Playground\Make\Configuration\Model</className>
+      <methodName>model_lower</methodName>
+      <methodSignature>model_lower(): string</methodSignature>
+      <fullMethod>model_lower(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration</package>
+      <className>Playground\Make\Configuration\Model</className>
+      <methodName>model_lowers</methodName>
+      <methodSignature>model_lowers(): string</methodSignature>
+      <fullMethod>model_lowers(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration</package>
+      <className>Playground\Make\Configuration\Model</className>
+      <methodName>model_kebab</methodName>
+      <methodSignature>model_kebab(): string</methodSignature>
+      <fullMethod>model_kebab(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration</package>
+      <className>Playground\Make\Configuration\Model</className>
+      <methodName>model_kebabs</methodName>
+      <methodSignature>model_kebabs(): string</methodSignature>
+      <fullMethod>model_kebabs(): string</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
@@ -806,9 +927,108 @@
     <method>
       <package>Playground\Make\Configuration</package>
       <className>Playground\Make\Configuration\Model</className>
+      <methodName>model_slugs</methodName>
+      <methodSignature>model_slugs(): string</methodSignature>
+      <fullMethod>model_slugs(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration</package>
+      <className>Playground\Make\Configuration\Model</className>
       <methodName>model_slug_plural</methodName>
       <methodSignature>model_slug_plural(): string</methodSignature>
       <fullMethod>model_slug_plural(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration</package>
+      <className>Playground\Make\Configuration\Model</className>
+      <methodName>model_snake</methodName>
+      <methodSignature>model_snake(): string</methodSignature>
+      <fullMethod>model_snake(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration</package>
+      <className>Playground\Make\Configuration\Model</className>
+      <methodName>model_snakes</methodName>
+      <methodSignature>model_snakes(): string</methodSignature>
+      <fullMethod>model_snakes(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration</package>
+      <className>Playground\Make\Configuration\Model</className>
+      <methodName>model_studly</methodName>
+      <methodSignature>model_studly(): string</methodSignature>
+      <fullMethod>model_studly(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration</package>
+      <className>Playground\Make\Configuration\Model</className>
+      <methodName>model_studlies</methodName>
+      <methodSignature>model_studlies(): string</methodSignature>
+      <fullMethod>model_studlies(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration</package>
+      <className>Playground\Make\Configuration\Model</className>
+      <methodName>model_variable</methodName>
+      <methodSignature>model_variable(): string</methodSignature>
+      <fullMethod>model_variable(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration</package>
+      <className>Playground\Make\Configuration\Model</className>
+      <methodName>model_variables</methodName>
+      <methodSignature>model_variables(): string</methodSignature>
+      <fullMethod>model_variables(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration</package>
+      <className>Playground\Make\Configuration\Model</className>
+      <methodName>module_slug</methodName>
+      <methodSignature>module_slug(): string</methodSignature>
+      <fullMethod>module_slug(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration</package>
+      <className>Playground\Make\Configuration\Model</className>
+      <methodName>module_slugs</methodName>
+      <methodSignature>module_slugs(): string</methodSignature>
+      <fullMethod>module_slugs(): string</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
@@ -1084,9 +1304,9 @@
       <methodName>HasManyThrough</methodName>
       <methodSignature>HasManyThrough(): array</methodSignature>
       <fullMethod>HasManyThrough(): array</fullMethod>
-      <crap>2</crap>
+      <crap>1</crap>
       <complexity>1</complexity>
-      <coverage>0</coverage>
+      <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
