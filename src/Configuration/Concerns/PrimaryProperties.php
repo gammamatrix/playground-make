@@ -8,6 +8,8 @@ declare(strict_types=1);
 
 namespace Playground\Make\Configuration\Concerns;
 
+use Illuminate\Support\Str;
+
 /**
  * \Playground\Make\Configuration\Concerns\PrimaryProperties
  */
@@ -26,7 +28,9 @@ trait PrimaryProperties
         'model_fqdn' => '',
         'module' => '',
         'module_slug' => '',
+        'module_slugs' => '',
         'name' => '',
+        'names' => '',
         'namespace' => '',
         'organization' => '',
         'package' => '',
@@ -55,7 +59,11 @@ trait PrimaryProperties
 
     protected string $module_slug = '';
 
+    protected string $module_slugs = '';
+
     protected string $name = '';
+
+    protected string $names = '';
 
     protected string $namespace = '';
 
@@ -145,12 +153,30 @@ trait PrimaryProperties
             && is_string($options['module_slug'])
         ) {
             $this->module_slug = $options['module_slug'];
+            if (! empty($this->module_slug) && empty($options['module_slugs']) && empty($this->module_slugs)) {
+                $this->module_slugs = Str::of($this->module_slug)->plural()->finish('s')->toString();
+            }
+        }
+
+        if (! empty($options['module_slugs'])
+            && is_string($options['module_slugs'])
+        ) {
+            $this->module_slugs = $options['module_slugs'];
         }
 
         if (! empty($options['name'])
             && is_string($options['name'])
         ) {
             $this->name = $options['name'];
+            if (! empty($this->name) && empty($options['names']) && empty($this->names)) {
+                $this->names = Str::of($this->name)->plural()->finish('s')->toString();
+            }
+        }
+
+        if (! empty($options['names'])
+            && is_string($options['names'])
+        ) {
+            $this->names = $options['names'];
         }
 
         if (! empty($options['namespace'])
@@ -288,6 +314,18 @@ trait PrimaryProperties
         return $this;
     }
 
+    public function module_slugs(): string
+    {
+        return $this->module_slugs;
+    }
+
+    public function setModuleSlugs(string $module_slugs): self
+    {
+        $this->module_slugs = $module_slugs;
+
+        return $this;
+    }
+
     public function name(): string
     {
         return $this->name;
@@ -296,6 +334,18 @@ trait PrimaryProperties
     public function setName(string $name): self
     {
         $this->name = $name;
+
+        return $this;
+    }
+
+    public function names(): string
+    {
+        return $this->names;
+    }
+
+    public function setNames(string $names): self
+    {
+        $this->names = $names;
 
         return $this;
     }

@@ -28,6 +28,22 @@ class Model extends PrimaryConfiguration
     // protected string $extends = 'Model';
 
     /**
+     * Camel, names, snake, studly, and variable need to end with an "s" for:
+     * - has one and many accessors
+     * - variables
+     * - class names
+     *
+     * plural() will try to properly apply the correct ending.
+     *
+     * model_variable could be snake or camel case, depending on the coding style.
+     *
+     * model is used as a class name
+     *
+     * model_plural and model_singular are labels
+     *
+     * TODO model_attribute and model_attribute_required is too basic for validation
+     *
+     *
      * @var array<string, mixed>
      */
     protected $properties = [
@@ -36,7 +52,9 @@ class Model extends PrimaryConfiguration
         'fqdn' => '',
         'module' => '',
         'module_slug' => '',
+        'module_slugs' => '',
         'name' => '',
+        'names' => '',
         'namespace' => '',
         'organization' => '',
         'package' => '',
@@ -44,10 +62,25 @@ class Model extends PrimaryConfiguration
         'model' => '',
         'model_attribute' => '',
         'model_attribute_required' => false,
-        'model_plural' => '',
-        'model_singular' => '',
+        'model_camel' => '',
+        'model_camels' => '',
+        'model_label' => '',
+        'model_labels' => '',
+        'model_lower' => '',
+        'model_lowers' => '',
+        'model_kebab' => '',
+        'model_kebabs' => '',
+        'model_plural' => '', // @deprecated: model_plural use model_labels instead
+        'model_singular' => '',  // @deprecated: model_plural use model_label instead
         'model_slug' => '',
-        'model_slug_plural' => '',
+        'model_slugs' => '',
+        'model_slug_plural' => '', // @deprecated: model_slug_plural
+        'model_snake' => '',
+        'model_snakes' => '',
+        'model_studly' => '',
+        'model_studlies' => '',
+        'model_variable' => '',
+        'model_variables' => '',
         'recipe' => '',
         'type' => '',
         'table' => '',
@@ -84,17 +117,37 @@ class Model extends PrimaryConfiguration
         $this->properties['fqdn'] = $this->fqdn();
         $this->properties['module'] = $this->module();
         $this->properties['module_slug'] = $this->module_slug();
+        $this->properties['module_slugs'] = $this->module_slugs();
         $this->properties['name'] = $this->name();
+        $this->properties['names'] = $this->names();
         $this->properties['namespace'] = $this->namespace();
         $this->properties['organization'] = $this->organization();
         $this->properties['package'] = $this->package();
         $this->properties['model'] = $this->model();
         $this->properties['model_attribute'] = $this->model_attribute();
         $this->properties['model_attribute_required'] = $this->model_attribute_required();
+        $this->properties['model_camel'] = $this->model_camel();
+        $this->properties['model_camels'] = $this->model_camels();
+        $this->properties['model_label'] = $this->model_label();
+        $this->properties['model_labels'] = $this->model_labels();
+        $this->properties['model_lower'] = $this->model_lower();
+        $this->properties['model_lowers'] = $this->model_lowers();
+        $this->properties['model_kebab'] = $this->model_kebab();
+        $this->properties['model_kebabs'] = $this->model_kebabs();
+        $this->properties['model_slug'] = $this->model_slug();
+        $this->properties['model_slugs'] = $this->model_slugs();
+        $this->properties['model_snake'] = $this->model_snake();
+        $this->properties['model_snakes'] = $this->model_snakes();
+        $this->properties['model_studly'] = $this->model_studly();
+        $this->properties['model_studlies'] = $this->model_studlies();
+        $this->properties['model_variable'] = $this->model_variable();
+        $this->properties['model_variables'] = $this->model_variables();
+
+        // deprecated:
+        $this->properties['model_slug_plural'] = $this->model_slug_plural();
         $this->properties['model_plural'] = $this->model_plural();
         $this->properties['model_singular'] = $this->model_singular();
-        $this->properties['model_slug'] = $this->model_slug();
-        $this->properties['model_slug_plural'] = $this->model_slug_plural();
+
         $this->properties['recipe'] = $this->recipe();
         $this->properties['type'] = $this->type();
         $this->properties['table'] = $this->table();
@@ -184,13 +237,52 @@ class Model extends PrimaryConfiguration
 
     protected bool $model_attribute_required = false;
 
+    protected string $model_camel = '';
+
+    protected string $model_camels = '';
+
+    protected string $model_label = '';
+
+    protected string $model_labels = '';
+
+    protected string $model_lower = '';
+
+    protected string $model_lowers = '';
+
+    protected string $model_kebab = '';
+
+    protected string $model_kebabs = '';
+
+    protected string $model_studly = '';
+
+    protected string $model_studlies = '';
+
+    protected string $model_variable = '';
+
+    protected string $model_variables = '';
+
+    /**
+     * @deprecated use model_labels instead
+     */
     protected string $model_plural = '';
 
+    /**
+     * @deprecatedu se model_label instead
+     */
     protected string $model_singular = '';
 
     protected string $model_slug = '';
 
+    protected string $model_slugs = '';
+
+    /**
+     * @deprecated use $model_slugs instead
+     */
     protected string $model_slug_plural = '';
+
+    protected string $model_snake = '';
+
+    protected string $model_snakes = '';
 
     protected string $recipe = '';
 
@@ -289,6 +381,18 @@ class Model extends PrimaryConfiguration
             $this->model_attribute_required = ! empty($options['model_attribute_required']);
         }
 
+        if (! empty($options['model_camel'])
+            && is_string($options['model_camel'])
+        ) {
+            $this->model_camel = $options['model_camel'];
+        }
+
+        if (! empty($options['model_camels'])
+            && is_string($options['model_camels'])
+        ) {
+            $this->model_camels = $options['model_camels'];
+        }
+
         if (! empty($options['model_plural'])
             && is_string($options['model_plural'])
         ) {
@@ -311,6 +415,18 @@ class Model extends PrimaryConfiguration
             && is_string($options['model_slug_plural'])
         ) {
             $this->model_slug_plural = $options['model_slug_plural'];
+        }
+
+        if (! empty($options['model_snake'])
+            && is_string($options['model_snake'])
+        ) {
+            $this->model_snake = $options['model_snake'];
+        }
+
+        if (! empty($options['model_snakes'])
+            && is_string($options['model_snakes'])
+        ) {
+            $this->model_snakes = $options['model_snakes'];
         }
 
         if (! empty($options['recipe'])
@@ -406,11 +522,6 @@ class Model extends PrimaryConfiguration
         return $this->table;
     }
 
-    public function module_slug(): string
-    {
-        return $this->module_slug;
-    }
-
     public function model_attribute(): string
     {
         return $this->model_attribute;
@@ -421,11 +532,57 @@ class Model extends PrimaryConfiguration
         return $this->model_attribute_required;
     }
 
+    public function model_camel(): string
+    {
+        return $this->model_camel;
+    }
+
+    public function model_camels(): string
+    {
+        return $this->model_camels;
+    }
+
+    public function model_label(): string
+    {
+        return $this->model_label;
+    }
+
+    public function model_labels(): string
+    {
+        return $this->model_labels;
+    }
+
+    public function model_lower(): string
+    {
+        return $this->model_lower;
+    }
+
+    public function model_lowers(): string
+    {
+        return $this->model_lowers;
+    }
+
+    public function model_kebab(): string
+    {
+        return $this->model_kebab;
+    }
+
+    public function model_kebabs(): string
+    {
+        return $this->model_kebabs;
+    }
+
+    /**
+     * @deprecated use model_labels instead
+     */
     public function model_plural(): string
     {
         return $this->model_plural;
     }
 
+    /**
+     * @deprecated use model_label instead
+     */
     public function model_singular(): string
     {
         return $this->model_singular;
@@ -436,9 +593,57 @@ class Model extends PrimaryConfiguration
         return $this->model_slug;
     }
 
+    public function model_slugs(): string
+    {
+        return $this->model_slugs;
+    }
+
+    /**
+     * @deprecated use model_slugs instead
+     */
     public function model_slug_plural(): string
     {
         return $this->model_slug_plural;
+    }
+
+    public function model_snake(): string
+    {
+        return $this->model_snake;
+    }
+
+    public function model_snakes(): string
+    {
+        return $this->model_snakes;
+    }
+
+    public function model_studly(): string
+    {
+        return $this->model_studly;
+    }
+
+    public function model_studlies(): string
+    {
+        return $this->model_studlies;
+    }
+
+    public function model_variable(): string
+    {
+        return $this->model_variable;
+    }
+
+    public function model_variables(): string
+    {
+        return $this->model_variables;
+    }
+
+    public function module_slug(): string
+    {
+        return $this->module_slug;
+    }
+
+    public function module_slugs(): string
+    {
+        return $this->module_slugs;
     }
 
     public function getRecipe(): ?ModelRecipe

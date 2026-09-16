@@ -31,7 +31,9 @@ class PropertiesTest extends TestCase
         'model_fqdn' => '',
         'module' => '',
         'module_slug' => '',
+        'module_slugs' => '',
         'name' => '',
+        'names' => '',
         'namespace' => '',
         'organization' => '',
         'package' => '',
@@ -75,7 +77,9 @@ class PropertiesTest extends TestCase
             'model' => 'Something',
             'module' => 'Some',
             'module_slug' => 'some',
+            // 'module_slugs' => 'somes',
             'name' => 'Some',
+            // 'names' => 'Somes',
             'namespace' => 'Acme',
             'organization' => 'Acme',
             'package' => 'some-package',
@@ -104,7 +108,9 @@ class PropertiesTest extends TestCase
         $this->assertSame($options['model'], $instance->model());
         $this->assertSame($options['module'], $instance->module());
         $this->assertSame($options['module_slug'], $instance->module_slug());
+        $this->assertSame('somes', $instance->module_slugs());
         $this->assertSame($options['name'], $instance->name());
+        $this->assertSame('Somes', $instance->names());
         $this->assertSame($options['namespace'], $instance->namespace());
         $this->assertSame($options['organization'], $instance->organization());
         $this->assertSame($options['package'], $instance->package());
@@ -126,7 +132,9 @@ class PropertiesTest extends TestCase
             'model_fqdn' => '',
             'module' => 'Some',
             'module_slug' => 'some',
+            'module_slugs' => 'somes',
             'name' => 'Some',
+            'names' => 'Somes',
             'namespace' => 'Acme',
             'organization' => 'Acme',
             'package' => 'some-package',
@@ -155,7 +163,9 @@ class PropertiesTest extends TestCase
         $this->assertSame($options['model'], $instance->model());
         $this->assertSame($options['module'], $instance->module());
         $this->assertSame($options['module_slug'], $instance->module_slug());
+        $this->assertSame($options['module_slugs'], $instance->module_slugs());
         $this->assertSame($options['name'], $instance->name());
+        $this->assertSame($options['names'], $instance->names());
         $this->assertSame($options['namespace'], $instance->namespace());
         $this->assertSame($options['organization'], $instance->organization());
         $this->assertSame($options['package'], $instance->package());

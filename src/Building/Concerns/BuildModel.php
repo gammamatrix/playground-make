@@ -73,6 +73,10 @@ trait BuildModel
         $this->searches['modelSlugPlural'] = Str::of($dummyModel)->camel()->plural()->toString();
         $this->searches['modelVariablePlural'] = Str::of($dummyModel)->camel()->plural()->toString();
 
+        // TODO APPLY MODEL
+        //        $this->name_camels = Str::of($name)->plural()->camel()->finish('s')->toString();
+        //        $this->name_snakes = Str::of($name)->plural()->snake()->finish('s')->toString();
+
         $this->searches['modelLabel'] = Str::of($dummyModel)->headline()->toString();
 
         $this->searches['DummyUser'] = $dummyUser;
@@ -85,14 +89,6 @@ trait BuildModel
 
         if (method_exists($this->c, 'privilege')) {
             $this->searches['module_privilege'] = $this->c->privilege();
-        }
-
-        if (array_key_exists('model_route', $this->searches)) {
-            $this->searches['model_route'] = $this->searches['model_route'];
-        }
-
-        if (array_key_exists('route', $this->searches)) {
-            $this->searches['route'] = $this->searches['route'];
         }
 
         $this->searches['model_slug'] = $this->searches['modelVariable'];

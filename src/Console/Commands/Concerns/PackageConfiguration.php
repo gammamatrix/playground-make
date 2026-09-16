@@ -495,7 +495,6 @@ trait PackageConfiguration
         //    '$this->c->model()' => $this->c->model(),
         //    '$this->c->models()' => $this->c->models(),
         // ]);
-
     }
 
     public function resetModelFile(): void
