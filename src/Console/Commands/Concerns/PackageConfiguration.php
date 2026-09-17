@@ -45,6 +45,7 @@ trait PackageConfiguration
         'class' => '',
         'model' => '',
         'name' => '',
+        'names' => '',
         'namespace' => '',
         'organization' => '',
         'package' => '',
@@ -239,6 +240,7 @@ trait PackageConfiguration
         ) {
             $this->c->setName($this->parseClassInput($this->argument('name')));
             $this->searches['name'] = $this->c->name();
+            $this->searches['names'] = Str::of($this->c->name())->plural()->finish('s')->toString();
         }
     }
 
@@ -658,10 +660,16 @@ trait PackageConfiguration
 
         if ($module) {
             $this->c->setModule($module);
+            // Module is a word
             $this->searches['module'] = $this->c->module();
 
             $this->c->setModuleSlug(Str::slug($this->c->module()));
             $this->searches['module_slug'] = $this->c->module_slug();
+            // TLAs should be lowercase
+            $this->c->setModuleSlugs(
+                Str::of($this->c->module())->lower()->plural()->toString()
+            );
+            $this->searches['module_slugs'] = $this->c->module_slugs();
         }
 
         if (! $this->c->config()) {

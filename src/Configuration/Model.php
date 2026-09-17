@@ -393,6 +393,42 @@ class Model extends PrimaryConfiguration
             $this->model_camels = $options['model_camels'];
         }
 
+        if (! empty($options['model_label'])
+            && is_string($options['model_label'])
+        ) {
+            $this->model_label = $options['model_label'];
+        }
+
+        if (! empty($options['model_labels'])
+            && is_string($options['model_labels'])
+        ) {
+            $this->model_labels = $options['model_labels'];
+        }
+
+        if (! empty($options['model_lower'])
+            && is_string($options['model_lower'])
+        ) {
+            $this->model_lower = $options['model_lower'];
+        }
+
+        if (! empty($options['model_lowers'])
+            && is_string($options['model_lowers'])
+        ) {
+            $this->model_lowers = $options['model_lowers'];
+        }
+
+        if (! empty($options['model_kebab'])
+            && is_string($options['model_kebab'])
+        ) {
+            $this->model_kebab = $options['model_kebab'];
+        }
+
+        if (! empty($options['model_kebabs'])
+            && is_string($options['model_kebabs'])
+        ) {
+            $this->model_kebabs = $options['model_kebabs'];
+        }
+
         if (! empty($options['model_plural'])
             && is_string($options['model_plural'])
         ) {
@@ -411,6 +447,12 @@ class Model extends PrimaryConfiguration
             $this->model_slug = $options['model_slug'];
         }
 
+        if (! empty($options['model_slugs'])
+            && is_string($options['model_slugs'])
+        ) {
+            $this->model_slugs = $options['model_slugs'];
+        }
+
         if (! empty($options['model_slug_plural'])
             && is_string($options['model_slug_plural'])
         ) {
@@ -427,6 +469,30 @@ class Model extends PrimaryConfiguration
             && is_string($options['model_snakes'])
         ) {
             $this->model_snakes = $options['model_snakes'];
+        }
+
+        if (! empty($options['model_studly'])
+            && is_string($options['model_studly'])
+        ) {
+            $this->model_studly = $options['model_studly'];
+        }
+
+        if (! empty($options['model_studlies'])
+            && is_string($options['model_studlies'])
+        ) {
+            $this->model_studlies = $options['model_studlies'];
+        }
+
+        if (! empty($options['model_variable'])
+            && is_string($options['model_variable'])
+        ) {
+            $this->model_variable = $options['model_variable'];
+        }
+
+        if (! empty($options['model_variables'])
+            && is_string($options['model_variables'])
+        ) {
+            $this->model_variables = $options['model_variables'];
         }
 
         if (! empty($options['recipe'])
