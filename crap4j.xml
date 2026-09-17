@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2026-09-16 21:02:02</timestamp>
+  <timestamp>2026-09-17 19:10:31</timestamp>
   <stats>
     <name>Method Crap Stats</name>
     <methodCount>303</methodCount>
     <crapMethodCount>20</crapMethodCount>
-    <crapLoad>296</crapLoad>
-    <totalCrap>6863.27</totalCrap>
+    <crapLoad>304</crapLoad>
+    <totalCrap>6936.07</totalCrap>
     <crapMethodPercent>6.6</crapMethodPercent>
   </stats>
   <methods>
@@ -688,10 +688,10 @@
       <methodName>setOptions</methodName>
       <methodSignature>setOptions(array $options): self</methodSignature>
       <fullMethod>setOptions(array $options): self</fullMethod>
-      <crap>57.69</crap>
-      <complexity>39</complexity>
-      <coverage>76.92</coverage>
-      <crapLoad>10</crapLoad>
+      <crap>130.49</crap>
+      <complexity>61</complexity>
+      <coverage>73.47</coverage>
+      <crapLoad>17</crapLoad>
     </method>
     <method>
       <package>Playground\Make\Configuration</package>
