@@ -21,7 +21,7 @@ trait Sorting
     protected array $sortable = [];
 
     /**
-     * @param  array<string, mixed>  $options
+     * @param  array<mixed, mixed>  $options
      */
     public function addSorting(array $options): self
     {

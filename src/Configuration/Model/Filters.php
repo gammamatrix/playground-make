@@ -181,7 +181,7 @@ class Filters extends ModelConfiguration implements Configuration\Contracts\With
     }
 
     /**
-     * @param  array<string, mixed>  $options
+     * @param  array<mixed, mixed>  $options
      */
     public function setOptions(array $options = []): self
     {

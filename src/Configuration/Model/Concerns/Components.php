@@ -28,7 +28,7 @@ trait Components
     protected bool $test = false;
 
     /**
-     * @param  array<string, mixed>  $options
+     * @param  array<mixed, mixed>  $options
      */
     public function addComponents(array $options): self
     {

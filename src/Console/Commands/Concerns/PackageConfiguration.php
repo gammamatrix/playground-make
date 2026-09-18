@@ -429,8 +429,8 @@ trait PackageConfiguration
             return $this->option('model-file');
         }
 
-        $model = method_exists($this->c, 'model') ? $this->c->model() : '';
-        $models = method_exists($this->c, 'models') ? $this->c->models() : [];
+        $model = $this->c->model();
+        $models = $this->c->models();
         // dd([
         //     '__METHOD__' => __METHOD__,
         //     '$this->c' => $this->c,
@@ -466,8 +466,8 @@ trait PackageConfiguration
             return;
         }
 
-        $model = method_exists($this->c, 'model') ? $this->c->model() : '';
-        $models = method_exists($this->c, 'models') ? $this->c->models() : [];
+        $model = $this->c->model();
+        $models = $this->c->models();
 
         if (! empty($model) && ! empty($models[$model])) {
 
@@ -504,10 +504,7 @@ trait PackageConfiguration
         $model_file = null;
 
         $name = $this->c->name();
-        $models = [];
-        if (method_exists($this->c, 'models')) {
-            $models = $this->c->models();
-        }
+        $models = $this->c->models();
 
         if ($name && ! empty($models)) {
             if (! empty($models[$name])
@@ -560,12 +557,12 @@ trait PackageConfiguration
 
             $model = $this->readJsonFileAsArray($model_file, false, 'Model File');
 
-            if (is_array($model) && $this->model) {
+            if ($this->model) {
                 $this->model = new Model(array_replace($this->model->properties(), $model));
-            } elseif (is_array($model)) {
+            } else {
                 $this->model = new Model($model);
             }
-            $this->model?->apply();
+            $this->model->apply();
         }
 
         // dump([
@@ -707,7 +704,7 @@ trait PackageConfiguration
         //     '$this->c->name()' => $this->c->name(),
         //     '$this->getType()' => $this->getType(),
         // ]);
-        return ! is_string($this->c->name()) ? '' : sprintf(
+        return sprintf(
             '%1$s.%2$s.json',
             Str::of($this->getType())->kebab(),
             Str::of($this->c->name())->kebab(),
@@ -754,7 +751,7 @@ trait PackageConfiguration
     protected bool $preloadModelFile = false;
 
     /**
-     * @return ?array<string, mixed>
+     * @return ?array<mixed, mixed>
      */
     protected function preloadConfiguration(): ?array
     {

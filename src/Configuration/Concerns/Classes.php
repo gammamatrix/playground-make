@@ -14,7 +14,7 @@ namespace Playground\Make\Configuration\Concerns;
 trait Classes
 {
     /**
-     * @param  array<string, mixed>  $options
+     * @param  array<mixed, mixed>  $options
      */
     public function addModels(array $options): self
     {
@@ -38,7 +38,7 @@ trait Classes
     }
 
     /**
-     * @param  array<string, mixed>  $options
+     * @param  array<mixed, mixed>  $options
      */
     public function addImplements(array $options): self
     {
@@ -62,7 +62,7 @@ trait Classes
     }
 
     /**
-     * @param  array<string, mixed>  $options
+     * @param  array<mixed, mixed>  $options
      */
     public function addUses(array $options): self
     {
@@ -72,11 +72,13 @@ trait Classes
             && is_array($options['uses'])
         ) {
             foreach ($options['uses'] as $key => $class) {
-                $this->addToUse(
-                    $class,
-                    is_string($key) ? $key : null
-                );
-                $added = true;
+                if (is_string($class)) {
+                    $this->addToUse(
+                        $class,
+                        is_string($key) ? $key : null
+                    );
+                    $added = true;
+                }
             }
         }
 
@@ -161,7 +163,7 @@ trait Classes
         if (empty($value) || ! is_string($value)) {
             throw new \RuntimeException(__('playground-make::configuration.addMappedClassTo.value.required', [
                 'class' => static::class,
-                'key' => is_string($key) ? $key : gettype($key),
+                'key' => $key,
                 'property' => $property,
                 'value' => is_string($value) ? $value : gettype($value),
             ]));
@@ -172,7 +174,7 @@ trait Classes
         ) {
             throw new \RuntimeException(__('playground-make::configuration.addMappedClassTo.property.missing', [
                 'class' => static::class,
-                'key' => is_string($key) ? $key : gettype($key),
+                'key' => $key,
                 'property' => $property,
                 'value' => $value,
             ]));

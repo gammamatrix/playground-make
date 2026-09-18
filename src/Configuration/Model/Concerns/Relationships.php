@@ -33,7 +33,7 @@ trait Relationships
     protected array $HasManyThrough = [];
 
     /**
-     * @param  array<string, mixed>  $options
+     * @param  array<mixed, mixed>  $options
      */
     public function addRelationships(array $options): self
     {
@@ -47,9 +47,7 @@ trait Relationships
                         'accessor' => is_string($accessor) ? $accessor : gettype($accessor),
                     ]));
                 }
-                if (is_string($accessor)) {
-                    $this->addHasOne($accessor, $meta);
-                }
+                $this->addHasOne($accessor, $meta);
             }
         }
 
@@ -63,9 +61,7 @@ trait Relationships
                         'accessor' => is_string($accessor) ? $accessor : gettype($accessor),
                     ]));
                 }
-                if (is_string($accessor)) {
-                    $this->addHasMany($accessor, $meta);
-                }
+                $this->addHasMany($accessor, $meta);
             }
         }
 
@@ -79,9 +75,7 @@ trait Relationships
                         'accessor' => is_string($accessor) ? $accessor : gettype($accessor),
                     ]));
                 }
-                if (is_string($accessor)) {
-                    $this->addHasManyThrough($accessor, $meta);
-                }
+                $this->addHasManyThrough($accessor, $meta);
             }
         }
 

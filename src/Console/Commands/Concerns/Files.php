@@ -24,7 +24,7 @@ trait Files
      * - $pathInMakePackage
      * - absolute path
      *
-     * @return array<string, mixed>
+     * @return array<mixed, mixed>
      */
     protected function readJsonFileAsArray(string $file, bool $required = true, string $name = 'file'): array
     {
@@ -66,9 +66,6 @@ trait Files
             if ($this->files->exists($pathInStub)) {
                 $this->components->info(sprintf('Loading %s [%s] from the stub [%s]', $name, $file, $pathInStub));
                 $payload = $this->files->json($pathInStub);
-            } elseif ($this->files->exists($pathInApp)) {
-                $this->components->info(sprintf('Loading %s [%s] from the app [%s]', $name, $file, $pathInApp));
-                $payload = $this->files->json($pathInApp);
             } elseif ($this->files->exists($pathInApp)) {
                 $this->components->info(sprintf('Loading %s [%s] from the app [%s]', $name, $file, $pathInApp));
                 $payload = $this->files->json($pathInApp);

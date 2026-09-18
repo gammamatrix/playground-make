@@ -37,7 +37,7 @@ class RelationshipsTest extends TestCase
         ];
 
         $this->expectException(\RuntimeException::class);
-        $this->expectExceptionMessage(__('playground-make::model.HasOne.invalid', [
+        $this->expectExceptionMessageIs(__('playground-make::model.HasOne.invalid', [
             'name' => 'SomeModel',
             'accessor' => 'integer',
         ]));
@@ -64,7 +64,7 @@ class RelationshipsTest extends TestCase
         ];
 
         $this->expectException(\RuntimeException::class);
-        $this->expectExceptionMessage(__('playground-make::model.HasMany.invalid', [
+        $this->expectExceptionMessageIs(__('playground-make::model.HasMany.invalid', [
             'name' => 'SomeModel',
             'accessor' => 'integer',
         ]));

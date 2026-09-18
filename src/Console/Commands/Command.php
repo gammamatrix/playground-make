@@ -226,6 +226,20 @@ abstract class Command extends BaseGeneratorCommand
         return $rootNamespace;
     }
 
+    //    /**
+    //     * Get the model for the default guard's user provider.
+    //     *
+    //     * @return string|null
+    //     */
+    //    protected function userProviderModel()
+    //    {
+    //        $config = $this->laravel['config'];
+    //
+    //        $provider = $config->get('auth.guards.'.$config->get('auth.defaults.guard').'.provider');
+    //
+    //        return $config->get("auth.providers.{$provider}.model");
+    //    }
+
     /**
      * Get the destination class path.
      *

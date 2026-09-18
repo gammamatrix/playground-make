@@ -21,7 +21,7 @@ trait Scopes
     protected array $scopes = [];
 
     /**
-     * @param  array<string, mixed>  $options
+     * @param  array<mixed, mixed>  $options
      */
     public function addScopes(array $options): self
     {

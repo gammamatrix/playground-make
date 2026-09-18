@@ -18,7 +18,7 @@ trait Filters
     protected ?Model\Filters $filters = null;
 
     /**
-     * @param  array<string, mixed>  $options
+     * @param  array<mixed, mixed>  $options
      */
     public function addFilters(array $options, bool $apply = false): self
     {
@@ -48,7 +48,7 @@ trait Filters
     }
 
     /**
-     * @param  array<string, mixed>  $options
+     * @param  array<mixed, mixed>  $options
      */
     public function addFilter(array $options = [], bool $apply = true): self
     {

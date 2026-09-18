@@ -18,17 +18,71 @@ trait BuildModel
 {
     protected function buildClass_model(string $name): void
     {
-        $model = $this->model?->model();
+        $model = $this->model?->model() ?? $name;
+
+        if (Str::camel($model) === 'user') {
+            // TODO is this user handling really necessary?
+            $dummyModel = 'model';
+        } else {
+            $dummyModel = $model;
+        }
+
         $fqdn = $this->model?->fqdn();
-        // dump([
-        //     '__METHOD__' => __METHOD__,
-        //     '$name' => $name,
-        //     '$model' => $model,
-        //     '$this->configurationType' => $this->configurationType,
-        //     // '$modelConfiguration' => $modelConfiguration,
-        //     '$this->option(model-file)' => $this->option('model-file'),
-        //     '$this->searches' => $this->searches,
-        // ]);
+        $model_attribute = $this->model?->model_attribute() ?? 'title';
+        $model_camel = $this->model?->model_camel() ?? Str::of($dummyModel)->camel()->toString();
+        $model_camels = $this->model?->model_camels() ?? Str::of($dummyModel)->plural()->camel()->toString();
+        $model_label = $this->model?->model_label() ?? Str::of($dummyModel)->headline()->toString();
+        $model_labels = $this->model?->model_label() ?? Str::of($dummyModel)->headline()->plural()->toString();
+        $model_lower = $this->model?->model_lower() ?? Str::of($dummyModel)->lower()->toString();
+        $model_lowers = $this->model?->model_lowers() ?? Str::of($dummyModel)->lower()->plural()->toString();
+        $model_kebab = $this->model?->model_kebab() ?? Str::of($dummyModel)->kebab()->toString();
+        $model_kebabs = $this->model?->model_kebabs() ?? Str::of($dummyModel)->plural()->kebab()->toString();
+        $model_slug = $this->model?->model_slug() ?? Str::of($dummyModel)->slug()->toString();
+        $model_slugs = $this->model?->model_slugs() ?? Str::of($dummyModel)->slug()->plural()->toString();
+        $model_snake = $this->model?->model_snake() ?? Str::of($dummyModel)->snake()->plural()->toString();
+        $model_snakes = $this->model?->model_snakes() ?? Str::of($dummyModel)->plural()->snake()->toString();
+        $model_studly = $this->model?->model_studly() ?? Str::of($dummyModel)->studly()->toString();
+        $model_studlies = $this->model?->model_studlies() ?? Str::of($dummyModel)->plural()->studly()->toString();
+        $model_variable = $this->model?->model_variable() ?? Str::of($dummyModel)->camel()->toString();
+        $model_variables = $this->model?->model_variables() ?? Str::of($dummyModel)->camel()->plural()->toString();
+
+        // TODO some of these will be empty without a model file.
+        $this->searches['model_camel'] = $model_camel;
+        $this->searches['model_camels'] = $model_camels;
+        $this->searches['model_label'] = $model_label;
+        $this->searches['model_labels'] = $model_labels;
+        $this->searches['model_lower'] = $model_lower;
+        $this->searches['model_lowers'] = $model_lowers;
+        $this->searches['model_kebab'] = $model_kebab;
+        $this->searches['model_kebabs'] = $model_kebabs;
+        $this->searches['model_slug'] = $model_slug;
+        $this->searches['model_slugs'] = $model_slugs;
+        $this->searches['model_snake'] = $model_snake;
+        $this->searches['model_snakes'] = $model_snakes;
+        $this->searches['model_studly'] = $model_studly;
+        $this->searches['model_studlies'] = $model_studlies;
+        $this->searches['model_variable'] = $model_variable;
+        $this->searches['model_variables'] = $model_variables;
+
+        $this->searches['namespacedModel'] = $this->parseClassInput($fqdn);
+        $this->searches['NamespacedDummyModel'] = $this->parseClassInput($fqdn);
+
+        $this->searches['DummyModel'] = $model;
+        $this->searches['model'] = $model;
+        $this->searches['dummyModel'] = $model_camel;
+        $this->searches['modelVariable'] = $model_variable;
+        $this->searches['modelSlugPlural'] = $model_slugs;
+        $this->searches['modelVariablePlural'] = $model_variables;
+
+        dump([
+            '__METHOD__' => __METHOD__,
+            '$name' => $name,
+            '$model' => $model,
+            '$this->configurationType' => $this->configurationType,
+            // '$modelConfiguration' => $modelConfiguration,
+            '$this->option(model-file)' => $this->option('model-file'),
+            '$this->searches' => $this->searches,
+        ]);
 
         if (empty($model)
             && $this->hasOption('model')
@@ -61,31 +115,15 @@ trait BuildModel
         $userProviderModel = $this->userProviderModel();
         $dummyUser = ! is_string($userProviderModel) ? 'DummyUser' : class_basename($userProviderModel);
 
-        $dummyModel = Str::camel($model) === 'user' ? 'model' : $model;
-
-        $this->searches['namespacedModel'] = $this->parseClassInput($fqdn);
-        $this->searches['NamespacedDummyModel'] = $this->parseClassInput($fqdn);
-
-        $this->searches['DummyModel'] = $model;
-        $this->searches['model'] = $model;
-        $this->searches['dummyModel'] = Str::camel($dummyModel);
-        $this->searches['modelVariable'] = Str::camel($dummyModel);
-        $this->searches['modelSlugPlural'] = Str::of($dummyModel)->camel()->plural()->toString();
-        $this->searches['modelVariablePlural'] = Str::of($dummyModel)->camel()->plural()->toString();
-
-        // TODO APPLY MODEL
-        //        $this->name_camels = Str::of($name)->plural()->camel()->finish('s')->toString();
-        //        $this->name_snakes = Str::of($name)->plural()->snake()->finish('s')->toString();
-
-        $this->searches['modelLabel'] = Str::of($dummyModel)->headline()->toString();
+        $this->searches['modelLabel'] = $model_label;
 
         $this->searches['DummyUser'] = $dummyUser;
         $this->searches['user'] = $dummyUser;
         $this->searches['$user'] = '$'.Str::camel($dummyUser);
 
-        $this->searches['model_attribute'] = 'title';
-        $this->searches['model_label'] = $this->searches['modelLabel'];
-        $this->searches['model_label_plural'] = Str::of($this->searches['modelLabel'])->plural()->toString();
+        $this->searches['model_attribute'] = $model_attribute;
+        $this->searches['model_label'] = $model_label;
+        $this->searches['model_label_plural'] = $model_labels;
 
         if (method_exists($this->c, 'privilege')) {
             $this->searches['module_privilege'] = $this->c->privilege();
@@ -118,11 +156,13 @@ trait BuildModel
             }
         }
 
-        // dd([
-        //     '__METHOD__' => __METHOD__,
-        //     '$model' => $model,
-        //     '$this->searches' => $this->searches,
-        // ]);
+        dump([
+            '__METHOD__' => __METHOD__,
+            'exists' => ! empty($this->model),
+            '$model' => $model,
+            '$this->searches' => $this->searches,
+            'static' => static::class,
+        ]);
     }
 
     /**

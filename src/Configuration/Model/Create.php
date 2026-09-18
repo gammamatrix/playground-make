@@ -107,7 +107,7 @@ class Create extends ModelConfiguration implements Configuration\Contracts\WithS
     ];
 
     /**
-     * @param  array<string, mixed>  $options
+     * @param  array<mixed, mixed>  $options
      */
     public function setOptions(array $options = []): self
     {
@@ -516,91 +516,65 @@ class Create extends ModelConfiguration implements Configuration\Contracts\WithS
 
         if ($this->ids()) {
             foreach ($this->ids() as $column => $c) {
-                if (is_array($properties['ids'])) {
-                    $properties['ids'][$column] = $c->toArray();
-                }
+                $properties['ids'][$column] = $c->toArray();
             }
         }
 
         if ($this->unique()) {
             foreach ($this->unique() as $i => $unique) {
-                if (is_array($properties['unique'])) {
-                    $properties['unique'][$i] = $unique->toArray();
-                }
+                $properties['unique'][$i] = $unique->toArray();
             }
         }
 
         if ($this->dates()) {
             foreach ($this->dates() as $column => $c) {
-                if (is_array($properties['dates'])) {
-                    $properties['dates'][$column] = $c->toArray();
-                }
+                $properties['dates'][$column] = $c->toArray();
             }
-            if (! empty($properties['dates']) && is_array($properties['dates'])) {
-                ksort($properties['dates']);
-            }
+            ksort($properties['dates']);
         }
 
         if ($this->flags()) {
             foreach ($this->flags() as $column => $c) {
-                if (is_array($properties['flags'])) {
-                    $properties['flags'][$column] = $c->toArray();
-                }
+                $properties['flags'][$column] = $c->toArray();
             }
-            if (! empty($properties['flags']) && is_array($properties['flags'])) {
-                ksort($properties['flags']);
-            }
+            ksort($properties['flags']);
         }
 
         if ($this->columns()) {
             foreach ($this->columns() as $column => $c) {
-                if (is_array($properties['columns'])) {
-                    $properties['columns'][$column] = $c->toArray();
-                }
+                $properties['columns'][$column] = $c->toArray();
             }
         }
 
         if ($this->permissions()) {
             foreach ($this->permissions() as $column => $c) {
-                if (is_array($properties['permissions'])) {
-                    $properties['permissions'][$column] = $c->toArray();
-                }
+                $properties['permissions'][$column] = $c->toArray();
             }
         }
 
         if ($this->status()) {
             foreach ($this->status() as $column => $c) {
-                if (is_array($properties['status'])) {
-                    $properties['status'][$column] = $c->toArray();
-                }
+                $properties['status'][$column] = $c->toArray();
             }
         }
 
         if ($this->matrix()) {
             foreach ($this->matrix() as $column => $c) {
-                if (is_array($properties['matrix'])) {
-                    $properties['matrix'][$column] = $c->toArray();
-                }
+                $properties['matrix'][$column] = $c->toArray();
             }
         }
 
         if ($this->ui()) {
             foreach ($this->ui() as $column => $c) {
-                if (is_array($properties['ui'])) {
-                    $properties['ui'][$column] = $c->toArray();
-                }
+                $properties['ui'][$column] = $c->toArray();
             }
         }
 
         if ($this->json()) {
             foreach ($this->json() as $column => $c) {
-                if (is_array($properties['json'])) {
-                    $properties['json'][$column] = $c->toArray();
-                }
+                $properties['json'][$column] = $c->toArray();
             }
-            if (! empty($properties['json']) && is_array($properties['json'])) {
-                ksort($properties['json']);
-            }
+            ksort($properties['json']);
         }
 
         return $properties;

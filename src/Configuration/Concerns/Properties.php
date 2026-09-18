@@ -26,7 +26,7 @@ trait Properties
     protected array $uses = [];
 
     /**
-     * @param  array<string, mixed>  $options
+     * @param  array<mixed, mixed>  $options
      */
     public function setOptions(array $options = []): self
     {

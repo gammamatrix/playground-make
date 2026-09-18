@@ -14,7 +14,7 @@ namespace Playground\Make\Configuration\Model\Concerns;
 trait Attributes
 {
     /**
-     * @param  array<string, mixed>  $options
+     * @param  array<mixed, mixed>  $options
      */
     public function addModelProperties(array $options): self
     {

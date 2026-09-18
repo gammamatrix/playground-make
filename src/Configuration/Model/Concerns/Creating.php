@@ -23,7 +23,7 @@ trait Creating
     protected array $implements = [];
 
     /**
-     * @param  array<string, mixed>  $options
+     * @param  array<mixed, mixed>  $options
      */
     public function addCreate(array $options = []): Model\Create
     {
