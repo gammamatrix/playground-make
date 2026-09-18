@@ -31,7 +31,7 @@ class SortingTest extends TestCase
         $this->assertEmpty($instance->scopes());
 
         $this->expectException(\RuntimeException::class);
-        $this->expectExceptionMessage(__('playground-make::model.Sorting.invalid', [
+        $this->expectExceptionMessageIs(__('playground-make::model.Sorting.invalid', [
             'name' => 'SomeModel',
             'i' => '-',
         ]));
@@ -49,8 +49,10 @@ class SortingTest extends TestCase
         $instance->addSortable([
             'column' => 'some_column',
         ], 1);
-        // dump($instance);
-        $this->assertNotEmpty($instance->sortable());
+        $sortable = $instance->sortable();
+        $this->assertIsArray($sortable);
+        $this->assertArrayHasKey(1, $sortable);
+        $this->assertInstanceOf(Model\Sortable::class, $sortable[1]);
     }
 
     public function test_add_sortable_without_index(): void
@@ -64,7 +66,9 @@ class SortingTest extends TestCase
         $instance->addSortable([
             'column' => 'some_column',
         ]);
-        // dump($instance);
-        $this->assertNotEmpty($instance->sortable());
+        $sortable = $instance->sortable();
+        $this->assertIsArray($sortable);
+        $this->assertArrayHasKey(0, $sortable);
+        $this->assertInstanceOf(Model\Sortable::class, $sortable[0]);
     }
 }

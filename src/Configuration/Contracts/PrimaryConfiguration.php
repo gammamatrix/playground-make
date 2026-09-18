@@ -49,7 +49,11 @@ interface PrimaryConfiguration
 
     public function module_slug(): string;
 
+    public function module_slugs(): string;
+
     public function setModuleSlug(string $module_slug): self;
+
+    public function setModuleSlugs(string $module_slugs): self;
 
     public function name(): string;
 

@@ -27,3 +27,9 @@ parameters:
             # TODO hiding these errors until we can add tests for them
             -
                 identifier: trait.unused
+
+            # TODO determine what is going on here
+            # Triggers: Command "playground:make:model" does not have option "model-file"
+            -
+                identifier: larastan.console.undefinedOption
+                path: *src/Console/Commands/Concerns/PackageConfiguration.php

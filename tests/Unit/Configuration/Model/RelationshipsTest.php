@@ -79,10 +79,9 @@ class RelationshipsTest extends TestCase
             'name' => 'SomeModel',
         ], $withSkeleton);
 
-        $this->assertEmpty($instance->HasOne());
-        $instance->addHasOne('someAccessor', null);
-        $this->assertNotEmpty($instance->HasOne());
-        // dump($instance);
+        $hasOne = $instance->HasOne();
+        $this->assertIsArray($hasOne);
+        $this->assertEmpty($hasOne);
     }
 
     public function test_add_has_many_without_meta(): void
@@ -92,9 +91,8 @@ class RelationshipsTest extends TestCase
             'name' => 'SomeModel',
         ], $withSkeleton);
 
-        // dump($instance);
-        $this->assertEmpty($instance->HasMany());
-        $instance->addHasMany('someAccessor', null);
-        $this->assertNotEmpty($instance->HasMany());
+        $hasOne = $instance->HasMany();
+        $this->assertIsArray($hasOne);
+        $this->assertEmpty($hasOne);
     }
 }

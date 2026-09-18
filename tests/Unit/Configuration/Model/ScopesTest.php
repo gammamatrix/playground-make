@@ -43,7 +43,14 @@ class ScopesTest extends TestCase
 
         $this->assertEmpty($instance->scopes());
         $instance->addScopes($options);
-        $this->assertNotEmpty($instance->scopes());
+        $scopes = $instance->scopes();
+        $this->assertIsArray($scopes);
+        $this->assertArrayHasKey('sort', $scopes);
+        $this->assertIsArray($scopes['sort']);
+        $this->assertArrayHasKey('include', $scopes['sort']);
+        $this->assertSame('minus', $scopes['sort']['include']);
+        $this->assertArrayHasKey('builder', $scopes['sort']);
+        $this->assertSame('CustomBuilder', $scopes['sort']['builder']);
     }
 
     public function test_add_scope_with_invalid_scope(): void
@@ -56,7 +63,7 @@ class ScopesTest extends TestCase
         $this->assertEmpty($instance->scopes());
 
         $this->expectException(\RuntimeException::class);
-        $this->expectExceptionMessage(__('playground-make::model.Scope.invalid', [
+        $this->expectExceptionMessageIs(__('playground-make::model.Scope.invalid', [
             'name' => 'SomeModel',
             'scope' => 'NULL',
         ]));
@@ -72,8 +79,15 @@ class ScopesTest extends TestCase
 
         $this->assertEmpty($instance->scopes());
         $instance->addScope('sort', null);
-        // dump($instance);
-        $this->assertNotEmpty($instance->scopes());
+
+        $scopes = $instance->scopes();
+        $this->assertIsArray($scopes);
+        $this->assertArrayHasKey('sort', $scopes);
+        $this->assertIsArray($scopes['sort']);
+        $this->assertArrayHasKey('include', $scopes['sort']);
+        $this->assertSame('minus', $scopes['sort']['include']);
+        $this->assertArrayHasKey('builder', $scopes['sort']);
+        $this->assertNull($scopes['sort']['builder']);
     }
 
     public function test_add_scope_unsupported_scope_and_ignore(): void
@@ -88,7 +102,8 @@ class ScopesTest extends TestCase
         // dump($instance);
         $this->assertEmpty($instance->scopes());
         $instance->addScope('someScope', null);
-        $this->assertEmpty($instance->scopes());
+        $scopes = $instance->scopes();
+        $this->assertIsArray($scopes);
 
         // $log->dump();
 

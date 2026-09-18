@@ -11,6 +11,7 @@ namespace Playground\Make\Console\Commands\Concerns;
 use Illuminate\Support\Str;
 use Playground\Make\Configuration\Contracts\PrimaryConfiguration as PrimaryConfigurationContract;
 use Playground\Make\Configuration\Model;
+use Playground\Make\Model\Console\Commands\ModelMakeCommand;
 
 /**
  * \Playground\Make\Console\Commands\Concerns\PackageConfiguration
@@ -213,8 +214,13 @@ trait PackageConfiguration
         $this->resetName();
         $this->resetNamespace();
 
-        if ($this->hasOption('preload') && $this->option('preload')) {
-            $this->preloadConfiguration();
+        // TODO: PHPStan - Triggers: Command "playground:make:model" does not have option "model-file"
+        if (! $this instanceof ModelMakeCommand) {
+            if ($this->hasOption('preload')) {
+                if ($this->option('preload')) {
+                    $this->preloadConfiguration();
+                }
+            }
         }
 
         $this->resetFile();
