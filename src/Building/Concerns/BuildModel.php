@@ -32,7 +32,7 @@ trait BuildModel
         $model_camel = $this->model?->model_camel() ?? Str::of($dummyModel)->camel()->toString();
         $model_camels = $this->model?->model_camels() ?? Str::of($dummyModel)->plural()->camel()->toString();
         $model_label = $this->model?->model_label() ?? Str::of($dummyModel)->headline()->toString();
-        $model_labels = $this->model?->model_label() ?? Str::of($dummyModel)->headline()->plural()->toString();
+        $model_labels = $this->model?->model_labels() ?? Str::of($dummyModel)->headline()->plural()->toString();
         $model_lower = $this->model?->model_lower() ?? Str::of($dummyModel)->lower()->toString();
         $model_lowers = $this->model?->model_lowers() ?? Str::of($dummyModel)->lower()->plural()->toString();
         $model_kebab = $this->model?->model_kebab() ?? Str::of($dummyModel)->kebab()->toString();
