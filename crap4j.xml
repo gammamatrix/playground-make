@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2026-09-19 18:17:19</timestamp>
+  <timestamp>2026-09-19 21:25:11</timestamp>
   <stats>
     <name>Method Crap Stats</name>
-    <methodCount>301</methodCount>
+    <methodCount>305</methodCount>
     <crapMethodCount>20</crapMethodCount>
-    <crapLoad>294</crapLoad>
-    <totalCrap>7595.36</totalCrap>
-    <crapMethodPercent>6.64</crapMethodPercent>
+    <crapLoad>295</crapLoad>
+    <totalCrap>7611.36</totalCrap>
+    <crapMethodPercent>6.56</crapMethodPercent>
   </stats>
   <methods>
     <method>
@@ -149,10 +149,10 @@
       <methodName>setOptions</methodName>
       <methodSignature>setOptions(array $options): self</methodSignature>
       <fullMethod>setOptions(array $options): self</fullMethod>
-      <crap>70</crap>
-      <complexity>70</complexity>
-      <coverage>99.06</coverage>
-      <crapLoad>2</crapLoad>
+      <crap>80</crap>
+      <complexity>80</complexity>
+      <coverage>98.31</coverage>
+      <crapLoad>3</crapLoad>
     </method>
     <method>
       <package>Playground\Make\Configuration\Concerns</package>
@@ -479,6 +479,50 @@
       <methodName>setModule</methodName>
       <methodSignature>setModule(string $module): self</methodSignature>
       <fullMethod>setModule(string $module): self</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\PrimaryProperties</className>
+      <methodName>module_label</methodName>
+      <methodSignature>module_label(): string</methodSignature>
+      <fullMethod>module_label(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\PrimaryProperties</className>
+      <methodName>setModuleLabel</methodName>
+      <methodSignature>setModuleLabel(string $module_label): self</methodSignature>
+      <fullMethod>setModuleLabel(string $module_label): self</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\PrimaryProperties</className>
+      <methodName>module_labels</methodName>
+      <methodSignature>module_labels(): string</methodSignature>
+      <fullMethod>module_labels(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\PrimaryProperties</className>
+      <methodName>setModuleLabels</methodName>
+      <methodSignature>setModuleLabels(string $module_labels): self</methodSignature>
+      <fullMethod>setModuleLabels(string $module_labels): self</fullMethod>
       <crap>2</crap>
       <complexity>1</complexity>
       <coverage>0</coverage>
@@ -844,7 +888,7 @@
       <fullMethod>apply(): self</fullMethod>
       <crap>14</crap>
       <complexity>14</complexity>
-      <coverage>95.12</coverage>
+      <coverage>95.24</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
