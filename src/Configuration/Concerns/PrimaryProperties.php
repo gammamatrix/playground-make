@@ -26,6 +26,22 @@ trait PrimaryProperties
         'extends_use' => '',
         'model' => '',
         'model_fqdn' => '',
+        'model_camel' => '',
+        'model_camels' => '',
+        'model_label' => '',
+        'model_labels' => '',
+        'model_lower' => '',
+        'model_lowers' => '',
+        'model_kebab' => '',
+        'model_kebabs' => '',
+        'model_slug' => '',
+        'model_slugs' => '',
+        'model_snake' => '',
+        'model_snakes' => '',
+        'model_studly' => '',
+        'model_studlies' => '',
+        'model_variable' => '',
+        'model_variables' => '',
         'module' => '',
         'module_slug' => '',
         'module_slugs' => '',
@@ -54,6 +70,38 @@ trait PrimaryProperties
     protected string $model = '';
 
     protected string $model_fqdn = '';
+
+    protected string $model_camel = '';
+
+    protected string $model_camels = '';
+
+    protected string $model_kebab = '';
+
+    protected string $model_kebabs = '';
+
+    protected string $model_label = '';
+
+    protected string $model_labels = '';
+
+    protected string $model_lower = '';
+
+    protected string $model_lowers = '';
+
+    protected string $model_slug = '';
+
+    protected string $model_slugs = '';
+
+    protected string $model_snake = '';
+
+    protected string $model_snakes = '';
+
+    protected string $model_studly = '';
+
+    protected string $model_studlies = '';
+
+    protected string $model_variable = '';
+
+    protected string $model_variables = '';
 
     protected string $module = '';
 
@@ -143,6 +191,102 @@ trait PrimaryProperties
             $this->model_fqdn = $options['model_fqdn'];
         }
 
+        if (! empty($options['model_camel'])
+            && is_string($options['model_camel'])
+        ) {
+            $this->model_camel = $options['model_camel'];
+        }
+
+        if (! empty($options['model_camels'])
+            && is_string($options['model_camels'])
+        ) {
+            $this->model_camels = $options['model_camels'];
+        }
+
+        if (! empty($options['model_label'])
+            && is_string($options['model_label'])
+        ) {
+            $this->model_label = $options['model_label'];
+        }
+
+        if (! empty($options['model_labels'])
+            && is_string($options['model_labels'])
+        ) {
+            $this->model_labels = $options['model_labels'];
+        }
+
+        if (! empty($options['model_lower'])
+            && is_string($options['model_lower'])
+        ) {
+            $this->model_lower = $options['model_lower'];
+        }
+
+        if (! empty($options['model_lowers'])
+            && is_string($options['model_lowers'])
+        ) {
+            $this->model_lowers = $options['model_lowers'];
+        }
+
+        if (! empty($options['model_kebab'])
+            && is_string($options['model_kebab'])
+        ) {
+            $this->model_kebab = $options['model_kebab'];
+        }
+
+        if (! empty($options['model_kebabs'])
+            && is_string($options['model_kebabs'])
+        ) {
+            $this->model_kebabs = $options['model_kebabs'];
+        }
+
+        if (! empty($options['model_slug'])
+            && is_string($options['model_slug'])
+        ) {
+            $this->model_slug = $options['model_slug'];
+        }
+
+        if (! empty($options['model_slugs'])
+            && is_string($options['model_slugs'])
+        ) {
+            $this->model_slugs = $options['model_slugs'];
+        }
+
+        if (! empty($options['model_snake'])
+            && is_string($options['model_snake'])
+        ) {
+            $this->model_snake = $options['model_snake'];
+        }
+
+        if (! empty($options['model_snakes'])
+            && is_string($options['model_snakes'])
+        ) {
+            $this->model_snakes = $options['model_snakes'];
+        }
+
+        if (! empty($options['model_studly'])
+            && is_string($options['model_studly'])
+        ) {
+            $this->model_studly = $options['model_studly'];
+        }
+
+        if (! empty($options['model_studlies'])
+            && is_string($options['model_studlies'])
+        ) {
+            $this->model_studlies = $options['model_studlies'];
+        }
+
+        if (! empty($options['model_variable'])
+            && is_string($options['model_variable'])
+        ) {
+            $this->model_variable = $options['model_variable'];
+        }
+
+        if (! empty($options['model_variables'])
+            && is_string($options['model_variables'])
+        ) {
+            $this->model_variables = $options['model_variables'];
+        }
+
         if (! empty($options['module'])
             && is_string($options['module'])
         ) {
@@ -153,7 +297,7 @@ trait PrimaryProperties
             && is_string($options['module_slug'])
         ) {
             $this->module_slug = $options['module_slug'];
-            if (! empty($this->module_slug) && empty($options['module_slugs']) && empty($this->module_slugs)) {
+            if (empty($options['module_slugs']) && empty($this->module_slugs)) {
                 $this->module_slugs = Str::of($this->module_slug)->plural()->finish('s')->toString();
             }
         }
@@ -168,7 +312,7 @@ trait PrimaryProperties
             && is_string($options['name'])
         ) {
             $this->name = $options['name'];
-            if (! empty($this->name) && empty($options['names']) && empty($this->names)) {
+            if (empty($options['names']) && empty($this->names)) {
                 $this->names = Str::of($this->name)->plural()->finish('s')->toString();
             }
         }
@@ -277,6 +421,86 @@ trait PrimaryProperties
         $this->model_fqdn = $model_fqdn;
 
         return $this;
+    }
+
+    public function model_camel(): string
+    {
+        return $this->model_camel;
+    }
+
+    public function model_camels(): string
+    {
+        return $this->model_camels;
+    }
+
+    public function model_kebab(): string
+    {
+        return $this->model_kebab;
+    }
+
+    public function model_kebabs(): string
+    {
+        return $this->model_kebabs;
+    }
+
+    public function model_label(): string
+    {
+        return $this->model_label;
+    }
+
+    public function model_labels(): string
+    {
+        return $this->model_labels;
+    }
+
+    public function model_lower(): string
+    {
+        return $this->model_lower;
+    }
+
+    public function model_lowers(): string
+    {
+        return $this->model_lowers;
+    }
+
+    public function model_slug(): string
+    {
+        return $this->model_slug;
+    }
+
+    public function model_slugs(): string
+    {
+        return $this->model_slugs;
+    }
+
+    public function model_snake(): string
+    {
+        return $this->model_snake;
+    }
+
+    public function model_snakes(): string
+    {
+        return $this->model_snakes;
+    }
+
+    public function model_studly(): string
+    {
+        return $this->model_studly;
+    }
+
+    public function model_studlies(): string
+    {
+        return $this->model_studlies;
+    }
+
+    public function model_variable(): string
+    {
+        return $this->model_variable;
+    }
+
+    public function model_variables(): string
+    {
+        return $this->model_variables;
     }
 
     /**

@@ -29,6 +29,22 @@ class PropertiesTest extends TestCase
         'extends_use' => '',
         'model' => '',
         'model_fqdn' => '',
+        'model_camel' => '',
+        'model_camels' => '',
+        'model_label' => '',
+        'model_labels' => '',
+        'model_lower' => '',
+        'model_lowers' => '',
+        'model_kebab' => '',
+        'model_kebabs' => '',
+        'model_slug' => '',
+        'model_slugs' => '',
+        'model_snake' => '',
+        'model_snakes' => '',
+        'model_studly' => '',
+        'model_studlies' => '',
+        'model_variable' => '',
+        'model_variables' => '',
         'module' => '',
         'module_slug' => '',
         'module_slugs' => '',
@@ -130,11 +146,27 @@ class PropertiesTest extends TestCase
             'extends_use' => 'Illuminate/Foundation/Http/FormRequest',
             'model' => 'Something',
             'model_fqdn' => '',
-            'module' => 'Some',
-            'module_slug' => 'some',
-            'module_slugs' => 'somes',
-            'name' => 'Some',
-            'names' => 'Somes',
+            'model_camel' => 'alphaApe',
+            'model_camels' => 'alphaApes',
+            'model_label' => 'Beta Bird',
+            'model_labels' => 'Beta Birds',
+            'model_lower' => 'delta dog',
+            'model_lowers' => 'delta dogs',
+            'model_kebab' => 'gamma-goat',
+            'model_kebabs' => 'gamma-goats',
+            'model_slug' => 'iota-iguana',
+            'model_slugs' => 'iota-iguanas',
+            'model_snake' => 'kappa_koala',
+            'model_snakes' => 'kappa_koalas',
+            'model_studly' => 'LambdaLion',
+            'model_studlies' => 'LambdaLions',
+            'model_variable' => 'muMoose',
+            'model_variables' => 'muMooses',
+            'module' => 'Nu Newt',
+            'module_slug' => 'nu-newt',
+            'module_slugs' => 'nu-newts',
+            'name' => 'OmicronOriole',
+            'names' => 'OmicronOrioles',
             'namespace' => 'Acme',
             'organization' => 'Acme',
             'package' => 'some-package',
@@ -161,6 +193,20 @@ class PropertiesTest extends TestCase
         $this->assertSame($options['config'], $instance->config());
         $this->assertSame($options['fqdn'], $instance->fqdn());
         $this->assertSame($options['model'], $instance->model());
+        $this->assertSame($options['model_camel'], $instance->model_camel());
+        $this->assertSame($options['model_camels'], $instance->model_camels());
+        $this->assertSame($options['model_label'], $instance->model_label());
+        $this->assertSame($options['model_labels'], $instance->model_labels());
+        $this->assertSame($options['model_lower'], $instance->model_lower());
+        $this->assertSame($options['model_kebab'], $instance->model_kebab());
+        $this->assertSame($options['model_slug'], $instance->model_slug());
+        $this->assertSame($options['model_slugs'], $instance->model_slugs());
+        $this->assertSame($options['model_snake'], $instance->model_snake());
+        $this->assertSame($options['model_snakes'], $instance->model_snakes());
+        $this->assertSame($options['model_studly'], $instance->model_studly());
+        $this->assertSame($options['model_studlies'], $instance->model_studlies());
+        $this->assertSame($options['model_variable'], $instance->model_variable());
+        $this->assertSame($options['model_variables'], $instance->model_variables());
         $this->assertSame($options['module'], $instance->module());
         $this->assertSame($options['module_slug'], $instance->module_slug());
         $this->assertSame($options['module_slugs'], $instance->module_slugs());
