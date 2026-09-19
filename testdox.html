@@ -2,171 +2,297 @@
 <html lang="en">
     <head>
         <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <title>Test Documentation</title>
         <style>
+            :root {
+                color-scheme: light dark;
+
+                --background: light-dark(#f4f5f7, #16181d);
+                --card-background: light-dark(#ffffff, #1f2228);
+                --border: light-dark(#e2e4e8, #30343c);
+                --text: light-dark(#1a1a1a, #e6e8eb);
+                --muted: light-dark(#6b7280, #9aa1ab);
+                --shadow: light-dark(0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.4));
+
+                --passed-background: light-dark(#d6e6f2, #1e3550);
+                --failed-background: light-dark(#fad4c0, #4a2a10);
+            }
+
+            *, *::before, *::after {
+                box-sizing: border-box;
+            }
+
             body {
                 text-rendering: optimizeLegibility;
-                font-family: Source SansSerif Pro, Arial, sans-serif;
+                font-family: Source SansSerif Pro, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
                 font-variant-ligatures: common-ligatures;
                 font-kerning: normal;
-                margin-left: 2rem;
-                background-color: #fff;
-                color: #000;
-            }
-
-            body > ul > li {
-                font-size: larger;
-            }
-
-            h2 {
-                font-size: larger;
-                text-decoration-line: underline;
-                text-decoration-thickness: 2px;
+                line-height: 1.5;
                 margin: 0;
-                padding: 0.5rem 0;
+                padding: 2.5rem 1rem;
+                background-color: var(--background);
+                color: var(--text);
+            }
+
+            .summary,
+            main {
+                max-width: 52rem;
+                margin: 0 auto;
+            }
+
+            .summary {
+                margin-bottom: 1.5rem;
+            }
+
+            .summary h1 {
+                font-size: 1.5rem;
+                font-weight: 600;
+                margin: 0 0 0.25rem;
+            }
+
+            .counts {
+                margin: 0;
+                color: var(--muted);
+            }
+
+            .counts .passed,
+            .counts .failed {
+                display: inline-block;
+                padding: 0.1rem 0.5rem;
+                border-radius: 0.25rem;
+                color: var(--text);
+                font-weight: 600;
+            }
+
+            .counts .passed {
+                background-color: var(--passed-background);
+            }
+
+            .counts .failed {
+                background-color: var(--failed-background);
+            }
+
+            .test-class {
+                background-color: var(--card-background);
+                border: 1px solid var(--border);
+                border-radius: 0.5rem;
+                box-shadow: var(--shadow);
+                padding: 1rem 1.25rem;
+                margin-bottom: 1rem;
+            }
+
+            .test-class h2 {
+                font-size: 1.1rem;
+                font-weight: 600;
+                margin: 0 0 0.5rem;
+                padding-bottom: 0.5rem;
+                border-bottom: 1px solid var(--border);
             }
 
             ul {
                 list-style: none;
-                margin: 0 0 2rem;
-                padding: 0 0 0 1rem;
-                text-indent: -1rem;
+                margin: 0;
+                padding: 0;
             }
 
-            .success:before {
-                color: #4e9a06;
+            li {
+                position: relative;
+                margin-bottom: 0.25rem;
+                padding: 0.25rem 0.5rem 0.25rem 1.9rem;
+                border-radius: 0.25rem;
+            }
+
+            li::before {
+                position: absolute;
+                left: 0.5rem;
+            }
+
+            li.success {
+                background-color: var(--passed-background);
+            }
+
+            li.success::before {
                 content: '✓';
-                padding-right: 0.5rem;
             }
 
-            .defect {
-                color: #a40000;
+            li.defect {
+                background-color: var(--failed-background);
             }
 
-            .defect:before {
-                color: #a40000;
+            li.defect::before {
                 content: '✗';
-                padding-right: 0.5rem;
             }
         </style>
     </head>
     <body>
-        <h2>Attributes (Tests\Unit\Playground\Make\Configuration\Model\Attributes)</h2>
-        <ul>
-            <li class="success">Add model properties with empty options</li>
-            <li class="success">Add attribute with invalid column</li>
-            <li class="success">Add attribute with invalid default value of array</li>
-            <li class="success">Add cast with invalid column and set empty string</li>
-            <li class="success">Add cast with invalid cast value and treat as string</li>
-            <li class="success">Add fillable with invalid column</li>
-        </ul>
-        <h2>Command (Tests\Feature\Playground\Make\Console\Commands\About\Command)</h2>
-        <ul>
-            <li class="success">Command about displays package information and succeed with code 0</li>
-        </ul>
-        <h2>Instance (Tests\Unit\Playground\Make\Configuration\Configuration\Instance)</h2>
-        <ul>
-            <li class="success">Instance</li>
-            <li class="success">Instance apply without options</li>
-        </ul>
-        <h2>Instance (Tests\Unit\Playground\Make\Configuration\Model\CreateColumn\Instance)</h2>
-        <ul>
-            <li class="success">Instance</li>
-            <li class="success">Model with file</li>
-            <li class="success">Set options unsupported primary and ignore</li>
-            <li class="success">Add id with empty column</li>
-            <li class="success">Add unique with empty column</li>
-            <li class="success">Add date with empty column</li>
-            <li class="success">Add flag with empty column</li>
-            <li class="success">Add column with empty column</li>
-            <li class="success">Add permission with empty column</li>
-            <li class="success">Add status with empty column</li>
-            <li class="success">Add ui with empty column</li>
-            <li class="success">Add json with empty column</li>
-        </ul>
-        <h2>Instance (Tests\Unit\Playground\Make\Configuration\Model\Create\Instance)</h2>
-        <ul>
-            <li class="success">Instance</li>
-            <li class="success">Model with file json serialize</li>
-            <li class="success">Set options unsupported primary and log message</li>
-        </ul>
-        <h2>Instance (Tests\Unit\Playground\Make\Configuration\Model\Filter\Instance)</h2>
-        <ul>
-            <li class="success">Instance</li>
-            <li class="success">Instance apply without options</li>
-        </ul>
-        <h2>Instance (Tests\Unit\Playground\Make\Configuration\Model\Filters\Instance)</h2>
-        <ul>
-            <li class="success">Instance</li>
-            <li class="success">Instance apply without options</li>
-            <li class="success">Model with file</li>
-            <li class="success">Set options with builder in options</li>
-            <li class="success">Add id with empty meta</li>
-            <li class="success">Add date with empty meta</li>
-            <li class="success">Add flag with empty meta</li>
-            <li class="success">Handle trash with empty meta</li>
-            <li class="success">Add column with empty meta</li>
-            <li class="success">Add permission with empty meta</li>
-            <li class="success">Add status with empty meta</li>
-            <li class="success">Add ui with empty meta</li>
-            <li class="success">Add json with empty meta</li>
-        </ul>
-        <h2>Instance (Tests\Unit\Playground\Make\Configuration\Model\Instance)</h2>
-        <ul>
-            <li class="success">Instance</li>
-            <li class="success">Instance apply without options</li>
-            <li class="success">Folder is empty by default</li>
-            <li class="success">Model with file and skeleton</li>
-        </ul>
-        <h2>Instance (Tests\Unit\Playground\Make\Configuration\PrimaryConfiguration\Instance)</h2>
-        <ul>
-            <li class="success">Instance</li>
-            <li class="success">Instance apply without options</li>
-            <li class="success">Folder is empty by default</li>
-            <li class="success">Folder with empty set folder</li>
-            <li class="success">Folder with path for set folder</li>
-        </ul>
-        <h2>Properties (Tests\Unit\Playground\Make\Configuration\Configuration\Properties)</h2>
-        <ul>
-            <li class="success">Properties</li>
-            <li class="success">Properties with all options without apply</li>
-            <li class="success">Properties with all options with apply</li>
-        </ul>
-        <h2>Properties (Tests\Unit\Playground\Make\Configuration\PrimaryConfiguration\Properties)</h2>
-        <ul>
-            <li class="success">Properties</li>
-            <li class="success">Properties with all options without apply</li>
-            <li class="success">Properties with all options with apply</li>
-        </ul>
-        <h2>Relationships (Tests\Unit\Playground\Make\Configuration\Model\Relationships)</h2>
-        <ul>
-            <li class="success">Add relationships for has one with invalid accessor</li>
-            <li class="success">Add relationships for has many with invalid accessor</li>
-            <li class="success">Add has one without meta</li>
-            <li class="success">Add has many without meta</li>
-        </ul>
-        <h2>Scopes (Tests\Unit\Playground\Make\Configuration\Model\Scopes)</h2>
-        <ul>
-            <li class="success">Add scopes with sort</li>
-            <li class="success">Add scope with invalid scope</li>
-            <li class="success">Add scope for sort without meta</li>
-            <li class="success">Add scope unsupported scope and ignore</li>
-        </ul>
-        <h2>Skeleton (Tests\Unit\Playground\Make\Configuration\PrimaryConfiguration\Skeleton)</h2>
-        <ul>
-            <li class="success">Skeleton</li>
-            <li class="success">Skeleton with skeleton</li>
-            <li class="success">Skeleton option as false</li>
-            <li class="success">Skeleton option as true</li>
-            <li class="success">Skeleton parameter as true</li>
-            <li class="success">Skeleton parameter as false overrules option</li>
-            <li class="success">Skeleton parameter as true overrules option</li>
-        </ul>
-        <h2>Sorting (Tests\Unit\Playground\Make\Configuration\Model\Sorting)</h2>
-        <ul>
-            <li class="success">Add sortable without column</li>
-            <li class="success">Add sortable with index</li>
-            <li class="success">Add sortable without index</li>
-        </ul>
+        <header class="summary">
+            <h1>Test Documentation</h1>
+            <p class="counts"><span class="passed">72 passed</span></p>
+        </header>
+        <main>
+
+            <section class="test-class">
+                <h2>Attributes (Tests\Unit\Playground\Make\Configuration\Model\Attributes)</h2>
+                <ul>
+                    <li class="success">Add model properties with empty options</li>
+                    <li class="success">Add attribute with invalid column</li>
+                    <li class="success">Add attribute with invalid default value of array</li>
+                    <li class="success">Add cast with invalid column and set empty string</li>
+                    <li class="success">Add cast with invalid cast value and treat as string</li>
+                    <li class="success">Add fillable with invalid column</li>
+                </ul>
+            </section>
+
+            <section class="test-class">
+                <h2>Command (Tests\Feature\Playground\Make\Console\Commands\About\Command)</h2>
+                <ul>
+                    <li class="success">Command about displays package information and succeed with code 0</li>
+                </ul>
+            </section>
+
+            <section class="test-class">
+                <h2>Instance (Tests\Unit\Playground\Make\Configuration\Configuration\Instance)</h2>
+                <ul>
+                    <li class="success">Instance</li>
+                    <li class="success">Instance apply without options</li>
+                </ul>
+            </section>
+
+            <section class="test-class">
+                <h2>Instance (Tests\Unit\Playground\Make\Configuration\Model\CreateColumn\Instance)</h2>
+                <ul>
+                    <li class="success">Instance</li>
+                    <li class="success">Model with file</li>
+                    <li class="success">Set options unsupported primary and ignore</li>
+                    <li class="success">Add id with empty column</li>
+                    <li class="success">Add unique with empty column</li>
+                    <li class="success">Add date with empty column</li>
+                    <li class="success">Add flag with empty column</li>
+                    <li class="success">Add column with empty column</li>
+                    <li class="success">Add permission with empty column</li>
+                    <li class="success">Add status with empty column</li>
+                    <li class="success">Add ui with empty column</li>
+                    <li class="success">Add json with empty column</li>
+                </ul>
+            </section>
+
+            <section class="test-class">
+                <h2>Instance (Tests\Unit\Playground\Make\Configuration\Model\Create\Instance)</h2>
+                <ul>
+                    <li class="success">Instance</li>
+                    <li class="success">Model with file json serialize</li>
+                    <li class="success">Set options unsupported primary and log message</li>
+                </ul>
+            </section>
+
+            <section class="test-class">
+                <h2>Instance (Tests\Unit\Playground\Make\Configuration\Model\Filters\Instance)</h2>
+                <ul>
+                    <li class="success">Instance</li>
+                    <li class="success">Instance apply without options</li>
+                    <li class="success">Model with file</li>
+                    <li class="success">Set options with builder in options</li>
+                    <li class="success">Add id with empty meta</li>
+                    <li class="success">Add date with empty meta</li>
+                    <li class="success">Add flag with empty meta</li>
+                    <li class="success">Handle trash with empty meta</li>
+                    <li class="success">Add column with empty meta</li>
+                    <li class="success">Add permission with empty meta</li>
+                    <li class="success">Add status with empty meta</li>
+                    <li class="success">Add ui with empty meta</li>
+                    <li class="success">Add json with empty meta</li>
+                </ul>
+            </section>
+
+            <section class="test-class">
+                <h2>Instance (Tests\Unit\Playground\Make\Configuration\Model\Filter\Instance)</h2>
+                <ul>
+                    <li class="success">Instance</li>
+                    <li class="success">Instance apply without options</li>
+                </ul>
+            </section>
+
+            <section class="test-class">
+                <h2>Instance (Tests\Unit\Playground\Make\Configuration\Model\Instance)</h2>
+                <ul>
+                    <li class="success">Instance</li>
+                    <li class="success">Instance apply without options</li>
+                    <li class="success">Folder is empty by default</li>
+                    <li class="success">Model with file and skeleton</li>
+                </ul>
+            </section>
+
+            <section class="test-class">
+                <h2>Instance (Tests\Unit\Playground\Make\Configuration\PrimaryConfiguration\Instance)</h2>
+                <ul>
+                    <li class="success">Instance</li>
+                    <li class="success">Instance apply without options</li>
+                    <li class="success">Folder is empty by default</li>
+                    <li class="success">Folder with empty set folder</li>
+                    <li class="success">Folder with path for set folder</li>
+                </ul>
+            </section>
+
+            <section class="test-class">
+                <h2>Properties (Tests\Unit\Playground\Make\Configuration\Configuration\Properties)</h2>
+                <ul>
+                    <li class="success">Properties</li>
+                    <li class="success">Properties with all options without apply</li>
+                    <li class="success">Properties with all options with apply</li>
+                </ul>
+            </section>
+
+            <section class="test-class">
+                <h2>Properties (Tests\Unit\Playground\Make\Configuration\PrimaryConfiguration\Properties)</h2>
+                <ul>
+                    <li class="success">Properties</li>
+                    <li class="success">Properties with all options without apply</li>
+                    <li class="success">Properties with all options with apply</li>
+                </ul>
+            </section>
+
+            <section class="test-class">
+                <h2>Relationships (Tests\Unit\Playground\Make\Configuration\Model\Relationships)</h2>
+                <ul>
+                    <li class="success">Add relationships for has one with invalid accessor</li>
+                    <li class="success">Add relationships for has many with invalid accessor</li>
+                    <li class="success">Add has one without meta</li>
+                    <li class="success">Add has many without meta</li>
+                </ul>
+            </section>
+
+            <section class="test-class">
+                <h2>Scopes (Tests\Unit\Playground\Make\Configuration\Model\Scopes)</h2>
+                <ul>
+                    <li class="success">Add scopes with sort</li>
+                    <li class="success">Add scope with invalid scope</li>
+                    <li class="success">Add scope for sort without meta</li>
+                    <li class="success">Add scope unsupported scope and ignore</li>
+                </ul>
+            </section>
+
+            <section class="test-class">
+                <h2>Skeleton (Tests\Unit\Playground\Make\Configuration\PrimaryConfiguration\Skeleton)</h2>
+                <ul>
+                    <li class="success">Skeleton</li>
+                    <li class="success">Skeleton with skeleton</li>
+                    <li class="success">Skeleton option as false</li>
+                    <li class="success">Skeleton option as true</li>
+                    <li class="success">Skeleton parameter as true</li>
+                    <li class="success">Skeleton parameter as false overrules option</li>
+                    <li class="success">Skeleton parameter as true overrules option</li>
+                </ul>
+            </section>
+
+            <section class="test-class">
+                <h2>Sorting (Tests\Unit\Playground\Make\Configuration\Model\Sorting)</h2>
+                <ul>
+                    <li class="success">Add sortable without column</li>
+                    <li class="success">Add sortable with index</li>
+                    <li class="success">Add sortable without index</li>
+                </ul>
+            </section>
+        </main>
     </body>
 </html>

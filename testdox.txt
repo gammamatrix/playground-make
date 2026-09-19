@@ -32,10 +32,6 @@ Instance (Tests\Unit\Playground\Make\Configuration\Model\Create\Instance)
  [x] Model with file json serialize
  [x] Set options unsupported primary and log message
 
-Instance (Tests\Unit\Playground\Make\Configuration\Model\Filter\Instance)
- [x] Instance
- [x] Instance apply without options
-
 Instance (Tests\Unit\Playground\Make\Configuration\Model\Filters\Instance)
  [x] Instance
  [x] Instance apply without options
@@ -50,6 +46,10 @@ Instance (Tests\Unit\Playground\Make\Configuration\Model\Filters\Instance)
  [x] Add status with empty meta
  [x] Add ui with empty meta
  [x] Add json with empty meta
+
+Instance (Tests\Unit\Playground\Make\Configuration\Model\Filter\Instance)
+ [x] Instance
+ [x] Instance apply without options
 
 Instance (Tests\Unit\Playground\Make\Configuration\Model\Instance)
  [x] Instance
