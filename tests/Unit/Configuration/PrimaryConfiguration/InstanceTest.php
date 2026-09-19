@@ -57,6 +57,8 @@ class InstanceTest extends TestCase
         'model_variable' => '',
         'model_variables' => '',
         'module' => '',
+        'module_label' => '',
+        'module_labels' => '',
         'module_slug' => '',
         'module_slugs' => '',
         'name' => '',

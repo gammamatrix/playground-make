@@ -51,6 +51,8 @@ class Model extends PrimaryConfiguration
         'config' => '',
         'fqdn' => '',
         'module' => '',
+        'module_label' => '',
+        'module_labels' => '',
         'module_slug' => '',
         'module_slugs' => '',
         'name' => '',
@@ -116,6 +118,8 @@ class Model extends PrimaryConfiguration
         $this->properties['config'] = $this->config();
         $this->properties['fqdn'] = $this->fqdn();
         $this->properties['module'] = $this->module();
+        $this->properties['module_label'] = $this->module_label();
+        $this->properties['module_labels'] = $this->module_labels();
         $this->properties['module_slug'] = $this->module_slug();
         $this->properties['module_slugs'] = $this->module_slugs();
         $this->properties['name'] = $this->name();

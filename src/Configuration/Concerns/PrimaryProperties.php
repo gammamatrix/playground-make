@@ -43,6 +43,8 @@ trait PrimaryProperties
         'model_variable' => '',
         'model_variables' => '',
         'module' => '',
+        'module_label' => '',
+        'module_labels' => '',
         'module_slug' => '',
         'module_slugs' => '',
         'name' => '',
@@ -104,6 +106,10 @@ trait PrimaryProperties
     protected string $model_variables = '';
 
     protected string $module = '';
+
+    protected string $module_label = '';
+
+    protected string $module_labels = '';
 
     protected string $module_slug = '';
 
@@ -291,6 +297,27 @@ trait PrimaryProperties
             && is_string($options['module'])
         ) {
             $this->module = $options['module'];
+            if (empty($options['module_label']) && empty($this->module_label)) {
+                $this->module_label = Str::of($this->module)->headline()->toString();
+            }
+            if (empty($options['module_labels']) && empty($this->module_labels)) {
+                $this->module_labels = Str::of($this->module)->plural()->headline()->toString();
+            }
+        }
+
+        if (! empty($options['module_label'])
+            && is_string($options['module_label'])
+        ) {
+            $this->module_label = $options['module_label'];
+            if (empty($options['module_labels']) && empty($this->module_labels)) {
+                $this->module_labels = Str::of($this->module_label)->plural()->toString();
+            }
+        }
+
+        if (! empty($options['module_labels'])
+            && is_string($options['module_labels'])
+        ) {
+            $this->module_labels = $options['module_labels'];
         }
 
         if (! empty($options['module_slug'])
@@ -522,6 +549,30 @@ trait PrimaryProperties
     public function setModule(string $module): self
     {
         $this->module = $module;
+
+        return $this;
+    }
+
+    public function module_label(): string
+    {
+        return $this->module_label;
+    }
+
+    public function setModuleLabel(string $module_label): self
+    {
+        $this->module_label = $module_label;
+
+        return $this;
+    }
+
+    public function module_labels(): string
+    {
+        return $this->module_labels;
+    }
+
+    public function setModuleLabels(string $module_labels): self
+    {
+        $this->module_labels = $module_labels;
 
         return $this;
     }

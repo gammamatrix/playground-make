@@ -51,6 +51,8 @@ class InstanceTest extends TestCase
         'config' => '',
         'fqdn' => '',
         'module' => '',
+        'module_label' => '',
+        'module_labels' => '',
         'module_slug' => '',
         'module_slugs' => '',
         'name' => '',
