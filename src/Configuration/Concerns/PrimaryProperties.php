@@ -111,6 +111,8 @@ trait PrimaryProperties
 
     protected string $module_labels = '';
 
+    protected string $module_route = '';
+
     protected string $module_slug = '';
 
     protected string $module_slugs = '';
@@ -297,11 +299,12 @@ trait PrimaryProperties
             && is_string($options['module'])
         ) {
             $this->module = $options['module'];
+            $isTLA = ctype_upper($this->module);
             if (empty($options['module_label']) && empty($this->module_label)) {
-                $this->module_label = Str::of($this->module)->headline()->toString();
+                $this->module_label = $isTLA ? $this->module : Str::of($this->module)->headline()->toString();
             }
             if (empty($options['module_labels']) && empty($this->module_labels)) {
-                $this->module_labels = Str::of($this->module)->plural()->headline()->toString();
+                $this->module_labels = $isTLA ? $this->module.'s' : Str::of($this->module)->plural()->headline()->toString();
             }
         }
 
@@ -309,8 +312,9 @@ trait PrimaryProperties
             && is_string($options['module_label'])
         ) {
             $this->module_label = $options['module_label'];
+            $isTLA = ctype_upper($this->module_label);
             if (empty($options['module_labels']) && empty($this->module_labels)) {
-                $this->module_labels = Str::of($this->module_label)->plural()->toString();
+                $this->module_labels = $isTLA ? $this->module_label.'s' : Str::of($this->module_label)->plural()->toString();
             }
         }
 
@@ -573,6 +577,18 @@ trait PrimaryProperties
     public function setModuleLabels(string $module_labels): self
     {
         $this->module_labels = $module_labels;
+
+        return $this;
+    }
+
+    public function module_route(): string
+    {
+        return $this->module_route;
+    }
+
+    public function setModuleRoute(string $module_route): self
+    {
+        $this->module_route = $module_route;
 
         return $this;
     }
