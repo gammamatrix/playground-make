@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2026-09-19 21:25:11</timestamp>
+  <timestamp>2026-09-20 23:44:59</timestamp>
   <stats>
     <name>Method Crap Stats</name>
-    <methodCount>305</methodCount>
+    <methodCount>307</methodCount>
     <crapMethodCount>20</crapMethodCount>
-    <crapLoad>295</crapLoad>
-    <totalCrap>7611.36</totalCrap>
-    <crapMethodPercent>6.56</crapMethodPercent>
+    <crapLoad>313</crapLoad>
+    <totalCrap>9400.36</totalCrap>
+    <crapMethodPercent>6.51</crapMethodPercent>
   </stats>
   <methods>
     <method>
@@ -28,10 +28,10 @@
       <methodName>buildClass_model</methodName>
       <methodSignature>buildClass_model(string $name): void</methodSignature>
       <fullMethod>buildClass_model(string $name): void</fullMethod>
-      <crap>1640</crap>
-      <complexity>40</complexity>
+      <crap>3422</crap>
+      <complexity>58</complexity>
       <coverage>0</coverage>
-      <crapLoad>41</crapLoad>
+      <crapLoad>59</crapLoad>
     </method>
     <method>
       <package>Playground\Make\Building\Concerns</package>
@@ -149,9 +149,9 @@
       <methodName>setOptions</methodName>
       <methodSignature>setOptions(array $options): self</methodSignature>
       <fullMethod>setOptions(array $options): self</fullMethod>
-      <crap>80</crap>
-      <complexity>80</complexity>
-      <coverage>98.31</coverage>
+      <crap>83</crap>
+      <complexity>83</complexity>
+      <coverage>98.33</coverage>
       <crapLoad>3</crapLoad>
     </method>
     <method>
@@ -523,6 +523,28 @@
       <methodName>setModuleLabels</methodName>
       <methodSignature>setModuleLabels(string $module_labels): self</methodSignature>
       <fullMethod>setModuleLabels(string $module_labels): self</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\PrimaryProperties</className>
+      <methodName>module_route</methodName>
+      <methodSignature>module_route(): string</methodSignature>
+      <fullMethod>module_route(): string</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\PrimaryProperties</className>
+      <methodName>setModuleRoute</methodName>
+      <methodSignature>setModuleRoute(string $module_route): self</methodSignature>
+      <fullMethod>setModuleRoute(string $module_route): self</fullMethod>
       <crap>2</crap>
       <complexity>1</complexity>
       <coverage>0</coverage>
