@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2026-09-20 23:44:59</timestamp>
+  <timestamp>2026-09-27 18:06:59</timestamp>
   <stats>
     <name>Method Crap Stats</name>
-    <methodCount>307</methodCount>
+    <methodCount>308</methodCount>
     <crapMethodCount>20</crapMethodCount>
-    <crapLoad>313</crapLoad>
-    <totalCrap>9400.36</totalCrap>
-    <crapMethodPercent>6.51</crapMethodPercent>
+    <crapLoad>321</crapLoad>
+    <totalCrap>9789.36</totalCrap>
+    <crapMethodPercent>6.49</crapMethodPercent>
   </stats>
   <methods>
     <method>
@@ -28,10 +28,10 @@
       <methodName>buildClass_model</methodName>
       <methodSignature>buildClass_model(string $name): void</methodSignature>
       <fullMethod>buildClass_model(string $name): void</fullMethod>
-      <crap>3422</crap>
-      <complexity>58</complexity>
+      <crap>3540</crap>
+      <complexity>59</complexity>
       <coverage>0</coverage>
-      <crapLoad>59</crapLoad>
+      <crapLoad>60</crapLoad>
     </method>
     <method>
       <package>Playground\Make\Building\Concerns</package>
@@ -149,10 +149,10 @@
       <methodName>setOptions</methodName>
       <methodSignature>setOptions(array $options): self</methodSignature>
       <fullMethod>setOptions(array $options): self</fullMethod>
-      <crap>83</crap>
-      <complexity>83</complexity>
-      <coverage>98.33</coverage>
-      <crapLoad>3</crapLoad>
+      <crap>92</crap>
+      <complexity>92</complexity>
+      <coverage>96.09</coverage>
+      <crapLoad>5</crapLoad>
     </method>
     <method>
       <package>Playground\Make\Configuration\Concerns</package>
@@ -240,6 +240,17 @@
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\PrimaryProperties</className>
+      <methodName>resetModel</methodName>
+      <methodSignature>resetModel(string $model): self</methodSignature>
+      <fullMethod>resetModel(string $model): self</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -3119,8 +3130,8 @@
       <methodName>resetName</methodName>
       <methodSignature>resetName(): void</methodSignature>
       <fullMethod>resetName(): void</fullMethod>
-      <crap>12</crap>
-      <complexity>3</complexity>
+      <crap>20</crap>
+      <complexity>4</complexity>
       <coverage>0</coverage>
       <crapLoad>0</crapLoad>
     </method>
@@ -3185,10 +3196,10 @@
       <methodName>resetOptions</methodName>
       <methodSignature>resetOptions(): void</methodSignature>
       <fullMethod>resetOptions(): void</fullMethod>
-      <crap>870</crap>
-      <complexity>29</complexity>
+      <crap>1122</crap>
+      <complexity>33</complexity>
       <coverage>0</coverage>
-      <crapLoad>30</crapLoad>
+      <crapLoad>34</crapLoad>
     </method>
     <method>
       <package>Playground\Make\Console\Commands\Concerns</package>
