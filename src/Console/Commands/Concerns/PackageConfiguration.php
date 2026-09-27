@@ -229,6 +229,8 @@ trait PackageConfiguration
 
         // Reset options gets called after the file for CLI overrides
         $this->resetOptions();
+
+        $this->c->apply();
         // dump([
         //     '__METHOD__' => __METHOD__,
         //     '$this->folder' => $this->folder,
@@ -246,7 +248,11 @@ trait PackageConfiguration
         ) {
             $this->c->setName($this->parseClassInput($this->argument('name')));
             $this->searches['name'] = $this->c->name();
-            $this->searches['names'] = Str::of($this->c->name())->plural()->finish('s')->toString();
+            if (! ctype_lower($this->c->name())) {
+                $this->searches['names'] = Str::of($this->c->name())->finish('s')->toString();
+            } else {
+                $this->searches['names'] = Str::of($this->c->name())->plural()->finish('s')->toString();
+            }
         }
     }
 
@@ -657,22 +663,57 @@ trait PackageConfiguration
         }
 
         if ($model) {
-            $this->c->setModel(class_basename($this->parseClassInput($model)));
+            $this->c->resetModel(class_basename($this->parseClassInput($model)));
             $this->searches['model'] = $this->c->model();
+            $this->searches['model_camel'] = $this->c->model_camel();
+            $this->searches['model_camels'] = $this->c->model_camels();
+            $this->searches['model_label'] = $this->c->model_label();
+            $this->searches['model_labels'] = $this->c->model_labels();
+            $this->searches['model_lower'] = $this->c->model_lower();
+            $this->searches['model_lowers'] = $this->c->model_lowers();
+            $this->searches['model_kebab'] = $this->c->model_kebab();
+            $this->searches['model_kebabs'] = $this->c->model_kebabs();
+            $this->searches['model_slug'] = $this->c->model_slug();
+            $this->searches['model_slugs'] = $this->c->model_slugs();
+            $this->searches['model_snake'] = $this->c->model_snake();
+            $this->searches['model_snakes'] = $this->c->model_snakes();
+            $this->searches['model_studly'] = $this->c->model_studly();
+            $this->searches['model_studlies'] = $this->c->model_studlies();
+            $this->searches['model_variable'] = $this->c->model_variable();
+            $this->searches['model_variables'] = $this->c->model_variables();
+            //            dump([
+            //                '__METHOD__' => __METHOD__,
+            //                '$model' => $model,
+            //                '$this->searches' => $this->searches,
+            //            ]);
         }
 
+        // Module is a word
         if ($module) {
-            $this->c->setModule($module);
-            // Module is a word
-            $this->searches['module'] = $this->c->module();
+            $isTLA = ctype_upper($module);
 
-            $this->c->setModuleSlug(Str::slug($this->c->module()));
+            $module_label = $isTLA ? $module : Str::of($module)->headline()->toString();
+
+            $module_labels = $isTLA ? $module.'s' : Str::of($module)->plural()->headline()->toString();
+            $module_slug = $isTLA ? strtolower($module) : Str::of($module)->slug()->toString();
+            $module_slugs = $isTLA ? strtolower($module).'s' : Str::of($module_slug)->plural()->finish('s')->toString();
+
+            $this->c->setModule($module);
+            $this->c->setModuleLabel($module_label);
+            $this->c->setModuleLabels($module_labels);
+            $this->c->setModuleSlug($module_slug);
+            $this->c->setModuleSlugs($module_slugs);
+
+            $this->searches['module'] = $this->c->module();
+            $this->searches['module_label'] = $this->c->module_label();
+            $this->searches['module_labels'] = $this->c->module_labels();
             $this->searches['module_slug'] = $this->c->module_slug();
-            // TLAs should be lowercase
-            $this->c->setModuleSlugs(
-                Str::of($this->c->module())->lower()->plural()->toString()
-            );
             $this->searches['module_slugs'] = $this->c->module_slugs();
+            //            dump([
+            //                '__METHOD__' => __METHOD__,
+            //                '$model' => $model,
+            //                '$this->c->module()' => $this->c->module(),
+            //            ]);
         }
 
         if (! $this->c->config()) {

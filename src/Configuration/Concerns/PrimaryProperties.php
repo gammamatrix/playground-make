@@ -9,6 +9,9 @@ declare(strict_types=1);
 namespace Playground\Make\Configuration\Concerns;
 
 use Illuminate\Support\Str;
+use Playground\Make\Configuration\Model;
+use Playground\Make\Controller\Configuration\Controller;
+use Playground\Make\Package\Configuration\Package;
 
 /**
  * \Playground\Make\Configuration\Concerns\PrimaryProperties
@@ -28,12 +31,12 @@ trait PrimaryProperties
         'model_fqdn' => '',
         'model_camel' => '',
         'model_camels' => '',
+        'model_kebab' => '',
+        'model_kebabs' => '',
         'model_label' => '',
         'model_labels' => '',
         'model_lower' => '',
         'model_lowers' => '',
-        'model_kebab' => '',
-        'model_kebabs' => '',
         'model_slug' => '',
         'model_slugs' => '',
         'model_snake' => '',
@@ -306,6 +309,24 @@ trait PrimaryProperties
             if (empty($options['module_labels']) && empty($this->module_labels)) {
                 $this->module_labels = $isTLA ? $this->module.'s' : Str::of($this->module)->plural()->headline()->toString();
             }
+            if (empty($options['module_slug']) && empty($this->module_slug)) {
+                $this->module_slug = $isTLA ? strtolower($this->module) : Str::of($this->module)->slug()->toString();
+            }
+            if (empty($options['module_slugs']) && empty($this->module_slugs) && ! empty($this->module_slug)) {
+                $this->module_slugs = $isTLA ? strtolower($this->module).'s' : Str::of($this->module_slug)->plural()->finish('s')->toString();
+            }
+//            if (! in_array(static::class, [
+//                Controller::class,
+//                Model::class,
+//                Package::class,
+//            ])) {
+//                dd([
+//                    '__METHOD__' => __METHOD__,
+//                    '$options' => $options,
+//                    '$this' => $this,
+//                    'static' => static::class,
+//                ]);
+//            }
         }
 
         if (! empty($options['module_label'])
@@ -329,7 +350,9 @@ trait PrimaryProperties
         ) {
             $this->module_slug = $options['module_slug'];
             if (empty($options['module_slugs']) && empty($this->module_slugs)) {
+                $isTLA = ctype_upper($this->module);
                 $this->module_slugs = Str::of($this->module_slug)->plural()->finish('s')->toString();
+                $this->module_slugs = $isTLA ? strtolower($this->module_slug).'s' : Str::of($this->module_slug)->plural()->finish('s')->toString();
             }
         }
 
@@ -344,7 +367,11 @@ trait PrimaryProperties
         ) {
             $this->name = $options['name'];
             if (empty($options['names']) && empty($this->names)) {
-                $this->names = Str::of($this->name)->plural()->finish('s')->toString();
+                if (! ctype_lower($this->name)) {
+                    $this->names = Str::of($this->name)->finish('s')->toString();
+                } else {
+                    $this->names = Str::of($this->name)->plural()->finish('s')->toString();
+                }
             }
         }
 
@@ -433,6 +460,29 @@ trait PrimaryProperties
     public function model(): string
     {
         return $this->model;
+    }
+
+    public function resetModel(string $model): self
+    {
+        $this->model = $model;
+        $this->model_camel = Str::of($model)->headline()->camel()->toString();
+        $this->model_camels = Str::of($model)->headline()->plural()->camel()->toString();
+        $this->model_label = Str::of($model)->headline()->toString();
+        $this->model_labels = Str::of($model)->headline()->plural()->toString();
+        $this->model_lower = Str::of($model)->headline()->lower()->toString();
+        $this->model_lowers = Str::of($model)->headline()->lower()->plural()->toString();
+        $this->model_kebab = Str::of($model)->headline()->kebab()->toString();
+        $this->model_kebabs = Str::of($model)->headline()->plural()->kebab()->toString();
+        $this->model_slug = Str::of($model)->headline()->slug()->toString();
+        $this->model_slugs = Str::of($model)->headline()->slug()->plural()->toString();
+        $this->model_snake = Str::of($model)->headline()->snake()->toString();
+        $this->model_snakes = Str::of($model)->headline()->plural()->snake()->toString();
+        $this->model_studly = Str::of($model)->headline()->studly()->toString();
+        $this->model_studlies = Str::of($model)->headline()->plural()->studly()->toString();
+        $this->model_variable = Str::of($model)->headline()->camel()->toString();
+        $this->model_variables = Str::of($model)->headline()->camel()->plural()->toString();
+
+        return $this;
     }
 
     public function setModel(string $model): self

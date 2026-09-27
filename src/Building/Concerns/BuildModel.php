@@ -173,12 +173,18 @@ trait BuildModel
         $this->searches['model_slug'] = $this->searches['modelVariable'];
         $this->searches['slug_plural'] = $this->searches['modelSlugPlural'];
         $this->searches['model_slug_plural'] = $this->searches['modelSlugPlural'];
+
+        if (! $this->searches['module']) {
+            $this->searches['module'] = $this->model?->module();
+        }
+
         $this->searches['module_label'] = $this->searches['module'];
         if (ctype_upper($this->searches['module'])) {
             $this->searches['module_label_plural'] = Str::of($this->searches['module'])->finish('s')->toString();
         } else {
             $this->searches['module_label_plural'] = Str::of($this->searches['module'])->plural()->toString();
         }
+        $this->searches['module_labels'] = $this->searches['module_label_plural'];
 
         if (empty($this->searches['module_route']) && ! empty($this->searches['route'])) {
             $this->searches['module_route'] = Str::of($this->searches['route'])->beforeLast('.')->toString();
