@@ -175,7 +175,7 @@ trait BuildModel
         $this->searches['model_slug_plural'] = $this->searches['modelSlugPlural'];
 
         if (! $this->searches['module']) {
-            $this->searches['module'] = $this->model?->module();
+            $this->searches['module'] = $this->model?->module() ?? '';
         }
 
         $this->searches['module_label'] = $this->searches['module'];

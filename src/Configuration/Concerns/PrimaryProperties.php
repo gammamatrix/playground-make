@@ -9,9 +9,6 @@ declare(strict_types=1);
 namespace Playground\Make\Configuration\Concerns;
 
 use Illuminate\Support\Str;
-use Playground\Make\Configuration\Model;
-use Playground\Make\Controller\Configuration\Controller;
-use Playground\Make\Package\Configuration\Package;
 
 /**
  * \Playground\Make\Configuration\Concerns\PrimaryProperties
@@ -315,18 +312,6 @@ trait PrimaryProperties
             if (empty($options['module_slugs']) && empty($this->module_slugs) && ! empty($this->module_slug)) {
                 $this->module_slugs = $isTLA ? strtolower($this->module).'s' : Str::of($this->module_slug)->plural()->finish('s')->toString();
             }
-//            if (! in_array(static::class, [
-//                Controller::class,
-//                Model::class,
-//                Package::class,
-//            ])) {
-//                dd([
-//                    '__METHOD__' => __METHOD__,
-//                    '$options' => $options,
-//                    '$this' => $this,
-//                    'static' => static::class,
-//                ]);
-//            }
         }
 
         if (! empty($options['module_label'])
