@@ -37,6 +37,7 @@ class PropertiesTest extends TestCase
         'model_labels' => '',
         'model_lower' => '',
         'model_lowers' => '',
+        'model_route_param' => '',
         'model_slug' => '',
         'model_slugs' => '',
         'model_snake' => '',
@@ -156,6 +157,7 @@ class PropertiesTest extends TestCase
             'model_labels' => 'Beta Birds',
             'model_lower' => 'delta dog',
             'model_lowers' => 'delta dogs',
+            'model_route_param' => 'psi_clops',
             'model_slug' => 'iota-iguana',
             'model_slugs' => 'iota-iguanas',
             'model_snake' => 'kappa_koala',
@@ -203,6 +205,7 @@ class PropertiesTest extends TestCase
         $this->assertSame($options['model_labels'], $instance->model_labels());
         $this->assertSame($options['model_lower'], $instance->model_lower());
         $this->assertSame($options['model_kebab'], $instance->model_kebab());
+        $this->assertSame($options['model_route_param'], $instance->model_route_param());
         $this->assertSame($options['model_slug'], $instance->model_slug());
         $this->assertSame($options['model_slugs'], $instance->model_slugs());
         $this->assertSame($options['model_snake'], $instance->model_snake());

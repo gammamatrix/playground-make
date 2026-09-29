@@ -73,6 +73,7 @@ class InstanceTest extends TestCase
         'model_kebab' => '',
         'model_kebabs' => '',
         'model_plural' => '',
+        'model_route_param' => '',
         'model_singular' => '',
         'model_slug' => '',
         'model_slugs' => '',

@@ -34,6 +34,7 @@ trait PrimaryProperties
         'model_labels' => '',
         'model_lower' => '',
         'model_lowers' => '',
+        'model_route_param' => '',
         'model_slug' => '',
         'model_slugs' => '',
         'model_snake' => '',
@@ -88,6 +89,8 @@ trait PrimaryProperties
     protected string $model_lower = '';
 
     protected string $model_lowers = '';
+
+    protected string $model_route_param = '';
 
     protected string $model_slug = '';
 
@@ -245,6 +248,12 @@ trait PrimaryProperties
             && is_string($options['model_kebabs'])
         ) {
             $this->model_kebabs = $options['model_kebabs'];
+        }
+
+        if (! empty($options['model_route_param'])
+            && is_string($options['model_route_param'])
+        ) {
+            $this->model_route_param = $options['model_route_param'];
         }
 
         if (! empty($options['model_slug'])
@@ -467,6 +476,8 @@ trait PrimaryProperties
         $this->model_variable = Str::of($model)->headline()->camel()->toString();
         $this->model_variables = Str::of($model)->headline()->camel()->plural()->toString();
 
+        $this->model_route_param = $this->model_snake;
+
         return $this;
     }
 
@@ -527,6 +538,11 @@ trait PrimaryProperties
     public function model_lowers(): string
     {
         return $this->model_lowers;
+    }
+
+    public function model_route_param(): string
+    {
+        return $this->model_route_param;
     }
 
     public function model_slug(): string

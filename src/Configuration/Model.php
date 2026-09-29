@@ -73,6 +73,7 @@ class Model extends PrimaryConfiguration
         'model_kebab' => '',
         'model_kebabs' => '',
         'model_plural' => '', // @deprecated: model_plural use model_labels instead
+        'model_route_param' => '',
         'model_singular' => '',  // @deprecated: model_plural use model_label instead
         'model_slug' => '',
         'model_slugs' => '',
@@ -138,6 +139,7 @@ class Model extends PrimaryConfiguration
         $this->properties['model_lowers'] = $this->model_lowers();
         $this->properties['model_kebab'] = $this->model_kebab();
         $this->properties['model_kebabs'] = $this->model_kebabs();
+        $this->properties['model_route_param'] = $this->model_route_param();
         $this->properties['model_slug'] = $this->model_slug();
         $this->properties['model_slugs'] = $this->model_slugs();
         $this->properties['model_snake'] = $this->model_snake();

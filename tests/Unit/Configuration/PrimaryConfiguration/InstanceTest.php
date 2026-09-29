@@ -48,6 +48,7 @@ class InstanceTest extends TestCase
         'model_labels' => '',
         'model_lower' => '',
         'model_lowers' => '',
+        'model_route_param' => '',
         'model_slug' => '',
         'model_slugs' => '',
         'model_snake' => '',

@@ -56,6 +56,8 @@ interface PrimaryConfiguration
 
     public function model_lowers(): string;
 
+    public function model_route_param(): string;
+
     public function model_slug(): string;
 
     public function model_slugs(): string;

@@ -673,6 +673,7 @@ trait PackageConfiguration
             $this->searches['model_lowers'] = $this->c->model_lowers();
             $this->searches['model_kebab'] = $this->c->model_kebab();
             $this->searches['model_kebabs'] = $this->c->model_kebabs();
+            $this->searches['model_route_param'] = $this->c->model_route_param();
             $this->searches['model_slug'] = $this->c->model_slug();
             $this->searches['model_slugs'] = $this->c->model_slugs();
             $this->searches['model_snake'] = $this->c->model_snake();
