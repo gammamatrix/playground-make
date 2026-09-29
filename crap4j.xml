@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2026-09-28 17:55:10</timestamp>
+  <timestamp>2026-09-29 21:44:08</timestamp>
   <stats>
     <name>Method Crap Stats</name>
-    <methodCount>308</methodCount>
+    <methodCount>309</methodCount>
     <crapMethodCount>20</crapMethodCount>
     <crapLoad>321</crapLoad>
-    <totalCrap>9789.36</totalCrap>
-    <crapMethodPercent>6.49</crapMethodPercent>
+    <totalCrap>9792.36</totalCrap>
+    <crapMethodPercent>6.47</crapMethodPercent>
   </stats>
   <methods>
     <method>
@@ -149,9 +149,9 @@
       <methodName>setOptions</methodName>
       <methodSignature>setOptions(array $options): self</methodSignature>
       <fullMethod>setOptions(array $options): self</fullMethod>
-      <crap>92</crap>
-      <complexity>92</complexity>
-      <coverage>96.09</coverage>
+      <crap>94</crap>
+      <complexity>94</complexity>
+      <coverage>96.18</coverage>
       <crapLoad>5</crapLoad>
     </method>
     <method>
@@ -369,6 +369,17 @@
       <methodName>model_lowers</methodName>
       <methodSignature>model_lowers(): string</methodSignature>
       <fullMethod>model_lowers(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Make\Configuration\Concerns</package>
+      <className>Playground\Make\Configuration\Concerns\PrimaryProperties</className>
+      <methodName>model_route_param</methodName>
+      <methodSignature>model_route_param(): string</methodSignature>
+      <fullMethod>model_route_param(): string</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
@@ -921,7 +932,7 @@
       <fullMethod>apply(): self</fullMethod>
       <crap>14</crap>
       <complexity>14</complexity>
-      <coverage>95.24</coverage>
+      <coverage>95.29</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
