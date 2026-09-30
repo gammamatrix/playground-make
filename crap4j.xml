@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2026-09-29 21:44:08</timestamp>
+  <timestamp>2026-09-30 20:39:06</timestamp>
   <stats>
     <name>Method Crap Stats</name>
     <methodCount>309</methodCount>
     <crapMethodCount>20</crapMethodCount>
     <crapLoad>321</crapLoad>
-    <totalCrap>9792.36</totalCrap>
+    <totalCrap>9892.36</totalCrap>
     <crapMethodPercent>6.47</crapMethodPercent>
   </stats>
   <methods>
@@ -28,10 +28,10 @@
       <methodName>buildClass_model</methodName>
       <methodSignature>buildClass_model(string $name): void</methodSignature>
       <fullMethod>buildClass_model(string $name): void</fullMethod>
-      <crap>3540</crap>
-      <complexity>59</complexity>
+      <crap>3660</crap>
+      <complexity>60</complexity>
       <coverage>0</coverage>
-      <crapLoad>60</crapLoad>
+      <crapLoad>61</crapLoad>
     </method>
     <method>
       <package>Playground\Make\Building\Concerns</package>
@@ -2932,10 +2932,10 @@
       <methodName>readJsonFileAsArray</methodName>
       <methodSignature>readJsonFileAsArray(string $file, bool $required, string $name): array</methodSignature>
       <fullMethod>readJsonFileAsArray(string $file, bool $required, string $name): array</fullMethod>
-      <crap>110</crap>
-      <complexity>10</complexity>
+      <crap>90</crap>
+      <complexity>9</complexity>
       <coverage>0</coverage>
-      <crapLoad>10</crapLoad>
+      <crapLoad>9</crapLoad>
     </method>
     <method>
       <package>Playground\Make\Console\Commands\Concerns</package>
