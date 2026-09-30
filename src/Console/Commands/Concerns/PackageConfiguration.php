@@ -335,13 +335,26 @@ trait PackageConfiguration
             $package = implode('-', $namespace_exploded);
         }
 
-        if (empty($package)) {
-            $package = 'app';
+//        if (empty($package)) {
+//            dd(debug_backtrace());
+//            throw new \Exception('The package name must not be empty');
+//            $package = $this->c->package();
+//             dump([
+//                 '__METHOD__' => __METHOD__,
+//                 '$package' => $package,
+//                 'static::class' => static::class,
+//                 //'$this->searches' => $this->searches,
+//                 //'$this' => $this,
+//                 //'$this->c' => $this->c,
+//                 '$this->options()' => $this->options(),
+//             ]);
+//        }
+
+        if (!empty($package)) {
+            $this->c->setPackage($package);
+
+            $this->searches['package'] = $this->c->package();
         }
-
-        $this->c->setPackage($package);
-
-        $this->searches['package'] = $this->c->package();
 
         // dump([
         //     '__METHOD__' => __METHOD__,
@@ -366,42 +379,52 @@ trait PackageConfiguration
         $pathInApp = '';
         $pathInMakePackage = '';
         $pathInPackage = '';
-        // $pathInStubPackage = '';
+        $pathInStub = '';
         $payload = null;
         $isAbsolute = Str::of($file)->startsWith('/');
 
-        // dump([
-        //     '__METHOD__' => __METHOD__,
-        //     // '$this->searches' => $this->searches,
-        //     // '$this->c' => $this->c,
-        //     '$this->options()' => $this->options(),
-        //     '$file' => $file,
-        // ]);
+//         dd([
+//             '__METHOD__' => __METHOD__,
+//             // '$this->searches' => $this->searches,
+//             // '$this->c' => $this->c,
+//             '$this->options()' => $this->options(),
+//             '$file' => $file,
+//         ]);
 
         if (! $isAbsolute) {
             $pathInApp = base_path($file);
             $pathInPackage = sprintf('%1$s/%2$s', $this->getPackageDirectoryFromCommand(), $file);
             $pathInMakePackage = sprintf('%1$s/%2$s', dirname(dirname(dirname(dirname(__DIR__)))), $file);
-            // $pathInStubPackage = storage_path(sprintf('app/stub/%1$s/%2$s', 'playground-cms', $file));
+            //$pathInStub = sprintf('%1$s%2$s/%3$s', $this->laravel->storagePath(), $this->getPackageFolder(), $file);
         }
 
-        // dump([
-        //     '__METHOD__' => __METHOD__,
-        //     '__FILE__' => __FILE__,
-        //     'static::class' => static::class,
-        //     '$isAbsolute' => $isAbsolute,
-        //     'dir' => dirname(dirname(dirname(dirname(__DIR__)))),
-        //     '$file' => $file,
-        //     '$pathInApp' => $pathInApp,
-        //     '$pathInPackage' => $pathInPackage,
-        //     '$pathInMakePackage' => $pathInMakePackage,
-        //     '$this->options()' => $this->options(),
-        //     '$this->getPackageDirectoryFromCommand()' => $this->getPackageDirectoryFromCommand(),
-        // ]);
+//         dump([
+//             '__METHOD__' => __METHOD__,
+//             '__FILE__' => __FILE__,
+//             'static::class' => static::class,
+//             '$isAbsolute' => $isAbsolute,
+//             'dir' => dirname(dirname(dirname(dirname(__DIR__)))),
+//             '$this->options()' => $this->options(),
+//             '$this->getPackageDirectoryFromCommand()' => $this->getPackageDirectoryFromCommand(),
+//             '$this->getPackageFolder()' => $this->getPackageFolder(),
+//             '$file' => $file,
+//             '$this->files->exists($file)' => $this->files->exists($file),
+//             '$pathInStub' => $pathInStub,
+//             '$this->files->exists($pathInStub)' => $this->files->exists($pathInStub),
+//             '$pathInApp' => $pathInApp,
+//             '$this->files->exists($pathInApp)' => $this->files->exists($pathInApp),
+//             '$pathInPackage' => $pathInPackage,
+//             '$this->files->exists($pathInPackage)' => $this->files->exists($pathInPackage),
+//             '$pathInMakePackage' => $pathInMakePackage,
+//             '$this->files->exists($pathInMakePackage)' => $this->files->exists($pathInMakePackage),
+//         ]);
 
         if ($isAbsolute && $this->files->exists($file)) {
             $this->components->info(sprintf('Loading %s File [%s]', $this->type, $file));
             $payload = $this->files->json($file);
+//        } elseif ($this->files->exists($pathInStub)) {
+//            $this->components->info(sprintf('Loading %s [%s] from the app [%s]', $this->type, $file, $pathInStub));
+//            $payload = $this->files->json($pathInStub);
         } elseif ($this->files->exists($pathInApp)) {
             $this->components->info(sprintf('Loading %s [%s] from the app [%s]', $this->type, $file, $pathInApp));
             $payload = $this->files->json($pathInApp);
@@ -761,12 +784,14 @@ trait PackageConfiguration
 
     protected function getPackageFolder(): string
     {
-        // dd([
+        // dump([
         //     '__METHOD__' => __METHOD__,
-        //     '$this->c' => $this->c,
-        //     '$this->folder' => $this->folder,
+        //     //'$this->c' => $this->c,
+        //     '$this->c->package()' => $this->c->package(),
+        //     //'$this->folder' => $this->folder,
         // ]);
         if (empty($this->c->package()) || ! is_string($this->c->package())) {
+            //dd(debug_backtrace());
             throw new \Exception('Expecting the package to be set.');
         }
 

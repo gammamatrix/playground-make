@@ -18,6 +18,7 @@ trait BuildModel
 {
     protected function buildClass_model(string $name): void
     {
+        $type = $this->model?->type();
         $model = $this->model?->model() ?? '';
         $model_attribute = '';
         if ($model) {
@@ -69,6 +70,35 @@ trait BuildModel
         $model_studlies = $this->model?->model_studlies() ?: Str::of($dummyModel)->plural()->studly()->toString();
         $model_variable = $this->model?->model_variable() ?: Str::of($dummyModel)->camel()->toString();
         $model_variables = $this->model?->model_variables() ?: Str::of($dummyModel)->camel()->plural()->toString();
+
+        if (in_array($type, [
+            'playground-model-tagged',
+        ])) {
+            $model_camels = $model_camel;
+            $model_kebabs = $model_kebab;
+            $model_snakes = $model_snake;
+            $model_studlies = $model_studly;
+            $model_labels = $model_label;
+            $model_lowers = $model_lower;
+
+            $properties['model_camels'] = $model_camels;
+            $properties['model_kebabs'] = $model_kebabs;
+            $properties['model_snakes'] = $model_snakes;
+            $properties['model_studlies'] = $model_studlies;
+            $properties['model_labels'] = $model_labels;
+            $properties['model_lowers'] = $model_lowers;
+        }
+
+        $properties['model_route_param'] = $model_snake;
+
+        //dump([
+        //    '__METHOD__' => __METHOD__,
+        //    '$properties' => $properties,
+        //    '$model_slug' => $model_slug,
+        //    '$dummyModel' => $dummyModel,
+        //    '$this->model?->model_slug()' => $this->model?->model_slug(),
+        //]);
+
         //         if (!empty($model)) {
         //            dd([
         //                '__METHOD__' => __METHOD__,
