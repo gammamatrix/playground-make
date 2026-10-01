@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2026-09-30 20:39:06</timestamp>
+  <timestamp>2026-10-01 16:15:50</timestamp>
   <stats>
     <name>Method Crap Stats</name>
     <methodCount>309</methodCount>
     <crapMethodCount>20</crapMethodCount>
-    <crapLoad>321</crapLoad>
-    <totalCrap>9892.36</totalCrap>
+    <crapLoad>325</crapLoad>
+    <totalCrap>9984.36</totalCrap>
     <crapMethodPercent>6.47</crapMethodPercent>
   </stats>
   <methods>
@@ -2932,10 +2932,10 @@
       <methodName>readJsonFileAsArray</methodName>
       <methodSignature>readJsonFileAsArray(string $file, bool $required, string $name): array</methodSignature>
       <fullMethod>readJsonFileAsArray(string $file, bool $required, string $name): array</fullMethod>
-      <crap>90</crap>
-      <complexity>9</complexity>
+      <crap>132</crap>
+      <complexity>11</complexity>
       <coverage>0</coverage>
-      <crapLoad>9</crapLoad>
+      <crapLoad>11</crapLoad>
     </method>
     <method>
       <package>Playground\Make\Console\Commands\Concerns</package>
@@ -3163,10 +3163,10 @@
       <methodName>resetFile</methodName>
       <methodSignature>resetFile(): void</methodSignature>
       <fullMethod>resetFile(): void</fullMethod>
-      <crap>132</crap>
-      <complexity>11</complexity>
+      <crap>182</crap>
+      <complexity>13</complexity>
       <coverage>0</coverage>
-      <crapLoad>11</crapLoad>
+      <crapLoad>13</crapLoad>
     </method>
     <method>
       <package>Playground\Make\Console\Commands\Concerns</package>
