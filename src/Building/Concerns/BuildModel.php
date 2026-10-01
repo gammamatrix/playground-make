@@ -91,13 +91,13 @@ trait BuildModel
 
         $properties['model_route_param'] = $model_snake;
 
-        //dump([
+        // dump([
         //    '__METHOD__' => __METHOD__,
         //    '$properties' => $properties,
         //    '$model_slug' => $model_slug,
         //    '$dummyModel' => $dummyModel,
         //    '$this->model?->model_slug()' => $this->model?->model_slug(),
-        //]);
+        // ]);
 
         //         if (!empty($model)) {
         //            dd([
