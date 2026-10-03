@@ -21,5 +21,8 @@ return [
 
     'input.error' => 'Please provide a name for the package or provide a configuration with [--file]',
 
-    'type.unexpected' => 'Unexpect [--type :type] provided for the :generator. Allowed types [:types]',
+    'type.unexpected' => 'Unexpected [--type :type] provided for the :generator. Allowed types [:types]',
+
+    'json.file.required' => 'A JSON file is required for the :generator.',
+    'json.file.unexpected' => 'Unexpected [:file] provided for the :generator.',
 ];

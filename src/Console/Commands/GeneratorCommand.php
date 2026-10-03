@@ -38,7 +38,6 @@ abstract class GeneratorCommand extends Command
 
             $error = __('playground-make::generator.input.error');
 
-            // Check if interactive - TODO implement interactive in applicable generators
             /** @phpstan-ignore larastan.console.undefinedOption */
             if ($this->interactive && $this->hasOption('interactive') && $this->option('interactive')) {
                 $name = $this->interactive();
@@ -169,6 +168,14 @@ abstract class GeneratorCommand extends Command
 
         $this->c->apply();
 
+        // dump([
+        //    '__METHOD__' => __METHOD__,
+        //    'static::class' => static::class,
+        //    //'$this->c' => $this->c,
+        //    '$this->c->name()' => $this->c->name(),
+        //    '$this->c->type()' => $this->c->type(),
+        //    '$this->options()' => $this->options(),
+        // ]);
         return $this->c->name();
     }
 }

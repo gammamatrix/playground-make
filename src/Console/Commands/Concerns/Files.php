@@ -29,14 +29,15 @@ trait Files
     protected function readJsonFileAsArray(string $file, bool $required = true, string $name = 'file'): array
     {
         if (empty($file)) {
-            throw new \RuntimeException(__('playground-make::generator.json.file.required'));
+            throw new \RuntimeException(__('playground-make::generator.json.file.required', ['generator' => static::class]));
         }
 
         $stringable = Str::of($file);
 
         if (! $stringable->endsWith('.json')) {
-            throw new \RuntimeException(__('playground-make::generator.json.file.json', [
+            throw new \RuntimeException(__('playground-make::generator.json.file.unexpected', [
                 'file' => $file,
+                'generator' => static::class,
             ]));
         }
 
