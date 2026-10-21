@@ -38,7 +38,6 @@ abstract class GeneratorCommand extends Command
 
             $error = __('playground-make::generator.input.error');
 
-            /** @phpstan-ignore larastan.console.undefinedOption */
             if ($this->interactive && $this->hasOption('interactive') && $this->option('interactive')) {
                 $name = $this->interactive();
                 if (! $name) {
