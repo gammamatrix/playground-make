@@ -26,7 +26,7 @@ trait BuildUses
         $use = '';
         $use_class = '';
         $this->searches['use'] = '';
-        $this->searches['use_class'] = '';
+        //$this->searches['use_class'] = '';
 
         $extends_use = $this->c->extends_use();
 
@@ -57,7 +57,8 @@ trait BuildUses
             $this->searches['use'] = trim($use).PHP_EOL;
         }
         if (! empty($use_class)) {
-            $this->searches['use_class'] = static::INDENT.trim($use_class).PHP_EOL;
+            // @deprecated
+            //$this->searches['use_class'] = static::INDENT.trim($use_class).PHP_EOL;
         }
     }
 
